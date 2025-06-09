@@ -10,6 +10,7 @@
 <body>
 
 <form action="transit.html" method="post">
+
 	<div>
 	<label id="Label1">Nom: <input id ="nom" name="nom" type="text" ><br></label>
 	&nbsp;<label id="Label2"><br>Prenoms:<input id="prenom" name="prenom" type="text"></label>
@@ -29,50 +30,201 @@
 
 	<br><br><input name="tir_fct" type="button" value="Tirez une facture">
 	<input name="Enr_av" type="button" value="<">
-	<input name="Enr_dv" type="button" value=">" >
+	<input name="Enr_dv" type="button" value="\" >
 	<input name="edit_exam" type="button" value="Redaction d'examens">
 	<input name="nouv" type="button" value="Nouveau Patient"><input name="Bl" type="button" value="Bilan Operationnel"><input name="calc" type="button" value="Utilisez une Calculatrice?">
-</form>
+
 </div>
 <div>
-	<form>
+	
 <div>
 <h3>inflammation</h3>
-	<label>CRP: <input name="Text1" type="text"></label>
-<br><label>VS: 1ère HEURE <input name="Text2" type="text"> 2ième HEURE:	<input name="Text3" type="text"></label>
+	<label>CRP: <input name="crp" type="text">titre: <input name="crp_t" type="number"></label>
+<br><label>VS: 1ère HEURE <input name="vs1" type="number"> 2ième HEURE:	
+	<input name="vs2" type="number"></label>
 <h3>ionogramme</h3>
-	<label>Potassium (k+) : <input name="Text1" type="text" > Sodium (Na+) : <input name="Text1" type="text" > Chlore (Cl-) : <input name="Text1" type="text" /></label>
-<br><label>Reserve Alcalin: <input name="Text2" type="text"> </label>
-<br><label>Protides Totaux: <input name="Text2" type="text"> </label>
+	<label>Potassium (k+) : <input name="k" type="number" > Sodium (Na+) : 
+	<input name="na" type="number" > Chlore (Cl-) : 
+	<input name="cl" type="number" /></label>
+<br><label>Magnésium (Mg2+): <input name="mg" type="number"> </label>
+<br><label>Calcium (Ca2+): <input name="ca" type="number"> </label>
+<br><label>Reserve Alcalin: <input name="Ral" type="number"> </label>
+<br><label>Protides Totaux: <input name="ptt" type="number"> </label>
 <h3>bilan lipidique</h3>
-	<label>Triglycerides: <input name="Text1" type="text"></label>
-<br><label>Cholestérol Total <input name="Text2" type="text"></label>
-<br><label>Cholestérol HDL <input name="Text2" type="text"> </label>
-<br><label>Cholestérol LDL <input name="Text2" type="text"> </label>
-<h3>bilan hepatique</h3>
-	<label>Transaminasémie GOT: <input name="Text1" type="text"> Transaminasémie GPT: <input name="Text1" type="text"></label>
-<br><label>Gamma-GT <input name="Text2" type="text"></label>
-<br><label>Phosphatase alcaline <input name="Text2" type="text"> </label>
+	<label>Triglycerides: <input name="tg" type="number"></label>
+<br><label>Cholestérol Total <input name="cht" type="number"></label>
+<br><label>Cholestérol HDL <input name="hdl" type="number"> </label>
+<br><label>Cholestérol LDL <input name="ldl" type="number"> </label>
+<br><label>Lipide Totale <input name="lpdtt" type="number"> </label>
+<h3>bilan hepatique et bilaire</h3>
+	<label>Transaminasémie GOT: <input name="tgo" type="number"> Transaminasémie GPT: 
+	<input name="tgp" type="number"></label>
+<br><label>Bilirubine Totale : <input name="bilt" type="number"></label>
+<br><label>Bilirubine conjuguée : <input name="bilc" type="number"> </label>
+<br><label>AgHBS : <select name="aghbs"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label>
+<br><label>ACHBS : <select name="achbs"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label>
+<br><label>AgHBe : <select name="aghbe"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label>
+<br><label>ACHBe : <select name="achbe"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select> </label>
+<br><label>ACHBC : <select name="achbc"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label>
+<br><label>ACHVC : <select name="achvc"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label>
+<br><label>HAV (IgM) : <select name="hav"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label>
+<br><label>Gamma-GT <input name="ggt" type="number"></label>
+<br><label>Phosphatase alcaline <input name="ppa" type="number"> </label>
+
+<h3>bilan cytobacteriologie</h3>
+	<label><a href="#">ECBU: </a> </label>
+<br><label><a href="#">Coproculture:  </a>  </label>
+<br><label><a href="#">PV :  </a>  </label>
+<br><label><a href="#">PU :</a>  </label>
+<br><label><a href="#">Spermoculture : </a> </label>
+<br><label><a href="#">LCR/Exudat :</a> </label>
+
+<h3>bilan spermiologique</h3>
+	<label><a href="#">Spermogramme:</a> </label>
+<br><a href="#"><label>Spermocytogramme:</label>
+</a>
+<br>
+
 
 </div>
 <div>
-<h3>bilan Urinaire</h3>
-	<label>Protéinurie 24h: <input name="Text1" type="text"></label>
-<br><label>ECBU <input name="Text2" type="text"></label>
-<br><label>ionogramme urinaire <input name="Text2" type="text"> </label>
+<h3>bilan renal</h3>
+	<label>Créatinine : <input name="creat" type="number"></label>
+<br><label>Urée:<input name="uree" type="number"></label>
+<br><label>Albuminurie:<input name="alb" type="number"></label>
+<br><label>Protéinurie:<input name="ptu" type="number"></label>
+<br><label>Protéinurie 24h:<input name="p24" type="number"></label>
+<br><label>DFG:<input name="dgf" type="number"></label>
+<br><label>ionogramme urinaire : <input name="ionou" type="number"></label>
+<br><label>Clairance de créatininurie : <input name="clrcreat" type="number"> </label>
 <h3>bilan glycemique</h3>
-	<label>Glycémie à jeun: <input name="Text1" type="text"></label>
-<br><label>Glycémie Post prandiale<input name="Text2" type="text"></label>
-<br><label>HBA1C <input name="Text2" type="text"> </label>
-<h3>bilan glycemique</h3>
-	<label>Glycémie à jeun: <input name="Text1" type="text"></label>
-<br><label>Glycémie Post prandiale<input name="Text2" type="text"></label>
-<br><label>HBA1C <input name="Text2" type="text"> </label>
+	<label>Glycémie à jeun: <input name="gly" type="number"></label>
+<br><label>Glycémie Post prandiale<input name="glyp" type="number"></label>
+<br><label>HBA1C <input name="hb1ac" type="number"> </label>
+<br><label>glycosurie : <input name="glyu" type="number"> </label>
+<br><label>Glycorachie : <input name="glyr" type="number"> </label>
+<h3>bilan Immuno-hematologique</h3>
+<p>NFS (Numeration  Sanguine):</p>
+&nbsp;<br>
+	<div>
+<label>Leucocytes : <input name="gb" type="number" size="20"></label>
+<label>Hématies : <input name="gr" type="number"></label>
+<label id="Label1">Hémoglobine : <input name="hb" type="number"></label>
+<label id="Label1">Hématocrite : <input name="hct" type="number"></label>
+<label id="Label1">VGM : <input name="vgm" type="number"></label>
+<label id="Label1">TCMH : <input name="tcmh" type="number"></label>
+<label id="Label1">CCMH : <input name="ccmh" type="text"></label>
+<label id="Label1">Plaquette : <input name="plq" type="number"></label>
+</div>
+
+<div>
+<label id="Label1">PN : <input name="pn" type="number"></label>
+<label id="Label1">PE : <input name="pe" type="number"></label>
+<label id="Label1">PB : <input name="pb" type="number"></label>
+<label id="Label1">LY : <input name="ly" type="number"></label>
+<label id="Label1">Mn : <input name="mn" type="number"></label>
+</div>
+
+&nbsp;<br><label>Groupe Sanguin: <input name="grs" type="text"> Rhésus : 
+	<input name="rh" type="text"></label>
+<br><label>TP : <input name="tp" type="number"> </label>
+<br><label>TCK : <input name="tck" type="number"> </label>
+<br><label>Fibrinémie : <input name="fibr" type="number"> </label>
+<br><label>Taux de Prothrombine : <input name="tpr" type="number"> </label>
+<br><label>INR : <input name="inr" type="number"> </label>
+<br>
+
+<div>
+<label>Electrophorèse de l'hémoglobine : <input name="Ehb" type="text"></label><br>
+<label id="Label1">A1 : <input name="a1" type="number"></label>
+<label id="Label1">A2 : <input name="a2" type="number"></label>
+<label id="Label1">S : <input name="s" type="number"></label>
+<label id="Label1">C : <input name="c" type="number"></label>
+<label id="Label1">F : <input name="f" type="number"></label>
+</div>
+
+<div>
+<label>Electrophorèse des proteines serique : <input name="Ept" type="text"></label><br>
+<label id="Label1"> : <input name="Text2" type="text"><input name="Text1" type="text"></label>
+<label id="Label1"> : <input name="Text2" type="text"><input name="Text1" type="text"><input name="Text1" type="text"></label>
+<label id="Label1"> : <input name="Text2" type="text"><input name="Text1" type="text"><input name="Text1" type="text"></label>
+<label id="Label1"> : <input name="Text2" type="text"><input name="Text1" type="text"><input name="Text1" type="text"></label>
+<label id="Label1"> : <input name="Text2" type="text"><input name="Text1" type="text"><input name="Text1" type="text"></label>
+</div>
+
+
+<h3>bilan sérologie</h3>
+	<p>Widal et Félix</p>
+	<div>
+<br><label>TO : <input name="to" type="number">TH : 
+		<input name="th" type="number"></label>
+<br><label>AO : <input name="ao" type="number">AH : 
+		<input name="ah" type="number"></label>
+<br><label>BO : <input name="bo" type="number">BH : 
+		<input name="ah" type="number"></label>
+<br><label>CO : <input name="co" type="number">CH : 
+		<input name="ch" type="number"></label>
+</div>
+
+<br><label>Toxoplasmose : <select name="toxo"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select>IgM : 
+	<input name="toxo_igm" type="number">IgG : 
+	<input name="toxo_igg" type="number"></label>
+<br><label>Rubéole : <select name="rub"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select>IgM : 
+	<input name="rub_igm" type="number">IgG : 
+	<input name="rub_igg" type="number"></label>
+<br><label>chlamydia : <select name="chld"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select>IgM : 
+	<input name="chld_igm" type="number">IgG : 
+	<input name="chld_igg" type="number"></label>
+<br><label>Mycoplasme : <select name="mycp"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select>IgM : 
+	<input name="mycp_igm" type="number">IgG : 
+	<input name="mycp_igg" type="number"></label>
+<br><label>bilharziose : <select name="bilh"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select>IgM : 
+	<input name="bilh_igm" type="number">IgG : 
+	<input name="bilh_igg" type="number"></label>
+<br><label>VDRL : <select name="bw"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select>TPHA : 
+	<input name="tpha" type="number"></label>
+<br><label>Waaler rose: <select name="wlr"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select> 
+	Titre : <input name="wlr_t" type="number"></label>
+<br><label>ASLO : <select name="aslo"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select> 
+	Titre : <input name="aslo_t" type="number"></label>
+<br><label>VIH : <select name="vih"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select> 
+	Typage : <select name="vih_tp"><option></option><option>VIH1</option><option>VIH2</option><option>VIH1 et VIH 2</option></select></label>
 
 </div>
-<div></div>
-	</form>
+<div>
+<h3>bilan hormonal</h3>
+	<label>T3 libre: <input name="t3l" type="number"></label>
+<br><label>T4 libre : <input name="t4l" type="number"></label>
+<br><label>TSH : <input name="tsh" type="number"> </label>
+<br><label>PSA : <input name="psa" type="number"> </label>
+<br><label>Estradiol : <input name="estd" type="number"> </label>
+<br><label>Progesterone : <input name="prgs" type="number"> </label>
+<br><label>Prolactinemie : <input name="prolac" type="number"> </label>
+<br><label>LH-RH : <input name="lh" type="number"> </label>
+<br><label>Cortisol : <input name="cort" type="number"> </label>
+<br><label>FSH : <input name="fsh" type="number"> </label>
+<br><label>Testosterone : <input name="testr" type="number"> </label>
+<br><label>TSH_us : <input name="tshus" type="number"> </label>
+<br><label>Beta HCG sanguin : <input name="bhcgs" type="number"> </label>
+<br><label>Beta HCG urinaire : <input name="bhcgu" type="number"> </label>
+
+<h3>bilan enzymatique musculaires</h3>
+	<label>LDH: <input name="ldh" type="number"></label>
+<br><label>CPK : <input name="cpk" type="number"></label>
+<br><label>CPK-mb : <input name="cpk-mb" type="number"> </label>
+<br>
+
+<h3>bilan divers</h3>
+	<label>Myoglobine: <input name="myg" type="number"></label>
+<br><label>Troponime: <input name="trpn" type="number"></label>
+<br><label> : </label>
+
+
 </div>
+
+
+</form>
+
 
 </body>
 
