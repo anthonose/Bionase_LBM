@@ -10,19 +10,14 @@
 
 <body>
 
-<div class="div">
+<div >
 	<img alt="encart" height="94" src="imageTest2.jpg" width="727"></div>
 <form action="transit.html" method="post">
 
 	<div>
-	<label id="Label1">Nom: <input id ="nom" name="nom" type="text" ><br></label>
-	&nbsp;<label id="Label2"><br>Prenoms:<input id="prenom" name="prenom" type="text"></label>
-	<label id="Label3"><br><br>	Sexe : 
-	<select name="Sexe" style="width: 45px">
-				<option></option>
-			<option>M</option>
-	<option>F</option>
-			</select></label>
+	<label id="Label1">Nom: <input id ="nom" name="nom" type="text" ></label><br>
+	<label id="Label2"><br>Prenoms:<input id="prenom" name="prenom" type="text"></label>
+	<label id="Label3"><br><br>	Sexe :<select name="Sexe" style="width: 45px"><option>M</option><option>F</option></select></label>
 	<label id="Label4"><br><br>	Telephone: <input id="tel" name="tel" type="text"></label>
 	<label id="Label17"><br><br>Diagnostic Clinique:<input id="dgn" name="dgn" type="text"></label>
 	<label id="Label6"><br>	<br>Prescripteur: <input id="prsc" name="prsc" type="text"></label>
@@ -31,7 +26,7 @@
 	<label id="Label9"><br><br>Prix des Examens (ou statut): <input id="px" name="px" type="text"></label>
 	<label id="Label10"><br><br>Date du Prélèvement: <input id="dprv" name="dprv" type="text">&nbsp;</label>
 
-	<br><br><input name="tir_fct" type="button" value="Tirez une facture">
+	<br><br><input id="tir_fct" name="tir_fct" type="button" value="Tirez une facture">
 	<input name="Enr_av" type="button" value="<">
 	<input name="Enr_dv" type="button" value="\" >
 	<input name="edit_exam" type="button" value="Redaction d'examens">
@@ -228,7 +223,7 @@
 
 </form>
 
-
+<script src="Manip.js"></script>
 </body>
 
 </html>
