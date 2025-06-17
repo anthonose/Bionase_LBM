@@ -8,13 +8,12 @@ btn_evt.addEventListener('click',vd_pgweb);
 
 function vd_pgweb(){
 
-for (var i=0; i<10 ; i++) 
+for (var i= 0; i < 11; i++) 
 {
+if (chpi_vd[i].value.trim()===""||chpi_vd[i].value.trim () ==="null"||chpi_vd[i].value.trim()==="indefined"){lgn_pt[i+1].remove();i--;}
+}
+}
 
-//lgn_pt[i].style.color="red";
-if (chpi_vd[i].value===""){blk_pt[1].removeChild(lgn_pt[i]);}
-}
-}
 /*var att_n = document.getElementById("nom");
 var att_pr = document.getElementById("prenom");
 var att_pr_rb = document.getElementById("Label2");
