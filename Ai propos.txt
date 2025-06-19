@@ -1,0 +1,42 @@
+﻿*** Pour enlever les champs vides d'un formulaire avant la récupération des données en JavaScript ***
+
+function nettoyerFormulaire(formulaire) {
+  const formData = new FormData(formulaire);
+  const donneesNettoyees = {};
+
+  for (const [key, value] of formData.entries()) {
+    if (value.trim() !== "") { // Vérifie si la valeur n'est pas juste des espaces
+      donneesNettoyees[key] = value;
+    }
+  }
+
+  return donneesNettoyees;
+}
+
+// Exemple d'utilisation
+const monFormulaire = document.getElementById('monFormulaire');
+const donnees = nettoyerFormulaire(monFormulaire);
+
+console.log(donnees);
+
+// Ici, 'donnees' contiendra un objet avec les champs non vides.
+
+*** (Methode 2) Pour enlever les champs vides d'un formulaire avant la récupération des données en JavaScript ***
+
+function supprimerChampsVides(formulaire) {
+  const champs = formulaire.elements;
+  for (let i = 0; i < champs.length; i++) {
+    const champ = champs[i];
+    if (champ.value === "") {
+      formulaire.removeChild(champ);
+      i--; // Ajuster l'indice après la suppression
+    }
+  }
+}
+
+// Exemple d'utilisation
+const formulaire = document.getElementById("monFormulaire");
+supprimerChampsVides(formulaire);
+
+// Maintenant, vous pouvez récupérer les données du formulaire
+// sans les champs vides.
