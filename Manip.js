@@ -1,17 +1,20 @@
-﻿var chpi_vd=document.getElementsByTagName("input");
-var chps_vd=document.getElementsByTagName("select");
-var blk_pt=document.getElementsByTagName("div");
-var lgn_pt=document.getElementsByTagName("label");
+﻿var lgn_pt=document.getElementsByTagName("label");
 
-var btn_evt= document.getElementById("tir_fct");
-btn_evt.addEventListener('click',vd_pgweb);
+var btn_vdg= document.getElementById("vdg");
+btn_vdg.addEventListener('click',vd_pgweb);
 
 function vd_pgweb(){
 
-for (var i= 0; i < 11; i++) 
-{
+for (var i= 0; i < lgn_pt.length; i++){
 if (lgn_pt[i].firstElementChild.value.trim() ===""||lgn_pt[i].firstElementChild.value.trim() ==="null"||lgn_pt[i].firstElementChild.value.trim() ==="indefined"){lgn_pt[i].remove();i--;}
-}
+
+var btn_evt = document.createElement("input");
+btn_evt.id="envt";
+btn_evt.name="envt";
+btn_evt.value="Envoyer";
+btn_evt.type="submit";
+
+btn_vdg.replaceWith(btn_evt) ; }
+
 }
 
-/*alert(lgn_pt[0].firstElementChild.value);*/
