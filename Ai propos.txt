@@ -40,3 +40,24 @@ supprimerChampsVides(formulaire);
 
 // Maintenant, vous pouvez récupérer les données du formulaire
 // sans les champs vides.
+
+*****Vous pouvez lire et manipuler le contenu d'un fichier HTML , puis l'écrire à nouveau****
+
+    const fs = require('fs');
+
+    // Lire le fichier
+    fs.readFile('index.html', 'utf8', (err, data) => {
+      if (err) {
+        console.error(err);
+        return;
+      }
+      // Manipuler la donnée
+      const newData = data.replace('ancien texte', 'nouveau texte');
+
+      // Écrire dans le fichier
+      fs.writeFile('index.html', newData, (err) => {
+        if (err) {
+          console.error(err);
+        }
+      });
+    });
