@@ -61,3 +61,88 @@ supprimerChampsVides(formulaire);
         }
       });
     });
+    
+
+   
+ ***** lire page html contenant des fichier statique une image ou js ou css..  en Node js  ****
+
+const http= require("http"), fs= require("fs"), path = require('path');
+
+const serveur = http.createServer((req, rep) => {
+  // Déterminer le chemin du fichier demandé
+  var pg_adr = '.' + req.url;
+  if (pg_adr === './') { pg_adr = './index.html'; }// Par défaut, afficher index.html
+
+  // Déterminer le type de contenu
+  const xson= String(path.extname(pg_adr)).toLowerCase();
+  const c_typ = {
+    '.html': 'text/html',
+    '.js': 'text/javascript',
+    '.css': 'text/css',
+    '.png': 'image/png',
+    '.jpg': 'image/jpeg',
+    '.gif': 'image/gif',
+    '.svg': 'image/svg+xml',
+  };
+  const Cnu = c_typ[xson] || 'application/octet-stream';
+
+  // Lire le fichier
+  fs.readFile(pg_adr, (err, info) => {
+    if (err) { console.log(err);} 
+    else {// Succès, envoyer le contenu
+      rep.setHeader('Content-Type',Cnu);
+      rep.end(info, 'utf-8');}
+    
+  });
+});
+
+serveur.listen(3004, "localhost",() => { console.log(`Emission serveur`);
+});
+
+ ***** lire page html contenant une image  en Node js /2  ****
+
+const http = require('http');
+const fs = require('fs');
+const path = require('path');
+
+const hostname = '127.0.0.1';
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+  if (req.url === '/') {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/html');
+    const html = `
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <title>Affichage d'image</title>
+      </head>
+      <body>
+        <h1>Image affichée</h1>
+        <img src="/imageTest2.jpg" alt="Description de l'image">
+      </body>
+      </html>
+    `;
+    res.end(html);
+  } else if (req.url === '/imageTest2.jpg') {
+    const imagePath = path.join(__dirname, 'imageTest2.jpg');
+    fs.readFile(imagePath, (err, data) => {
+      if (err) {
+        res.statusCode = 404;
+        res.end('Image not found');
+        return;
+      }
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'image/jpeg');
+      res.end(data);
+    });
+  } else {
+    res.statusCode = 404;
+    res.end('Not Found');
+  }
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Serveur lancé sur http://${hostname}:${port}/`);
+});

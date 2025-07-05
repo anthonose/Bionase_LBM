@@ -1,25 +1,32 @@
-﻿// chargement des differents module utiliser pour cette page dans nodejs.
-const http= require("http"), fs= require("fs"), url= require("url"), txt_md= require("querystring"), {MongoClient, ObjectId}= require("mongodb");
-const cnx_bd= new MongoClient("mongodb+srv://athanasey376:Bionase12@cluster0.uiomylq.mongodb.net/"); 
+﻿const http= require("http"), fs= require("fs"), url= require("url"), txt_md= require("querystring"), {MongoClient}= require("mongodb"), path = require('path');
 
-// creation du serveur
-const serveur= http.createServer((req,rep)=>{
+const serveur = http.createServer((req, rep) => {
+  // Déterminer le chemin du fichier demandé
+  var pg_adr = '.' + req.url;
+  if (pg_adr === './') { pg_adr = './index.html'; }// Par défaut, afficher index.html
 
-// Entete du serveur
-rep.setHeader('Content-Type','text/html');
+  // Déterminer le type de contenu
+  const xson= String(path.extname(pg_adr)).toLowerCase();
+  const c_typ = {
+    '.html': 'text/html',
+    '.js': 'text/javascript',
+    '.css': 'text/css',
+    '.png': 'image/png',
+    '.jpg': 'image/jpeg',
+    '.gif': 'image/gif',
+    '.svg': 'image/svg+xml',
+  };
+  const Cnu = c_typ[xson] || 'application/octet-stream';
 
-// debut du corps du serveur.
-// declaration des variables a l'interieur du serveur
-var adr= url.parse(req.url, true), pg_adr="."+ req.url;
-var pg_type="", pg_web="";
-
-fs.readFile("malad.html,"utf8",(err, info)=>{
-var c_info="";
-c_info= (err)?console.log(err):rep.end(info);})
-
-
+  // Lire le fichier
+  fs.readFile(pg_adr, (err, info) => {
+    if (err) { console.log(err);} 
+    else {// Succès, envoyer le contenu
+      rep.setHeader('Content-Type',Cnu);
+      rep.end(info, 'utf-8');}
+    
+  });
 });
-// fermeture du corps du serveur
 
-//finalisation du serveur et du signal du OK
-serveur.listen(3004,"localhost",()=> console.log("Emission serveur activee"));
+serveur.listen(3004, "localhost",() => { console.log(`Emission serveur`);
+});

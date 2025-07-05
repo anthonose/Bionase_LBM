@@ -51,7 +51,7 @@ var html_Strc="<html><"+"head><"+"meta charset"+"=\"utf-8\">"+"</head"+"><body>"
 "<input name=\"tel\" type=\"number\" id=\"tel\"></label></p><p><label>Mot de pass:"+
 "<input name=\"pass\" type=\"password\" id=\"pass\"></label></p>"+
 "<input type=\"submit\" value=\"Envoyer\">"+
-"</form><p>&nbsp;</p></body></html>";
+"<img alt=\"encart\" height=\"94\" src=\"imageTest2.jpg\" width=\"727\"></form><p>&nbsp;</p></body></html>";
 
 //insertion des donnees dans la page d'accueil
 fs.writeFile("registre.html",

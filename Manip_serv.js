@@ -15,7 +15,8 @@ var pg_type="", pg_web="";
 
 // declenchement automatique de la creation de page d'accueil(dynamique, sinon pas necessaire si statique) 
 //utilisant des informations depuis la base de donnees
-(async ()=> {
+
+/*(async ()=> {
 await cnx_bd.connect();
 var m_cns= cnx_bd.db("sample_mflix");
 var fam= m_cns.collection("athanaseCol");
@@ -64,6 +65,7 @@ else{console.log("Fichier Pre creé avec succès");}
 }
 }
 )();
+*/
 //Fin de creation de la page d'accueil dynamique par le serveur.
 
 // pose des conditions pour l'affichage des differentes page web contenu dans  l'ordinateur du serveur vers le navigateur internet.
@@ -71,14 +73,14 @@ else{console.log("Fichier Pre creé avec succès");}
 // debut Condition SiVrai
 pg_type=(req.method==="POST")?
 req.on("data",data=>{
-console.log("la medthode est maintenant en POST");
+console.log("Formulaire Recu !");
 
 const txt_e= encodeURI(data);
 const txt_d= decodeURIComponent(txt_e);
 const cv_txtd= txt_md.parse(txt_d);
-console.log(cv_txtd.nom +' '+ cv_txtd.prenom +' '+cv_txtd.tel +' '+cv_txtd.pass);
-(async ()=> {
-await cnx_bd.connect();
+console.log(cv_txtd);
+(/*async*/ ()=> {
+/*await cnx_bd.connect();
 var m_cnss= cnx_bd.db("Bionase_LBM");
 var famm= m_cnss.collection("PATIENTS");
 var pers_asp=
@@ -88,12 +90,9 @@ tel:cv_txtd.tel,
 pass:cv_txtd.pass}
 var mbr= await famm.insertOne(pers_asp);
 var aff_mbr= await famm.findOne(pers_asp);
-var aff_Gle= "<br><h2 style=\"color:blue;font-weight:bold;\">"+aff_mbr.nom +"</h2><br><span style=\"color:green;font-weight:bold;\">"+ aff_mbr.prenoms+"</span><br><span style=\"color:red;font-weight:bold;\">"+ aff_mbr.tel+ "</span><br><a href=\"registre.html\"> Retour a  l'accueil</a>";
-var html_Strc="<html><"+"head><"+"meta charset"+"=\"utf-8\">"+"</head"+"><h1>Nouvelle personne enregistrée:</h1>"+ aff_Gle+ "</html>";
-//var bja="<html><"+"head><"+"meta charset"+"=\"utf-8\">"+"</head"+"><h1>"+ bj+ "</h1></html>";
-
+*/
 fs.writeFile("pg_succes.html",
-html_Strc,
+"Ecriture avec succes",
 {encoding:"utf8", flag:"w"},
 (err)=>{
 if(err){console.log(err);}
@@ -113,7 +112,7 @@ c_info= (err)?console.log(err):rep.end(info);})
 
 // debut de la Condition SiFaux
 pg_web=(req.url==="/")?
-fs.readFile("./registre.html","utf8",(err, info)=>{
+fs.readFile("./specimenMalad.html","utf8",(err, info)=>{
 console.log(adr.search|| req.url);							   
 var c_info="";
 c_info=(err)?console.log(err):rep.end(info);
@@ -130,7 +129,7 @@ c_info= (err)?console.log(err):rep.end(info);});
 
 //finalisation du serveur et du signal du OK
 serveur.listen(3004,"localhost",
-(async ()=> {await cnx_bd.connect();
-console.log("Emission serveur activee");
-console.log("Base de donnee connectee");
-}));
+/*(async*/ ()=> {/*await cnx_bd.connect();*/
+console.log("Emission serveur avec Base de donnees connectée ! ");
+
+})/*)*/;
