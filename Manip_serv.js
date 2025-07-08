@@ -16,35 +16,20 @@ var pg_type="", pg_web="";
 // declenchement automatique de la creation de page d'accueil(dynamique, sinon pas necessaire si statique) 
 //utilisant des informations depuis la base de donnees
 
-/*(async ()=> {
+(async ()=> {
 await cnx_bd.connect();
-var m_cns= cnx_bd.db("sample_mflix");
-var fam= m_cns.collection("athanaseCol");
+var Lbd= cnx_bd.db("Bionase_LBM");
+var Lpt= Lbd.collection("PATIENTS");
 
 // recherche et recuperation des informations depuis la base donnee
-var Rchr_nf= await fam.find({}).toArray();
-const tab_dbn=[];
-const tab_dbp=[];
-let textn= "";
-let textp= "";
-for( let mbrr of Rchr_nf){
-textn += tab_dbn.push(Object.values(mbrr)[1]) + "<br>";
-textp += tab_dbp.push(Object.values(mbrr)[2]) + "<br>";
+var rch_Mld= await Lpt.find({}).toArray();
+let text= "";
 
-let tab_un= new Set(tab_dbn);
-let tab_up= new Set(tab_dbp);
-tab_un= [...tab_un]; 
-tab_up= [...tab_up];
+for( let pers of  rch_Mld){text += Object.values(pers)[1] + "<br>";}
 
-let text_sdn= "";
-for( let npers of tab_un){
-text_sdn += "<option value=\"" + npers + "\">";}
+console.log(text);
 
-let text_sdp= "";
-for( let ppers of tab_up){
-text_sdp += "<option value=\"" + ppers + "\">";}
-
-var html_Strc="<html><"+"head><"+"meta charset"+"=\"utf-8\">"+"</head"+"><body>"+
+/*var html_Strc="<html><"+"head><"+"meta charset"+"=\"utf-8\">"+"</head"+"><body>"+
 
 "<h1 id=\"accueil\">accueil</h1><ul><li><a href=\"appropos.htm\">appros</a></li><li><a href=\"autres.htm\">autres evenements</a></li></ul><p id=\"annonce\">Bonjour, vous etes connecte a page HTML</p><p id=\"inom\">&nbsp;</p><p id=\"iprenom\">&nbsp; </p><p id=\"itel\">&nbsp;</p><form action=\"transit.html\" method=\"post\" name=\"form1\"> <p><label>Nom:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+
 "<input autocomplete=\"off\" list=\"nomf\" name=\"nom\"><datalist id=\"nomf\">"+ text_sdn +"</datalist></label></p><p><label>Prenoms:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+
@@ -62,10 +47,10 @@ html_Strc,
 if(err){console.log(err);}
 else{console.log("Fichier Pre creé avec succès");}
 });
-}
-}
+*/}
+
 )();
-*/
+
 //Fin de creation de la page d'accueil dynamique par le serveur.
 
 // pose des conditions pour l'affichage des differentes page web contenu dans  l'ordinateur du serveur vers le navigateur internet.
@@ -77,20 +62,17 @@ console.log("Formulaire Recu !");
 
 const txt_e= encodeURI(data);
 const txt_d= decodeURIComponent(txt_e);
-const cv_txtd= txt_md.parse(txt_d);
-console.log(cv_txtd);
-(/*async*/ ()=> {
-/*await cnx_bd.connect();
-var m_cnss= cnx_bd.db("Bionase_LBM");
-var famm= m_cnss.collection("PATIENTS");
-var pers_asp=
-{nom:cv_txtd.nom,
-prenoms:cv_txtd.prenom,
-tel:cv_txtd.tel,
-pass:cv_txtd.pass}
-var mbr= await famm.insertOne(pers_asp);
-var aff_mbr= await famm.findOne(pers_asp);
-*/
+const info_p= txt_md.parse(txt_d);
+
+(async ()=> {
+await cnx_bd.connect();
+var Lbd= cnx_bd.db("Bionase_LBM");
+var Lpt= Lbd.collection("PATIENTS");
+var pers= await Lpt.insertOne(info_p);
+var pers_rtv= await Lpt.findOne(info_p);
+
+console.log(pers_rtv);
+
 fs.writeFile("pg_succes.html",
 "Ecriture avec succes",
 {encoding:"utf8", flag:"w"},
@@ -129,7 +111,7 @@ c_info= (err)?console.log(err):rep.end(info);});
 
 //finalisation du serveur et du signal du OK
 serveur.listen(3004,"localhost",
-/*(async*/ ()=> {/*await cnx_bd.connect();*/
-console.log("Emission serveur avec Base de donnees connectée ! ");
+(async ()=> {await cnx_bd.connect();
+console.log("Emission du serveur avec Base de donnees connectée ! ");
 
-})/*)*/;
+}));

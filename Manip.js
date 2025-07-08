@@ -11,7 +11,6 @@ if (lgn_pt[i].firstElementChild.value.trim() ===""||lgn_pt[i].firstElementChild.
 
 var btn_evt = document.createElement("input");
 btn_evt.id="envt";
-btn_evt.name="envt";
 btn_evt.value="Envoyer";
 btn_evt.type="submit";
 
