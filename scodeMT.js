@@ -1,0 +1,1 @@
+{"_id":"68c1ad9fcea1f63fc12492e4","nom":"fofana","prenoms":"mohamed","Sexe":"M","Telephone":"0708884454","Diagnostic_Clinique":"Bilan de santé","Prescripteur":"DR Diarra","Biotechnologiste":"k.athanase","Prix_des_Examens_ou_statut":"19010","Date_du_Prelevement":"2025-09-10","VS_1ereHEURE":"1.61","VS_2iemeHEURE":"6.12"}

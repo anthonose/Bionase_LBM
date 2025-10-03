@@ -1,1 +1,130 @@
-﻿
+﻿label {
+	width: 150px;
+	display: inline-block;
+	text-transform: capitalize;
+	font-family: "Courier New", Courier, monospace;
+	text-align: right;
+		
+}
+
+#blks {
+	
+	display: inline-block;
+	width: 350px;
+}
+#blkr {
+	display: inline-block;
+	width: 350px;
+}
+body {
+	width: 730px;
+	margin-right: auto;
+	margin-left: auto;
+	background-image: url('images/LGbionase3.jpg');
+	
+}
+
+h3 {
+	text-align: center;
+	text-decoration: underline;
+	color: #383159;
+	font-weight: bold;
+}
+
+
+.conclusion {
+	width: 730px;
+}
+h5 {
+	text-align: center;
+	font-weight: bold;
+	text-decoration: underline;
+	color: #383159;
+	font-family: "bookman Old Style";
+}
+h4 {
+	text-decoration: underline;
+	color: #383159;
+	font-weight: bold;
+
+}
+#TYPE_THEURAPETIQUE {
+	margin-left: 80px;
+	font-weight: bold;
+	font-family: "bookman Old Style";
+}
+label[for=TYPE_THEURAPETIQUE]{
+	width: 200px;
+	text-decoration: underline;
+}
+#blkID,#blkMA,#blkEF,#blkAC {
+	display: inline-block;
+	margin-left: 125px;
+	width: 500px;
+	
+}
+#blkI {
+	display: inline-block;
+		
+}
+
+h6 {
+	text-decoration: underline;
+	margin-left: 80px;
+}
+label[for=Identification] {
+	width: 200px;
+	text-align: left;
+}
+#Identification {
+	display: inline-block;
+	margin-left: 75px;
+	width: 185px;
+}
+h5 {
+	color: #275280;
+	font-weight: bold;
+}
+#btnECBU {
+	text-align: center;
+}
+#enr_svECBU {
+	margin-left: 50px;
+}
+#enr_svECBU,#mdfECBU {
+	height: 30px;
+	font-family: "bookman Old Style";
+	font-weight: bold;
+	font-size: 16px;
+	color: #275280;
+}
+#blkMA select,#blkEF select{
+	height: 22px;
+	width: 192px;
+	margin-top: 5px;
+	font-size: 15px;
+
+}
+input,select {
+	font-family: "courier New";
+	font-size: 15px;
+	
+}
+#blkEF input {
+margin-top: 5px;
+width: 185px;
+}
+#GRAM{
+
+	width: 192px;
+}
+#GIEMSA{
+	width: 192px;
+	margin-top: 5px;
+}
+#volume{
+	width: 185px;
+	margin-top: 5px;
+}
+
+

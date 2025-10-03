@@ -146,3 +146,69 @@ const server = http.createServer((req, res) => {
 server.listen(port, hostname, () => {
   console.log(`Serveur lancé sur http://${hostname}:${port}/`);
 });
+
+**************changer une information dans une page de l'historique du navigateur (nt)************
+history.replaceState({page: 2, name: 'autre-page'}, "Nouvelle page", "autre-page.html");
+
+**************changer une information dans une page de l'historique du navigateur (nt)************
+
+Il n'est pas possible d'ajouter une information spécifique à une page dans l'historique du navigateur en utilisant history.go(-2). history.go(-2) permet simplement de naviguer vers l'arrière de deux pages dans l'historique de navigation. Pour ajouter une information, il faut soit :
+1. Modifier la page actuelle avant de naviguer :
+Avant d'utiliser history.go(-2), vous pouvez modifier le contenu de la page actuelle en utilisant du JavaScript (par exemple, changer le contenu d'un élément HTML, ajouter des données dans le stockage local, etc.).
+2. Transférer des données entre pages :
+Si vous avez besoin de transférer des données vers la page précédente, vous pouvez utiliser des paramètres d'URL, le stockage local, ou les cookies. Cependant, ces méthodes ne sont pas directement liées à l'historique du navigateur.
+Explication détaillée:
+history.go(-2):
+Cette fonction fait référence à l'objet history du navigateur, qui gère l'historique de navigation. history.go(-2) est une commande pour naviguer de deux étapes en arrière dans l'historique. Cela ne modifie pas le contenu des pages dans l'historique, mais simplement l'endroit où se trouve le navigateur dans son historique de navigation.
+Modification de la page actuelle:
+Pour modifier la page actuelle, vous devez utiliser du JavaScript pour accéder aux éléments de la page (par exemple, le corps de la page, des éléments spécifiques, etc.) et modifier leur contenu. Vous pouvez aussi utiliser le stockage local (localStorage) pour stocker des données qui seront accessibles par la page suivante, même après une navigation dans l'historique.
+Transfert de données:
+Si vous devez passer des informations de la page actuelle à la page précédente, vous pouvez utiliser :
+Paramètres d'URL: Ajouter des paramètres à l'URL de la page actuelle avant de naviguer.
+Stockage local: Utiliser le stockage local (localStorage) pour stocker des données qui seront accessibles par la page précédente.
+Cookies: Utiliser des cookies pour stocker des données qui seront accessibles par la page précédente. 
+Exemple (transfert de données via URL):
+Imaginez que vous êtes sur une page "produit.html" et vous voulez afficher le nom du produit sur la page précédente.
+Page produit.html:
+Code
+
+<a href="page_precedente.html?produit=nom_du_produit">Retour</a>
+Page page_precedente.html:
+Code
+
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const nomProduit = urlParams.get('produit');
+  if (nomProduit) {
+    document.getElementById('message').textContent = "Dernier produit visité : " + nomProduit;
+  }
+</script>
+<p id="message"></p>
+Dans cet exemple, le lien sur "produit.html" contient le paramètre ?produit=nom_du_produit. La page "page_precedente.html" récupère ce paramètre et l'affiche. Ensuite, vous pouvez utiliser history.go(-1) pour revenir en arrière et voir ce résultat.
+**************changer une information dans une page de l'historique du navigateur (nt)************
+// Page précédente (avant history.go(-2))
+localStorage.setItem('monInfo', 'Données à ajouter');
+
+// Retour en arrière
+history.go(-2);
+
+// Page actuelle (après le retour)
+const maDonnee = localStorage.getItem('monInfo');
+if (maDonnee) {
+  document.getElementById('monElement').textContent = maDonnee; // Affiche la donnée
+}
+
+******************************conseil///////////////////////////////////////
+
+Pour ajouter une information spécifique à une page lors d'un retour en arrière avec history.go(-2) en JavaScript, il n'est pas possible de modifier directement le contenu de la page visitée précédemment. La fonction history.go(-2) ne fait que naviguer dans l'historique du navigateur. Pour modifier une page visitée, il faut soit la recharger avec de nouvelles données, soit la régénérer avec des informations mises à jour. 
+Voici les options possibles : 
+1. Recharger la page avec de nouvelles données :
+Si la page précédente stocke des données dans un contexte (localStorage, sessionStorage, etc.) ou via des cookies, vous pouvez les récupérer et les utiliser pour mettre à jour la page lors du rechargement.
+Par exemple, si la page précédente utilisait localStorage pour stocker un nom, vous pouvez le récupérer et l'afficher dans la page en cours après le history.go(-2).
+2. Utiliser une méthode de stockage côté client:
+localStorage: Permet de stocker des données de manière persistante dans le navigateur, même après la fermeture de la fenêtre.
+sessionStorage: Similaire à localStorage, mais les données sont supprimées à la fermeture de l'onglet ou de la fenêtre.
+Cookies: Les cookies sont de petits fichiers texte stockés par le navigateur et peuvent être utilisés pour stocker des informations sur l'utilisateur ou l'état de l'application.
+IndexDB: Une base de donnéesNoSQL intégrée au navigateur, plus puissante que localStorage pour les applications complexes.
+3. Générer la page avec les informations mises à jour:
+Si vous avez un serveur, vous pouvez envoyer des données mises à jour au serveur, qui générera une nouvelle page avec les informations modifiées lors du retour à la page précédente

@@ -1,0 +1,1 @@
+export let exa_Grp={_id:"68deb15cc4772b637b4203ce",nom:"coulibaly",prenoms:"marguerite",Sexe:"F",Telephone:"0708884454",Diagnostic_Clinique:"Bilan de santé",Prescripteur:"Kathanase",Examens_Demandes:"Coproculture,Spermoculture",Biotechnologiste:"kouadio yao",Prix_des_Examens_ou_statut:"19005",Date_du_Prelevement:"2025-10-02",VS_1ereHEURE:"1.61",};

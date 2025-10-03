@@ -1,12 +1,147 @@
-﻿<!DOCTYPE html>
-<html>
-
-<head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+﻿<!DOCTYPE html><html>
+<head><meta content="fr-ci" http-equiv="Content-Language"><meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>EXAMEN CYTO-BACTERIOLOGIE URINAIRE</title>
+<link href="MFormat.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+</style>
 </head>
-
 <body>
 
-</body>
+<div ><img alt="encart" height="91" src="imageTest2.jpg" width="730"><br><br></div>
 
-</html>
+<h3>EXAMEN CYTO-BACTERIOLOGIE URINAIRE</h3>
+
+<form method="post" action="transitECBU.html">
+	<div id="blkID">
+<label for="dpv"><br>d.prelevement: </label>
+<input name="Date_du_Prelevement" type="text" id="Date_du_Prelevement" readonly="readonly"><br>
+<label for="Id">ID:</label>
+<input name="_id" type="text" id="Id" readonly="readonly"><br>
+<label for="nom">nom:</label>
+<input name="nom" type="text" id="nom" readonly="readonly"><br>
+<label for="prenoms">prenoms:</label>
+<input name="prenoms" type="text" id="prenoms" readonly="readonly"><br>
+<label for="sexe">sexe:</label>
+<input name="sexe" type="text" id="sexe" readonly="readonly">
+
+	</div>
+
+<hr />
+
+<h4>EXAMEN MACROSCOPIQUE</h4>
+	<div id="blkMA">
+<label for="Aspect">Aspect:</label>
+<select name="Aspect" id="Aspect"><option>Limpide</option><option>Trouble</option></select><br>
+<label for="Couleur">Couleur:</label>
+<select name="Couleur" id="Couleur"><option>Jaune Pâle</option><option>Jaune Foncé</option><option>Jaune Clair</option></select><br>
+<label for="Odeurs">Odeurs:</label>
+<select name="Odeurs" id="Odeurs"><option>Normale</option><option>Forte</option><option>Purulente</option></select><br>
+<label for="depot">depot:</label>
+<select name="depot" id="depot"><option>Absent</option><option>Présent</option></select><br>
+<label for="volume">volume:</label>
+<input name="volume" id="volume" type="number"  step="0.01"><br>
+
+	</div>
+
+<h4>EXAMEN MICROSCOPIQUE</h4><h5>ETAT FRAIS</h5>
+	<div id="blkEF">
+<label for="Hematies">Hematies:</label>
+<select name="Hematies" id="Hematies"><option>Absent</option><option>Rare</option><option>Quelques</option><option>Nombreux</option></select><br>
+<label for="Leucocytes">Leucocytes:</label>
+<select name="Leucocytes" id="Leucocytes"><option>Absent</option><option>Rare</option><option>Quelques</option><option>Nombreux</option></select><br>
+<label for="Cellules_epiteliales">C. epiteliales:</label>
+<select name="Cellules_epiteliales" id="Cellules_epiteliales"><option>Absent</option><option>Rare</option><option>Quelques</option><option>Nombreux</option></select><br>
+<label for="Cylindres">Cylindres:</label>
+<select name="Cylindres" id="Cylindres">
+<option>Absent</option><option>Cylindre granuleux</option><option>Cylindre érythrocytaire</option><option>Cylindres leucocytaires</option><option>cylindre pigmenté</option>
+<option>cylindre hyalins</option></select><br>
+<label for="Cristaux">Cristaux:</label>
+<select name="Cristaux" id="Cristaux">
+<option>Absent</option><option>Cristaux d’acide hippurique</option><option>Cristaux d'acide urique</option><option>Cristaux d'ampicilline</option><option>Cristaux de bilirubine</option>
+<option>Cristaux de carbonates de calcium</option><option>Cristaux de cholestérol</option><option>Cristaux de cystine</option><option>Cristaux de leucine</option><option>Cristaux de nystatine</option>
+<option>Cristaux de phosphates ammoniacomagnésiens</option><option>Cristaux de phosphates bi-calciques</option><option>Cristaux de phosphates de calcium</option><option>Cristaux de phosphates de magnésium</option><option>Cristaux de phosphates de potassium</option>
+<option>Cristaux de phosphates de sodium</option><option>Cristaux de phosphates tricalciques</option><option>Cristaux de sulfamides</option><option>Cristaux de sulfates de calcium</option><option>Cristaux de tyrosine</option>
+<option>Cristaux d'oxalates de calcium</option><option>Cristaux d'urates d'ammonium</option><option>Cristaux d'urates de calcium</option><option>Cristaux d'urates de magnésium</option><option>Cristaux d'urates de potassium</option><option>Cristaux d'urates de sodium</option>
+</select><br>
+<label for="Parasites">Parasites:</label>
+<input list="ParasitesL" name="Parasites" id="Parasites"><datalist id="ParasitesL">
+<option value="Absent"></datalist><br>
+<label for="Fongiques">Fongiques:</label>
+<input list="FongiquesL" name="Fongiques" id="Fongiques"><datalist id="FongiquesL">
+<option value="Absent"></datalist><br>
+
+	</div>
+
+<h5>APRES COLORATION</h5>
+	<div id="blkAC">
+<label for="GRAM">GRAM:</label>
+<select name="GRAM" id="GRAM" multiple="multiple" size="3" ><option selected="selected">Néant</option><option>Bacille (-)</option><option>Bacille (+)</option><option>Cocci (-)</option><option>Cocci (+)</option><option>GRAM Variable</option></select><br>
+<label for="GIEMSA">GIEMSA:</label>
+<select name="GIEMSA" id="GIEMSA"><option>Néant</option><option>Cellules à Inclusion</option></select><br>
+
+	</div>
+
+<h5>CULTURE</h5>
+	<div id="blkI">
+<label for="Identification">Identification:</label>
+<input list="IdentificationL" name="Identification" id="Identification"><datalist id="IdentificationL">
+<option value="Absent"></datalist><br>
+
+	</div>
+
+<h3 class="conclusion">CONCLUSION</h3>
+<textarea class="conclusion" name="TextArea1" rows="2" ></textarea><br>
+
+<hr />
+
+<label for="TYPE_THEURAPETIQUE">TYPE THEURAPETIQUE:</label>
+<select name="TYPE_THEURAPETIQUE" id="TYPE_THEURAPETIQUE"><option></option><option>ANTIBIOGRAMME</option><option>ANTIFONGIGRAMME</option></select>
+	<div id="blk_atf_atb">
+	<div id="blks">
+<h6>SENSIBLE</h6>
+<label for="1erchoix">1er choix:</label>
+<input list="1erchoixL" name="1erchoix" id="1erchoix"><datalist id="1erchoixL">
+<option value="Absent"></datalist><br>
+<label for="2iemechoix">2ieme choix:</label>
+<input list="2iemechoixL" name="2iemechoix" id="2iemechoix"><datalist id="2iemechoixL">
+<option value="Absent"></datalist><br>
+<label for="3iemechoix">3ieme choix:</label>
+<input list="3iemechoixL" name="3iemechoix" id="3iemechoix"><datalist id="3iemechoixL">
+<option value="Absent"></datalist><br>
+<label for="4iemechoix">4ieme choix:</label>
+<input list="4iemechoixL" name="4iemechoix" id="4iemechoix"><datalist id="4iemechoixL">
+<option value="Absent"></datalist><br>
+<label for="5iemechoix">5ieme choix:</label>
+<input list="5iemechoixL" name="5iemechoix" id="5iemechoix"><datalist id="5iemechoixL">
+<option value="Absent"></datalist><br>
+	</div>
+
+	<div id="blkr">
+
+<h6>RESISTANCE</h6>
+<label for="1erchoixr">1er choix:</label>
+<input list="1erchoixrL" name="1erchoixr" id="1erchoixr"><datalist id="1erchoixrL">
+<option value="Absent"></datalist><br>
+<label for="2iemechoixr">2ieme choix:</label>
+<input list="2iemechoixrL" name="2iemechoixr" id="2iemechoixr"><datalist id="2iemechoixrL">
+<option value="Absent"></datalist><br>
+<label for="3iemechoixr">3ieme choix:</label>
+<input list="3iemechoixrL" name="3iemechoixr" id="3iemechoixr"><datalist id="3iemechoixrL">
+<option value="Absent"></datalist><br>
+<label for="4iemechoixr">4ieme choix:</label>
+<input list="4iemechoixrL" name="4iemechoixr" id="4iemechoixr"><datalist id="4iemechoixrL">
+<option value="Absent"></datalist><br>
+<label for="5iemechoixr">5ieme choix:</label>
+<input list="5iemechoixrL" name="5iemechoixr" id="5iemechoixr"><datalist id="5iemechoixrL">
+<option value="Absent"></datalist><br>
+	</div>
+
+	</div>
+<p id="btnECBU"><input id="mdfECBU"  type="button"  value="Modifier"><input id="enr_svECBU"  type="submit" value="Etape suivante"></p>
+</form>
+
+<script>
+document.getElementById("mdfECBU").addEventListener('click',()=>{window.location.href="Modif.html";});
+</script>
+
+</body></html>

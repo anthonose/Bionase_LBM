@@ -2,9 +2,10 @@
 
 const serveur = http.createServer((req, rep) => {
   // Déterminer le chemin du fichier demandé
-  var pg_adr = '.' + req.url;
-  if (pg_adr === './') { pg_adr = './index.html'; }// Par défaut, afficher index.html
-
+  var pg_adr ="";
+/*  if ( req.url=== '/') { pg_adr = './specimenMalad.html'; } else {pg_adr = '.' + req.url;}*/
+ pg_adr= ( req.url=== '/')?'./specimenMalad.html':'.' + req.url;
+  
   // Déterminer le type de contenu
   const xson= String(path.extname(pg_adr)).toLowerCase();
   const c_typ = {
@@ -20,13 +21,12 @@ const serveur = http.createServer((req, rep) => {
 
   // Lire le fichier
   fs.readFile(pg_adr, (err, info) => {
-    if (err) { console.log(err);} 
-    else {// Succès, envoyer le contenu
-      rep.setHeader('Content-Type',Cnu);
-      rep.end(info, 'utf-8');}
+   var c_info="";
+c_info= (err)?console.log(err):rep.setHeader('Content-Type',Cnu);rep.end(info, 'utf-8');
     
   });
 });
 
 serveur.listen(3004, "localhost",() => { console.log(`Emission serveur`);
 });
+
