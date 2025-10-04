@@ -3,7 +3,9 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <title>ACCUEIL ET ENREGISTREMENT PATIENTS</title>
 <link href="MFormat.css" rel="stylesheet" type="text/css">
-</head><body><div ><img alt="encart" height="91" src="imageTest2.jpg" width="730"><br></div>
+</head><body>
+<div style="text-align:center" >
+	<img alt="encart" height="91" src="imageTest2.jpg" width="730"><br></div>
 <form action="transit.html" method="post">
 <div id="bk_Hid">
 <label for="nom">Nom: </label><input id="nom" list="nomL" name="nom" type="text" autocomplete="off" ><datalist id="nomL">
@@ -13,7 +15,7 @@
 <label for="Diagnostic_Clinique">Diagnostic Clinique:</label><input list="dc" name="Diagnostic_Clinique" type="text" autocomplete="off" id="Diagnostic_Clinique"><datalist id="dc"><option value="Bilan de santé"></datalist><br><br>
 <label for="Prescripteur">Prescripteur: </label><input  name="Prescripteur" type="text" autocomplete="off" list="prs" id="Prescripteur"> <datalist id="prs"><option value="Kathanase"><option value="dr diarra"></datalist><br><br>
 <label for="ExamensDemandes">Examens Demandés :</label>
-<select name="ExamensDemandes" size="10" multiple="multiple" id="ExamensDemandes"><option></option>
+<select name="ExamensDemandes" size="10" multiple="multiple" id="ExamensDemandes">
 <optgroup label="bilan cytobacteriologie"><option>ECBU</option><option>Coproculture</option><option>LCR/Exudat</option><option>PU</option><option>PV</option><option>Spermoculture</option></optgroup>
 <optgroup label="bilan enzymatique musculaires"><option>CPK</option><option>CPK-mb</option><option>LDH</option></optgroup>
 <optgroup label="bilan glycemique"><option>Glycemie à Jeûn</option><option>Glycemie Post Prandiale</option><option>Glycorachie</option><option>Glycosurie</option><option>HBA1C</option></optgroup>
@@ -30,16 +32,23 @@
 <label for="Biotechnologiste">Le Biotechnologiste:</label><input  name="Biotechnologiste" type="text" autocomplete="off" list="btech" id="Biotechnologiste"><datalist id="btech"><option value="amani yao"><option value="kouadio yao"><option value="kouadio yao athanase"></datalist><br><br>
 <label for="PrixdesExamensouStatut">Prix des Examens (ou statut):</label><input  name="PrixdesExamensouStatut" type="number"  step="0.01" id="PrixdesExamensouStatut"><br><br>
 <label for="DateduPrelevement">Date du Prelevement:</label><input  name="DateduPrelevement" type="date" id="DateduPrelevement">&nbsp;<br><br></div>
+
+<input id="vdg"  type="submit" value="Envoyer [Vider]">
+<input id="Enr_av" type="button" value="<">
+<input  id="Enr_dv" type="button" value="/" >
+<input id="edit_exam" type="button" value="Redaction d'examens">
+<input type="button" value="Nouveau Patient"><input type="button" value="Bilan Operationnel"><input  type="button" value="Utilisez une Calculatrice?">
+
 <hr>
 <div id="bk_C">
 <div id="bk_CG">
 <h3>inflammation</h3>
-<label for="VS1ereHEURE">VS : 1ère HEURE </label><input name="VS1ereHEURE" type="number"  step="0.01" id="VS1ereHEURE"><label for="VS2iemeHEURE">2ième HEURE :</label><input name="VS2iemeHEURE" type="number"  step="0.01" id="VS2iemeHEURE">
+<label for="VS1ereHEURE">VS: 1ère HEURE </label><input name="VS1ereHEURE" type="number"  step="0.01" id="VS1ereHEURE"><label for="VS2iemeHEURE">2ième HEURE :</label><input name="VS2iemeHEURE" type="number"  step="0.01" id="VS2iemeHEURE">
 <h3>ionogramme</h3>
 <div>
-<label for="Potassium">Potassium (k+) :</label> <input name="Potassium" type="number"  step="0.01" id="Potassium"> 
-<label for="Sodium">Sodium (Na+) :</label> <input name="Sodium" type="number"  step="0.01" id="Sodium">
-<label for="Chlore">Chlore (Cl-) :</label> <input name="Chlore" type="number"  step="0.01" id="Chlore">
+<label for="Potassium">Potassium(k+) :</label> <input name="Potassium" type="number"  step="0.01" id="Potassium"> 
+<label for="Sodium">Sodium(Na+) :</label> <input name="Sodium" type="number"  step="0.01" id="Sodium">
+<label for="Chlore">Chlore(Cl-) :</label> <input name="Chlore" type="number"  step="0.01" id="Chlore">
 </div><br>
 <label for="Magnesium">Magnésium (Mg2+) :</label> <input name="Magnesium" type="number"  step="0.01" id="Magnesium"><br>
 <label for="Calcium">Calcium (Ca2+) :</label> <input name="Calcium" type="number"  step="0.01" id="Calcium"><br>
@@ -52,7 +61,7 @@
 <label for="CholesterolLDL">Cholestérol LDL :</label> <input name="CholesterolLDL" type="number"  step="0.01" id="CholesterolLDL"> <br>
 <label for="LipideTotale">Lipide Totale :</label> <input name="LipideTotale" type="number"  step="0.01" id="LipideTotale"> <br>
 <h3>bilan hepatique et bilaire</h3>
-<label for="TGO">Transaminasemie GOT :</label> <input name="TGO" type="number"  step="0.01" id="TGO"><label for="TGP">Transaminases TGP :</label> <input name="TGP" type="number"  step="0.01" id="TGP"><br>
+<label for="TGO">Transaminases GOT :</label> <input name="TGO" type="number"  step="0.01" id="TGO"><label for="TGP">Transaminases TGP :</label> <input name="TGP" type="number"  step="0.01" id="TGP"><br>
 <label for="BilirubineTotale">Bilirubine Totale :</label> <input name="BilirubineTotale" type="number"  step="0.01" id="BilirubineTotale"><br>
 <label for="BilirubineConjuguee">Bilirubine conjuguée :</label> <input name="BilirubineConjuguee" type="number"  step="0.01" id="BilirubineConjuguee"> <br>
 <label for="AgHBS">AgHBS :</label> <select name="AgHBS" id="AgHBS"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><br>
@@ -61,7 +70,7 @@
 <label for="ACHBe">ACHBe :</label> <select name="ACHBe" id="ACHBe"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select> <br>
 <label for="ACHBC">ACHBC :</label> <select name="ACHBC" id="ACHBC"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><br>
 <label for="ACHVC">ACHVC :</label> <select name="ACHVC" id="ACHVC"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><br>
-<label for="HAVIgM">HAV (IgM) :</label> <select name="HAVIgM" id="HAVIgM"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><br>
+<label for="HAVIgM">HAV(IgM) :</label> <select name="HAVIgM" id="HAVIgM"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><br>
 <label for="GammaGT">Gamma-GT :</label> <input name="GammaGT" type="number"  step="0.01" id="GammaGT"><br>
 <label for="PhosphataseAlcaline">Phosphatase Alcaline :</label> <input name="PhosphataseAlcaline" type="number"  step="0.01" id="PhosphataseAlcaline">
 <h3>bilan cytobacteriologie</h3>
@@ -97,7 +106,7 @@
 <label for="Glycosurie">Glycosurie :</label> <input name="Glycosurie" type="number"  step="0.01" id="Glycosurie"><br>
 <label for="Glycorachie">Glycorachie :</label> <input name="Glycorachie" type="number"  step="0.01" id="Glycorachie">
 <h3>bilan Immuno-hematologique</h3>
-NFS (Numeration  Sanguine):
+NFS (Numeration  Sanguine):<br>
 <label for="nfsLeucocytes">Leucocytes :</label> <input name="nfsLeucocytes" type="number"  step="0.01" id="nfsLeucocytes"><br>
 <label for="nfsHematies">Hématies :</label> <input name="nfsHematies" type="number"  step="0.01" id="nfsHematies"><br>
 <label for="nfsHemoglobine">Hemoglobine :</label> <input name="nfsHemoglobine" type="number"  step="0.01" id="nfsHemoglobine"><br>
@@ -109,69 +118,64 @@ NFS (Numeration  Sanguine):
 <label for="nfsPN">Polyn.Neutrophile :</label> <input name="nfsPN" type="number"  step="0.01" id="nfsPN"><br>
 <label for="nfsPE">Polyn.Eosinophile :</label> <input name="nfsPE" type="number"  step="0.01" id="nfsPE"><br>
 <label for="nfsPB">Polyn.Basophile :</label> <input name="nfsPB" type="number"  step="0.01" id="nfsPB"><br>
-<label>LY : <input name="nfs_LY" type="number"  step="0.01"></label><br>
-<label>Mn : <input name="nfs_Mn" type="number"  step="0.01"></label><br><br>
-<label>Groupe Sanguin : <select name="Groupe_Sanguin"><option></option><option>O</option><option>A</option><option>B</option><option>AB</option></select></label>
-<label>Rhésus : <select name="Rhesus"><option></option><option>(+) POSITIVE</option><option>(-) NEGATIVE</option></select></label>
-<label>TP : <input name="TP" type="number"  step="0.01"></label><br>
-<label>TCK : <input name="TCK" type="number"  step="0.01"></label><br>
-<label>Fibrinémie : <input name="Fibrinemie" type="number"  step="0.01"></label><br>
-<label>Taux de Prothrombine : <input name="Taux_de_Prothrombine" type="number"  step="0.01"></label><br>
-<label>INR : <input name="INR" type="number"  step="0.01"></label><br><br>
-<label>Electrophorèse de hemoglobine : <select name="Electrophorese_de_hemoglobine"><option></option><option>A1A2</option><option>AC</option><option>SC</option><option>SS</option><option>AF</option></select></label><br>
-<label>A1 : <input name="ElectroHB_A1" type="number"  step="0.01"></label>
-<label>A2 : <input name="ElectroHB_A2" type="number"  step="0.01"></label>
-<label>S : <input name="ElectroHB_S" type="number"  step="0.01"></label>
-<label>C : <input name="ElectroHB_C" type="number"  step="0.01"></label>
-<label>F : <input name="ElectroHB_F" type="number"  step="0.01"></label>
+<label for="nfsLY">Lymphocyte :</label> <input name="nfsLY" type="number"  step="0.01" id="nfsLY"><br>
+<label for="nfsMn">Monocyte:</label> <input name="nfsMn" type="number"  step="0.01" id="nfsMn"><br><br>
+<label for="GroupeSanguin">Groupe Sanguin : </label><select name="GroupeSanguin" id="GroupeSanguin"><option></option><option>O</option><option>A</option><option>B</option><option>AB</option></select>
+<label for="Rhesus">Rhésus :</label> <select name="Rhesus" id="Rhesus"><option></option><option>(+) POSITIVE</option><option>(-) NEGATIVE</option></select><br>
+<label for="TP">TP :</label><input name="TP" type="number"  step="0.01" id="TP"><br>
+<label for="TCK">TCK :</label> <input name="TCK" type="number"  step="0.01" id="TCK"><br>
+<label for="Fibrinemie">Fibrinémie :</label> <input name="Fibrinemie" type="number"  step="0.01" id="Fibrinemie"><br>
+<label for="TauxProthrombine">Taux Prothrombine :</label> <input name="TauxProthrombine" type="number"  step="0.01" id="TauxProthrombine"><br>
+<label for="INR">INR :</label> <input name="INR" type="number"  step="0.01" id="INR"><br><br>
+<label for="Electrophoresehemoglobine">Electrophorèse d'hemoglobine :</label><select name="Electrophoresehemoglobine" id="Electrophoresehemoglobine"><option></option><option>A1A2</option><option>AC</option><option>SC</option><option>SS</option><option>AF</option></select><br>
+<label for="ElectroHBA1">A1 :</label> <input name="ElectroHBA1" type="number"  step="0.01" id="ElectroHBA1">
+<label for="ElectroHBA2">A2 :</label> <input name="ElectroHBA2" type="number"  step="0.01" id="ElectroHBA2">
+<label for="ElectroHBS">S :</label> <input name="ElectroHBS" type="number"  step="0.01" id="ElectroHBS">
+<label for="ElectroHBC">C :</label> <input name="ElectroHBC" type="number"  step="0.01" id="ElectroHBC">
+<label for="ElectroHBF">F :</label> <input name="ElectroHBF" type="number"  step="0.01" id="ElectroHBF">
 <h3>bilan serologie</h3>
-<label>Widal et Félix : <select name="Widal_et_Felix"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label><br>
-<label>TO : <input name="TO" type="number"  step="0.01"></label>
-<label>TH :	<input name="TH" type="number"  step="0.01"></label><br>
-<label>AO : <input name="AO" type="number"  step="0.01"></label>
-<label>AH : <input name="AH" type="number"  step="0.01"></label><br>
-<label>BO : <input name="BO" type="number"  step="0.01"></label>
-<label>BH : <input name="BH" type="number"  step="0.01"></label><br>
-<label>CO : <input name="CO" type="number"  step="0.01"></label>
-<label>CH :	<input name="CH" type="number"  step="0.01"></label><br><br>
-<label>Toxoplasmose : <select name="Toxoplasmose"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label><label> IgM : <input name="toxo_igm" type="number"  step="0.01"></label><label> IgG :<input name="toxo_igg" type="number"  step="0.01"></label><br>
-<label>Rubéole : <select name="Rubeole"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label><label> IgM : <input name="rub_igm" type="number"  step="0.01"></label><label> IgG :<input name="rub_igg" type="number"  step="0.01"></label><br>
-<label>Chlamydia : <select name="Chlamydia"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label><label> IgM : <input name="chld_igm" type="number"  step="0.01"></label><label> IgG : <input name="chld_igg" type="number"  step="0.01"></label><br>
-<label>Mycoplasme : <select name="Mycoplasme"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label><label> IgM : <input name="mycp_igm" type="number"  step="0.01"></label><label> IgG : <input name="mycp_igg" type="number"  step="0.01"></label><br>
-<label>Bilharziose : <select name="Bilharziose"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label><label> IgM : <input name="bilh_igm" type="number"  step="0.01"></label><label> IgG : <input name="bilh_igg" type="number"  step="0.01"></label><br>
-<label>VDRL : <select name="BW"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label><label> TPHA : <input name="tpha" type="number"  step="0.01"></label><br>
-<label>Waaler Rose : <select name="Waaler_Rose"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label><label> Titre : <input name="wlr_t" type="number"  step="0.01"></label><br>
-<label>ASLO : <select name="ASLO"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label><label> Titre : <input name="aslo_t" type="number"  step="0.01"></label><br>
-<label>VIH : <select name="VIH"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label><label> Typage : <select name="vih_tp"><option></option><option>VIH1</option><option>VIH2</option><option>VIH1 et VIH 2</option></select></label><br>
-<label>CRP: <select name="CRP"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label><label> Titre: <input name="CRP_t" type="number"  step="0.01"></label><br>
+<label for="WidalFelix">Widal et Félix :</label> <select name="WidalFelix" id="WidalFelix"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><br>
+<label for="TO">TO :</label> <input name="TO" type="number"  step="0.01" id="TO">
+<label for="TH">TH :</label>	<input name="TH" type="number"  step="0.01" id="TH"><br>
+<label for="AO">AO :</label> <input name="AO" type="number"  step="0.01" id="AO">
+<label for="AH">AH :</label> <input name="AH" type="number"  step="0.01" id="AH"><br>
+<label for="BO">BO :</label> <input name="BO" type="number"  step="0.01" id="BO">
+<label for="BH">BH : </label><input name="BH" type="number"  step="0.01" id="BH"><br>
+<label for="CO">CO :</label> <input name="CO" type="number"  step="0.01" id="CO">
+<label for="CH">CH :</label>	<input name="CH" type="number"  step="0.01" id="CH"><br><br>
+<label for="Toxoplasmose">Toxoplasmose :</label> <select name="Toxoplasmose" id="Toxoplasmose"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for="toxoIgm"> IgM :</label> <input name="toxoIgm" type="number"  step="0.01" id="toxoIgm"><label for="toxoIgg"> IgG :</label><input name="toxoIgg" type="number"  step="0.01" id="toxoIgg"><br>
+<label for="Rubeole">Rubéole :</label> <select name="Rubeole" id="Rubeole"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for="rubIgg"> IgM :</label> <input name="rubIgm" type="number"  step="0.01" id="rubIgg"><label for="rubIgg"> IgG :</label><input name="rubIgg" type="number"  step="0.01" id="rubIgg"><br>
+<label for="Chlamydia">Chlamydia :</label> <select name="Chlamydia" id="Chlamydia"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for="chldIgm"> IgM :</label> <input name="chldIgm" type="number"  step="0.01" id="chldIgm"><label for="chldIgg"> IgG :</label> <input name="chldIgg" type="number"  step="0.01" id="chldIgg"><br>
+<label for="Mycoplasme">Mycoplasme:</label>  <select name="Mycoplasme" id="Mycoplasme"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for="mycpIgm"> IgM :</label> <input name="mycpIgm" type="number"  step="0.01" id="mycpIgm"><label for="mycpIgg"> IgG :</label> <input name="mycpIgg" type="number"  step="0.01" id="mycpIgg"><br>
+<label for="Bilharziose">Bilharziose :</label> <select name="Bilharziose" id="Bilharziose"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for="bilhIgm"> IgM :</label> <input name="bilhIgm" type="number"  step="0.01" id="bilhIgm"><label for="bilhIgg"> IgG :</label> <input name="bilhIgg" type="number"  step="0.01" id="bilhIgg"><br>
+<label for="BW">VDRL :</label> <select name="BW" id="BW"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for="tpha"> TPHA :</label> <input name="tpha" type="number"  step="0.01" id="tpha"><br>
+<label for="WaalerRose">Waaler Rose :</label> <select name="WaalerRose" id="WaalerRose"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for="wlrT"> Titre :</label> <input name="wlrT" type="number"  step="0.01" id="wlrT"><br>
+<label for="ASLO">ASLO :</label> <select name="ASLO" id="ASLO"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for="asloT"> Titre :</label> <input name="asloT" type="number"  step="0.01" id="asloT"><br>
+<label for="VIH">VIH :</label> <select name="VIH" id="VIH"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for="vihTp"> Typage :</label> <select name="vihTp" id="vihTp"><option></option><option>VIH1</option><option>VIH2</option><option>VIH1 et VIH 2</option></select><br>
+<label for="CRP">CRP:</label> <select name="CRP" id="CRP"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for="crpT"> Titre:</label> <input name="crpT" type="number"  step="0.01" id="crpT"><br>
 </div><div id="bk_CD">
 <h3>bilan hormonal</h3>
-<label>T3 libre: <input name="T3_libre" type="number"  step="0.01"></label><br>
-<label>T4 libre : <input name="T4_libre" type="number"  step="0.01"></label><br>
-<label>TSH : <input name="TSH" type="number"  step="0.01"></label><br>
-<label>PSA : <input name="PSA" type="number"  step="0.01"></label><br>
-<label>Estradiol : <input name="Estradiol" type="number"  step="0.01"></label><br>
-<label>Progestérone : <input name="Progesterone" type="number"  step="0.01"></label><br>
-<label>Prolactinémie : <input name="Prolactinemie" type="number"  step="0.01"></label><br>
-<label>LH-RH : <input name="LH_RH" type="number"  step="0.01"></label><br>
-<label>Cortisol : <input name="Cortisol" type="number"  step="0.01"></label><br>
-<label>FSH : <input name="FSH" type="number"  step="0.01"></label><br>
-<label>Testosterone : <input name="Testosterone" type="number"  step="0.01"></label><br>
-<label>TSH_us : <input name="TSH_us" type="number"  step="0.01"></label><br>
-<label>Beta HCG (sang) : <input name="Beta_HCG_sang" type="number"  step="0.01"></label><br>
-<label>Beta HCG (urine) : <input name="Beta_HCG_urine" type="number"  step="0.01"></label>
+<label for="T3libre">T3 libre:</label> <input name="T3libre" type="number"  step="0.01" id="T3libre"><br>
+<label for="T4libre">T4 libre :</label> <input name="T4libre" type="number"  step="0.01" id="T4libre"><br>
+<label for="TSH">TSH </label>: <input name="TSH" type="number"  step="0.01" id="TSH"><br>
+<label for="PSA">PSA :</label> <input name="PSA" type="number"  step="0.01" id="PSA"><br>
+<label for="Estradiol">Estradiol :</label> <input name="Estradiol" type="number"  step="0.01" id="Estradiol"><br>
+<label for="Progesterone">Progestérone :</label> <input name="Progesterone" type="number"  step="0.01" id="Progesterone"><br>
+<label for="Prolactinemie">Prolactinémie :</label> <input name="Prolactinemie" type="number"  step="0.01" id="Prolactinemie"><br>
+<label for="LhRH">LH-RH :</label> <input name="LhRH" type="number"  step="0.01" id="LhRH"><br>
+<label for="Cortisol">Cortisol :</label> <input name="Cortisol" type="number"  step="0.01" id="Cortisol"><br>
+<label for="FSH">FSH :</label> <input name="FSH" type="number"  step="0.01" id="FSH"><br>
+<label for="Testosterone">Testosterone :</label> <input name="Testosterone" type="number"  step="0.01" id="Testosterone"><br>
+<label for="TSHus">TSHus :</label> <input name="TSHus" type="number"  step="0.01" id="TSHus"><br>
+<label for="bHCGsang">Beta HCG(sang) :</label> <input name="bHCGsang" type="number"  step="0.01" id="bHCGsang"><br>
+<label for="bHCGurine">Beta HCG(urine) :</label> <input name="bHCGurine" type="number"  step="0.01" id="bHCGurine">
 <h3>bilan enzymatique musculaires</h3>
-<label>LDH : <input name="LDH" type="number"  step="0.01"></label><br>
-<label>CPK : <input name="CPK" type="number"  step="0.01"></label><br>
-<label>CPK-mb : <input name="CPK_mb" type="number"  step="0.01"></label>
+<label for="LDH">LDH :</label> <input name="LDH" type="number"  step="0.01" id="LDH"><br>
+<label for="CPK">CPK :</label> <input name="CPK" type="number"  step="0.01" id="CPK"><br>
+<label for="CPKmb">CPK-mb :</label> <input name="CPKmb" type="number"  step="0.01" id="CPKmb">
 <h3>bilan divers</h3>
-<label>Myoglobine: <input name="Myoglobine" type="number"  step="0.01"></label><br>
-<label>Troponime: <input name="Troponime" type="number"  step="0.01"></label><br><br>
-<input id="vdg"  type="submit" value="Envoyer [Vider]">
-<input id="Enr_av" type="button" value="<">
-<input  id="Enr_dv" type="button" value="/" >
-<input id="edit_exam" type="button" value="Redaction d'examens">
-<input type="button" value="Nouveau Patient"><input type="button" value="Bilan Operationnel"><input  type="button" value="Utilisez une Calculatrice?">
+<label for="Myoglobine">Myoglobine:</label> <input name="Myoglobine" type="number"  step="0.01" id="Myoglobine"><br>
+<label for="Troponime">Troponime:</label> <input name="Troponime" type="number"  step="0.01" id="Troponime"><br><br>
 <br></div></div></form>
 <script src="Manip.js"></script>
 <script>

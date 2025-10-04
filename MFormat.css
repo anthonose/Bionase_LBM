@@ -1,4 +1,5 @@
-﻿label {
+﻿
+label {
 	width: 150px;
 	display: inline-block;
 	text-transform: capitalize;
@@ -17,11 +18,12 @@
 	width: 350px;
 }
 body {
-	width: 730px;
+	border-style: solid;
+	border-width: thin;
+	width: 900px;
 	margin-right: auto;
 	margin-left: auto;
 	background-image: url('images/LGbionase3.jpg');
-	
 }
 
 h3 {
@@ -108,6 +110,7 @@ h5 {
 input,select {
 	font-family: "courier New";
 	font-size: 15px;
+	margin-right: 5px;
 	
 }
 #blkEF input {
