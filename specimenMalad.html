@@ -2,8 +2,7 @@
 <meta content="fr-ci" http-equiv="Content-Language">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <title>ACCUEIL ET ENREGISTREMENT PATIENTS</title>
-</head><body style="background-image:url('images/LGbionase3.jpg');width: 730px;margin-right: auto;	margin-left: auto;
-border-style: solid;border-width: thin;">
+</head><body style="background-image:url('images/LGbionase3.jpg');width: 730px;margin-right: auto;	margin-left: auto">
 <div style="text-align:center;margin-bottom:20px" >
 	<img alt="encart" height="91" src="imageTest2.jpg" width="730"><br></div>
 <form action="transit.html" method="post">
@@ -42,13 +41,15 @@ border-style: solid;border-width: thin;">
 <div id="bk_C">
 <div id="bk_CG">
 <h3>inflammation</h3>
-<label for="VS1ereHEURE">VS: 1ère HEURE:</label><input name="VS1ereHEURE" type="number"  step="0.01" id="VS1ereHEURE" ><label for="VS2iemeHEURE" style="display:inline-block;width:125px;margin-left:30px">2ième HEURE:</label><input name="VS2iemeHEURE" type="number"  step="0.01" id="VS2iemeHEURE">
+<fieldset style="border: thin blue solid"><legend> VS </legend>
+<label for="VS1ereHEURE">1ère HEURE:</label><input name="VS1ereHEURE" type="number"  step="0.01" id="VS1ereHEURE" ><label for="VS2iemeHEURE" style="display:inline-block;width:125px;margin-left:30px">2ième HEURE:</label><input name="VS2iemeHEURE" type="number"  step="0.01" id="VS2iemeHEURE">
+</fieldset>
 <h3>ionogramme</h3>
-<div>
-<label for="Potassium">Potassium(k+):</label><input name="Potassium" type="number"  step="0.01" id="Potassium"> 
+<fieldset style="padding:0px 0px; border: thin blue solid; margin-bottom:20px"><legend>Ionogramme Simple</legend> 
+<label for="Potassium">Potassium(k+):</label><input name="Potassium" type="number"  step="0.01" id="Potassium" style="margin-bottom:20px"> 
 <label for="Sodium" style="display:inline-block;width:125px;margin-left:25px">Sodium(Na+):</label><input name="Sodium" type="number"  step="0.01" id="Sodium">
 <label for="Chlore" style="display:inline-block;width:125px;margin-left:30px">Chlore(Cl-):</label><input name="Chlore" type="number"  step="0.01" id="Chlore">
-</div>
+</fieldset>
 <label for="Magnesium">Magnésium(Mg2+):</label><input name="Magnesium" type="number"  step="0.01" id="Magnesium"><br>
 <label for="Calcium">Calcium(Ca2+):</label><input name="Calcium" type="number"  step="0.01" id="Calcium"><br>
 <label for="ReserveAlcalin">Reserve Alcalin:</label><input name="ReserveAlcalin" type="number"  step="0.01" id="ReserveAlcalin"><br>
@@ -60,7 +61,9 @@ border-style: solid;border-width: thin;">
 <label for="CholesterolLDL">Cholestérol LDL:</label><input name="CholesterolLDL" type="number"  step="0.01" id="CholesterolLDL"> <br>
 <label for="LipideTotale">Lipide Totale:</label><input name="LipideTotale" type="number"  step="0.01" id="LipideTotale"> <br>
 <h3>bilan hepatique et bilaire</h3>
-<label for="TGO">Transaminases: TGO:</label><input name="TGO" type="number"  step="0.01" id="TGO" style="width:81px"><label for="TGP" style="display:inline-block;width:99px;margin-left:30px">TGP:</label><input name="TGP" type="number"  step="0.01" id="TGP"><br>
+<fieldset style="padding:0px 0px; border: thin blue solid; margin-bottom:20px"><legend>Transaminases</legend>
+<label for="TGO"> TGO:</label><input name="TGO" type="number"  step="0.01" id="TGO" style="width:81px;margin-bottom:20px"><label for="TGP" style="display:inline-block;width:99px;margin-left:30px">TGP:</label><input name="TGP" type="number"  step="0.01" id="TGP"><br>
+</fieldset>
 <label for="BilirubineTotale">Bilirubine Tot:</label><input name="BilirubineTotale" type="number"  step="0.01" id="BilirubineTotale" style="width:81px"><br>
 <label for="BilirubineConjuguee">Bilirubine Conj:</label><input name="BilirubineConjuguee" type="number"  step="0.01" id="BilirubineConjuguee" style="width:81px"><br>
 <label for="AgHBS">AgHBS:</label><select name="AgHBS" id="AgHBS"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><br>
@@ -92,7 +95,7 @@ border-style: solid;border-width: thin;">
 <label for="DFG">DFG:</label><input name="DFG" type="number"  step="0.01" id="DFG" style="width:89px"><br>
 <label for="IonogrammeUrinaire">Ionogramme Urn:</label><input name="IonogrammeUrinaire" type="number"  step="0.01" id="IonogrammeUrinaire" style="width:89px"><br>
 <label for="ClairanceCreatininurie">Clairance Créat:</label><input name="ClairanceCreatininurie" type="number"  step="0.01" id="ClairanceCreatininurie" style="width:89px"><br>
-<label for="ElectrophoreseProteinesSerique">Electroph Prot Sq:</label><select name="ElectrophoreseProteinesSerique" id="ElectrophoreseProteinesSerique"><option></option><option>NORMALE</option><option>ANORMALE</option></select>
+<label for="ElectrophoreseProteinesSerique">Electroph Prot Sq:</label><select name="ElectrophoreseProteinesSerique" id="ElectrophoreseProteinesSerique" style="margin-top:20px"><option></option><option>NORMALE</option><option>ANORMALE</option></select>
 <label for="AlbumineEP" style="display:inline-block;width:91px;margin-left:30px">Albumine:</label><input name="AlbumineEP"  type="number"  step="0.01" id="AlbumineEP">
 <label for="AlphaI" style="display:inline-block;width:125px;margin-left:30px">AlphaI:</label><input name="AlphaI"  type="number"  step="0.01" id="AlphaI"><br>
 <label for="AlphaII" style="display:inline-block;width:423px">AlphaII:</label><input name="AlphaII"  type="number"  step="0.01" id="AlphaII">
@@ -119,7 +122,7 @@ NFS (Numeration  Sanguine):<br>
 <label for="nfsPB">Polyn.Basophile:</label><input name="nfsPB" type="number"  step="0.01" id="nfsPB"><br>
 <label for="nfsLY">Lymphocyte:</label><input name="nfsLY" type="number"  step="0.01" id="nfsLY"><br>
 <label for="nfsMn">Monocyte:</label><input name="nfsMn" type="number"  step="0.01" id="nfsMn"><br><br>
-<label for="GroupeSanguin" >Groupe Sanguin:</label><select name="GroupeSanguin" id="GroupeSanguin" style="width:64px"><option></option><option>O</option><option>A</option><option>B</option><option>AB</option></select>
+<label for="GroupeSanguin" >Groupe Sanguin:</label><select name="GroupeSanguin" id="GroupeSanguin" style="width:64px;margin-bottom:20px"><option></option><option>O</option><option>A</option><option>B</option><option>AB</option></select>
 <label for="Rhesus" style="display:inline-block;width:125px;margin-left:30px">Rhésus:</label><select name="Rhesus" id="Rhesus"><option></option><option>(+) POSITIVE</option><option>(-) NEGATIVE</option></select><br>
 <label for="TP">TP:</label><input name="TP" type="number"  step="0.01" id="TP"><br>
 <label for="TCK">TCK:</label><input name="TCK" type="number"  step="0.01" id="TCK"><br>
@@ -133,8 +136,8 @@ NFS (Numeration  Sanguine):<br>
 <label for="ElectroHBC" style="display:inline-block;width:125px;margin-left:30px">C:</label><input name="ElectroHBC" type="number"  step="0.01" id="ElectroHBC"><br>
 <label for="ElectroHBF" style="display:inline-block;width:423px">F:</label><input name="ElectroHBF" type="number"  step="0.01" id="ElectroHBF">
 <h3>bilan serologie</h3>
-<label for="WidalFelix">Widal et Félix:</label><select name="WidalFelix" id="WidalFelix"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><br>
-<label for="TO" style="display:inline-block;width:423px">TO:</label><input name="TO" type="number"  step="0.01" id="TO">
+<label for="WidalFelix">Widal et Félix:</label><select name="WidalFelix" id="WidalFelix"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select>
+<label for="TO" style="display:inline-block;width:130px">TO:</label><input name="TO" type="number"  step="0.01" id="TO">
 <label for="TH" style="display:inline-block;width:125px;margin-left:30px">TH:</label><input name="TH" type="number"  step="0.01" id="TH"><br>
 <label for="AO" style="display:inline-block;width:423px">AO:</label><input name="AO" type="number"  step="0.01" id="AO">
 <label for="AH" style="display:inline-block;width:125px;margin-left:30px">AH:</label><input name="AH" type="number"  step="0.01" id="AH"><br>
