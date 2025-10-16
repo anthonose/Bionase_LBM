@@ -3,41 +3,25 @@
 <head><meta content="fr-ci" http-equiv="Content-Language"><meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <title>Enregistrement</title><link href="MFormat.css" rel="stylesheet" type="text/css"></head>
 <body>
-<form method="post" action="">
-<label>Nbre I: <input id="t1" name="Text1" type="text" /></label><br>
-<label>Nbre II: <input id="t2" name="Text2" type="text" /></label><br>
-<label>Pdt = <input id="t3" name="Text3" type="text" /></label>
-	<input id="btn1" type="button" value="Calculez"></form>
-<script>
-var butt= document.getElementById("btn1");
-butt.addEventListener('click',calc);
-function calc()
-{document.getElementById("t3").value= document.getElementById("t1").value*document.getElementById("t2").value;
-window.location.href = "specimen.html";
-}
-for (var m= 0; m < 11; m++){info_persM += Object.keys(info_p)[m] + ": "+ Object.values(info_p)[m]+"<br>";}
-for (var n= 11; n < Object.values(info_p).length; n++){info_exaM += Object.keys(info_p)[n] + ":"+ Object.values(info_p)[n] + " ";}
-for (var k= 0; k < Object.keys(info_p).length; k++){info_persTM += Object.keys(info_p)[k] + ":"+"\""+ Object.values(info_p)[k]+"\""+ ",";}
-
-var impr_exa_jsonM="export let exa_GrpM={"+ info_persTM + "};";
-fs.writeFile("scodeM.js",impr_exa_jsonM,{encoding:"utf8", flag:"w"},(err)=>{var info=(err)?console.log(err):console.log("imprExaModule_M ok");});
-
-var sucMdf1="<html><head>"+
-"<meta content=\"fr-ci\" http-equiv=\"Content-Language\">"+
-"<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\">"+
-"<link href=\"MFormat.css\" rel=\"stylesheet\" type=\"text/css\">"+
-"<title>sans titre 1</title></head><body><h1>Vous venez d'enregistrez:</h1><table>"+
-"<tr><td>Pour BULLETIN DU PATIENT</td><td>Et&nbsp; EXAMENS EFFECTUES :</td></tr><tr><td>";
-var sucMdf2="</td><td>";
-var sucMdf3="</td></tr></table><br><br><br><br><p>"+
-"<input id=\"mdf\"  type=\"button\"  value=\"Modifier\"><input id=\"enr_sv\"  type=\"button\" value=\"Passez à letape suivante\"><br></p><br>"+
-"<script>document.getElementById(\"mdf\").addEventListener('click',Apg_Mdf);"+
-"function Apg_Mdf(){window.location.href=\"Modif.html\";}</script></body></html>";
-
-var aff_GleM= sucMdf1+info_persM+sucMdf2+info_exaM+sucMdf3;
-fs.writeFile("pg_Mdfsucces.html",aff_GleM,{encoding:"utf8", flag:"w"},(err)=>{var info=(err)?console.log(err):console.log("OK succesMdf");});
-
-
-</script>
+<form action="" method="post">
+	<div id="blkBox">
+<label for="ecbu">ECBU</label><input name="Checkbox1" type="checkbox" id="ecbu"><br>
+<label for="copro">Coproculture</label><input  id="copro" name="Checkbox1" type="checkbox"><br>
+<label for="lcr">LCR</label><input id="lcr" name="Checkbox1" type="checkbox"><br>
+<label for="pu">PU</label><input id="pu" name="Checkbox1" type="checkbox"><br>
+<label for="pv">PV</label><input id="pv" name="Checkbox1" type="checkbox"><br>
+<label for="spermoC">Spermoculture</label><input id="spermoC" name="Checkbox1" type="checkbox"><br>
+<label for="cpk">CPK</label><input id="cpk" name="Checkbox1" type="checkbox"><br>
+<label for="cpkMb">CPK-mb</label><input id="cpkMb" name="Checkbox1" type="checkbox"><br>
+<label for="gly">Glycemie</label><input id="gly" name="Checkbox1" type="checkbox"><br>
+<label for="glypp">Glycemie Post P.</label><input id="glypp" name="Checkbox1" type="checkbox"><br>
+<label for="glyR">Glycorachie</label><input id="glyR" name="Checkbox1" type="checkbox"><br>
+<label for="glyU">Glycourie</label><input id="glyU" name="Checkbox1" type="checkbox"><br>
+<label for="hba1c">HBA1C</label><input id="hba1c" name="Checkbox1" type="checkbox"><br>
+<label for="achbc">ACHBC</label><input id="achbc" name="Checkbox1" type="checkbox"><br>
+<label for="achbe">ACHBe</label><input id="achbe" name="Checkbox1" type="checkbox"><br>
+<label for="achbs">ACHBS</label><input id="achbs" name="Checkbox1" type="checkbox"><br>
+	</div>
+</form>
 </body>
 </html>

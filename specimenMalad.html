@@ -7,26 +7,110 @@
 	<img alt="encart" height="91" src="imageTest2.jpg" width="730"><br></div>
 <form action="transit.html" method="post">
 <div id="bk_Hid">
-<label for="nom">Nom: </label><input id="nom" list="nomL" name="nom" type="text" autocomplete="off" ><datalist id="nomL">
-</datalist><br><label for="prenoms">Prénoms:</label><input list="prenomsL" id="prenoms" name="prenoms" type="text" autocomplete="off" ><datalist id="prenomsL">
-</datalist><br><label for="Sexe">Sexe:</label><select name="Sexe" style="width: 45px" id="Sexe"><option></option><option>M</option><option>F</option></select><br>
-<label for="Telephone">Téléphone: </label><input name="Telephone" type="tel" id="Telephone"><br>
-<label for="Diagnostic_Clinique">Diagnostic Clinique:</label><input list="dc" name="Diagnostic_Clinique" type="text" autocomplete="off" id="Diagnostic_Clinique"><datalist id="dc"><option value="Bilan de santé"></datalist><br>
-<label for="Prescripteur">Prescripteur: </label><input  name="Prescripteur" type="text" autocomplete="off" list="prs" id="Prescripteur"> <datalist id="prs"><option value="Kathanase"><option value="dr diarra"></datalist><br>
-<label for="ExamensDemandes">Examens Demandés:</label><select name="ExamensDemandes" size="10" multiple="multiple" id="ExamensDemandes">
-<optgroup label="bilan cytobacteriologie"><option>ECBU</option><option>Coproculture</option><option>LCR/Exudat</option><option>PU</option><option>PV</option><option>Spermoculture</option></optgroup>
-<optgroup label="bilan enzymatique musculaires"><option>CPK</option><option>CPK-mb</option><option>LDH</option></optgroup>
-<optgroup label="bilan glycemique"><option>Glycemie à Jeûn</option><option>Glycemie Post Prandiale</option><option>Glycorachie</option><option>Glycosurie</option><option>HBA1C</option></optgroup>
-<optgroup label="bilan hepatique et bilaire"><option>ACHBC</option><option>ACHBe</option><option>ACHBS</option><option>ACHVC</option><option>AgHBe</option><option>AgHBS</option><option>Bilirubine conjuguee</option><option>Bilirubine Totale</option><option>Gamma-GT</option><option>HAV (IgM)</option><option>Phosphatase Alcaline</option><option>Transaminases</option></optgroup>
-<optgroup label="bilan hormonal"><option>Beta HCG (sang)</option><option>Beta HCG (urine)</option><option>Cortisol</option><option>Estradiol</option><option>FSH</option><option>LH-RH</option><option>Progesterone</option><option>Prolactinemie</option><option>PSA</option><option>T3 libre</option><option>T4 libre</option><option>Testosterone</option><option>TSH</option><option>TSH_us</option></optgroup>
-<optgroup label="bilan Immuno-hematologique"><option>NFS</option><option>Fibrinemie</option><option>Groupe Sanguin</option><option>INR</option><option>Taux de Prothrombine</option><option>TCK</option></optgroup>
-<optgroup label="bilan lipidique"><option>Cholesterol HDL</option><option>Cholesterol LDL</option><option>Cholesterol Total</option><option>Triglycerides</option><option>Lipide totale</option></optgroup>
-<optgroup label="bilan renal"><option>Acide urique</option><option>Albumine</option><option>Albuminurie</option><option>Clairance de creatininurie</option><option>Creatinine</option><option>DFG</option><option>Electrophorese des Proteines Serique</option><option>Gamma</option><option>Ionogramme Urinaire</option><option>Proteinurie</option><option>Proteinurie 24h</option><option>Uree</option></optgroup>
-<optgroup label="bilan serologie"><option>ASLO</option><option>Bilharziose</option><option>BW (VDRL-TPHA)</option><option>Chlamydia</option><option>CRP</option><option>Mycoplasme</option><option>Rubeole</option><option>Toxoplasmose</option><option>VIH</option><option>Waaler Rose</option><option>Widal et Felix</option></optgroup>
-<optgroup label="bilan spermiologique"><option>Spermocytogramme</option><option>Spermogramme</option></optgroup>
-<optgroup label="inflammation"><option>Vitesse de Sedimentation (VS)</option><option>Facteur Rhumatoïde (FR)</option></optgroup>
-<optgroup label="ionogramme"><option>Ionogramme simple</option><option>Calcium (Ca2+)</option><option>Magnesium (Mg2+)</option><option>Potassium (k+)</option><option>Protides Totaux</option><option>Reserve Alcalin</option></optgroup>
-</select><br>
+<label for="nom">Nom:</label><input id="nom" list="nomL" name="nom" type="text" autocomplete="off" style="width: 257px" ><datalist id="nomL">
+</datalist><br><label for="prenoms">Prénoms:</label><input list="prenomsL" id="prenoms" name="prenoms" type="text" autocomplete="off" style="width: 257px" ><datalist id="prenomsL">
+</datalist><br><label for="Sexe">Sexe:</label><select name="Sexe" style="width: 265px" id="Sexe"><option></option><option>M</option><option>F</option></select><br>
+<label for="Telephone">Téléphone:</label><input name="Telephone" type="tel" id="Telephone" style="width:257px"><br>
+<label for="Diagnostic_Clinique">Diagnostic Clinique:</label><input list="dc" name="Diagnostic_Clinique" type="text" autocomplete="off" id="Diagnostic_Clinique" style="width: 257px"><datalist id="dc"><option value="Bilan de santé"></datalist><br>
+<label for="Prescripteur">Prescripteur:</label><input  name="Prescripteur" type="text" autocomplete="off" list="prs" id="Prescripteur" style="width: 257px"> <datalist id="prs"><option value="Kathanase"><option value="dr diarra"></datalist><br>
+<p>Examens Demandés:</p>
+<div id="ExamensDemandes">
+<h6>bilan cytobacteriologie</h6>
+<label for="ecbu">ECBU</label><input name="ecbu" type="checkbox" id="ecbu"><br>
+<label for="copro">Coproculture</label><input  id="copro" name="copro" type="checkbox"><br>
+<label for="lcr">LCR</label><input id="lcr" name="lcr" type="checkbox"><br>
+<label for="pu">PU</label><input id="pu" name="pu" type="checkbox"><br>
+<label for="pv">PV</label><input id="pv" name="pv" type="checkbox"><br>
+<label for="spermoC">Spermoculture</label><input id="spermoC" name="spermoC" type="checkbox">
+<h6>bilan enzymatique musculaires</h6>
+<label for="cpk">CPK</label><input id="cpk" name="cpk" type="checkbox"><br>
+<label for="cpkMb">CPK-mb</label><input id="cpkMb" name="cpkMb" type="checkbox"><br>
+<label for="ldh">LDH</label><input id="ldh" name="ldh" type="checkbox">
+<h6>bilan glycemique</h6>
+<label for="gly">Glycemie</label><input id="gly" name="gly" type="checkbox"><br>
+<label for="glypp">Glycemie Post P.</label><input id="glypp" name="glypp" type="checkbox"><br>
+<label for="glyR">Glycorachie</label><input id="glyR" name="glyR" type="checkbox"><br>
+<label for="glyU">Glycourie</label><input id="glyU" name="glyU" type="checkbox"><br>
+<label for="hba1c">HBA1C</label><input id="hba1c" name="hba1c" type="checkbox">
+<h6>bilan hepatique et bilaire</h6>
+<label for="achbc">ACHBC</label><input id="achbc" name="achbc" type="checkbox"><br>
+<label for="achbe">ACHBe</label><input id="achbe" name="achbe" type="checkbox"><br>
+<label for="achbs">ACHBS</label><input id="achbs" name="achbs" type="checkbox"><br>
+<label for="achvc">ACHVC</label><input id="achvc" name="achvc" type="checkbox"><br>
+<label for="aghbe">AgHBe</label><input id="aghbe" name="aghbe" type="checkbox"><br>
+<label for="aghbs">AgHBS</label><input id="aghbs" name="aghbs" type="checkbox"><br>
+<label for="biliT">Bilirubine Tot.</label><input id="biliT" name="biliT" type="checkbox"><br>
+<label for="biliC">Bilirubine Conj.</label><input id="biliC" name="biliC" type="checkbox"><br>
+<label for="gammagt">GAMMA-GT</label><input id="gammagt" name="gammagt" type="checkbox"><br>
+<label for="hav">HAV(IgM)</label><input id="hav" name="hav" type="checkbox"><br>
+<label for="pal">Phosphat.Alc</label><input id="pal" name="pal" type="checkbox"><br>
+<label for="transa">Transaminases</label><input id="transa" name="transa" type="checkbox">
+<h6>bilan hormonal</h6>
+<label for="bhcg">Beta HCG(sg)</label><input id="bhcg" name="bhcg" type="checkbox"><br>
+<label for="bhcgu">Beta HCG(ur)</label><input id="bhcgu" name="bhcgu" type="checkbox"><br>
+<label for="crt">Cortisol</label><input id="crt" name="crt" type="checkbox"><br>
+<label for="est">Estradiol</label><input id="est" name="est" type="checkbox"><br>
+<label for="fsh">FSH</label><input id="fsh" name="fsh" type="checkbox"><br>
+<label for="lhrh">LH-RH</label><input id="lhrh" name="lhrh" type="checkbox"><br>
+<label for="proges">Progesterone</label><input id="proges" name="proges" type="checkbox"><br>
+<label for="prolac">Prolactinemie</label><input id="prolac" name="prolac" type="checkbox"><br>
+<label for="psa">PSA</label><input id="psa" name="psa" type="checkbox"><br>
+<label for="t3l">T3 libre</label><input id="t3l" name="t3l" type="checkbox"><br>
+<label for="t4l">T4 libre</label><input id="t4l" name="t4l" type="checkbox"><br>
+<label for="transa">Transaminases</label><input id="transa" name="transa" type="checkbox"><br>
+<label for="tsh">TSH</label><input id="tsh" name="tsh" type="checkbox"><br>
+<label for="transa">Transaminases</label><input id="transa" name="transa" type="checkbox">
+<h6>bilan Immuno-hematologique</h6>
+<label for="nfs">NFS</label><input id="nfs" name="nfs" type="checkbox"><br>
+<label for="fib">Fibrinemie</label><input id="fib" name="fib" type="checkbox"><br>
+<label for="gsr">Groupe Sanguin</label><input id="gsr" name="gsr" type="checkbox"><br>
+<label for="TPr">Taux de Prothrombine</label><input id="TPr" name="TPr" type="checkbox"><br>
+<label for="tck">TCK</label><input id="tck" name="tck" type="checkbox"><br>
+<label for="inr">INR</label><input id="inr" name="inr" type="checkbox">
+<h6>bilan lipidique</h6>
+<label for="chdl">Cholesterol HD</label><input id="chdl" name="chdl" type="checkbox"><br>
+<label for="cldl">Cholesterol LDL</label><input id="cldl" name="cldl" type="checkbox"><br>
+<label for="chtt">Cholesterol Total</label><input id="chtt" name="chtt" type="checkbox"><br>
+<label for="tgl">Triglycerides</label><input id="tgl" name="tgl" type="checkbox"><br>
+<label for="lptl">Lipide totale</label><input id="lptl" name="lptl" type="checkbox">
+<h6>bilan renal</h6>
+<label for="acq">Acide urique</label><input id="acq" name="acq" type="checkbox"><br>
+<label for="albm">Albumine</label><input id="albm" name="albm" type="checkbox"><br>
+<label for="albmu">Albuminurie</label><input id="albmu" name="albmu" type="checkbox"><br>
+<label for="Ccr">Clairance de creatininurie</label><input id="Ccr" name="Ccr" type="checkbox"><br>
+<label for="crea">Creatinine</label><input id="crea" name="crea" type="checkbox"><br>
+<label for="dfgl">DFG</label><input id="dfgl" name="dfgl" type="checkbox"><br>
+<label for="Eps">Electrophorèse.Prot.Sq</label><input id="Eps" name="Eps" type="checkbox"><br>
+<label for="IU">Ionogramme Urinaire</label><input id="IU" name="IU" type="checkbox"><br>
+<label for="Ptu">Proteinurie</label><input id="Ptu" name="Ptu" type="checkbox"><br>
+<label for="Ptu24">Proteinurie 24h</label><input id="Ptu24" name="Ptu24" type="checkbox"><br>
+<label for="Ur">Urée</label><input id="Ur" name="Ur" type="checkbox">
+<h6>bilan serologie</h6>
+<label for="Asl">ASLO</label><input id="Asl" name="Asl" type="checkbox"><br>
+<label for="bilh">Bilharziose</label><input id="bilh" name="bilh" type="checkbox"><br>
+<label for="Bw">BW(VDRL-TPHA)</label><input id="Bw" name="Bw" type="checkbox"><br>
+<label for="Chl">Chlamydia</label><input id="Chl" name="Chl" type="checkbox"><br>
+<label for="Crp">CRP</label><input id="Crp" name="Crp" type="checkbox"><br>
+<label for="Myco">Mycoplasme</label><input id="Myco" name="Myco" type="checkbox"><br>
+<label for="Rbl">Rubeole</label><input id="Rbl" name="Rbl" type="checkbox"><br>
+<label for="Vih">VIH</label><input id="Vih" name="Vih" type="checkbox"><br>
+<label for="wf">Widal et Felix</label><input id="wf" name="wf" type="checkbox"><br>
+<label for="Wrs">Waaler-Rose</label><input id="Wrs" name="Wrs" type="checkbox"><br>
+<label for="Txp">Toxoplasmose</label><input id="Txp" name="Txp" type="checkbox">
+<h6>bilan spermiologique</h6>
+<label for="Spmg">Spermocytogramme</label><input id="Spmg" name="Spmg" type="checkbox"><br>
+<label for="Spct">Spermogramme</label><input id="Spct" name="Spct" type="checkbox"><br>
+<h6>inflammation</h6>
+<label for="Vs">Vit.Sediment.(VS)</label><input id="Vs" name="Vs" type="checkbox"><br>
+<label for="Fr">Fact.Rhumat.(FR)</label><input id="Fr" name="Fr" type="checkbox"><br>
+<h6>ionogramme</h6>
+<label for="ionsg">Ionogramme Sg</label><input id="ionsg" name="ionsg" type="checkbox"><br>
+<label for="Ca">Calcium(Ca2+)</label><input id="Ca" name="Ca" type="checkbox"><br>
+<label for="Mg">Magnesium(Mg2+)</label><input id="Mg" name="Mg" type="checkbox"><br>
+<label for="k">Potassium(k+)</label><input id="k" name="k" type="checkbox"><br>
+<label for="Pttl">Protid.Tot.</label><input id="Pttl" name="Pttl" type="checkbox"><br>
+<label for="Rsv">Res.Alcal.</label><input id="Rsv" name="Rsv" type="checkbox"><br>
+</div><br>
 <label for="Biotechnologiste">Biotechnologiste:</label><input  name="Biotechnologiste" type="text" autocomplete="off" list="btech" id="Biotechnologiste"><datalist id="btech"><option value="amani yao"><option value="kouadio yao"><option value="kouadio yao athanase"></datalist><br>
 <label for="PrixdesExamensouStatut">Prix/statut:</label><input  name="PrixdesExamensouStatut" type="number"  step="0.01" id="PrixdesExamensouStatut"><br>
 <label for="DateduPrelevement">Date Prelevement:</label><input  name="DateduPrelevement" type="date" id="DateduPrelevement"></div>
@@ -41,15 +125,11 @@
 <div id="bk_C">
 <div id="bk_CG">
 <h3>inflammation</h3>
-<fieldset style="border: thin blue solid"><legend> VS </legend>
-<label for="VS1ereHEURE">1ère HEURE:</label><input name="VS1ereHEURE" type="number"  step="0.01" id="VS1ereHEURE" ><label for="VS2iemeHEURE" style="display:inline-block;width:125px;margin-left:30px">2ième HEURE:</label><input name="VS2iemeHEURE" type="number"  step="0.01" id="VS2iemeHEURE">
-</fieldset>
+<label for="VS1ereHEURE">VS/1ère HEURE:</label><input name="VS1ereHEURE" type="number"  step="0.01" id="VS1ereHEURE" ><label for="VS2iemeHEURE" style="display:inline-block;width:125px;margin-left:30px">2ième HEURE:</label><input name="VS2iemeHEURE" type="number"  step="0.01" id="VS2iemeHEURE">
 <h3>ionogramme</h3>
-<fieldset style="padding:0px 0px; border: thin blue solid; margin-bottom:20px"><legend>Ionogramme Simple</legend> 
 <label for="Potassium">Potassium(k+):</label><input name="Potassium" type="number"  step="0.01" id="Potassium" style="margin-bottom:20px"> 
 <label for="Sodium" style="display:inline-block;width:125px;margin-left:25px">Sodium(Na+):</label><input name="Sodium" type="number"  step="0.01" id="Sodium">
 <label for="Chlore" style="display:inline-block;width:125px;margin-left:30px">Chlore(Cl-):</label><input name="Chlore" type="number"  step="0.01" id="Chlore">
-</fieldset>
 <label for="Magnesium">Magnésium(Mg2+):</label><input name="Magnesium" type="number"  step="0.01" id="Magnesium"><br>
 <label for="Calcium">Calcium(Ca2+):</label><input name="Calcium" type="number"  step="0.01" id="Calcium"><br>
 <label for="ReserveAlcalin">Reserve Alcalin:</label><input name="ReserveAlcalin" type="number"  step="0.01" id="ReserveAlcalin"><br>
@@ -61,9 +141,7 @@
 <label for="CholesterolLDL">Cholestérol LDL:</label><input name="CholesterolLDL" type="number"  step="0.01" id="CholesterolLDL"> <br>
 <label for="LipideTotale">Lipide Totale:</label><input name="LipideTotale" type="number"  step="0.01" id="LipideTotale"> <br>
 <h3>bilan hepatique et bilaire</h3>
-<fieldset style="padding:0px 0px; border: thin blue solid; margin-bottom:20px"><legend>Transaminases</legend>
-<label for="TGO"> TGO:</label><input name="TGO" type="number"  step="0.01" id="TGO" style="width:81px;margin-bottom:20px"><label for="TGP" style="display:inline-block;width:99px;margin-left:30px">TGP:</label><input name="TGP" type="number"  step="0.01" id="TGP"><br>
-</fieldset>
+<label for="TGO">Transaminases/TGO:</label><input name="TGO" type="number"  step="0.01" id="TGO" style="width:81px;margin-bottom:20px"><label for="TGP" style="display:inline-block;width:99px;margin-left:30px">TGP:</label><input name="TGP" type="number"  step="0.01" id="TGP"><br>
 <label for="BilirubineTotale">Bilirubine Tot:</label><input name="BilirubineTotale" type="number"  step="0.01" id="BilirubineTotale" style="width:81px"><br>
 <label for="BilirubineConjuguee">Bilirubine Conj:</label><input name="BilirubineConjuguee" type="number"  step="0.01" id="BilirubineConjuguee" style="width:81px"><br>
 <label for="AgHBS">AgHBS:</label><select name="AgHBS" id="AgHBS"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><br>
@@ -181,7 +259,7 @@ NFS (Numeration  Sanguine):<br>
 <br></div></div></form>
 
 <script>
-for (var i= 0; i < document.querySelectorAll("label").length; i++)
+/*for (var i= 0; i < document.querySelectorAll("label").length; i++)
 {if(i===11||i===13||i===14||i===25||i===46||i===47||i===48||i===49||i===50||i===70||i===77||i===78||i===79||i===80||i===81||i===83||i===84||i===85||i===87||i===89||i===86||i===88||i===90||i===92||i===93||i===95||i===96||i===98||i===99||i===101||i===102||i===104||i===105||i===107||i===109||i===111||i===113||i===115)
 {continue;}document.querySelectorAll("label")[i].style.display="inline-block";}
 for (var i= 0; i < document.querySelectorAll("label").length; i++)
@@ -189,10 +267,11 @@ for (var i= 0; i < document.querySelectorAll("label").length; i++)
 {continue;}document.querySelectorAll("label")[i].style.width="200px";}
 for (var i= 0; i < document.querySelectorAll("label").length; i++){document.querySelectorAll("label")[i].style.fontFamily="courier New";}
 for (var i= 0; i < document.querySelectorAll("input").length; i++){document.querySelectorAll("input")[i].style.fontFamily="courier New";}
+for (var i= 0; i < document.querySelectorAll("input").length; i++){document.querySelectorAll("input")[i].style.fontSize="15px";}
 for (var i= 15; i < document.querySelectorAll("input").length; i++)
 {if(i===29||i===31||i===32||i===33||i===34||i===35||i===36||i===37||i===38||i===39||i===40||i===41||i===42||i===84||i===86||i===88||i===90||i===92||i===94||i===95||i===96||i===97)
 {continue;}document.querySelectorAll("input")[i].style.width="55px";}
 for (var i= 0; i < document.querySelectorAll("label").length; i++){document.querySelectorAll("label")[i].style.textAlign="right";}
-
+*/
 </script>
 </body></html>
