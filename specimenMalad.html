@@ -56,9 +56,7 @@
 <label for="psa">PSA</label><input id="psa" name="psa" type="checkbox"><br>
 <label for="t3l">T3 libre</label><input id="t3l" name="t3l" type="checkbox"><br>
 <label for="t4l">T4 libre</label><input id="t4l" name="t4l" type="checkbox"><br>
-<label for="transa">Transaminases</label><input id="transa" name="transa" type="checkbox"><br>
 <label for="tsh">TSH</label><input id="tsh" name="tsh" type="checkbox"><br>
-<label for="transa">Transaminases</label><input id="transa" name="transa" type="checkbox">
 <h6>bilan Immuno-hematologique</h6>
 <label for="nfs">NFS</label><input id="nfs" name="nfs" type="checkbox"><br>
 <label for="fib">Fibrinemie</label><input id="fib" name="fib" type="checkbox"><br>
@@ -189,7 +187,7 @@
 <label for="AlphaI">AlphaI:</label><input name="AlphaI"  type="number"  step="0.01" id="AlphaI"><br>
 <label for="AlphaII">AlphaII:</label><input name="AlphaII"  type="number"  step="0.01" id="AlphaII">
 <label for="Beta">Beta:</label><input name="Beta"  type="number"  step="0.01" id="Beta"><br>
-<label id="Gamma">Gamma:</label><input name="Gamma"  type="number"  step="0.01" id="Gamma">
+<label for="Gamma">Gamma:</label><input name="Gamma"  type="number"  step="0.01" id="Gamma">
 </div>
 <h3>bilan glycemique</h3>
 <div>
@@ -249,7 +247,7 @@
 </div>
 <div>
 <label for="Toxoplasmose"><span style="background-color: #00F3FF">Toxoplasmose:</span></label><select name="Toxoplasmose" id="Toxoplasmose"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for="toxoIgm">IgM:</label><input name="toxoIgm" type="number"  step="0.01" id="toxoIgm"><label for="toxoIgg">IgG:</label><input name="toxoIgg" type="number"  step="0.01" id="toxoIgg"><br>
-<label for="Rubeole"><span style="background-color: #00F3FF">Rubéole:</span></label><select name="Rubeole" id="Rubeole"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for="rubIgg">IgM:</label><input name="rubIgm" type="number"  step="0.01" id="rubIgg"><label for="rubIgg">IgG:</label><input name="rubIgg" type="number"  step="0.01" id="rubIgg"><br>
+<label for="Rubeole"><span style="background-color: #00F3FF">Rubéole:</span></label><select name="Rubeole" id="Rubeole"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for="rubIgm">IgM:</label><input name="rubIgm" type="number"  step="0.01" id="rubIgm"><label for="rubIgg">IgG:</label><input name="rubIgg" type="number"  step="0.01" id="rubIgg"><br>
 <label for="Chlamydia"><span style="background-color: #00F3FF">Chlamydia:</span></label><select name="Chlamydia" id="Chlamydia"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for="chldIgm">IgM:</label><input name="chldIgm" type="number"  step="0.01" id="chldIgm"><label for="chldIgg">IgG:</label><input name="chldIgg" type="number"  step="0.01" id="chldIgg"><br>
 <label for="Mycoplasme"><span style="background-color: #00F3FF">Mycoplasme:</span></label><select name="Mycoplasme" id="Mycoplasme"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for="mycpIgm">IgM:</label><input name="mycpIgm" type="number"  step="0.01" id="mycpIgm"><label for="mycpIgg">IgG:</label><input name="mycpIgg" type="number"  step="0.01" id="mycpIgg"><br>
 <label for="Bilharziose"><span style="background-color: #00F3FF">Bilharziose:</span></label><select name="Bilharziose" id="Bilharziose"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for="bilhIgm">IgM:</label><input name="bilhIgm" type="number"  step="0.01" id="bilhIgm"><label for="bilhIgg">IgG:</label><input name="bilhIgg" type="number"  step="0.01" id="bilhIgg"><br>
@@ -292,28 +290,28 @@
 <script>
 for (var i= 0; i < 6; i++){document.querySelectorAll("label")[i].style.display="inline-block";}
 for (var i= 0; i < 6; i++){document.querySelectorAll("label")[i].style.width="275px";}
-for (var i= 89; i< 92 ; i++){document.querySelectorAll("label")[i].style.display="inline-block";}
-for (var i= 89; i< 92 ; i++){document.querySelectorAll("label")[i].style.width="275px";}
+for (var i= 87; i< 92 ; i++){document.querySelectorAll("label")[i].style.display="inline-block";}
+for (var i= 87; i< 92 ; i++){document.querySelectorAll("label")[i].style.width="275px";}
 for (var i= 0; i < 5; i++){document.querySelectorAll("input")[i].style.width="180px";}
 for (var i= 88; i< 90 ; i++){document.querySelectorAll("input")[i].style.width="180px";}
-for (var i= 0; i < 6; i++){document.querySelectorAll("label")[i].style.textAlign="right";}
-for (var i= 88; i< 92 ; i++){document.querySelectorAll("label")[i].style.textAlign="right";}
 for (var i= 0; i < 5; i++){document.querySelectorAll("input")[i].style.fontSize="15px";}
 for (var i= 88; i< 90 ; i++){document.querySelectorAll("input")[i].style.fontSize="15px"}
 for (var i= 0; i < 5; i++){document.querySelectorAll("input")[i].style.marginBottom="5px";}
 for (var i= 0; i < 5; i++){document.querySelectorAll("input")[i].style.textTransform="capitalize";}
 for (var i= 88; i< 90 ; i++){document.querySelectorAll("input")[i].style.textTransform="capitalize";}
-for (var i= 92; i<document.querySelectorAll("label").length ; i++){document.querySelectorAll("label")[i].style.display="inline-block";}
 for (var i= 97; i<document.querySelectorAll("input").length ; i++){document.querySelectorAll("input")[i].style.width="55px";}
+for (var i= 0; i < 6; i++){document.querySelectorAll("label")[i].style.textAlign="right";}
+for (var i= 87; i< 92 ; i++){document.querySelectorAll("label")[i].style.textAlign="right";}
+for (var i= 92; i<document.querySelectorAll("label").length ; i++){document.querySelectorAll("label")[i].style.display="inline-block";}
 
 
 for (var i= 0; i<document.querySelectorAll("label").length ; i++){document.querySelectorAll("label")[i].style.fontFamily="courier New";}
 for (var i= 0; i<document.querySelectorAll("input,select").length ; i++){document.querySelectorAll("input,select")[i].style.fontFamily="courier New";}
 
-for (var i= 0; i<document.querySelectorAll("input[type=button]").length ; i++){document.querySelectorAll("input[type=button]")[i].style.fontFamily="bookman Old Style";}
-for (var i= 0; i<document.querySelectorAll("input[type=button]").length ; i++){document.querySelectorAll("input[type=button]")[i].style.fontWeight="bold";}
-for (var i= 0; i<document.querySelectorAll("input[type=button]").length ; i++){document.querySelectorAll("input[type=button]")[i].style.color= "#275280";}
-for (var i= 0; i<document.querySelectorAll("input[type=button]").length ; i++){document.querySelectorAll("input[type=button]")[i].style.fontSize="15px"}
+for (var i= 0; i<document.querySelectorAll("input[type=button],input[type=submit]").length ; i++){document.querySelectorAll("input[type=button],input[type=submit]")[i].style.fontFamily="bookman Old Style";}
+for (var i= 0; i<document.querySelectorAll("input[type=button],input[type=submit]").length ; i++){document.querySelectorAll("input[type=button],input[type=submit]")[i].style.fontWeight="bold";}
+for (var i= 0; i<document.querySelectorAll("input[type=button],input[type=submit]").length ; i++){document.querySelectorAll("input[type=button],input[type=submit]")[i].style.color= "#275280";}
+for (var i= 0; i<document.querySelectorAll("input[type=button],input[type=submit]").length ; i++){document.querySelectorAll("input[type=button],input[type=submit]")[i].style.fontSize="15px"}
 
 for (var i= 0; i <document.getElementById("ExamensDemandes").querySelectorAll("label").length; i++){document.getElementById("ExamensDemandes").querySelectorAll("label")[i].style.display="inline-block";}
 for (var i= 0; i <document.getElementById("ExamensDemandes").querySelectorAll("label").length; i++){document.getElementById("ExamensDemandes").querySelectorAll("label")[i].style.width="150px";}
@@ -339,6 +337,25 @@ for(var j=0;j<document.querySelectorAll("div")[i].querySelectorAll("label").leng
 for (var i= 2; i <document.querySelectorAll("div").length; i++){
 for(var j=0;j<document.querySelectorAll("div")[i].querySelectorAll("label").length;j++)
 {document.querySelectorAll("div")[i].querySelectorAll("label")[j].style.textAlign="right";}}
+
+var btn_vdg= document.getElementById("vdg");
+btn_vdg.addEventListener('click',vd_pgweb);
+function vd_pgweb(){
+
+for (var i= 0; i<document.querySelectorAll("label").length ; i++){
+if (document.querySelectorAll("label")[i].nextElementSibling.value.trim() ===""){document.querySelectorAll("label")[i].nextElementSibling.remove();
+document.querySelectorAll("label")[i].remove();i--;
+
+var btn_evt = document.createElement("input");
+btn_evt.id="envt";btn_evt.value="Envoyer";btn_evt.type="submit";
+btn_evt.style.fontFamily="bookman Old Style";
+btn_evt.style.fontWeight="bold";
+btn_evt.style.color= "#275280";
+btn_evt.style.fontSize="15px";
+btn_vdg.replaceWith(btn_evt) ;
+
+}}}
+
 
 </script>
 </body></html>
