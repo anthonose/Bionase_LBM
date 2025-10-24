@@ -112,13 +112,12 @@
 <label for="PrixdesExamensouStatut">Prix/statut:</label><input  name="PrixdesExamensouStatut" type="number"  step="0.01" id="PrixdesExamensouStatut" ><br>
 <label for="DateduPrelevement">Date Prelevement:</label><input  name="DateduPrelevement" type="date" id="DateduPrelevement" style="width: 183px; height: 20px;">
 
-
-
-
+<hr style="margin-top:50px">
+<h1 style="text-align:center">EXAMENS BIOLOGIQUES</h1>
 <hr>
-<h3>inflammation</h3>
+<h3 id="bilinf">inflammation</h3>
 <p ><label for="VS1ereHEURE" ><span style="background-color: #00F3FF">VS</span>/1ère HEURE:</label><input name="VS1ereHEURE" type="number"  step="0.01" id="VS1ereHEURE" > <label for="VS2iemeHEURE" >2ième HEURE:</label><input name="VS2iemeHEURE" type="number"  step="0.01" id="VS2iemeHEURE"></p>
-<h3>ionogramme</h3>
+<h3 id="bilion">ionogramme</h3>
 <p>
 <label for="Potassium">Potassium(k+):</label><input name="Potassium" type="number"  step="0.01" id="Potassium" > 
 <label for="Sodium">Sodium(Na+):</label><input name="Sodium" type="number"  step="0.01" id="Sodium">
@@ -130,7 +129,7 @@
 <label for="ReserveAlcalin">Reserve Alcalin:</label><input name="ReserveAlcalin" type="number"  step="0.01" id="ReserveAlcalin"><br>
 <label for="ProtidesTotaux">Protides Totaux:</label><input name="ProtidesTotaux" type="number"  step="0.01" id="ProtidesTotaux">
 </div>
-<h3>bilan lipidique</h3>
+<h3 id="billip">bilan lipidique</h3>
 <div>
 <label for="Triglycerides">Triglycérides:</label><input name="Triglycerides" type="number"  step="0.01" id="Triglycerides"><br>
 <label for="CholesterolTotal">Cholestérol Total:</label><input name="CholesterolTotal" type="number"  step="0.01" id="CholesterolTotal"><br>
@@ -138,7 +137,7 @@
 <label for="CholesterolLDL">Cholestérol LDL:</label><input name="CholesterolLDL" type="number"  step="0.01" id="CholesterolLDL"> <br>
 <label for="LipideTotale">Lipide Totale:</label><input name="LipideTotale" type="number"  step="0.01" id="LipideTotale"> <br>
 </div>
-<h3>bilan hepatique et bilaire</h3>
+<h3 id="bilhepbil">bilan hepatique et bilaire</h3>
 <p>
 <label for="TGO" ><span style="background-color: #00F3FF">Transaminases</span>/TGO:</label><input name="TGO" type="number"  step="0.01" id="TGO"> <label for="TGP">TGP:</label><input name="TGP" type="number"  step="0.01" id="TGP"><br>
 </p>
@@ -156,20 +155,12 @@
 <label for="GammaGT">Gamma-GT:</label><input name="GammaGT" type="number"  step="0.01" id="GammaGT"><br>
 <label for="PhosphataseAlcaline">Phosphatase Alc:</label><input name="PhosphataseAlcaline" type="number"  step="0.01" id="PhosphataseAlcaline">
 </div>
-<h3>bilan cytobacteriologie</h3>
-			<a href="ECBU.html">ECBU: </a><br> 
-			<a href="coproculture.html">Coproculture:  </a><br> 
-			<a href="pv.html">PV :  </a><br>  
-			<a href="pu.html">PU :</a><br>
-			<a href="spermoculture.html">Spermoculture : </a><br> 
-			<a href="lcr_exudat.html">LCR/Exudat :</a> 
-<h3>bilan spermiologique</h3>
-			<a href="spermogramme.html">Spermogramme:</a><br>
-			<a href="spermocytogramme.html">Spermocytogramme:</a>
-<h3>bilan renal</h3>
+<h3 id="bilren">bilan renal</h3>
 <div>
 <label for="Creatinine">Créatinine:</label><input name="Creatinine" type="number"  step="0.01" id="Creatinine"><br>
 <label for="Uree">Uree:</label><input name="Uree" type="number"  step="0.01" id="Uree"><br>
+<label for="AcideUrique">Acide Urique:</label><input name="AcideUrique" type="number"  step="0.01" id="AcideUrique"><br>
+<label for="Albumine">Albumine:</label><input name="Albumine" type="number"  step="0.01" id="Albumine"><br>
 <label for="Albuminurie">Albuminurie:</label><input name="Albuminurie" type="number"  step="0.01" id="Albuminurie"><br>
 <label for="Proteinurie">Protéinurie:</label><input name="Proteinurie" type="number"  step="0.01" id="Proteinurie"><br>
 <label for="Proteinurie24h">Protéinurie 24h:</label><input name="Proteinurie24h" type="number"  step="0.01" id="Proteinurie24h"><br>
@@ -185,7 +176,7 @@
 <label for="Beta">Beta:</label><input name="Beta"  type="number"  step="0.01" id="Beta"><br>
 <label for="Gamma">Gamma:</label><input name="Gamma"  type="number"  step="0.01" id="Gamma">
 </div>
-<h3>bilan glycemique</h3>
+<h3 id="Bilg">bilan glycemique</h3>
 <div>
 <label for="GlycemieJeun">Glycémie:</label><input name="GlycemieJeun" type="number"  step="0.01" id="GlycemieJeun"><br>
 <label for="GlycemiePostPrandiale">Glycémie PP:</label><input name="GlycemiePostPrandiale" type="number"  step="0.01" id="GlycemiePostPrandiale"><br>
@@ -193,7 +184,7 @@
 <label for="Glycosurie">Glycosurie:</label><input name="Glycosurie" type="number"  step="0.01" id="Glycosurie"><br>
 <label for="Glycorachie">Glycorachie:</label><input name="Glycorachie" type="number"  step="0.01" id="Glycorachie">
 </div>
-<h3>bilan Immuno-hematologique</h3>
+<h3 id="bilhem">bilan Immuno-hematologique</h3>
 <span style="background-color: #00F3FF">NFS (Numeration  Sanguine):</span><br>
 <div>
 <label for="nfsLeucocytes">Leucocytes:</label><input name="nfsLeucocytes" type="number"  step="0.01" id="nfsLeucocytes"><br>
@@ -229,7 +220,7 @@
 <label for="ElectroHBC">C:</label><input name="ElectroHBC" type="number"  step="0.01" id="ElectroHBC"><br>
 <label for="ElectroHBF">F:</label><input name="ElectroHBF" type="number"  step="0.01" id="ElectroHBF">
 </div>
-<h3>bilan serologie</h3>
+<h3 id="bilser">bilan serologie</h3>
 <div>
 <label for="WidalFelix" ><span style="background-color: #00F3FF">Widal et Félix:</span></label><select name="WidalFelix" id="WidalFelix"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select>
 <label for="TO">TO:</label><input name="TO" type="number"  step="0.01" id="TO">
@@ -253,7 +244,7 @@
 <label for="VIH"><span style="background-color: #00F3FF">VIH:</span></label><select name="VIH" id="VIH"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for="vihTp">Typage:</label><select name="vihTp" id="vihTp"><option></option><option>VIH1</option><option>VIH2</option><option>VIH1 et VIH 2</option></select><br>
 <label for="CRP"><span style="background-color: #00F3FF">CRP:</span></label><select name="CRP" id="CRP"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for="crpT">Titre:</label><input name="crpT" type="number"  step="0.01" id="crpT"><br>
 </div>
-<h3>bilan hormonal</h3>
+<h3 id="bilhor">bilan hormonal</h3>
 <div>
 <label for="T3libre">T3 libre:</label><input name="T3libre" type="number"  step="0.01" id="T3libre"><br>
 <label for="T4libre">T4 libre:</label><input name="T4libre" type="number"  step="0.01" id="T4libre"><br>
@@ -270,118 +261,52 @@
 <label for="bHCGsang">Beta HCG(sang):</label><input name="bHCGsang" type="number"  step="0.01" id="bHCGsang"><br>
 <label for="bHCGurine">Beta HCG(urine):</label><input name="bHCGurine" type="number"  step="0.01" id="bHCGurine">
 </div>
-<h3>bilan enzymatique musculaires</h3>
+<h3 id="enzMus">bilan enzymatique musculaires</h3>
 <div>
 <label for="LDH">LDH:</label><input name="LDH" type="number"  step="0.01" id="LDH"><br>
 <label for="CPK">CPK:</label><input name="CPK" type="number"  step="0.01" id="CPK"><br>
 <label for="CPKmb">CPK-mb:</label><input name="CPKmb" type="number"  step="0.01" id="CPKmb">
 </div>
-<h3>bilan divers</h3>
+<h3 id="bildiv">bilan divers</h3>
 <div>
 <label for="Myoglobine">Myoglobine:</label><input name="Myoglobine" type="number"  step="0.01" id="Myoglobine"><br>
 <label for="Troponime">Troponime:</label><input name="Troponime" type="number"  step="0.01" id="Troponime"><br>
 </div>
-</form>
 <span style="display:inline-block;height:300px;width:200px;
 border:thick #275280 solid;position:fixed;bottom:0px;
 right:15px">
-<span style="display:inline-block;height:200px;width:200px;background-color:aqua">
+<span style="display:inline-block;height:200px;width:200px">
 <span style="display:inline-block;height:20px;width:200px;text-align:center">
 EXAMENS A FAIRE</span>
-<span id="LMenu" style="display:inline-block;height:180px;width:200px;border:thin black solid;overflow-y:auto">
+<span id="LMenu" style="display:inline-block;
+height:180px;width:180px;border:thin black solid;
+overflow-y:auto;text-align:left;padding-left:20px;
+background-color:aqua;display:grid">
 <h6>bilan cytobacteriologie</h6>
-<a>ECBU</a><br>
-<a>Coproculture</a><br>
-<a>LCR</a><br>
-<a>PU</a><br>
-<a>PV</a><br>
-<a>Spermoculture</a>
+<a href="ECBU.html" target="_blank">ECBU</a><a href="Coproculture.html" target="_blank">Coproculture</a>
+<a href="LCR.html" target="_blank">LCR</a><a href="PU.html" target="_blank">PU</a><a href="PV.html" target="_blank">PV</a><a href="Spermoculture.html" target="_blank">Spermoculture</a>
 <h6>bilan enzymatique musculaires</h6>
-<a>CPK</a><br>
-<a>CPK-mb</a><br>
-<a>LDH</a>
+<a href="#CPK">CPK</a><a href="#CPKmb">CPK-mb</a><a href="#LDH">LDH</a>
 <h6>bilan glycemique</h6>
-<a>Glycemie</a><br>
-<a>Glycemie Post P.</a><br>
-<a>Glycorachie</a><br>
-<a>Glycourie</a><br>
-<a>HBA1C</a>
-<h6>bilan hepatique et bilaire</h6>
-<a>ACHBC</a><br>
-<a>ACHBe</a><br>
-<a>ACHBS</a><br>
-<a>ACHVC</a><br>
-<a>AgHBe</a><br>
-<a>AgHBS</a><br>
-<a>Bilirubine Tot.</a><br>
-<a>Bilirubine Conj.</a><br>
-<a>GAMMA-GT</a><br>
-<a>HAV(IgM)</a><br>
-<a>Phosphat.Alc</a><br>
-<a>Transaminases</a>
+<a href="#GlycemieJeun">Glycemie</a><a href="#GlycemiePostPrandiale">Glycemie Post P.</a><a href="#Glycorachie">Glycorachie</a><a href="#Glycosurie">Glycosurie</a><a href="#HBA1C">HBA1C</a>
+<h6 >bilan hepatique et bilaire</h6>
+<a href="#ACHBC">ACHBC</a><a href="#ACHBe">ACHBe</a><a href="#ACHBS">ACHBS</a><a href="#ACHVC">ACHVC</a><a href="#AgHBe">AgHBe</a><a href="#AgHBS">AgHBS</a><a href="#BilirubineTotale">Bilirubine Tot.</a><a href="#BilirubineConjuguee">Bilirubine Conj.</a><a href="#GammaGT">GAMMA-GT</a><a href="#HAVIgM">HAV(IgM)</a><a href="#PhosphataseAlcaline">Phosphat.Alc</a><a href="#TGO">Transaminases</a>
 <h6>bilan hormonal</h6>
-<a>Beta HCG(sg)</a><br>
-<a>Beta HCG(ur)</a><br>
-<a>Cortisol</a><br>
-<a>Estradiol</a><br>
-<a>FSH</a><br>
-<a>LH-RH</a><br>
-<a>Progesterone</a><br>
-<a>Prolactinemie</a><br>
-<a>PSA</a><br>
-<a>T3 libre</a><br>
-<a>T4 libre</a><br>
-<a>TSH</a><br>
+<a href="#bHCGsang">Beta HCG(sg)</a><a href="#bHCGurine">Beta HCG(ur)</a><a href="#Cortisol">Cortisol</a><a href="#Estradiol">Estradiol</a><a href="#FSH">FSH</a><a href="#LhRH">LH-RH</a><a href="#Progesterone">Progesterone</a><a href="#Prolactinemie">Prolactinemie</a><a href="#PSA">PSA</a><a href="#T3libre">T3 libre</a><a href="#T4libre">T4 libre</a><a href="#TSH">TSH</a>
 <h6>bilan Immuno-hematologique</h6>
-<a>NFS</a><br>
-<a>Fibrinemie</a><br>
-<a>Groupe Sanguin</a><br>
-<a>Taux de Prothrombine</a><br>
-<a>TCK</a><br>
-<a>INR</a>
+<a href="#nfsLeucocytes">NFS</a><a href="#Fibrinemie">Fibrinemie</a><a href="#GroupeSanguin">Groupe Sanguin</a><a href="#TauxProthrombine">Taux de Prothrombine</a><a href="#TCK">TCK</a><a href="#INR">INR</a>
 <h6>bilan lipidique</h6>
-<a>Cholesterol HD</a><br>
-<a>Cholesterol LDL</a><br>
-<a>Cholesterol Total</a><br>
-<a>Triglycerides</a><br>
-<a>Lipide totale</a>
+<a href="#CholesterolHDL">Cholesterol HDL</a><a href="#CholesterolLDL">Cholesterol LDL</a><a href="#CholesterolTotal">Cholesterol Total</a><a href="#Triglycerides">Triglycerides</a><a href="#LipideTotale">Lipide totale</a>
 <h6>bilan renal</h6>
-<a>Acide urique</a><br>
-<a>Albumine</a><br>
-<a>Albuminurie</a><br>
-<a>Clairance de creatininurie</a><br>
-<a>Creatinine</a><br>
-<a>DFG</a><br>
-<a>Electrophorèse.Prot.Sq</a><br>
-<a>Ionogramme Urinaire</a><br>
-<a>Proteinurie</a><br>
-<a>Proteinurie 24h</a><br>
-<a>Urée</a>
+<a href="#AcideUrique">Acide urique</a><a href="#Albumine">Albumine</a><a href="#Albuminurie">Albuminurie</a><a href="#ClairanceCreatininurie">Clairance de creatininurie</a><a href="#Creatinine">Creatinine</a><a href="#DFG">DFG</a><a href="#ElectrophoreseProteinesSerique">Electrophorèse.Prot.Sq</a><a href="#IonogrammeUrinaire">Ionogramme Urinaire</a><a href="#Proteinurie">Proteinurie</a><a href="#Proteinurie24h">Proteinurie 24h</a><a href="#Uree">Urée</a>
 <h6>bilan serologie</h6>
-<a>ASLO</a><br>
-<a>Bilharziose</a><br>
-<a>BW(VDRL-TPHA)</a><br>
-<a>Chlamydia</a><br>
-<a>CRP</a><br>
-<a>Mycoplasme</a><br>
-<a>Rubeole</a><br>
-<a>VIH</a><br>
-<a>Widal et Felix</a><br>
-<a>Waaler-Rose</a><br>
-<a>Toxoplasmose</a>
+<a href="#ASLO">ASLO</a><a href="#Bilharziose">Bilharziose</a><a href="#BW">BW(VDRL-TPHA)</a><a href="#Chlamydia">Chlamydia</a><a href="#CRP">CRP</a><a href="#Mycoplasme">Mycoplasme</a><a href="#Rubeole">Rubeole</a><a href="#VIH">VIH</a><a href="#WidalFelix">Widal et Felix</a><a href="#WaalerRose">Waaler-Rose</a><a href="#Toxoplasmose">Toxoplasmose</a>
 <h6>bilan spermiologique</h6>
-<a>Spermocytogramme</a><br>
-<a>Spermogramme</a><br>
+<a href="Spermocytogramme.html" target="_blank">Spermocytogramme</a><a href="Spermogramme.html" target="_blank">Spermogramme</a>
 <h6>inflammation</h6>
-<a>Vit.Sediment.(VS)</a><br>
-<a>Fact.Rhumat.(FR)</a><br>
+<a href="#VS1ereHEURE">Vit.Sediment.(VS)</a><a href="#WaalerRose">Fact.Rhumat.(FR)</a>
 <h6>ionogramme</h6>
-<a>Ionogramme Sg</a><br>
-<a>Calcium(Ca2+)</a><br>
-<a>Magnesium(Mg2+)</a><br>
-<a>Potassium(k+)</a><br>
-<a>Protid.Tot.</a><br>
-<a>Res.Alcal.</a><br>
+<a href="#Potassium">Ionogramme Sg</a><a href="#Calcium">Calcium(Ca2+)</a><a href="#Magnesium">Magnesium(Mg2+)</a><a href="#Potassium">Potassium(k+)</a><a href="#ProtidesTotaux">Protid.Tot.</a><a href="#ReserveAlcalin">Res.Alcal.</a>
 </span>
 </span>
 <span style="display:inline-block;height:100px;width:200px">
@@ -391,6 +316,8 @@ EXAMENS A FAIRE</span>
 <input  type="button" value="Calculatrice">
 </span>
 </span>
+
+</form>
 <script>
 for (var i= 0; i < 6; i++){document.querySelectorAll("label")[i].style.display="inline-block";}
 for (var i= 0; i < 6; i++){document.querySelectorAll("label")[i].style.width="275px";}
@@ -432,11 +359,8 @@ for (var i= 0; i <document.getElementById("ExamensDemandes").querySelectorAll("h
 for (var i= 0; i <document.getElementById("ExamensDemandes").querySelectorAll("h6").length; i++){document.getElementById("ExamensDemandes").querySelectorAll("h6")[i].style.textTransform="capitalize";}
 for (var i= 0; i <document.getElementById("ExamensDemandes").querySelectorAll("h6").length; i++){document.getElementById("ExamensDemandes").querySelectorAll("h6")[i].style.textDecoration="underline";}
 
-for (var i= 0; i <document.getElementById("LMenu").querySelectorAll("a").length; i++){document.getElementById("LMenu").querySelectorAll("a")[i].style.display="inline-block";}
-for (var i= 0; i <document.getElementById("LMenu").querySelectorAll("a").length; i++){document.getElementById("LMenu").querySelectorAll("a")[i].style.width="150px";}
-for (var i= 0; i <document.getElementById("LMenu").querySelectorAll("a").length; i++){document.getElementById("LMenu").querySelectorAll("a")[i].style.textAlign="right";}
-for (var i= 0; i <document.getElementById("LMenu").querySelectorAll("a").length; i++){document.getElementById("LMenu").querySelectorAll("a")[i].style.fontSize="12px";}
-for (var i= 0; i <document.getElementById("LMenu").querySelectorAll("h6").length; i++){document.getElementById("LMenu").querySelectorAll("h6")[i].style.textAlign="right";}
+for (var i= 0; i <document.getElementById("LMenu").querySelectorAll("a").length; i++){document.getElementById("LMenu").querySelectorAll("a")[i].style.fontSize="14px";}
+for (var i= 0; i <document.getElementById("LMenu").querySelectorAll("h6").length; i++){document.getElementById("LMenu").querySelectorAll("h6")[i].style.textAlign="left";}
 for (var i= 0; i <document.getElementById("LMenu").querySelectorAll("h6").length; i++){document.getElementById("LMenu").querySelectorAll("h6")[i].style.margin="5px 0px";}
 for (var i= 0; i <document.getElementById("LMenu").querySelectorAll("h6").length; i++){document.getElementById("LMenu").querySelectorAll("h6")[i].style.fontSize="12px";}
 for (var i= 0; i <document.getElementById("LMenu").querySelectorAll("h6").length; i++){document.getElementById("LMenu").querySelectorAll("h6")[i].style.textTransform="capitalize";}
