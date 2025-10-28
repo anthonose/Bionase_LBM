@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head><meta content="fr-ci" http-equiv="Content-Language"><meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-<title>Enregistrement</title><link href="MFormat.css" rel="stylesheet" type="text/css"></head>
 <body>
-<form action="" method="post">
-	<div id="blkBox">
-<label for="ecbu">ECBU</label><input name="Checkbox1" type="checkbox" id="ecbu"><br>
-<label for="copro">Coproculture</label><input  id="copro" name="Checkbox1" type="checkbox"><br>
-<label for="lcr">LCR</label><input id="lcr" name="Checkbox1" type="checkbox"><br>
-<label for="pu">PU</label><input id="pu" name="Checkbox1" type="checkbox"><br>
-<label for="pv">PV</label><input id="pv" name="Checkbox1" type="checkbox"><br>
-<label for="spermoC">Spermoculture</label><input id="spermoC" name="Checkbox1" type="checkbox"><br>
-<label for="cpk">CPK</label><input id="cpk" name="Checkbox1" type="checkbox"><br>
-<label for="cpkMb">CPK-mb</label><input id="cpkMb" name="Checkbox1" type="checkbox"><br>
-<label for="gly">Glycemie</label><input id="gly" name="Checkbox1" type="checkbox"><br>
-<label for="glypp">Glycemie Post P.</label><input id="glypp" name="Checkbox1" type="checkbox"><br>
-<label for="glyR">Glycorachie</label><input id="glyR" name="Checkbox1" type="checkbox"><br>
-<label for="glyU">Glycourie</label><input id="glyU" name="Checkbox1" type="checkbox"><br>
-<label for="hba1c">HBA1C</label><input id="hba1c" name="Checkbox1" type="checkbox"><br>
-<label for="achbc">ACHBC</label><input id="achbc" name="Checkbox1" type="checkbox"><br>
-<label for="achbe">ACHBe</label><input id="achbe" name="Checkbox1" type="checkbox"><br>
-<label for="achbs">ACHBS</label><input id="achbs" name="Checkbox1" type="checkbox"><br>
-	</div>
-</form>
+
+<h2>JavaScript Timing</h2>
+
+<p>A script on this page starts this clock:</p>
+
+<p id="demo"></p>
+
+<script>
+function tour(x){
+let Bkc=document.querySelector("h2"), tDeb=Date.now();
+setInterval(myTimer, x);
+
+function myTimer() {
+let dur=Date.now()-tDeb;
+if(dur<1000){Bkc.style.backgroundColor="red";}
+else if(dur<2000){Bkc.style.backgroundColor="blue";}
+else if(dur<3000){Bkc.style.backgroundColor="green";}
+}}
+tour(10);(()=>{alert("bonjour")})();
+</script>
+
 </body>
 </html>
