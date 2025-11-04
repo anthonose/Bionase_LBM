@@ -397,12 +397,19 @@ btn_vdg.replaceWith(btn_evt) ;
 }}}
 
 let myInterval;
-function fChpSel(cel){myInterval = setInterval(()=>{
+function fChpSel(cel){
+cel.previousSibling.style.backgroundColor ="blue";
+myInterval = setInterval(()=>{
+cel.previousSibling.style.color = "white"
 cel.previousSibling.style.backgroundColor = 
-cel.previousSibling.style.backgroundColor == "aqua" ? "pink" : "aqua";
-cel.previousSibling.style.color == "white"
+cel.previousSibling.style.backgroundColor == "blue" ? "green" : 
+cel.previousSibling.style.backgroundColor =="green"?"red":"blue";
 }, 500)}
-function fChpLib(cel){clearInterval(myInterval);cel.previousSibling.style.backgroundColor = "";}
+function fChpLib(cel){clearInterval(myInterval);
+cel.previousSibling.style.backgroundColor = "";
+cel.previousSibling.style.color = ""
+
+}
 
 
 </script>
