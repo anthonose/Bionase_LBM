@@ -272,43 +272,28 @@
 <div>
 <label for="Myoglobine">Myoglobine:</label><input name="Myoglobine" type="number"  step="0.01" id="Myoglobine" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
 <label for="Troponime">Troponime:</label><input name="Troponime" type="number"  step="0.01" id="Troponime" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
+<label for="GoutteEpaisse">Goutte Epaisse:</label><input name="GoutteEpaisse" type="number"  step="0.01" id="GoutteEpaisse" onblur="fChpLib(this)" onfocus="fChpSel(this)">
+
 </div>
+
 <span style="display:inline-block;height:300px;width:200px;
 border:thick #275280 solid;position:fixed;bottom:0px;
-right:15px">
+right:15px;padding-left:3px">
 <span style="display:inline-block;height:200px;width:200px">
-<span style="display:inline-block;height:20px;width:200px;text-align:center">
-EXAMENS A FAIRE 
-<br><span> A B C </span></span>
+<span style="display:inline-block;height:20px;width:200px">
+<span style="display:inline-block;width:200px;font-family:bookman Old Style;font-weight:bold;text-decoration:underline;text-align:center;color:#275280">EXAMENS A FAIRE</span><br> 
+<span id="Lalphb1" style="font-size:14px;text-align:right;letter-spacing:2.1px"><span style="text-decoration:underline;font-size:11px;letter-spacing:0px;text-align:left">Ordre A-Z:</span>
+<a href="#A">A</a><a href="#B">B</a><a href="#C">C</a><a href="#D">D</a><a href="#E">E</a><a href="#F">F</a><a href="#G">G</a><a href="#H">H</a><a href="#I">I</a><a href="#J">J</a><a href="#K">K</a><a href="#M">M</a><a href="#N">N</a>
+</span><br><span id="Lalphb2" style="font-size:14px;letter-spacing:2.1px;padding-left:55px">
+<a href="#O">O</a><a href="#P">P</a><a href="#Q">Q</a><a href="#R">R</a><a href="#S">S</a><a href="#T">T</a><a href="#U">U</a><a href="#V">V</a><a href="#W">W</a><a href="#X">X</a><a href="#Y">Y</a><a href="#Z">Z</a>
+</span>
+</span>
 <span id="LMenu" style="display:inline-block;
 height:180px;width:180px;border:thin black solid;
 overflow-y:auto;text-align:left;padding-left:20px;
 background-color:aqua;display:grid">
-<h6>bilan cytobacteriologie</h6>
-<a href="ECBU.html" target="_blank">ECBU</a><a href="Coproculture.html" target="_blank">Coproculture</a>
-<a href="LCR.html" target="_blank">LCR</a><a href="PU.html" target="_blank">PU</a><a href="PV.html" target="_blank">PV</a><a href="Spermoculture.html" target="_blank">Spermoculture</a>
-<h6>bilan enzymatique musculaires</h6>
-<a href="#CPK">CPK</a><a href="#CPKmb">CPK-mb</a><a href="#LDH">LDH</a>
-<h6>bilan glycemique</h6>
-<a href="#GlycemieJeun">Glycemie</a><a href="#GlycemiePostPrandiale">Glycemie Post P.</a><a href="#Glycorachie">Glycorachie</a><a href="#Glycosurie">Glycosurie</a><a href="#HBA1C">HBA1C</a>
-<h6 >bilan hepatique et bilaire</h6>
-<a href="#ACHBC">ACHBC</a><a href="#ACHBe">ACHBe</a><a href="#ACHBS">ACHBS</a><a href="#ACHVC">ACHVC</a><a href="#AgHBe">AgHBe</a><a href="#AgHBS">AgHBS</a><a href="#BilirubineTotale">Bilirubine Tot.</a><a href="#BilirubineConjuguee">Bilirubine Conj.</a><a href="#GammaGT">GAMMA-GT</a><a href="#HAVIgM">HAV(IgM)</a><a href="#PhosphataseAlcaline">Phosphat.Alc</a><a href="#TGO">Transaminases</a>
-<h6>bilan hormonal</h6>
-<a href="#bHCGsang">Beta HCG(sg)</a><a href="#bHCGurine">Beta HCG(ur)</a><a href="#Cortisol">Cortisol</a><a href="#Estradiol">Estradiol</a><a href="#FSH">FSH</a><a href="#LhRH">LH-RH</a><a href="#Progesterone">Progesterone</a><a href="#Prolactinemie">Prolactinemie</a><a href="#PSA">PSA</a><a href="#T3libre">T3 libre</a><a href="#T4libre">T4 libre</a><a href="#TSH">TSH</a>
-<h6>bilan Immuno-hematologique</h6>
-<a href="#nfsLeucocytes">NFS</a><a href="#Fibrinemie">Fibrinemie</a><a href="#GroupeSanguin">Groupe Sanguin</a><a href="#TauxProthrombine">Taux de Prothrombine</a><a href="#TCK">TCK</a><a href="#INR">INR</a>
-<h6>bilan lipidique</h6>
-<a href="#CholesterolHDL">Cholesterol HDL</a><a href="#CholesterolLDL">Cholesterol LDL</a><a href="#CholesterolTotal">Cholesterol Total</a><a href="#Triglycerides">Triglycerides</a><a href="#LipideTotale">Lipide totale</a>
-<h6>bilan renal</h6>
-<a href="#AcideUrique">Acide urique</a><a href="#Albumine">Albumine</a><a href="#Albuminurie">Albuminurie</a><a href="#ClairanceCreatininurie">Clairance de creatininurie</a><a href="#Creatinine">Creatinine</a><a href="#DFG">DFG</a><a href="#ElectrophoreseProteinesSerique">Electrophorèse.Prot.Sq</a><a href="#IonogrammeUrinaire">Ionogramme Urinaire</a><a href="#Proteinurie">Proteinurie</a><a href="#Proteinurie24h">Proteinurie 24h</a><a href="#Uree">Urée</a>
-<h6>bilan serologie</h6>
-<a href="#ASLO">ASLO</a><a href="#Bilharziose">Bilharziose</a><a href="#BW">BW(VDRL-TPHA)</a><a href="#Chlamydia">Chlamydia</a><a href="#CRP">CRP</a><a href="#Mycoplasme">Mycoplasme</a><a href="#Rubeole">Rubeole</a><a href="#VIH">VIH</a><a href="#WidalFelix">Widal et Felix</a><a href="#WaalerRose">Waaler-Rose</a><a href="#Toxoplasmose">Toxoplasmose</a>
-<h6>bilan spermiologique</h6>
-<a href="Spermocytogramme.html" target="_blank">Spermocytogramme</a><a href="Spermogramme.html" target="_blank">Spermogramme</a>
-<h6>inflammation</h6>
-<a href="#VS1ereHEURE">Vit.Sediment.(VS)</a><a href="#WaalerRose">Fact.Rhumat.(FR)</a>
-<h6>ionogramme</h6>
-<a href="#Potassium">Ionogramme Sg</a><a href="#Calcium">Calcium(Ca2+)</a><a href="#Magnesium">Magnesium(Mg2+)</a><a href="#Potassium">Potassium(k+)</a><a href="#ProtidesTotaux">Protid.Tot.</a><a href="#ReserveAlcalin">Res.Alcal.</a>
+<span id="A" style="color:red">A</span><a href="#ACHBC">ACHBC</a><a href="#ACHBe">ACHBe</a><a href="#ACHBS">ACHBS</a><a href="#ACHVC">ACHVC</a><a href="#AcideUrique">Acide urique</a><a href="#AgHBe">AgHBe</a><a href="#AgHBS">AgHBS</a><a href="#Albumine">Albumine</a><a href="#Albuminurie">Albuminurie</a><a href="#ASLO">ASLO</a><span id="B" style="color:red">B</span><a href="#bHCGsang">Beta HCG(sg)</a><a href="#bHCGurine">Beta HCG(ur)</a><a href="#Bilharziose">Bilharziose</a><a href="#BilirubineConjuguee">Bilirubine Conj.</a><a href="#BilirubineTotale">Bilirubine Tot.</a><a href="#BW">BW(VDRL-TPHA)</a><span id="C" style="color:red">C</span><a href="#Calcium">Calcium(Ca2+)</a><a href="#Chlamydia">Chlamydia</a><a href="#CholesterolHDL">Cholesterol HDL</a><a href="#CholesterolLDL">Cholesterol LDL</a><a href="#CholesterolTotal">Cholesterol Total</a><a href="#ClairanceCreatininurie">Clairance creatininurie</a><a href="Coproculture.html" target="_blank">Coproculture</a><a href="#Cortisol">Cortisol</a><a href="#CPK">CPK</a><a href="#CPKmb">CPK-mb</a><a href="#Creatinine">Creatinine</a><a href="#CRP">CRP</a><span id="D" style="color:red">D</span><a href="#DFG">DFG</a><span id="E" style="color:red">E</span><a href="ECBU.html" target="_blank">ECBU</a><a href="#ElectrophoreseProteinesSerique">Electrophorèse.Prot.Sq</a><a href="#Estradiol">Estradiol</a><span id="F" style="color:red">F</span><a href="#WaalerRose">Fact.Rhumat.(FR)</a><a href="#Fibrinemie">Fibrinemie</a><a href="#FSH">FSH</a><span id="G" style="color:red">G</span><a href="#GammaGT">GAMMA-GT</a><a href="#Glycemie">Glycemie</a><a href="#GlycemiePostPrandiale">Glycemie Post P.</a><a href="#Glycorachie">Glycorachie</a><a href="#Glycosurie">Glycosurie</a><a href="#GoutteEpaisse">Goutte Epaisse</a><a href="#GroupeSanguin">Groupe Sanguin</a><span id="H" style="color:red">H</span><a href="#HAVIgM">HAV(IgM)</a><a href="#HBA1C">HBA1C</a><span id="I" style="color:red">I</span><a href="#INR">INR</a><a href="#Potassium">Ionogramme Sg</a><a href="#IonogrammeUrinaire">Ionogramme Urinaire</a><span id="L" style="color:red">L</span><a href="LCR.html" target="_blank">LCR</a><a href="#LDH">LDH</a><a href="#LHRH">LH-RH</a><a href="#LipideTotale">Lipide totale</a><span id="M" style="color:red">M</span><a href="#Magnesium">Magnesium(Mg2+)</a><a href="#Mycoplasme">Mycoplasme</a><span id="N" style="color:red">N</span><a href="#nfsLeucocytes">NFS</a><span id="P" style="color:red">P</span><a href="#PhosphataseAlcaline">Phosphat.Alc</a><a href="#Potassium">Potassium(k+)</a><a href="#Progesterone">Progesterone</a><a href="#Prolactinemie">Prolactinemie</a><a href="#Proteinurie">Proteinurie</a><a href="#Proteinurie24h">Proteinurie 24h</a><a href="#ProtidesTotaux">Protid.Tot.</a><a href="#PSA">PSA</a><a href="PU.html" target="_blank">PU</a><a href="PV.html" target="_blank">PV</a><span id="Q" style="color:red">Q</span><a href="#QBC">QBC</a><span id="R" style="color:red">R</span><a href="#ReserveAlcalin">Res.Alcal.</a><a href="#Rubeole">Rubeole</a><span id="S" style="color:red">S</span><a href="Spermoculture.html" target="_blank">Spermoculture</a><a href="Spermocytogramme.html" target="_blank">Spermocytogramme</a><a href="Spermogramme.html" target="_blank">Spermogramme</a><span id="T" style="color:red">T</span><a href="#T3libre">T3 libre</a><a href="#T4libre">T4 libre</a><a href="#TauxProthrombine">Taux Prothrombine</a><a href="#TCK">TCK</a><a href="#Toxoplasmose">Toxoplasmose</a><a href="#TGO">Transaminases</a><a href="#Triglycerides">Triglycerides</a><a href="#TSH">TSH</a><span id="U" style="color:red">U</span><a href="#Uree">Urée</a><span id="V" style="color:red">V</span><a href="#VIH">VIH</a><a href="#VS1ereHEURE">Vit.Sediment.(VS)</a><span id="W" style="color:red">W</span><a href="#WaalerRose">Waaler-Rose</a><a href="#WidalFelix">Widal et Felix</a>
+ 
 </span>
 </span>
 <span style="display:inline-block;height:100px;width:200px">
@@ -319,8 +304,13 @@ background-color:aqua;display:grid">
 </span>
 </span>
 
+
 </form>
 <script>
+for (var i= 0; i <document.getElementById("Lalphb1").querySelectorAll("a").length; i++){document.getElementById("Lalphb1").querySelectorAll("a")[i].style.textDecoration="none";}
+for (var i= 0; i <document.getElementById("Lalphb2").querySelectorAll("a").length; i++){document.getElementById("Lalphb2").querySelectorAll("a")[i].style.textDecoration="none";}
+
+
 for (var i= 0; i < 6; i++){document.querySelectorAll("label")[i].style.display="inline-block";}
 for (var i= 0; i < 6; i++){document.querySelectorAll("label")[i].style.width="275px";}
 for (var i= 87; i< 92 ; i++){document.querySelectorAll("label")[i].style.display="inline-block";}
