@@ -6,12 +6,12 @@
 <div style="text-align:center;margin-bottom:20px" >
 	<img alt="encart" height="91" src="imageTest2.jpg" width="730"><br></div>
 <form action="transit.html" method="post">
-<label for="nom">Nom:</label><input id="nom" list="nomL" name="nom" type="text" autocomplete="off"><datalist id="nomL">
-</datalist><br><label for="prenoms">Prénoms:</label><input list="prenomsL" id="prenoms" name="prenoms" type="text" autocomplete="off"><datalist id="prenomsL">
+<label for="nom">Nom:</label><input id="nom" list="nomL" name="nom" type="text" autocomplete="off" onblur="Avertir(this)"><datalist id="nomL">
+</datalist><br><label for="prenoms">Prénoms:</label><input list="prenomsL" id="prenoms" name="prenoms" type="text" autocomplete="off" onblur="Avertir(this)" ><datalist id="prenomsL">
 </datalist><br><label for="Sexe">Sexe:</label><select name="Sexe"  id="Sexe" style="width: 188px;margin-bottom:5px; height: 23px;" onblur="Avertir(this)"><option></option><option>M</option><option>F</option></select><br>
-<label for="Telephone">Téléphone:</label><input name="Telephone" type="tel" id="Telephone"><br>
-<label for="Diagnostic_Clinique">Diagnostic Clinique:</label><input list="dc" name="Diagnostic_Clinique" type="text" autocomplete="off" id="Diagnostic_Clinique"><datalist id="dc"><option value="Bilan de santé"></datalist><br>
-<label for="Prescripteur">Prescripteur:</label><input  name="Prescripteur" type="text" autocomplete="off" list="prs" id="Prescripteur"> <datalist id="prs"><option value="Kathanase"><option value="dr diarra"></datalist><br>
+<label for="Telephone">Téléphone:</label><input name="Telephone" type="tel" id="Telephone" onblur="Avertir(this)" ><br>
+<label for="Diagnostic_Clinique">Diagnostic Clinique:</label><input list="dc" name="Diagnostic_Clinique" type="text" autocomplete="off" id="Diagnostic_Clinique" onblur="Avertir(this)" ><datalist id="dc"><option value="Bilan de santé"></datalist><br>
+<label for="Prescripteur">Prescripteur:</label><input  name="Prescripteur" type="text" autocomplete="off" list="prs" id="Prescripteur" onblur="Avertir(this)"> <datalist id="prs"><option value="Kathanase"><option value="dr diarra"></datalist><br>
 <p id="lbExamensDemandes" style="display:inline-block;width:271px;vertical-align:75px;font-family:courier New;text-align:right">Examens Demandés:</p>
 <div id="ExamensDemandes" style="display:inline-block;width:186px;height:150px;overflow-y:auto;border:thin black solid;margin-bottom:1px">
 
@@ -109,7 +109,7 @@
 <label for="Pttl">Protid.Tot.</label><input id="Pttl" name="Pttl" type="checkbox"><br>
 <label for="Rsv">Res.Alcal.</label><input id="Rsv" name="Rsv" type="checkbox"><br>
 </div><br>
-<label for="Biotechnologiste">Biotechnologiste:</label><input  name="Biotechnologiste" type="text" autocomplete="off" list="btech" id="Biotechnologiste"><datalist id="btech"><option value="amani yao"><option value="kouadio yao"><option value="kouadio yao athanase"></datalist><br>
+<label for="Biotechnologiste">Biotechnologiste:</label><input  name="Biotechnologiste" type="text" autocomplete="off" list="btech" id="Biotechnologiste" onblur="Avertir(this)"><datalist id="btech"><option value="amani yao"><option value="kouadio yao"><option value="kouadio yao athanase"></datalist><br>
 <label for="PrixdesExamensouStatut">Prix/statut:</label><input  name="PrixdesExamensouStatut" type="number"  step="0.01" id="PrixdesExamensouStatut" onblur="Avertir(this)"><br>
 <label for="DateduPrelevement">Date Prelevement:</label><input  name="DateduPrelevement" type="date" id="DateduPrelevement" style="width: 183px; height: 20px;" onblur="Avertir(this)">
 
@@ -250,7 +250,7 @@
 <label for="T3libre">T3 libre:</label><input name="T3libre" type="number"  step="0.01" id="T3libre" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
 <label for="T4libre">T4 libre:</label><input name="T4libre" type="number"  step="0.01" id="T4libre" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
 <label for="TSH">TSH:</label><input name="TSH" type="number"  step="0.01" id="TSH" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="PSA">PSA:</label><input name="PSA" type="number"  step="0.01" id="PSA" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
+<label for="PSA">PSA(Prostate-Specific Antigen):</label><input name="PSA" type="number"  step="0.01" id="PSA" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
 <label for="Estradiol">Estradiol:</label><input name="Estradiol" type="number"  step="0.01" id="Estradiol" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
 <label for="Progesterone">Progestérone:</label><input name="Progesterone" type="number"  step="0.01" id="Progesterone" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
 <label for="Prolactinemie">Prolactinémie:</label><input name="Prolactinemie" type="number"  step="0.01" id="Prolactinemie" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
@@ -276,10 +276,10 @@
 
 </div>
 
-<span style="display:inline-block;height:300px;width:200px;
+<span style="display:inline-block;height:330px;width:200px;
 border:thick #275280 solid;position:fixed;bottom:0px;
 right:15px;padding-left:3px">
-<span style="display:inline-block;height:200px;width:200px">
+<span style="display:inline-block;height:240px;width:200px;padding-bottom:0px">
 <span style="display:inline-block;height:20px;width:200px">
 <span style="display:inline-block;width:200px;font-family:bookman Old Style;font-weight:bold;text-decoration:underline;text-align:center;color:#275280">EXAMENS A FAIRE</span><br> 
 <span id="Lalphb1" style="font-size:14px;text-align:right;letter-spacing:2.1px"><span style="text-decoration:underline;font-size:11px;letter-spacing:0px;text-align:left">Ordre A-Z:</span>
@@ -296,7 +296,7 @@ background-color:aqua;display:grid">
  
 </span>
 </span>
-<span style="display:inline-block;height:100px;width:200px">
+<span style="display:inline-block;height:130px;width:200px">
 <input id="vld"  type="button" value="Valider [Envoyer]"><br>
 <input type="button" value="Nouveau Patient"><br>
 <input type="button" value="Bilan Operationnel"><br>
@@ -397,8 +397,25 @@ for (var i= 87; i<90 ; i++){
 fTab2 += Rtab2.push(document.querySelectorAll("input,select")[i].value)}
 
 if(Rtab.includes("")||Rtab2.includes("")){
-event.preventDefault();
 
+for (var i= 0; i<6 ; i++){if(document.querySelectorAll("input,select")[i].value==="" 
+&& document.querySelectorAll("input,select")[i].nextElementSibling.nodeName!=="SPAN")
+{var negTx= document.createElement("span");
+negTx.textContent=" *Champ obligatoire";
+negTx.style.color="red";
+document.querySelectorAll("input,select")[i].after(negTx);}}
+
+for (var i= 87; i<90 ; i++){if(document.querySelectorAll("input,select")[i].value==="" 
+&& document.querySelectorAll("input,select")[i].nextElementSibling.nodeName!=="SPAN")
+{var negTx= document.createElement("span");
+negTx.textContent=" *Champ obligatoire";
+negTx.style.color="red";
+document.querySelectorAll("input,select")[i].after(negTx);}}
+
+
+
+
+event.preventDefault();
 }
 else{
 for (var i=90 ; i<document.querySelectorAll("label").length ; i++){
@@ -417,11 +434,10 @@ btn_vld.replaceWith(btn_evt) ;
 
 }}}}
 
-/*function Avertir (cel){
-if(cel.value===""){var negTx= document.createElement("span");
-negTx.textContent=" Remplissage obligatoire ";
-negTx.style.color="red";cel.after(negTx);
-}}
-*/
+function Avertir (cel){
+if(cel.nextElementSibling.textContent===" *Champ obligatoire")
+{cel.nextElementSibling.remove();}
+}
+
 </script>
 </body></html>
