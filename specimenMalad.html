@@ -12,102 +12,14 @@
 <label for="Telephone">Téléphone:</label><input name="Telephone" type="tel" id="Telephone" onblur="Avertir(this)" ><br>
 <label for="Diagnostic_Clinique">Diagnostic Clinique:</label><input list="dc" name="Diagnostic_Clinique" type="text" autocomplete="off" id="Diagnostic_Clinique" onblur="Avertir(this)" ><datalist id="dc"><option value="Bilan de santé"></datalist><br>
 <label for="Prescripteur">Prescripteur:</label><input  name="Prescripteur" type="text" autocomplete="off" list="prs" id="Prescripteur" onblur="Avertir(this)"> <datalist id="prs"><option value="Kathanase"><option value="dr diarra"></datalist><br>
+<span style="display:inline-block;width:186px;height:20px;border:thin red solid">Par odre alphabet</span><br>
+
+
 <p id="lbExamensDemandes" style="display:inline-block;width:271px;vertical-align:75px;font-family:courier New;text-align:right">Examens Demandés:</p>
 <div id="ExamensDemandes" style="display:inline-block;width:186px;height:150px;overflow-y:auto;border:thin black solid;margin-bottom:1px">
-
-<h6>bilan cytobacteriologie</h6>
-<label for="ecbu">ECBU</label><input name="ecbu" type="checkbox" id="ecbu"><br>
-<label for="copro">Coproculture</label><input  id="copro" name="copro" type="checkbox"><br>
-<label for="lcr">LCR</label><input id="lcr" name="lcr" type="checkbox"><br>
-<label for="pu">PU</label><input id="pu" name="pu" type="checkbox"><br>
-<label for="pv">PV</label><input id="pv" name="pv" type="checkbox"><br>
-<label for="spermoC">Spermoculture</label><input id="spermoC" name="spermoC" type="checkbox">
-<h6>bilan enzymatique musculaires</h6>
-<label for="cpk">CPK</label><input id="cpk" name="cpk" type="checkbox"><br>
-<label for="cpkMb">CPK-mb</label><input id="cpkMb" name="cpkMb" type="checkbox"><br>
-<label for="ldh">LDH</label><input id="ldh" name="ldh" type="checkbox">
-<h6>bilan glycemique</h6>
-<label for="gly">Glycemie</label><input id="gly" name="gly" type="checkbox"><br>
-<label for="glypp">Glycemie Post P.</label><input id="glypp" name="glypp" type="checkbox"><br>
-<label for="glyR">Glycorachie</label><input id="glyR" name="glyR" type="checkbox"><br>
-<label for="glyU">Glycourie</label><input id="glyU" name="glyU" type="checkbox"><br>
-<label for="hba1c">HBA1C</label><input id="hba1c" name="hba1c" type="checkbox">
-<h6>bilan hepatique et bilaire</h6>
-<label for="achbc">ACHBC</label><input id="achbc" name="achbc" type="checkbox"><br>
-<label for="achbe">ACHBe</label><input id="achbe" name="achbe" type="checkbox"><br>
-<label for="achbs">ACHBS</label><input id="achbs" name="achbs" type="checkbox"><br>
-<label for="achvc">ACHVC</label><input id="achvc" name="achvc" type="checkbox"><br>
-<label for="aghbe">AgHBe</label><input id="aghbe" name="aghbe" type="checkbox"><br>
-<label for="aghbs">AgHBS</label><input id="aghbs" name="aghbs" type="checkbox"><br>
-<label for="biliT">Bilirubine Tot.</label><input id="biliT" name="biliT" type="checkbox"><br>
-<label for="biliC">Bilirubine Conj.</label><input id="biliC" name="biliC" type="checkbox"><br>
-<label for="gammagt">GAMMA-GT</label><input id="gammagt" name="gammagt" type="checkbox"><br>
-<label for="hav">HAV(IgM)</label><input id="hav" name="hav" type="checkbox"><br>
-<label for="pal">Phosphat.Alc</label><input id="pal" name="pal" type="checkbox"><br>
-<label for="transa">Transaminases</label><input id="transa" name="transa" type="checkbox">
-<h6>bilan hormonal</h6>
-<label for="bhcg">Beta HCG(sg)</label><input id="bhcg" name="bhcg" type="checkbox"><br>
-<label for="bhcgu">Beta HCG(ur)</label><input id="bhcgu" name="bhcgu" type="checkbox"><br>
-<label for="crt">Cortisol</label><input id="crt" name="crt" type="checkbox"><br>
-<label for="est">Estradiol</label><input id="est" name="est" type="checkbox"><br>
-<label for="fsh">FSH</label><input id="fsh" name="fsh" type="checkbox"><br>
-<label for="lhrh">LH-RH</label><input id="lhrh" name="lhrh" type="checkbox"><br>
-<label for="proges">Progesterone</label><input id="proges" name="proges" type="checkbox"><br>
-<label for="prolac">Prolactinemie</label><input id="prolac" name="prolac" type="checkbox"><br>
-<label for="psa">PSA</label><input id="psa" name="psa" type="checkbox"><br>
-<label for="t3l">T3 libre</label><input id="t3l" name="t3l" type="checkbox"><br>
-<label for="t4l">T4 libre</label><input id="t4l" name="t4l" type="checkbox"><br>
-<label for="tsh">TSH</label><input id="tsh" name="tsh" type="checkbox"><br>
-<h6>bilan Immuno-hematologique</h6>
-<label for="nfs">NFS</label><input id="nfs" name="nfs" type="checkbox"><br>
-<label for="fib">Fibrinemie</label><input id="fib" name="fib" type="checkbox"><br>
-<label for="gsr">Groupe Sanguin</label><input id="gsr" name="gsr" type="checkbox"><br>
-<label for="TPr">Taux de Prothrombine</label><input id="TPr" name="TPr" type="checkbox"><br>
-<label for="tck">TCK</label><input id="tck" name="tck" type="checkbox"><br>
-<label for="inr">INR</label><input id="inr" name="inr" type="checkbox">
-<h6>bilan lipidique</h6>
-<label for="chdl">Cholesterol HD</label><input id="chdl" name="chdl" type="checkbox"><br>
-<label for="cldl">Cholesterol LDL</label><input id="cldl" name="cldl" type="checkbox"><br>
-<label for="chtt">Cholesterol Total</label><input id="chtt" name="chtt" type="checkbox"><br>
-<label for="tgl">Triglycerides</label><input id="tgl" name="tgl" type="checkbox"><br>
-<label for="lptl">Lipide totale</label><input id="lptl" name="lptl" type="checkbox">
-<h6>bilan renal</h6>
-<label for="acq">Acide urique</label><input id="acq" name="acq" type="checkbox"><br>
-<label for="albm">Albumine</label><input id="albm" name="albm" type="checkbox"><br>
-<label for="albmu">Albuminurie</label><input id="albmu" name="albmu" type="checkbox"><br>
-<label for="Ccr">Clairance de creatininurie</label><input id="Ccr" name="Ccr" type="checkbox"><br>
-<label for="crea">Creatinine</label><input id="crea" name="crea" type="checkbox"><br>
-<label for="dfgl">DFG</label><input id="dfgl" name="dfgl" type="checkbox"><br>
-<label for="Eps">Electrophorèse.Prot.Sq</label><input id="Eps" name="Eps" type="checkbox"><br>
-<label for="IU">Ionogramme Urinaire</label><input id="IU" name="IU" type="checkbox"><br>
-<label for="Ptu">Proteinurie</label><input id="Ptu" name="Ptu" type="checkbox"><br>
-<label for="Ptu24">Proteinurie 24h</label><input id="Ptu24" name="Ptu24" type="checkbox"><br>
-<label for="Ur">Urée</label><input id="Ur" name="Ur" type="checkbox">
-<h6>bilan serologie</h6>
-<label for="Asl">ASLO</label><input id="Asl" name="Asl" type="checkbox"><br>
-<label for="bilh">Bilharziose</label><input id="bilh" name="bilh" type="checkbox"><br>
-<label for="Bw">BW(VDRL-TPHA)</label><input id="Bw" name="Bw" type="checkbox"><br>
-<label for="Chl">Chlamydia</label><input id="Chl" name="Chl" type="checkbox"><br>
-<label for="Crp">CRP</label><input id="Crp" name="Crp" type="checkbox"><br>
-<label for="Myco">Mycoplasme</label><input id="Myco" name="Myco" type="checkbox"><br>
-<label for="Rbl">Rubeole</label><input id="Rbl" name="Rbl" type="checkbox"><br>
-<label for="Vih">VIH</label><input id="Vih" name="Vih" type="checkbox"><br>
-<label for="wf">Widal et Felix</label><input id="wf" name="wf" type="checkbox"><br>
-<label for="Wrs">Waaler-Rose</label><input id="Wrs" name="Wrs" type="checkbox"><br>
-<label for="Txp">Toxoplasmose</label><input id="Txp" name="Txp" type="checkbox">
-<h6>bilan spermiologique</h6>
-<label for="Spmg">Spermocytogramme</label><input id="Spmg" name="Spmg" type="checkbox"><br>
-<label for="Spct">Spermogramme</label><input id="Spct" name="Spct" type="checkbox"><br>
-<h6>inflammation</h6>
-<label for="Vs">Vit.Sediment.(VS)</label><input id="Vs" name="Vs" type="checkbox"><br>
-<label for="Fr">Fact.Rhumat.(FR)</label><input id="Fr" name="Fr" type="checkbox"><br>
-<h6>ionogramme</h6>
-<label for="ionsg">Ionogramme Sg</label><input id="ionsg" name="ionsg" type="checkbox"><br>
-<label for="Ca">Calcium(Ca2+)</label><input id="Ca" name="Ca" type="checkbox"><br>
-<label for="Mg">Magnesium(Mg2+)</label><input id="Mg" name="Mg" type="checkbox"><br>
-<label for="k">Potassium(k+)</label><input id="k" name="k" type="checkbox"><br>
-<label for="Pttl">Protid.Tot.</label><input id="Pttl" name="Pttl" type="checkbox"><br>
-<label for="Rsv">Res.Alcal.</label><input id="Rsv" name="Rsv" type="checkbox"><br>
+<span style="display:grid">
+<span id="A" style="color:red">A</span><a href="#ACHBC">ACHBC</a><a href="#ACHBe">ACHBe</a><a href="#ACHBS">ACHBS</a><a href="#ACHVC">ACHVC</a><a href="#AcideUrique">Acide urique</a><a href="#AgHBe">AgHBe</a><a href="#AgHBS">AgHBS</a><a href="#Albumine">Albumine</a><a href="#Albuminurie">Albuminurie</a><a href="#ASLO">ASLO</a><span id="B" style="color:red">B</span><a href="#bHCGsang">Beta HCG(sg)</a><a href="#bHCGurine">Beta HCG(ur)</a><a href="#Bilharziose">Bilharziose</a><a href="#BilirubineConjuguee">Bilirubine Conj.</a><a href="#BilirubineTotale">Bilirubine Tot.</a><a href="#BW">BW(VDRL-TPHA)</a><span id="C" style="color:red">C</span><a href="#Calcium">Calcium(Ca2+)</a><a href="#Chlamydia">Chlamydia</a><a href="#CholesterolHDL">Cholesterol HDL</a><a href="#CholesterolLDL">Cholesterol LDL</a><a href="#CholesterolTotal">Cholesterol Total</a><a href="#ClairanceCreatininurie">Clairance creatininurie</a><a href="Coproculture.html" target="_blank">Coproculture</a><a href="#Cortisol">Cortisol</a><a href="#CPK">CPK</a><a href="#CPKmb">CK-mb</a><a href="#Creatinine">Creatinine</a><a href="#CRP">CRP</a><span id="D" style="color:red">D</span><a href="#DFG">DFG</a><span id="E" style="color:red">E</span><a href="ECBU.html" target="_blank">ECBU</a><a href="#ElectrophoreseProteinesSerique">Electrophorèse.Prot.Sq</a><a href="#Estradiol">Estradiol</a><span id="F" style="color:red">F</span><a href="#WaalerRose">Fact.Rhumat.(FR)</a><a href="#Fibrinemie">Fibrinemie</a><a href="#FSH">FSH</a><span id="G" style="color:red">G</span><a href="#GammaGT">GAMMA-GT</a><a href="#GlycemieJeun">Glycemie</a><a href="#GlycemiePostPrandiale">Glycemie Post P.</a><a href="#Glycorachie">Glycorachie</a><a href="#Glycosurie">Glycosurie</a><a href="#GoutteEpaisse">Goutte Epaisse</a><a href="#GroupeSanguin">Groupe Sanguin</a><span id="H" style="color:red">H</span><a href="#HAVIgM">HAV(IgM)</a><a href="#HBA1C">HBA1C</a><span id="I" style="color:red">I</span><a href="#INR">INR</a><a href="#Potassium">Ionogramme Sg</a><a href="#IonogrammeUrinaire">Ionogramme Urinaire</a><span id="L" style="color:red">L</span><a href="LCR.html" target="_blank">LCR</a><a href="#LDH">LDH</a><a href="#LHRH">LH-RH</a><a href="#LipideTotale">Lipide totale</a><span id="M" style="color:red">M</span><a href="#Magnesium">Magnesium(Mg2+)</a><a href="#Mycoplasme">Mycoplasme</a><span id="N" style="color:red">N</span><a href="#nfsLeucocytes">NFS</a><span id="P" style="color:red">P</span><a href="#PhosphataseAlcaline">Phosphat.Alc</a><a href="#Potassium">Potassium(k+)</a><a href="#Progesterone">Progesterone</a><a href="#Prolactinemie">Prolactinemie</a><a href="#Proteinurie">Proteinurie</a><a href="#Proteinurie24h">Proteinurie 24h</a><a href="#ProtidesTotaux">Protid.Tot.</a><a href="#PSA">PSA</a><a href="PU.html" target="_blank">PU</a><a href="PV.html" target="_blank">PV</a><span id="Q" style="color:red">Q</span><a href="#QBC">QBC</a><span id="R" style="color:red">R</span><a href="#ReserveAlcalin">Res.Alcal.</a><a href="#Rubeole">Rubeole</a><span id="S" style="color:red">S</span><a href="Spermoculture.html" target="_blank">Spermoculture</a><a href="Spermocytogramme.html" target="_blank">Spermocytogramme</a><a href="Spermogramme.html" target="_blank">Spermogramme</a><span id="T" style="color:red">T</span><a href="#T3libre">T3 libre</a><a href="#T4libre">T4 libre</a><a href="#TauxProthrombine">Taux Prothrombine</a><a href="#TCK">TCK</a><a href="#Toxoplasmose">Toxoplasmose</a><a href="#TGO">Transaminases</a><a href="#Triglycerides">Triglycerides</a><a href="#TSH">TSH</a><span id="U" style="color:red">U</span><a href="#Uree">Urée</a><span id="V" style="color:red">V</span><a href="#VIH">VIH</a><a href="#VS1ereHEURE">Vit.Sediment.(VS)</a><span id="W" style="color:red">W</span><a href="#WaalerRose">Waaler-Rose</a><a href="#WidalFelix">Widal et Felix</a>
+</span>
 </div><br>
 <label for="Biotechnologiste">Biotechnologiste:</label><input  name="Biotechnologiste" type="text" autocomplete="off" list="btech" id="Biotechnologiste" onblur="Avertir(this)"><datalist id="btech"><option value="amani yao"><option value="kouadio yao"><option value="kouadio yao athanase"></datalist><br>
 <label for="PrixdesExamensouStatut">Prix/statut:</label><input  name="PrixdesExamensouStatut" type="number"  step="0.01" id="PrixdesExamensouStatut" onblur="Avertir(this)"><br>
@@ -165,7 +77,7 @@
 <label for="Albuminurie">Albuminurie:</label><input name="Albuminurie" type="number"  step="0.01" id="Albuminurie" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
 <label for="Proteinurie">Protéinurie:</label><input name="Proteinurie" type="number"  step="0.01" id="Proteinurie" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
 <label for="Proteinurie24h">Protéinurie 24h:</label><input name="Proteinurie24h" type="number"  step="0.01" id="Proteinurie24h" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="DFG">DFG:</label><input name="DFG" type="number"  step="0.01" id="DFG" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
+<label for="DFG">DFG:(Débit Filtration Glomérulaire)</label><input name="DFG" type="number"  step="0.01" id="DFG" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
 <label for="IonogrammeUrinaire">Ionogramme Urn:</label><input name="IonogrammeUrinaire" type="number"  step="0.01" id="IonogrammeUrinaire" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
 <label for="ClairanceCreatininurie">Clairance Créat:</label><input name="ClairanceCreatininurie" type="number"  step="0.01" id="ClairanceCreatininurie" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
 </div>
@@ -207,11 +119,11 @@
 <label for="Rhesus">Rhésus:</label><select name="Rhesus" id="Rhesus" onblur="fChpLib(this)" onfocus="fChpSel(this)"><option></option><option>(+) POSITIVE</option><option>(-) NEGATIVE</option></select><br>
 </p>
 <div>
-<label for="TP">TP:</label><input name="TP" type="number"  step="0.01" id="TP" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
+<label for="TP">TP(Taux Prothrombine):</label><input name="TP" type="number"  step="0.01" id="TP" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
 <label for="TCK">TCK:</label><input name="TCK" type="number"  step="0.01" id="TCK" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
 <label for="Fibrinemie">Fibrinémie:</label><input name="Fibrinemie" type="number"  step="0.01" id="Fibrinemie" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
 <label for="TauxProthrombine">Taux Prothrombine:</label><input name="TauxProthrombine" type="number"  step="0.01" id="TauxProthrombine" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="INR">INR:</label><input name="INR" type="number"  step="0.01" id="INR" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br><br>
+<label for="INR">INR(International Normalized Ratio):</label><input name="INR" type="number"  step="0.01" id="INR" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br><br>
 </div>
 <div>
 <label for="Electrophoresehemoglobine" >Electrophorèse Hb:</label><select name="Electrophoresehemoglobine" id="Electrophoresehemoglobine" style="width:64px" onblur="fChpLib(this)" onfocus="fChpSel(this)"><option></option><option>A1A2</option><option>AC</option><option>SC</option><option>SS</option><option>AF</option></select><br>
@@ -249,24 +161,24 @@
 <div>
 <label for="T3libre">T3 libre:</label><input name="T3libre" type="number"  step="0.01" id="T3libre" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
 <label for="T4libre">T4 libre:</label><input name="T4libre" type="number"  step="0.01" id="T4libre" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="TSH">TSH:</label><input name="TSH" type="number"  step="0.01" id="TSH" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
+<label for="TSH">TSH(ThyréoStimuline Hormone):</label><input name="TSH" type="number"  step="0.01" id="TSH" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
 <label for="PSA">PSA(Prostate-Specific Antigen):</label><input name="PSA" type="number"  step="0.01" id="PSA" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
 <label for="Estradiol">Estradiol:</label><input name="Estradiol" type="number"  step="0.01" id="Estradiol" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
 <label for="Progesterone">Progestérone:</label><input name="Progesterone" type="number"  step="0.01" id="Progesterone" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
 <label for="Prolactinemie">Prolactinémie:</label><input name="Prolactinemie" type="number"  step="0.01" id="Prolactinemie" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="LhRH">LH-RH:</label><input name="LhRH" type="number"  step="0.01" id="LhRH" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
+<label for="LhRH">LH-RH(Lutéinostimuline):</label><input name="LhRH" type="number"  step="0.01" id="LhRH" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
 <label for="Cortisol">Cortisol:</label><input name="Cortisol" type="number"  step="0.01" id="Cortisol" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="FSH">FSH:</label><input name="FSH" type="number"  step="0.01" id="FSH" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
+<label for="FSH">FSH(Hormone FolliculoStimulante):</label><input name="FSH" type="number"  step="0.01" id="FSH" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
 <label for="Testosterone">Testosterone:</label><input name="Testosterone" type="number"  step="0.01" id="Testosterone" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="TSHus">TSHus:</label><input name="TSHus" type="number"  step="0.01" id="TSHus" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
+<label for="TSHus">TSHus(ThyréoS. H. UltraSensible):</label><input name="TSHus" type="number"  step="0.01" id="TSHus" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
 <label for="bHCGsang">Beta HCG(sang):</label><input name="bHCGsang" type="number"  step="0.01" id="bHCGsang" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
 <label for="bHCGurine">Beta HCG(urine):</label><input name="bHCGurine" type="number"  step="0.01" id="bHCGurine" onblur="fChpLib(this)" onfocus="fChpSel(this)">
 </div>
 <h3 id="enzMus">bilan enzymatique musculaires</h3>
 <div>
-<label for="LDH">LDH:</label><input name="LDH" type="number"  step="0.01" id="LDH" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="CPK">CPK:</label><input name="CPK" type="number"  step="0.01" id="CPK" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="CPKmb">CPK-mb:</label><input name="CPKmb" type="number"  step="0.01" id="CPKmb" onblur="fChpLib(this)" onfocus="fChpSel(this)">
+<label for="LDH">LDH(Lactate DésHydrogénase):</label><input name="LDH" type="number"  step="0.01" id="LDH" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
+<label for="CPK">CPK(Créatine Phosphokinase):</label><input name="CPK" type="number"  step="0.01" id="CPK" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
+<label for="CPKmb">CK-mb(Créatine Kinase-MB):</label><input name="CPKmb" type="number"  step="0.01" id="CPKmb" onblur="fChpLib(this)" onfocus="fChpSel(this)">
 </div>
 <h3 id="bildiv">bilan divers</h3>
 <div>
@@ -292,7 +204,7 @@ right:15px;padding-left:3px">
 height:180px;width:180px;border:thin black solid;
 overflow-y:auto;text-align:left;padding-left:20px;
 background-color:aqua;display:grid">
-<span id="A" style="color:red">A</span><a href="#ACHBC">ACHBC</a><a href="#ACHBe">ACHBe</a><a href="#ACHBS">ACHBS</a><a href="#ACHVC">ACHVC</a><a href="#AcideUrique">Acide urique</a><a href="#AgHBe">AgHBe</a><a href="#AgHBS">AgHBS</a><a href="#Albumine">Albumine</a><a href="#Albuminurie">Albuminurie</a><a href="#ASLO">ASLO</a><span id="B" style="color:red">B</span><a href="#bHCGsang">Beta HCG(sg)</a><a href="#bHCGurine">Beta HCG(ur)</a><a href="#Bilharziose">Bilharziose</a><a href="#BilirubineConjuguee">Bilirubine Conj.</a><a href="#BilirubineTotale">Bilirubine Tot.</a><a href="#BW">BW(VDRL-TPHA)</a><span id="C" style="color:red">C</span><a href="#Calcium">Calcium(Ca2+)</a><a href="#Chlamydia">Chlamydia</a><a href="#CholesterolHDL">Cholesterol HDL</a><a href="#CholesterolLDL">Cholesterol LDL</a><a href="#CholesterolTotal">Cholesterol Total</a><a href="#ClairanceCreatininurie">Clairance creatininurie</a><a href="Coproculture.html" target="_blank">Coproculture</a><a href="#Cortisol">Cortisol</a><a href="#CPK">CPK</a><a href="#CPKmb">CPK-mb</a><a href="#Creatinine">Creatinine</a><a href="#CRP">CRP</a><span id="D" style="color:red">D</span><a href="#DFG">DFG</a><span id="E" style="color:red">E</span><a href="ECBU.html" target="_blank">ECBU</a><a href="#ElectrophoreseProteinesSerique">Electrophorèse.Prot.Sq</a><a href="#Estradiol">Estradiol</a><span id="F" style="color:red">F</span><a href="#WaalerRose">Fact.Rhumat.(FR)</a><a href="#Fibrinemie">Fibrinemie</a><a href="#FSH">FSH</a><span id="G" style="color:red">G</span><a href="#GammaGT">GAMMA-GT</a><a href="#GlycemieJeun">Glycemie</a><a href="#GlycemiePostPrandiale">Glycemie Post P.</a><a href="#Glycorachie">Glycorachie</a><a href="#Glycosurie">Glycosurie</a><a href="#GoutteEpaisse">Goutte Epaisse</a><a href="#GroupeSanguin">Groupe Sanguin</a><span id="H" style="color:red">H</span><a href="#HAVIgM">HAV(IgM)</a><a href="#HBA1C">HBA1C</a><span id="I" style="color:red">I</span><a href="#INR">INR</a><a href="#Potassium">Ionogramme Sg</a><a href="#IonogrammeUrinaire">Ionogramme Urinaire</a><span id="L" style="color:red">L</span><a href="LCR.html" target="_blank">LCR</a><a href="#LDH">LDH</a><a href="#LHRH">LH-RH</a><a href="#LipideTotale">Lipide totale</a><span id="M" style="color:red">M</span><a href="#Magnesium">Magnesium(Mg2+)</a><a href="#Mycoplasme">Mycoplasme</a><span id="N" style="color:red">N</span><a href="#nfsLeucocytes">NFS</a><span id="P" style="color:red">P</span><a href="#PhosphataseAlcaline">Phosphat.Alc</a><a href="#Potassium">Potassium(k+)</a><a href="#Progesterone">Progesterone</a><a href="#Prolactinemie">Prolactinemie</a><a href="#Proteinurie">Proteinurie</a><a href="#Proteinurie24h">Proteinurie 24h</a><a href="#ProtidesTotaux">Protid.Tot.</a><a href="#PSA">PSA</a><a href="PU.html" target="_blank">PU</a><a href="PV.html" target="_blank">PV</a><span id="Q" style="color:red">Q</span><a href="#QBC">QBC</a><span id="R" style="color:red">R</span><a href="#ReserveAlcalin">Res.Alcal.</a><a href="#Rubeole">Rubeole</a><span id="S" style="color:red">S</span><a href="Spermoculture.html" target="_blank">Spermoculture</a><a href="Spermocytogramme.html" target="_blank">Spermocytogramme</a><a href="Spermogramme.html" target="_blank">Spermogramme</a><span id="T" style="color:red">T</span><a href="#T3libre">T3 libre</a><a href="#T4libre">T4 libre</a><a href="#TauxProthrombine">Taux Prothrombine</a><a href="#TCK">TCK</a><a href="#Toxoplasmose">Toxoplasmose</a><a href="#TGO">Transaminases</a><a href="#Triglycerides">Triglycerides</a><a href="#TSH">TSH</a><span id="U" style="color:red">U</span><a href="#Uree">Urée</a><span id="V" style="color:red">V</span><a href="#VIH">VIH</a><a href="#VS1ereHEURE">Vit.Sediment.(VS)</a><span id="W" style="color:red">W</span><a href="#WaalerRose">Waaler-Rose</a><a href="#WidalFelix">Widal et Felix</a>
+<span id="A" style="color:red">A</span><a href="#ACHBC">ACHBC</a><a href="#ACHBe">ACHBe</a><a href="#ACHBS">ACHBS</a><a href="#ACHVC">ACHVC</a><a href="#AcideUrique">Acide urique</a><a href="#AgHBe">AgHBe</a><a href="#AgHBS">AgHBS</a><a href="#Albumine">Albumine</a><a href="#Albuminurie">Albuminurie</a><a href="#ASLO">ASLO</a><span id="B" style="color:red">B</span><a href="#bHCGsang">Beta HCG(sg)</a><a href="#bHCGurine">Beta HCG(ur)</a><a href="#Bilharziose">Bilharziose</a><a href="#BilirubineConjuguee">Bilirubine Conj.</a><a href="#BilirubineTotale">Bilirubine Tot.</a><a href="#BW">BW(VDRL-TPHA)</a><span id="C" style="color:red">C</span><a href="#Calcium">Calcium(Ca2+)</a><a href="#Chlamydia">Chlamydia</a><a href="#CholesterolHDL">Cholesterol HDL</a><a href="#CholesterolLDL">Cholesterol LDL</a><a href="#CholesterolTotal">Cholesterol Total</a><a href="#ClairanceCreatininurie">Clairance creatininurie</a><a href="Coproculture.html" target="_blank">Coproculture</a><a href="#Cortisol">Cortisol</a><a href="#CPK">CPK</a><a href="#CPKmb">CK-mb</a><a href="#Creatinine">Creatinine</a><a href="#CRP">CRP</a><span id="D" style="color:red">D</span><a href="#DFG">DFG</a><span id="E" style="color:red">E</span><a href="ECBU.html" target="_blank">ECBU</a><a href="#ElectrophoreseProteinesSerique">Electrophorèse.Prot.Sq</a><a href="#Estradiol">Estradiol</a><span id="F" style="color:red">F</span><a href="#WaalerRose">Fact.Rhumat.(FR)</a><a href="#Fibrinemie">Fibrinemie</a><a href="#FSH">FSH</a><span id="G" style="color:red">G</span><a href="#GammaGT">GAMMA-GT</a><a href="#GlycemieJeun">Glycemie</a><a href="#GlycemiePostPrandiale">Glycemie Post P.</a><a href="#Glycorachie">Glycorachie</a><a href="#Glycosurie">Glycosurie</a><a href="#GoutteEpaisse">Goutte Epaisse</a><a href="#GroupeSanguin">Groupe Sanguin</a><span id="H" style="color:red">H</span><a href="#HAVIgM">HAV(IgM)</a><a href="#HBA1C">HBA1C</a><span id="I" style="color:red">I</span><a href="#INR">INR</a><a href="#Potassium">Ionogramme Sg</a><a href="#IonogrammeUrinaire">Ionogramme Urinaire</a><span id="L" style="color:red">L</span><a href="LCR.html" target="_blank">LCR</a><a href="#LDH">LDH</a><a href="#LHRH">LH-RH</a><a href="#LipideTotale">Lipide totale</a><span id="M" style="color:red">M</span><a href="#Magnesium">Magnesium(Mg2+)</a><a href="#Mycoplasme">Mycoplasme</a><span id="N" style="color:red">N</span><a href="#nfsLeucocytes">NFS</a><span id="P" style="color:red">P</span><a href="#PhosphataseAlcaline">Phosphat.Alc</a><a href="#Potassium">Potassium(k+)</a><a href="#Progesterone">Progesterone</a><a href="#Prolactinemie">Prolactinemie</a><a href="#Proteinurie">Proteinurie</a><a href="#Proteinurie24h">Proteinurie 24h</a><a href="#ProtidesTotaux">Protid.Tot.</a><a href="#PSA">PSA</a><a href="PU.html" target="_blank">PU</a><a href="PV.html" target="_blank">PV</a><span id="Q" style="color:red">Q</span><a href="#QBC">QBC</a><span id="R" style="color:red">R</span><a href="#ReserveAlcalin">Res.Alcal.</a><a href="#Rubeole">Rubeole</a><span id="S" style="color:red">S</span><a href="Spermoculture.html" target="_blank">Spermoculture</a><a href="Spermocytogramme.html" target="_blank">Spermocytogramme</a><a href="Spermogramme.html" target="_blank">Spermogramme</a><span id="T" style="color:red">T</span><a href="#T3libre">T3 libre</a><a href="#T4libre">T4 libre</a><a href="#TauxProthrombine">Taux Prothrombine</a><a href="#TCK">TCK</a><a href="#Toxoplasmose">Toxoplasmose</a><a href="#TGO">Transaminases</a><a href="#Triglycerides">Triglycerides</a><a href="#TSH">TSH</a><span id="U" style="color:red">U</span><a href="#Uree">Urée</a><span id="V" style="color:red">V</span><a href="#VIH">VIH</a><a href="#VS1ereHEURE">Vit.Sediment.(VS)</a><span id="W" style="color:red">W</span><a href="#WaalerRose">Waaler-Rose</a><a href="#WidalFelix">Widal et Felix</a>
  
 </span>
 </span>
@@ -397,28 +309,21 @@ for (var i= 87; i<90 ; i++){
 fTab2 += Rtab2.push(document.querySelectorAll("input,select")[i].value)}
 
 if(Rtab.includes("")||Rtab2.includes("")){
-
 for (var i= 0; i<6 ; i++){if(document.querySelectorAll("input,select")[i].value==="" 
 && document.querySelectorAll("input,select")[i].nextElementSibling.nodeName!=="SPAN")
 {var negTx= document.createElement("span");
 negTx.textContent=" *Champ obligatoire";
 negTx.style.color="red";
 document.querySelectorAll("input,select")[i].after(negTx);}}
-
 for (var i= 87; i<90 ; i++){if(document.querySelectorAll("input,select")[i].value==="" 
 && document.querySelectorAll("input,select")[i].nextElementSibling.nodeName!=="SPAN")
 {var negTx= document.createElement("span");
 negTx.textContent=" *Champ obligatoire";
 negTx.style.color="red";
 document.querySelectorAll("input,select")[i].after(negTx);}}
-
-
-
-
 event.preventDefault();
 }
-else{
-for (var i=90 ; i<document.querySelectorAll("label").length ; i++){
+else{for (var i=90 ; i<document.querySelectorAll("label").length ; i++){
 if (document.querySelectorAll("label")[i].nextElementSibling.value.trim() ===""){
 document.querySelectorAll("label")[i].nextElementSibling.remove();
 document.querySelectorAll("label")[i].remove();i--;
@@ -430,9 +335,7 @@ btn_evt.style.fontWeight="bold";
 btn_evt.style.color= "#275280";
 btn_evt.style.fontSize="15px";
 btn_evt.style.width="200px";
-btn_vld.replaceWith(btn_evt) ;
-
-}}}}
+btn_vld.replaceWith(btn_evt) ;}}}}
 
 function Avertir (cel){
 if(cel.nextElementSibling.textContent===" *Champ obligatoire")
