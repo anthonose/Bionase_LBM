@@ -6,7 +6,7 @@ border:thick #275280 solid;padding-left:3px">
 <span id="Lalphb1" style="font-size:14px;text-align:right;letter-spacing:2.1px"><span style="text-decoration:underline;font-size:11px;letter-spacing:0px;text-align:left">Ordre A-Z:</span>
 <a>A</a><a>B</a><a>C</a><a>D</a><a>E</a><a>F</a><a>G</a><a>H</a><a>I</a><a>J</a><a>K</a><a>M</a><a>N</a>
 </span><br><span id="Lalphb2" style="font-size:14px;letter-spacing:2.1px;padding-left:55px">
-<a>O</a><a>P</a><a>Q</a><a>R</a><a>S</a><a>T</a><a>U</a><a>V</a><a>W</a><a>X</a><a>Y</a><a>Z</a>
+O<a>P</a><a>Q</a><a>R</a><a>S</a><a>T</a><a>U</a><a>V</a><a>W</a>XYZ
 </span>
 </span>
 <span id="LMenu" style="display:inline-block;
@@ -32,7 +32,7 @@ for (var i=0 ; i<document.getElementById("Lalphb2").children.length ; i++){
 document.getElementById("Lalphb2").children[i].addEventListener("click",Atpg);}
 
 function Atpg(e){
-var Diff= scrollY - 540 ;
+var Diff= scrollY - (document.getElementById("LMenu").offsetTop + 1) ;
 window.location.href="#"+ e.target.textContent;
 window.scrollBy(0, Diff);}
 
