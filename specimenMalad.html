@@ -6,12 +6,12 @@
 <div style="text-align:center;margin-bottom:20px" >
 	<img alt="encart" height="91" src="imageTest2.jpg" width="730"><br></div>
 <form action="transit.html" method="post">
-<label for="nom">Nom:</label><input id="nom" list="nomL" name="nom" type="text" autocomplete="off" onblur="Avertir(this)"><datalist id="nomL">
+<label for="nom">Nom:</label><input id="nom" list="nomL" name="nom" type="text" autocomplete="off" onblur="Avertir(this)" placeholder="Nom de famille"><datalist id="nomL">
 </datalist><br><label for="prenoms">Prénoms:</label><input list="prenomsL" id="prenoms" name="prenoms" type="text" autocomplete="off" onblur="Avertir(this)" ><datalist id="prenomsL">
 </datalist><br><label for="Sexe">Sexe:</label><select name="Sexe"  id="Sexe" style="width: 188px;margin-bottom:5px; height: 23px;" onblur="Avertir(this)"><option></option><option>M</option><option>F</option></select><br>
-<label for="Telephone">Téléphone:</label><input name="Telephone" type="tel" id="Telephone" onblur="Avertir(this)" ><br>
-<label for="Diagnostic_Clinique">Diagnostic Clinique:</label><input list="dc" name="Diagnostic_Clinique" type="text" autocomplete="off" id="Diagnostic_Clinique" onblur="Avertir(this)" ><datalist id="dc"><option value="Bilan de santé"></datalist><br>
-<label for="Prescripteur">Prescripteur:</label><input  name="Prescripteur" type="text" autocomplete="off" list="prs" id="Prescripteur" onblur="Avertir(this)"> <datalist id="prs"><option value="Kathanase"><option value="dr diarra"></datalist><br>
+<label for="Telephone">Téléphone:</label><input name="Telephone" type="tel" id="Telephone" onblur="Avertir(this)" placeholder="numero a 10 chiffres"><br>
+<label for="Diagnostic_Clinique">Diagnostic Clinique:</label><input list="dc" name="Diagnostic_Clinique" type="text" autocomplete="off" id="Diagnostic_Clinique" onblur="Avertir(this)" placeholder="categorie du mal"><datalist id="dc"><option value="Bilan de santé"></datalist><br>
+<label for="Prescripteur">Prescripteur:</label><input  name="Prescripteur" type="text" autocomplete="off" list="prs" id="Prescripteur" onblur="Avertir(this)" placeholder="provenance du Bull"> <datalist id="prs"><option value="Kathanase"><option value="dr diarra"></datalist><br>
 <span style="display:inline-block;width:186px;height:37px;border:thin black solid;margin-left:275px">
 
 <span id="Lalphb1" style="font-size:14.5px;text-align:right;letter-spacing:1.3px"><span style="text-decoration:underline;font-size:9px;letter-spacing:0px;text-align:left">Ordre A-Z:</span>
@@ -130,41 +130,41 @@ O<a>P</a><a>Q</a><a>R</a><a>S</a><a>T</a><a>U</a><a>V</a><a>W</a>XYZ
 
 </span>
 </div><br>
-<label for="Biotechnologiste">Biotechnologiste:</label><input  name="Biotechnologiste" type="text" autocomplete="off" list="btech" id="Biotechnologiste" onblur="Avertir(this)"><datalist id="btech"><option value="amani yao"><option value="kouadio yao"><option value="kouadio yao athanase"></datalist><br>
-<label for="PrixdesExamensouStatut">Prix/statut:</label><input  name="PrixdesExamensouStatut" type="number"  step="0.01" id="PrixdesExamensouStatut" onblur="Avertir(this)"><br>
+<label for="Biotechnologiste">Biotechnologiste:</label><input  name="Biotechnologiste" type="text" autocomplete="off" list="btech" id="Biotechnologiste" onblur="Avertir(this)" placeholder="Nom du technicien"><datalist id="btech"><option value="amani yao"><option value="kouadio yao"><option value="kouadio yao athanase"></datalist><br>
+<label for="PrixdesExamensouStatut">Prix/statut:</label><input  name="PrixdesExamensouStatut" type="text" id="PrixdesExamensouStatut" onblur="Avertir(this)" placeholder="Montant ou assuré(e)"><br>
 <label for="DateduPrelevement">Date Prelevement:</label><input  name="DateduPrelevement" type="date" id="DateduPrelevement" style="width: 183px; height: 20px;" onblur="Avertir(this)">
 
 <hr style="margin-top:50px">
 <h1 style="text-align:center;color:#275280">EXAMENS BIOLOGIQUES</h1>
 <hr>
 <h3 id="bilinf">inflammation</h3>
-<p ><label for="VS1ereHEURE" ><span style="background-color: #00F3FF">VS</span>/1ère HEURE:</label><input name="VS1ereHEURE" type="number"  step="0.01" id="VS1ereHEURE" onblur="fChpLib(this)" onfocus="fChpSel(this)" > <label for="VS2iemeHEURE" >2ième HEURE:</label><input name="VS2iemeHEURE" type="number"  step="0.01" id="VS2iemeHEURE" onblur="fChpLib(this)" onfocus="fChpSel(this)"></p>
+<p ><label for="VS1ereHEURE" ><span style="background-color: #00F3FF">VS</span>/1ère HEURE:</label><input name="VS1ereHEURE" type="number"  step="0.01" id="VS1ereHEURE" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="<7"><label for="VS2iemeHEURE" >2ième HEURE:</label><input name="VS2iemeHEURE" type="number"  step="0.01" id="VS2iemeHEURE" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="<20"></p>
 <h3 id="bilion">ionogramme</h3>
 <p>
-<label for="Potassium">Potassium(k+):</label><input name="Potassium" type="number"  step="0.01" id="Potassium" onblur="fChpLib(this)" onfocus="fChpSel(this)" > 
-<label for="Sodium">Sodium(Na+):</label><input name="Sodium" type="number"  step="0.01" id="Sodium" onblur="fChpLib(this)" onfocus="fChpSel(this)">
-<label for="Chlore">Chlore(Cl-):</label><input name="Chlore" type="number"  step="0.01" id="Chlore" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
+<label for="Potassium">Potassium(k+):</label><input name="Potassium" type="number"  step="0.01" id="Potassium" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="3.6-5.5"> 
+<label for="Sodium">Sodium(Na+):</label><input name="Sodium" type="number"  step="0.01" id="Sodium" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="135-155">
+<label for="Chlore">Chlore(Cl-):</label><input name="Chlore" type="number"  step="0.01" id="Chlore" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="95-105"><br>
 </p>
 <div >
-<label for="Magnesium">Magnésium(Mg2+):</label><input name="Magnesium" type="number"  step="0.01" id="Magnesium" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="Calcium">Calcium(Ca2+):</label><input name="Calcium" type="number"  step="0.01" id="Calcium" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="ReserveAlcalin">Reserve Alcalin:</label><input name="ReserveAlcalin" type="number"  step="0.01" id="ReserveAlcalin" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="ProtidesTotaux">Protides Totaux:</label><input name="ProtidesTotaux" type="number"  step="0.01" id="ProtidesTotaux" onblur="fChpLib(this)" onfocus="fChpSel(this)">
+<label for="Magnesium">Magnésium(Mg2+):</label><input name="Magnesium" type="number"  step="0.01" id="Magnesium" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="19-25"><br>
+<label for="Calcium">Calcium(Ca2+):</label><input name="Calcium" type="number"  step="0.01" id="Calcium" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="86-103"><br>
+<label for="ReserveAlcalin">Reserve Alcalin:</label><input name="ReserveAlcalin" type="number"  step="0.01" id="ReserveAlcalin" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="22-26"><br>
+<label for="ProtidesTotaux">Protides Totaux:</label><input name="ProtidesTotaux" type="number"  step="0.01" id="ProtidesTotaux" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="65-80">
 </div>
 <h3 id="billip">bilan lipidique</h3>
 <div>
-<label for="Triglycerides">Triglycérides:</label><input name="Triglycerides" type="number"  step="0.01" id="Triglycerides" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="CholesterolTotal">Cholestérol Total:</label><input name="CholesterolTotal" type="number"  step="0.01" id="CholesterolTotal" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="CholesterolHDL">Cholestérol HDL:</label><input name="CholesterolHDL" type="number"  step="0.01" id="CholesterolHDL" onblur="fChpLib(this)" onfocus="fChpSel(this)"> <br>
-<label for="CholesterolLDL">Cholestérol LDL:</label><input name="CholesterolLDL" type="number"  step="0.01" id="CholesterolLDL" onblur="fChpLib(this)" onfocus="fChpSel(this)"> <br>
-<label for="LipideTotale">Lipide Totale:</label><input name="LipideTotale" type="number"  step="0.01" id="LipideTotale" onblur="fChpLib(this)" onfocus="fChpSel(this)"> <br>
+<label for="Triglycerides">Triglycérides:</label><input name="Triglycerides" type="number"  step="0.01" id="Triglycerides" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="0.65-1.9"><br>
+<label for="CholesterolTotal">Cholestérol Total:</label><input name="CholesterolTotal" type="number"  step="0.01" id="CholesterolTotal" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="1.5-2.5"><br>
+<label for="CholesterolHDL">Cholestérol HDL:</label><input name="CholesterolHDL" type="number"  step="0.01" id="CholesterolHDL" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="0.2-0.4"> <br>
+<label for="CholesterolLDL">Cholestérol LDL:</label><input name="CholesterolLDL" type="number"  step="0.01" id="CholesterolLDL" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="< 2.5"> <br>
+<label for="LipideTotale">Lipide Totale:</label><input name="LipideTotale" type="number"  step="0.01" id="LipideTotale" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="6-7.5"> <br>
 </div>
 <h3 id="bilhepbil">bilan hepatique et bilaire</h3>
 <p>
-<label for="TGO" ><span style="background-color: #00F3FF">Transaminases</span>/TGO:</label><input name="TGO" type="number"  step="0.01" id="TGO" onblur="fChpLib(this)" onfocus="fChpSel(this)"> <label for="TGP">TGP:</label><input name="TGP" type="number"  step="0.01" id="TGP" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
+<label for="TGO" ><span style="background-color: #00F3FF">Transaminases</span>/TGO:</label><input name="TGO" type="number"  step="0.01" id="TGO" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="<37"> <label for="TGP">TGP:</label><input name="TGP" type="number"  step="0.01" id="TGP" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="< 40"><br>
 </p>
 <p>
-<label for="BilirubineTotale" >Bilirubine Tot:</label><input name="BilirubineTotale" type="number"  step="0.01" id="BilirubineTotale" onblur="fChpLib(this)" onfocus="fChpSel(this)"> <label for="BilirubineConjuguee">Bilirubine Conj:</label><input name="BilirubineConjuguee" type="number"  step="0.01" id="BilirubineConjuguee" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
+<label for="BilirubineTotale" >Bilirubine Tot:</label><input name="BilirubineTotale" type="number"  step="0.01" id="BilirubineTotale" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="< 12"> <label for="BilirubineConjuguee">Bilirubine Conj:</label><input name="BilirubineConjuguee" type="number"  step="0.01" id="BilirubineConjuguee" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="< 2.5"><br>
 </p>
 <div>
 <label for="AgHBS">AgHBS:</label><select name="AgHBS" id="AgHBS" onblur="fChpLib(this)" onfocus="fChpSel(this)"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><br>
@@ -174,65 +174,70 @@ O<a>P</a><a>Q</a><a>R</a><a>S</a><a>T</a><a>U</a><a>V</a><a>W</a>XYZ
 <label for="ACHBC">ACHBC:</label><select name="ACHBC" id="ACHBC" onblur="fChpLib(this)" onfocus="fChpSel(this)"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><br>
 <label for="ACHVC">ACHVC:</label><select name="ACHVC" id="ACHVC" onblur="fChpLib(this)" onfocus="fChpSel(this)"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><br>
 <label for="HAVIgM">HAV(IgM):</label><select name="HAVIgM" id="HAVIgM" onblur="fChpLib(this)" onfocus="fChpSel(this)"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><br>
-<label for="GammaGT">Gamma-GT:</label><input name="GammaGT" type="number"  step="0.01" id="GammaGT" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="PhosphataseAlcaline">Phosphatase Alc:</label><input name="PhosphataseAlcaline" type="number"  step="0.01" id="PhosphataseAlcaline" onblur="fChpLib(this)" onfocus="fChpSel(this)">
+<label for="GammaGT">Gamma-GT:</label><input name="GammaGT" type="number"  step="0.01" id="GammaGT" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="< 45"><br>
+<label for="PhosphataseAlcaline">Phosphatase Alc:</label><input name="PhosphataseAlcaline" type="number"  step="0.01" id="PhosphataseAlcaline" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="30-130">
 </div>
 <h3 id="bilren">bilan renal</h3>
 <div>
-<label for="Creatinine">Créatinine:</label><input name="Creatinine" type="number"  step="0.01" id="Creatinine" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="Uree">Uree:</label><input name="Uree" type="number"  step="0.01" id="Uree" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="AcideUrique">Acide Urique:</label><input name="AcideUrique" type="number"  step="0.01" id="AcideUrique" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="Albumine">Albumine:</label><input name="Albumine" type="number"  step="0.01" id="Albumine" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="Albuminurie">Albuminurie:</label><input name="Albuminurie" type="number"  step="0.01" id="Albuminurie" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="Proteinurie">Protéinurie:</label><input name="Proteinurie" type="number"  step="0.01" id="Proteinurie" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="Proteinurie24h">Protéinurie 24h:</label><input name="Proteinurie24h" type="number"  step="0.01" id="Proteinurie24h" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="DFG">DFG:(Débit Filtration Glomérulaire)</label><input name="DFG" type="number"  step="0.01" id="DFG" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="IonogrammeUrinaire">Ionogramme Urn:</label><input name="IonogrammeUrinaire" type="number"  step="0.01" id="IonogrammeUrinaire" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="ClairanceCreatininurie">Clairance Créat:</label><input name="ClairanceCreatininurie" type="number"  step="0.01" id="ClairanceCreatininurie" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
+<label for="Creatinine">Créatinine:</label><input name="Creatinine" type="number"  step="0.01" id="Creatinine" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="6-13"><br>
+<label for="Uree">Uree:</label><input name="Uree" type="number"  step="0.01" id="Uree" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="0.15-0.55"><br>
+<label for="AcideUrique">Acide Urique:</label><input name="AcideUrique" type="number"  step="0.01" id="AcideUrique" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="30-70"><br>
+<label for="Albumine">Albumine:</label><input name="Albumine" type="number"  step="0.01" id="Albumine" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="35-52"><br>
+<label for="Albuminurie">Albuminurie:</label><input name="Albuminurie" type="number"  step="0.01" id="Albuminurie" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="<0.15"><br>
+<label for="Proteinurie">Protéinurie:</label><input name="Proteinurie" type="number"  step="0.01" id="Proteinurie" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="<0.30"><br>
+<label for="Proteinurie24h">Protéinurie 24h:</label><input name="Proteinurie24h" type="number"  step="0.01" id="Proteinurie24h" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="<0.15"><br>
+<label for="DFG">DFG:(Débit Filtration Glomérulaire)</label><input name="DFG" type="number"  step="0.01" id="DFG" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="60-89"><br>
+<h3>ionogramme Urinaire</h3>
+<p>
+<label for="PotassiumU">Potassium(k+):</label><input name="PotassiumU" type="number"  step="0.01" id="PotassiumU" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="50-100"> 
+<label for="SodiumU">Sodium(Na+):</label><input name="SodiumU" type="number"  step="0.01" id="SodiumU" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="100-300">
+<label for="ChloreU">Chlore(Cl-):</label><input name="ChloreU" type="number"  step="0.01" id="ChloreU" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="80-270"><br>
+</p>
+
+<label for="ClairanceCreatininurie">Clairance Créat:</label><input name="ClairanceCreatininurie" type="number"  step="0.01" id="ClairanceCreatininurie" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="80-120"><br>
 </div>
 <div>
 <label for="ElectrophoreseProteinesSerique" >Electroph Prot Sq:</label><select name="ElectrophoreseProteinesSerique" id="ElectrophoreseProteinesSerique" style="margin-top:20px" onblur="fChpLib(this)" onfocus="fChpSel(this)"><option></option><option>NORMALE</option><option>ANORMALE</option></select><br>
-<label for="AlbumineEP">Albumine:</label><input name="AlbumineEP"  type="number"  step="0.01" id="AlbumineEP" onblur="fChpLib(this)" onfocus="fChpSel(this)">
-<label for="AlphaI">AlphaI:</label><input name="AlphaI"  type="number"  step="0.01" id="AlphaI" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="AlphaII">AlphaII:</label><input name="AlphaII"  type="number"  step="0.01" id="AlphaII" onblur="fChpLib(this)" onfocus="fChpSel(this)">
-<label for="Beta">Beta:</label><input name="Beta"  type="number"  step="0.01" id="Beta" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="Gamma">Gamma:</label><input name="Gamma"  type="number"  step="0.01" id="Gamma" onblur="fChpLib(this)" onfocus="fChpSel(this)">
+<label for="AlbumineEP">Albumine:</label><input name="AlbumineEP"  type="number"  step="0.01" id="AlbumineEP" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="35-50">
+<label for="AlphaI">AlphaI:</label><input name="AlphaI"  type="number"  step="0.01" id="AlphaI" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="1-5"><br>
+<label for="AlphaII">AlphaII:</label><input name="AlphaII"  type="number"  step="0.01" id="AlphaII" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="4-8">
+<label for="Beta">Beta:</label><input name="Beta"  type="number"  step="0.01" id="Beta" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="5-12"><br>
+<label for="Gamma">Gamma:</label><input name="Gamma"  type="number"  step="0.01" id="Gamma" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="8-16">
 </div>
 <h3 id="Bilg">bilan glycemique</h3>
 <div>
-<label for="GlycemieJeun">Glycémie:</label><input name="GlycemieJeun" type="number"  step="0.01" id="GlycemieJeun" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="GlycemiePostPrandiale">Glycémie PP:</label><input name="GlycemiePostPrandiale" type="number"  step="0.01" id="GlycemiePostPrandiale" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="HBA1C">HBA1C:</label><input name="HBA1C" type="number"  step="0.01" id="HBA1C" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="Glycosurie">Glycosurie:</label><input name="Glycosurie" type="number"  step="0.01" id="Glycosurie" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="Glycorachie">Glycorachie:</label><input name="Glycorachie" type="number"  step="0.01" id="Glycorachie" onblur="fChpLib(this)" onfocus="fChpSel(this)">
+<label for="GlycemieJeun">Glycémie:</label><input name="GlycemieJeun" type="number"  step="0.01" id="GlycemieJeun" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="0.60-1.06"><br>
+<label for="GlycemiePostPrandiale">Glycémie PP:</label><input name="GlycemiePostPrandiale" type="number"  step="0.01" id="GlycemiePostPrandiale" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="<1.40"><br>
+<label for="HBA1C">HBA1C:</label><input name="HBA1C" type="number"  step="0.01" id="HBA1C" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="4-6"><br>
+<label for="Glycosurie">Glycosurie:</label><input name="Glycosurie" type="number"  step="0.01" id="Glycosurie" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="<50"><br>
+<label for="Glycorachie">Glycorachie:</label><input name="Glycorachie" type="number"  step="0.01" id="Glycorachie" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="<0.4">
 </div>
 <h3 id="bilhem">bilan Immuno-hematologique</h3>
 	NFS (Numeration  Sanguine):<br>
 <div>
-<label for="nfsLeucocytes">Leucocytes:</label><input name="nfsLeucocytes" type="number"  step="0.01" id="nfsLeucocytes" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="nfsHematies">Hématies:</label><input name="nfsHematies" type="number"  step="0.01" id="nfsHematies" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="nfsHemoglobine">Hemoglobine:</label><input name="nfsHemoglobine" type="number"  step="0.01" id="nfsHemoglobine" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="nfsHematocrite">Hematocrite:</label><input name="nfsHematocrite" type="number"  step="0.01" id="nfsHematocrite" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="nfsVGM">VGM:</label><input name="nfsVGM" type="number"  step="0.01" id="nfsVGM" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="nfsTCMH">TCMH:</label><input name="nfsTCMH" type="number"  step="0.01" id="nfsTCMH" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="nfsCCMH">CCMH:</label><input name="nfsCCMH" type="number"  step="0.01" id="nfsCCMH" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="nfsPlaquette">Plaquette:</label><input name="nfsPlaquette" type="number"  step="0.01" id="nfsPlaquette" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="nfsPN">Polyn.Neutrophile:</label><input name="nfsPN" type="number"  step="0.01" id="nfsPN" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="nfsPE">Polyn.Eosinophile:</label><input name="nfsPE" type="number"  step="0.01" id="nfsPE" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="nfsPB">Polyn.Basophile:</label><input name="nfsPB" type="number"  step="0.01" id="nfsPB" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="nfsLY">Lymphocyte:</label><input name="nfsLY" type="number"  step="0.01" id="nfsLY" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="nfsMn">Monocyte:</label><input name="nfsMn" type="number"  step="0.01" id="nfsMn" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br><br>
+<label for="nfsLeucocytes">Leucocytes:</label><input name="nfsLeucocytes" type="number"  step="0.01" id="nfsLeucocytes" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="4-10"><br>
+<label for="nfsHematies">Hématies:</label><input name="nfsHematies" type="number"  step="0.01" id="nfsHematies" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="4-6"><br>
+<label for="nfsHemoglobine">Hemoglobine:</label><input name="nfsHemoglobine" type="number"  step="0.01" id="nfsHemoglobine" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="12-18"><br>
+<label for="nfsHematocrite">Hematocrite:</label><input name="nfsHematocrite" type="number"  step="0.01" id="nfsHematocrite" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="38-50"><br>
+<label for="nfsVGM">VGM:</label><input name="nfsVGM" type="number"  step="0.01" id="nfsVGM" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="80-100"><br>
+<label for="nfsTCMH">TCMH:</label><input name="nfsTCMH" type="number"  step="0.01" id="nfsTCMH" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="28-32"><br>
+<label for="nfsCCMH">CCMH:</label><input name="nfsCCMH" type="number"  step="0.01" id="nfsCCMH" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="30-34"><br>
+<label for="nfsPlaquette">Plaquette:</label><input name="nfsPlaquette" type="number"  step="0.01" id="nfsPlaquette" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="150-500"><br>
+<label for="nfsPN">Polyn.Neutrophile:</label><input name="nfsPN" type="number"  step="0.01" id="nfsPN" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="45-70"><br>
+<label for="nfsPE">Polyn.Eosinophile:</label><input name="nfsPE" type="number"  step="0.01" id="nfsPE" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="1-6"><br>
+<label for="nfsPB">Polyn.Basophile:</label><input name="nfsPB" type="number"  step="0.01" id="nfsPB" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="<1"><br>
+<label for="nfsLY">Lymphocyte:</label><input name="nfsLY" type="number"  step="0.01" id="nfsLY" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="20-40"><br>
+<label for="nfsMn">Monocyte:</label><input name="nfsMn" type="number"  step="0.01" id="nfsMn" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="3-7"><br><br>
 </div>
 <p>
 <label for="GroupeSanguin" >Groupe Sanguin:</label><select name="GroupeSanguin" id="GroupeSanguin" style="width:64px;margin-bottom:20px" onblur="fChpLib(this)" onfocus="fChpSel(this)"><option></option><option>O</option><option>A</option><option>B</option><option>AB</option></select>
 <label for="Rhesus">Rhésus:</label><select name="Rhesus" id="Rhesus" onblur="fChpLib(this)" onfocus="fChpSel(this)"><option></option><option>(+) POSITIVE</option><option>(-) NEGATIVE</option></select><br>
 </p>
 <div>
-<label for="TP">TP(Taux Prothrombine):</label><input name="TP" type="number"  step="0.01" id="TP" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="TCK">TCK:</label><input name="TCK" type="number"  step="0.01" id="TCK" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="Fibrinemie">Fibrinémie:</label><input name="Fibrinemie" type="number"  step="0.01" id="Fibrinemie" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="TauxProthrombine">Taux Prothrombine:</label><input name="TauxProthrombine" type="number"  step="0.01" id="TauxProthrombine" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="INR">INR(International Normalized Ratio):</label><input name="INR" type="number"  step="0.01" id="INR" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br><br>
+<label for="TP">TP(Taux Prothrombine):</label><input name="TP" type="number"  step="0.01" id="TP" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="70-100"><br>
+<label for="TCK">TCK:</label><input name="TCK" type="number"  step="0.01" id="TCK" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="20-33"><br>
+<label for="Fibrinemie">Fibrinémie:</label><input name="Fibrinemie" type="number"  step="0.01" id="Fibrinemie" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="2-4"><br>
+<label for="INR">INR(InternationalNormalizedRatio):</label><input name="INR" type="number"  step="0.01" id="INR" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="<1"><br><br>
 </div>
 <div>
 <label for="Electrophoresehemoglobine" >Electrophorèse Hb:</label><select name="Electrophoresehemoglobine" id="Electrophoresehemoglobine" style="width:64px" onblur="fChpLib(this)" onfocus="fChpSel(this)"><option></option><option>A1A2</option><option>AC</option><option>SC</option><option>SS</option><option>AF</option></select><br>
@@ -268,18 +273,18 @@ O<a>P</a><a>Q</a><a>R</a><a>S</a><a>T</a><a>U</a><a>V</a><a>W</a>XYZ
 </div>
 <h3 id="bilhor">bilan hormonal</h3>
 <div>
-<label for="T3libre">T3 libre:</label><input name="T3libre" type="number"  step="0.01" id="T3libre" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="T4libre">T4 libre:</label><input name="T4libre" type="number"  step="0.01" id="T4libre" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="TSH">TSH(ThyréoStimuline Hormone):</label><input name="TSH" type="number"  step="0.01" id="TSH" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="PSA">PSA(Prostate-Specific Antigen):</label><input name="PSA" type="number"  step="0.01" id="PSA" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="Estradiol">Estradiol:</label><input name="Estradiol" type="number"  step="0.01" id="Estradiol" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="Progesterone">Progestérone:</label><input name="Progesterone" type="number"  step="0.01" id="Progesterone" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="Prolactinemie">Prolactinémie:</label><input name="Prolactinemie" type="number"  step="0.01" id="Prolactinemie" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="LhRH">LH-RH(Lutéinostimuline):</label><input name="LhRH" type="number"  step="0.01" id="LhRH" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="Cortisol">Cortisol:</label><input name="Cortisol" type="number"  step="0.01" id="Cortisol" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="FSH">FSH(Hormone FolliculoStimulante):</label><input name="FSH" type="number"  step="0.01" id="FSH" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="Testosterone">Testosterone:</label><input name="Testosterone" type="number"  step="0.01" id="Testosterone" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
-<label for="TSHus">TSHus(ThyréoS. H. UltraSensible):</label><input name="TSHus" type="number"  step="0.01" id="TSHus" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
+<label for="T3libre">T3 libre:</label><input name="T3libre" type="number"  step="0.01" id="T3libre" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="3-8.5"><br>
+<label for="T4libre">T4 libre:</label><input name="T4libre" type="number"  step="0.01" id="T4libre" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="8.6-25"><br>
+<label for="TSH">TSH(ThyréoStimuline Hormone):</label><input name="TSH" type="number"  step="0.01" id="TSH" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="0.15-4.9"><br>
+<label for="PSA">PSA(Prostate-Specific Antigen):</label><input name="PSA" type="number"  step="0.01" id="PSA" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="<4"><br>
+<label for="Estradiol">Estradiol:</label><input name="Estradiol" type="number"  step="0.01" id="Estradiol" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="30-400"><br>
+<label for="Progesterone">Progestérone:</label><input name="Progesterone" type="number"  step="0.01" id="Progesterone" onblur="fChpLib(this)" onfocus="fChpSel(this)"><span> Ovul°(3.3-28) #Ovul°(0.2-1.4)</span><br>
+<label for="Prolactinemie">Prolactinémie:</label><input name="Prolactinemie" type="number"  step="0.01" id="Prolactinemie" onblur="fChpLib(this)" onfocus="fChpSel(this)"><span> #Gross.(5-20) Gross.(200-250)</span><br>
+<label for="LhRH">LH-RH(Lutéinostimuline):</label><input name="LhRH" type="number"  step="0.01" id="LhRH" onblur="fChpLib(this)" onfocus="fChpSel(this)"><span> Ovul°(20-100) #Ovul(2-15)</span><br>
+<label for="Cortisol">Cortisol:</label><input name="Cortisol" type="number"  step="0.01" id="Cortisol" onblur="fChpLib(this)" onfocus="fChpSel(this)"><span> 8H-10H(250-700)16H-24H(50-350)</span><br>
+<label for="FSH">FSH(Hormone FolliculoStimulante):</label><input name="FSH" type="number"  step="0.01" id="FSH" onblur="fChpLib(this)" onfocus="fChpSel(this)"><span> Ovul°(4.7-21.5) #Ovul(2-12.5) M||(sup à 25)</span><br>
+<label for="Testosterone">Testosterone:</label><input name="Testosterone" type="number"  step="0.01" id="Testosterone" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="300-1000"><br>
+<label for="TSHus">TSHus(ThyréoS. H. UltraSensible):</label><input name="TSHus" type="number"  step="0.01" id="TSHus" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="0.4-4"><br>
 <label for="bHCGsang">Beta HCG(sang):</label><input name="bHCGsang" type="number"  step="0.01" id="bHCGsang" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
 <label for="bHCGurine">Beta HCG(urine):</label><input name="bHCGurine" type="number"  step="0.01" id="bHCGurine" onblur="fChpLib(this)" onfocus="fChpSel(this)">
 </div>
@@ -315,7 +320,7 @@ overflow-y:auto;text-align:left;padding-left:20px;
 background-color:aqua;display:grid">
 <span id="A" style="color:red">A</span><a href="#ACHBC">ACHBC</a><a href="#ACHBe">ACHBe</a><a href="#ACHBS">ACHBS</a><a href="#ACHVC">ACHVC</a><a href="#AcideUrique">Acide urique</a><a href="#AgHBe">AgHBe</a><a href="#AgHBS">AgHBS</a><a href="#Albumine">Albumine</a><a href="#Albuminurie">Albuminurie</a><a href="#ASLO">ASLO</a><span id="B" style="color:red">B</span><a href="#bHCGsang">Beta HCG(sg)</a><a href="#bHCGurine">Beta HCG(ur)</a><a href="#Bilharziose">Bilharziose</a><a href="#BilirubineConjuguee">Bilirubine Conj.</a><a href="#BilirubineTotale">Bilirubine Tot.</a><a href="#BW">BW(VDRL-TPHA)</a><span id="C" style="color:red">C</span><a href="#Calcium">Calcium(Ca2+)</a><a href="#Chlamydia">Chlamydia</a><a href="#CholesterolHDL">Cholesterol HDL</a><a href="#CholesterolLDL">Cholesterol LDL</a><a href="#CholesterolTotal">Cholesterol Total</a><a href="#ClairanceCreatininurie">Clairance creatininurie</a><a href="Coproculture.html" target="_blank">Coproculture</a><a href="#Cortisol">Cortisol</a><a href="#CPK">CPK</a><a href="#CPKmb">CK-mb</a><a href="#Creatinine">Creatinine</a><a href="#CRP">CRP</a><span id="D" style="color:red">D</span><a href="#DFG">DFG</a><span id="E" style="color:red">E</span><a href="ECBU.html" target="_blank">ECBU</a><a href="#ElectrophoreseProteinesSerique">Electrophorèse.Prot.Sq</a><a href="#Estradiol">Estradiol</a><span id="F" style="color:red">F</span><a href="#WaalerRose">Fact.Rhumat.(FR)</a><a href="#Fibrinemie">Fibrinemie</a><a href="#FSH">FSH</a>
 <span id="G" style="color:red">G</span><a href="#GammaGT">GAMMA-GT</a><a href="#GlycemieJeun">Glycemie</a><a href="#GlycemiePostPrandiale">Glycemie Post P.</a><a href="#Glycorachie">Glycorachie</a><a href="#Glycosurie">Glycosurie</a><a href="#GoutteEpaisse">Goutte Epaisse</a><a href="#GroupeSanguin">Groupe Sanguin</a><span id="H" style="color:red">H</span><a href="#HAVIgM">HAV(IgM)</a><a href="#HBA1C">HBA1C</a>
-<span id="I" style="color:red">I</span><a href="#INR">INR</a><a href="#Potassium">Ionogramme Sg</a><a href="#IonogrammeUrinaire">Ionogramme Urinaire</a><span id="L" style="color:red">L</span><a href="LCR.html" target="_blank">LCR</a><a href="#LDH">LDH</a><a href="#LHRH">LH-RH</a><a href="#LipideTotale">Lipide totale</a><span id="M" style="color:red">M</span><a href="#Magnesium">Magnesium(Mg2+)</a><a href="#Mycoplasme">Mycoplasme</a><span id="N" style="color:red">N</span><a href="#nfsLeucocytes">NFS</a><span id="P" style="color:red">P</span><a href="#PhosphataseAlcaline">Phosphat.Alc</a><a href="#Potassium">Potassium(k+)</a><a href="#Progesterone">Progesterone</a><a href="#Prolactinemie">Prolactinemie</a><a href="#Proteinurie">Proteinurie</a><a href="#Proteinurie24h">Proteinurie 24h</a><a href="#ProtidesTotaux">Protid.Tot.</a><a href="#PSA">PSA</a><a href="PU.html" target="_blank">PU</a><a href="PV.html" target="_blank">PV</a><span id="Q" style="color:red">Q</span><a href="#QBC">QBC</a><span id="R" style="color:red">R</span><a href="#ReserveAlcalin">Res.Alcal.</a><a href="#Rubeole">Rubeole</a><span id="S" style="color:red">S</span><a href="Spermoculture.html" target="_blank">Spermoculture</a><a href="Spermocytogramme.html" target="_blank">Spermocytogramme</a><a href="Spermogramme.html" target="_blank">Spermogramme</a><span id="T" style="color:red">T</span><a href="#T3libre">T3 libre</a><a href="#T4libre">T4 libre</a><a href="#TauxProthrombine">Taux Prothrombine</a><a href="#TCK">TCK</a><a href="#Toxoplasmose">Toxoplasmose</a><a href="#TGO">Transaminases</a><a href="#Triglycerides">Triglycerides</a><a href="#TSH">TSH</a><span id="U" style="color:red">U</span><a href="#Uree">Urée</a><span id="V" style="color:red">V</span><a href="#VIH">VIH</a><a href="#VS1ereHEURE">Vit.Sediment.(VS)</a><span id="W" style="color:red">W</span><a href="#WaalerRose">Waaler-Rose</a><a href="#WidalFelix" style="display:inline-block;height:170px">Widal et Felix</a>
+<span id="I" style="color:red">I</span><a href="#INR">INR</a><a href="#Potassium">Ionogramme Sg</a><a href="#PotassiumU">Ionogramme Urinaire</a><span id="L" style="color:red">L</span><a href="LCR.html" target="_blank">LCR</a><a href="#LDH">LDH</a><a href="#LHRH">LH-RH</a><a href="#LipideTotale">Lipide totale</a><span id="M" style="color:red">M</span><a href="#Magnesium">Magnesium(Mg2+)</a><a href="#Mycoplasme">Mycoplasme</a><span id="N" style="color:red">N</span><a href="#nfsLeucocytes">NFS</a><span id="P" style="color:red">P</span><a href="#PhosphataseAlcaline">Phosphat.Alc</a><a href="#Potassium">Potassium(k+)</a><a href="#Progesterone">Progesterone</a><a href="#Prolactinemie">Prolactinemie</a><a href="#Proteinurie">Proteinurie</a><a href="#Proteinurie24h">Proteinurie 24h</a><a href="#ProtidesTotaux">Protid.Tot.</a><a href="#PSA">PSA</a><a href="PU.html" target="_blank">PU</a><a href="PV.html" target="_blank">PV</a><span id="Q" style="color:red">Q</span><a href="#QBC">QBC</a><span id="R" style="color:red">R</span><a href="#ReserveAlcalin">Res.Alcal.</a><a href="#Rubeole">Rubeole</a><span id="S" style="color:red">S</span><a href="Spermoculture.html" target="_blank">Spermoculture</a><a href="Spermocytogramme.html" target="_blank">Spermocytogramme</a><a href="Spermogramme.html" target="_blank">Spermogramme</a><span id="T" style="color:red">T</span><a href="#T3libre">T3 libre</a><a href="#T4libre">T4 libre</a><a href="#TauxProthrombine">Taux Prothrombine</a><a href="#TCK">TCK</a><a href="#Toxoplasmose">Toxoplasmose</a><a href="#TGO">Transaminases</a><a href="#Triglycerides">Triglycerides</a><a href="#TSH">TSH</a><span id="U" style="color:red">U</span><a href="#Uree">Urée</a><span id="V" style="color:red">V</span><a href="#VIH">VIH</a><a href="#VS1ereHEURE">Vit.Sediment.(VS)</a><span id="W" style="color:red">W</span><a href="#WaalerRose">Waaler-Rose</a><a href="#WidalFelix" style="display:inline-block;height:170px">Widal et Felix</a>
  
 </span>
 </span>
@@ -360,7 +365,9 @@ for (var i= 0; i < 5; i++){document.querySelectorAll("input")[i].style.textTrans
 for (var i= 88; i< 90 ; i++){document.querySelectorAll("input")[i].style.textTransform="capitalize";}
 for (var i= 86; i< 88 ; i++){document.querySelectorAll("input")[i].style.marginBottom="5px";}
 
-for (var i= 89; i<document.querySelectorAll("input").length-4 ; i++){document.querySelectorAll("input")[i].style.width="55px";}
+for (var i= 89; i<document.querySelectorAll("input").length-4 ; i++){document.querySelectorAll("input")[i].style.width="85px";}
+for (var i= 89; i<document.querySelectorAll("input").length-4 ; i++){document.querySelectorAll("input")[i].style.textAlign="center";}
+
 for (var i= 0; i < 6; i++){document.querySelectorAll("label")[i].style.textAlign="right";}
 for (var i= 87; i< 92 ; i++){document.querySelectorAll("label")[i].style.textAlign="right";}
 for (var i= 92; i<document.querySelectorAll("label").length ; i++){document.querySelectorAll("label")[i].style.display="inline-block";}
