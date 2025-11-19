@@ -227,8 +227,8 @@ O<a>P</a><a>Q</a><a>R</a><a>S</a><a>T</a><a>U</a><a>V</a><a>W</a>XYZ
 <label for="nfsMn">Monocyte:</label><input name="nfsMn" type="number"  step="0.01" id="nfsMn" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="3-7"><br><br>
 </div>
 <p>
-<label for="GroupeSanguin" >Groupe Sanguin:</label><select name="GroupeSanguin" id="GroupeSanguin" style="width:64px;margin-bottom:20px" onblur="fChpLib(this)" onfocus="fChpSel(this)"><option></option><option>O</option><option>A</option><option>B</option><option>AB</option></select>
-<label for="Rhesus">Rhésus:</label><select name="Rhesus" id="Rhesus" onblur="fChpLib(this)" onfocus="fChpSel(this)"><option></option><option>(+) POSITIVE</option><option>(-) NEGATIVE</option></select><br>
+<label for="GroupeSanguin" >Groupe Sanguin:</label><select name="GroupeSanguin" id="GroupeSanguin" style="width:64px;margin-bottom:20px;text-align:center" onblur="fChpLib(this)" onfocus="fChpSel(this)"><option></option><option>O</option><option>A</option><option>B</option><option>AB</option></select>
+<label for="Rhesus">Rhésus:</label><select name="Rhesus" id="Rhesus" onblur="fChpLib(this)" onfocus="fChpSel(this)"><option></option><option>(+)POSITIVE</option><option>(-)NEGATIVE</option></select><br>
 </p>
 <div>
 <label for="TP">TP(Taux Prothrombine):</label><input name="TP" type="number"  step="0.01" id="TP" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="70-100"><br>
@@ -237,7 +237,7 @@ O<a>P</a><a>Q</a><a>R</a><a>S</a><a>T</a><a>U</a><a>V</a><a>W</a>XYZ
 <label for="INR">INR(InternationalNormalizedRatio):</label><input name="INR" type="number"  step="0.01" id="INR" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="< 1"><br><br>
 </div>
 <div>
-<label for="Electrophoresehemoglobine" >Electrophorèse Hb:</label><select name="Electrophoresehemoglobine" id="Electrophoresehemoglobine" style="width:64px" onblur="fChpLib(this)" onfocus="fChpSel(this)"><option></option><option>A1A2</option><option>AC</option><option>SC</option><option>SS</option><option>AF</option></select><br>
+<label for="Electrophoresehemoglobine" >Electrophorèse Hb:</label><select name="Electrophoresehemoglobine" id="Electrophoresehemoglobine" style="width:64px;text-align:center" onblur="fChpLib(this)" onfocus="fChpSel(this)"><option></option><option>A1A2</option><option>AC</option><option>SC</option><option>SS</option><option>AF</option></select><br>
 <label for="ElectroHBA1">A1:</label><input name="ElectroHBA1" type="number"  step="0.01" id="ElectroHBA1" onblur="fChpLib(this)" onfocus="fChpSel(this)">
 <label for="ElectroHBA2">A2:</label><input name="ElectroHBA2" type="number"  step="0.01" id="ElectroHBA2" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
 <label for="ElectroHBS">S:</label><input name="ElectroHBS" type="number"  step="0.01" id="ElectroHBS" onblur="fChpLib(this)" onfocus="fChpSel(this)">
@@ -417,6 +417,9 @@ for(var j=0;j<document.querySelectorAll("div")[i].querySelectorAll("label").leng
 let myInterval;
 function fChpSel(cel){
 cel.previousSibling.style.backgroundColor ="blue";
+cel.style.backgroundColor="";
+cel.style.color="";
+cel.style.fontWeight="";
 myInterval = setInterval(()=>{
 cel.previousSibling.style.color = "white"
 cel.previousSibling.style.backgroundColor = 
@@ -426,7 +429,28 @@ cel.previousSibling.style.backgroundColor =="green"?"red":"blue";
 function fChpLib(cel){clearInterval(myInterval);
 cel.previousSibling.style.backgroundColor = "";
 cel.previousSibling.style.color = ""
-}
+if(cel.value==="POSITIVE"||cel.value==="AC"||cel.value==="SC"||
+cel.value==="SS")
+{cel.style.backgroundColor="aqua";
+cel.style.color="red";
+cel.style.fontWeight="bold";}
+else if (cel.placeholder.includes("<")){
+let refs=cel.placeholder.split(" ");
+if(cel.value > parseFloat(refs[1])){
+cel.style.backgroundColor="aqua";
+cel.style.color="red";
+cel.style.fontWeight="bold";}}
+else if(cel.placeholder.includes("-")){
+let refs=cel.placeholder.split("-");
+if(cel.value < parseFloat(refs[0])){
+cel.style.backgroundColor="aqua";
+cel.style.color="orange";
+cel.style.fontWeight="bold";}
+else if(cel.value > parseFloat(refs[1])){
+cel.style.backgroundColor="aqua";
+cel.style.color="red";
+cel.style.fontWeight="bold";}
+}}
 
 var btn_vld= document.getElementById("vld");
 btn_vld.addEventListener('click',vd_pgweb);
@@ -472,20 +496,6 @@ function Avertir (cel){
 if(cel.nextElementSibling.textContent===" *Champ obligatoire")
 {cel.nextElementSibling.remove();}
 }
-
-for (var i= 2; i <document.querySelectorAll("div").length; i++){
-for(var j=0;j<document.querySelectorAll("div")[i].querySelectorAll("input").length;j++)
-{if (document.querySelectorAll("div")[i].querySelectorAll("input")[j].placeholder.includes("<"))
-{let refs=document.querySelectorAll("div")[i].querySelectorAll("input")[j].placeholder.split(" ");
-if(document.querySelectorAll("div")[i].querySelectorAll("input")[j].value > refs[1])
-{document.querySelectorAll("div")[i].querySelectorAll("input")[j].addEventListener('blur',()=>{
-document.querySelectorAll("div")[i].querySelectorAll("input")[j].style.BackgroundColor="yellow";
-})}
-
-}else
-{}
-}}
-
 
 </script>
 </body></html>
