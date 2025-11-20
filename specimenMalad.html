@@ -38,7 +38,7 @@ O<a>P</a><a>Q</a><a>R</a><a>S</a><a>T</a><a>U</a><a>V</a><a>W</a>XYZ
 <label for="albmu">Albuminurie</label><input id="albmu" name="albmu" type="checkbox"><br>
 <label for="Asl">ASLO</label><input id="Asl" name="Asl" type="checkbox"><br>
 <span id="lB" style="color:blue">B</span><br>
-<label for="bhcg">Beta HCG(sg)</label><input id="bhcg" name="bhcg" type="checkbox"><br>
+<label for="bhcg">Beta HCG(plasma)</label><input id="bhcg" name="bhcg" type="checkbox"><br>
 <label for="bhcgu">Beta HCG(ur)</label><input id="bhcgu" name="bhcgu" type="checkbox"><br>
 <label for="bilh">Bilharziose</label><input id="bilh" name="bilh" type="checkbox"><br>
 <label for="biliC">Bilirubine Conj.</label><input id="biliC" name="biliC" type="checkbox"><br>
@@ -156,10 +156,10 @@ O<a>P</a><a>Q</a><a>R</a><a>S</a><a>T</a><a>U</a><a>V</a><a>W</a>XYZ
 <label for="Triglycerides">Triglycérides:</label><input name="Triglycerides" type="number"  step="0.01" id="Triglycerides" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="0.65-1.9"><br>
 <label for="CholesterolTotal">Cholestérol Total:</label><input name="CholesterolTotal" type="number"  step="0.01" id="CholesterolTotal" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="1.5-2.5"><br>
 <label for="CholesterolHDL">Cholestérol HDL:</label><input name="CholesterolHDL" type="number"  step="0.01" id="CholesterolHDL" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="0.2-0.4"> <br>
-<label for="CholesterolLDL">Cholestérol LDL:</label><input name="CholesterolLDL" type="number"  step="0.01" id="CholesterolLDL" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="< 2.5"> <br>
+<label for="CholesterolLDL">Cholestérol LDL:</label><input name="CholesterolLDL" type="number"  step="0.01" id="CholesterolLDL" onblur="fChpLib(this)" onfocus="fChpSel(this)" readonly="readonly" placeholder="< 2.5"> <br>
 <label for="LipideTotale">Lipide Totale:</label><input name="LipideTotale" type="number"  step="0.01" id="LipideTotale" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="6-7.5"> <br>
 </div>
-<h3 id="bilhepbil">bilan hepatique et bilaire</h3>
+<h3 id="bilhepbil">bilan hepatique et bilaire</h3> 
 <p>
 <label for="TGO" ><span style="background-color: #00F3FF">Transaminases</span>/TGO:</label><input name="TGO" type="number"  step="0.01" id="TGO" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="< 37"> <label for="TGP">TGP:</label><input name="TGP" type="number"  step="0.01" id="TGP" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="< 40"><br>
 </p>
@@ -275,14 +275,14 @@ O<a>P</a><a>Q</a><a>R</a><a>S</a><a>T</a><a>U</a><a>V</a><a>W</a>XYZ
 <label for="TSH">TSH(ThyréoStimuline Hormone):</label><input name="TSH" type="number"  step="0.01" id="TSH" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="0.15-4.9"><br>
 <label for="PSA">PSA(Prostate-Specific Antigen):</label><input name="PSA" type="number"  step="0.01" id="PSA" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="< 4"><br>
 <label for="Estradiol">Estradiol:</label><input name="Estradiol" type="number"  step="0.01" id="Estradiol" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="30-400"><br>
-<label for="Progesterone">Progestérone:</label><input name="Progesterone" type="number"  step="0.01" id="Progesterone" onblur="fChpLib(this)" onfocus="fChpSel(this)"><span> Ovul°(3.3-28) #Ovul°(0.2-1.4)</span><br>
-<label for="Prolactinemie">Prolactinémie:</label><input name="Prolactinemie" type="number"  step="0.01" id="Prolactinemie" onblur="fChpLib(this)" onfocus="fChpSel(this)"><span> #Gross.(5-20) Gross.(200-250)</span><br>
-<label for="LhRH">LH-RH(Lutéinostimuline):</label><input name="LhRH" type="number"  step="0.01" id="LhRH" onblur="fChpLib(this)" onfocus="fChpSel(this)"><span> Ovul°(20-100) #Ovul(2-15)</span><br>
-<label for="Cortisol">Cortisol:</label><input name="Cortisol" type="number"  step="0.01" id="Cortisol" onblur="fChpLib(this)" onfocus="fChpSel(this)"><span> 8H-10H(250-700)16H-24H(50-350)</span><br>
-<label for="FSH">FSH(Hormone FolliculoStimulante):</label><input name="FSH" type="number"  step="0.01" id="FSH" onblur="fChpLib(this)" onfocus="fChpSel(this)"><span> Ovul°(4.7-21.5) #Ovul(2-12.5) M||(sup à 25)</span><br>
+<label for="Progesterone">Progestérone:</label><input name="Progesterone" type="number"  step="0.01" id="Progesterone" onblur="fChpLib(this)" onfocus="fChpSel(this)">VN<a onclick="window.open('images/ProgesteroneTab.jpg', '_blank','left=650,top=50,width=680px,height=302px')" style="text-decoration:underline;color:dimgray">(Cliquez ici !)</a><br>
+<label for="Prolactinemie">Prolactinémie:</label><input name="Prolactinemie" type="number"  step="0.01" id="Prolactinemie" onblur="fChpLib(this)" onfocus="fChpSel(this)">VN<a onclick="window.open('images/ProlactineTab.jpg', '_blank','left=650,top=50,width=680px,height=208px')" style="text-decoration:underline;color:dimgray">(Cliquez ici !)</a><br>
+<label for="LhRH">LH-RH(Lutéinostimuline):</label><input name="LhRH" type="number"  step="0.01" id="LhRH" onblur="fChpLib(this)" onfocus="fChpSel(this)">VN<a onclick="window.open('images/LhTab.jpg', '_blank','left=650,top=50,width=680px,height=302px')" style="text-decoration:underline;color:dimgray">(Cliquez ici !)</a><br>
+<label for="Cortisol">Cortisol:</label><input name="Cortisol" type="number"  step="0.01" id="Cortisol" onblur="fChpLib(this)" onfocus="fChpSel(this)">VN<a onclick="window.open('images/CortisolTab.jpg', '_blank','left=650,top=50,width=680px,height=208px')" style="text-decoration:underline;color:dimgray">(Cliquez ici !)</a><br>
+<label for="FSH">FSH(Hormone FolliculoStimulante):</label><input name="FSH" type="number"  step="0.01" id="FSH" onblur="fChpLib(this)" onfocus="fChpSel(this)">VN<a onclick="window.open('images/FSHTab.jpg', '_blank','left=650,top=50,width=680px,height=302px')" style="text-decoration:underline;color:dimgray">(Cliquez ici !)</a><br>
 <label for="Testosterone">Testosterone:</label><input name="Testosterone" type="number"  step="0.01" id="Testosterone" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="300-1000"><br>
 <label for="TSHus">TSHus(ThyréoS. H. UltraSensible):</label><input name="TSHus" type="number"  step="0.01" id="TSHus" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="0.4-4"><br>
-<label for="bHCGsang">Beta HCG(sang):</label><input name="bHCGsang" type="number"  step="0.01" id="bHCGsang" onblur="fChpLib(this)" onfocus="fChpSel(this)"> <a onclick="window.open('images/hcg_biomnis_tableau.avif', '_blank','left=650,top=50,width=337px,height=223px,toolbar=0')" style="text-decoration:underline"> voir tableau</a><br>
+<label for="bHCGsang">Beta HCG(plasma):</label><input name="bHCGsang" type="number"  step="0.01" id="bHCGsang" onblur="fChpLib(this)" onfocus="fChpSel(this)"> VN<a onclick="window.open('images/hcg_biomnis_tableau.avif', '_blank','left=650,top=50,width=337px,height=223px')" style="text-decoration:underline;color:dimgray">(Cliquez ici !)</a><br>
 <label for="bHCGurine">Beta HCG(urine):</label><input name="bHCGurine" type="number"  step="0.01" id="bHCGurine" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="< 25">
 </div>
 <h3 id="enzMus">bilan enzymatique musculaires</h3>
@@ -315,7 +315,7 @@ right:15px;padding-left:3px">
 height:180px;width:180px;border:thin black solid;
 overflow-y:auto;text-align:left;padding-left:20px;
 background-color:aqua;display:grid">
-<span id="A" style="color:red">A</span><a href="#ACHBC">ACHBC</a><a href="#ACHBe">ACHBe</a><a href="#ACHBS">ACHBS</a><a href="#ACHVC">ACHVC</a><a href="#AcideUrique">Acide urique</a><a href="#AgHBe">AgHBe</a><a href="#AgHBS">AgHBS</a><a href="#Albumine">Albumine</a><a href="#Albuminurie">Albuminurie</a><a href="#ASLO">ASLO</a><span id="B" style="color:red">B</span><a href="#bHCGsang">Beta HCG(sg)</a><a href="#bHCGurine">Beta HCG(ur)</a><a href="#Bilharziose">Bilharziose</a><a href="#BilirubineConjuguee">Bilirubine Conj.</a><a href="#BilirubineTotale">Bilirubine Tot.</a><a href="#BW">BW(VDRL-TPHA)</a><span id="C" style="color:red">C</span><a href="#Calcium">Calcium(Ca2+)</a><a href="#Chlamydia">Chlamydia</a><a href="#CholesterolHDL">Cholesterol HDL</a><a href="#CholesterolLDL">Cholesterol LDL</a><a href="#CholesterolTotal">Cholesterol Total</a><a href="#ClairanceCreatininurie">Clairance creatininurie</a><a href="Coproculture.html" target="_blank">Coproculture</a><a href="#Cortisol">Cortisol</a><a href="#CPK">CPK</a><a href="#CPKmb">CK-mb</a><a href="#Creatinine">Creatinine</a><a href="#CRP">CRP</a><span id="D" style="color:red">D</span><a href="#DFG">DFG</a><span id="E" style="color:red">E</span><a href="ECBU.html" target="_blank">ECBU</a><a href="#ElectrophoreseProteinesSerique">Electrophorèse.Prot.Sq</a><a href="#Estradiol">Estradiol</a><span id="F" style="color:red">F</span><a href="#WaalerRose">Fact.Rhumat.(FR)</a><a href="#Fibrinemie">Fibrinemie</a><a href="#FSH">FSH</a>
+<span id="A" style="color:red">A</span><a href="#ACHBC">ACHBC</a><a href="#ACHBe">ACHBe</a><a href="#ACHBS">ACHBS</a><a href="#ACHVC">ACHVC</a><a href="#AcideUrique">Acide urique</a><a href="#AgHBe">AgHBe</a><a href="#AgHBS">AgHBS</a><a href="#Albumine">Albumine</a><a href="#Albuminurie">Albuminurie</a><a href="#ASLO">ASLO</a><span id="B" style="color:red">B</span><a href="#bHCGsang">Beta HCG(plasma)</a><a href="#bHCGurine">Beta HCG(ur)</a><a href="#Bilharziose">Bilharziose</a><a href="#BilirubineConjuguee">Bilirubine Conj.</a><a href="#BilirubineTotale">Bilirubine Tot.</a><a href="#BW">BW(VDRL-TPHA)</a><span id="C" style="color:red">C</span><a href="#Calcium">Calcium(Ca2+)</a><a href="#Chlamydia">Chlamydia</a><a href="#CholesterolHDL">Cholesterol HDL</a><a href="#CholesterolLDL">Cholesterol LDL</a><a href="#CholesterolTotal">Cholesterol Total</a><a href="#ClairanceCreatininurie">Clairance creatininurie</a><a href="Coproculture.html" target="_blank">Coproculture</a><a href="#Cortisol">Cortisol</a><a href="#CPK">CPK</a><a href="#CPKmb">CK-mb</a><a href="#Creatinine">Creatinine</a><a href="#CRP">CRP</a><span id="D" style="color:red">D</span><a href="#DFG">DFG</a><span id="E" style="color:red">E</span><a href="ECBU.html" target="_blank">ECBU</a><a href="#ElectrophoreseProteinesSerique">Electrophorèse.Prot.Sq</a><a href="#Estradiol">Estradiol</a><span id="F" style="color:red">F</span><a href="#WaalerRose">Fact.Rhumat.(FR)</a><a href="#Fibrinemie">Fibrinemie</a><a href="#FSH">FSH</a>
 <span id="G" style="color:red">G</span><a href="#GammaGT">GAMMA-GT</a><a href="#GlycemieJeun">Glycemie</a><a href="#GlycemiePostPrandiale">Glycemie Post P.</a><a href="#Glycorachie">Glycorachie</a><a href="#Glycosurie">Glycosurie</a><a href="#GoutteEpaisse">Goutte Epaisse</a><a href="#GroupeSanguin">Groupe Sanguin</a><span id="H" style="color:red">H</span><a href="#HAVIgM">HAV(IgM)</a><a href="#HBA1C">HBA1C</a>
 <span id="I" style="color:red">I</span><a href="#INR">INR</a><a href="#Potassium">Ionogramme Sg</a><a href="#PotassiumU">Ionogramme Urinaire</a><span id="L" style="color:red">L</span><a href="LCR.html" target="_blank">LCR</a><a href="#LDH">LDH</a><a href="#LHRH">LH-RH</a><a href="#LipideTotale">Lipide totale</a><span id="M" style="color:red">M</span><a href="#Magnesium">Magnesium(Mg2+)</a><a href="#Mycoplasme">Mycoplasme</a><span id="N" style="color:red">N</span><a href="#nfsLeucocytes">NFS</a><span id="P" style="color:red">P</span><a href="#PhosphataseAlcaline">Phosphat.Alc</a><a href="#Potassium">Potassium(k+)</a><a href="#Progesterone">Progesterone</a><a href="#Prolactinemie">Prolactinemie</a><a href="#Proteinurie">Proteinurie</a><a href="#Proteinurie24h">Proteinurie 24h</a><a href="#ProtidesTotaux">Protid.Tot.</a><a href="#PSA">PSA</a><a href="PU.html" target="_blank">PU</a><a href="PV.html" target="_blank">PV</a><span id="Q" style="color:red">Q</span><a href="#QBC">QBC</a><span id="R" style="color:red">R</span><a href="#ReserveAlcalin">Res.Alcal.</a><a href="#Rubeole">Rubeole</a><span id="S" style="color:red">S</span><a href="Spermoculture.html" target="_blank">Spermoculture</a><a href="Spermocytogramme.html" target="_blank">Spermocytogramme</a><a href="Spermogramme.html" target="_blank">Spermogramme</a><span id="T" style="color:red">T</span><a href="#T3libre">T3 libre</a><a href="#T4libre">T4 libre</a><a href="#TauxProthrombine">Taux Prothrombine</a><a href="#TCK">TCK</a><a href="#Toxoplasmose">Toxoplasmose</a><a href="#TGO">Transaminases</a><a href="#Triglycerides">Triglycerides</a><a href="#TSH">TSH</a><span id="U" style="color:red">U</span><a href="#Uree">Urée</a><span id="V" style="color:red">V</span><a href="#VIH">VIH</a><a href="#VS1ereHEURE">Vit.Sediment.(VS)</a><span id="W" style="color:red">W</span><a href="#WaalerRose">Waaler-Rose</a><a href="#WidalFelix" style="display:inline-block;height:170px">Widal et Felix</a>
  
@@ -332,6 +332,7 @@ background-color:aqua;display:grid">
 
 </form>
 <script>
+
 for (var i= 0; i <document.getElementById("Lalphb1").querySelectorAll("a").length; i++){document.getElementById("Lalphb1").querySelectorAll("a")[i].style.color="blue";}
 for (var i= 0; i <document.getElementById("Lalphb2").querySelectorAll("a").length; i++){document.getElementById("Lalphb2").querySelectorAll("a")[i].style.color="blue";}
 for (var i= 0; i <document.getElementById("lchx").querySelectorAll("span").length; i++){document.getElementById("lchx").querySelectorAll("span")[i].style.display="inline-block";}
@@ -494,8 +495,9 @@ btn_vld.replaceWith(btn_evt) ;}}}}
 
 function Avertir (cel){
 if(cel.nextElementSibling.textContent===" *Champ obligatoire")
-{cel.nextElementSibling.remove();}
-}
+{cel.nextElementSibling.remove();}}
 
+/*document.getElementById("CholesterolLDL").value=
+document.getElementById("CholesterolTotal").value-3;*/
 </script>
 </body></html>
