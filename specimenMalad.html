@@ -15,9 +15,9 @@
 <span style="display:inline-block;width:186px;height:37px;border:thin black solid;margin-left:275px">
 
 <span id="Lalphb1" style="font-size:14.5px;text-align:right;letter-spacing:1.3px"><span style="text-decoration:underline;font-size:9px;letter-spacing:0px;text-align:left">Ordre A-Z:</span>
-<a>A</a><a>B</a><a>C</a><a>D</a><a>E</a><a>F</a><a>G</a><a>H</a><a>I</a>JK<a>M</a><a>N</a>
-</span><br><span id="Lalphb2" style="font-size:14.5px;letter-spacing:1.3px;padding-left:46px">
-O<a>P</a><a>Q</a><a>R</a><a>S</a><a>T</a><a>U</a><a>V</a><a>W</a>XYZ
+<a>A</a><a>B</a><a>C</a><a>D</a><a>E</a><a>F</a><a>G</a><a>H</a><a>I</a>JK<a>L</a><a>M</a>
+</span><br><span id="Lalphb2" style="font-size:14.5px;letter-spacing:1px;padding-left:43px">
+<a>N</a>O<a>P</a><a>Q</a><a>R</a><a>S</a><a>T</a><a>U</a><a>V</a><a>W</a>XYZ
 </span>
 
 </span><br>
@@ -156,8 +156,8 @@ O<a>P</a><a>Q</a><a>R</a><a>S</a><a>T</a><a>U</a><a>V</a><a>W</a>XYZ
 <label for="Triglycerides">Triglycérides:</label><input name="Triglycerides" type="number"  step="0.01" id="Triglycerides" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="0.65-1.9"><br>
 <label for="CholesterolTotal">Cholestérol Total:</label><input name="CholesterolTotal" type="number"  step="0.01" id="CholesterolTotal" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="1.5-2.5"><br>
 <label for="CholesterolHDL">Cholestérol HDL:</label><input name="CholesterolHDL" type="number"  step="0.01" id="CholesterolHDL" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="0.2-0.4"> <br>
-<label for="CholesterolLDL">Cholestérol LDL:</label><input name="CholesterolLDL" type="number"  step="0.01" id="CholesterolLDL" onblur="fChpLib(this)" onfocus="fChpSel(this)" readonly="readonly" placeholder="< 2.5"> <br>
-<label for="LipideTotale">Lipide Totale:</label><input name="LipideTotale" type="number"  step="0.01" id="LipideTotale" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="6-7.5"> <br>
+<label for="CholesterolLDL">Cholestérol LDL:</label><input name="CholesterolLDL" type="number"  step="0.01" id="CholesterolLDL" onblur="fChpLibC(this)" onfocus="fChpSelC(this)" readonly="readonly" style="border:medium blue solid" placeholder="< 2.5" ><span style="color:blue"> *Champ Calculé</span><span style="color:purple" title="LDL = Cholestérol total - HDL - (Triglycérides / 5)"> (Formule [ en survol ])</span> <br>
+<label for="LipideTotale">Lipide Totale:</label><input name="LipideTotale" type="number"  step="0.01" id="LipideTotale" onblur="fChpLibC(this)" onfocus="fChpSelC(this)" placeholder="6-7.5" style="border:medium blue solid" readonly="readonly"><span style="color:blue"> *Champ Calculé</span><span style="color:purple" title="Lipides totaux (en g/L) = (Cholestérol total) x 2,56 + (Triglycérides) x 0,87"> (Formule [ en survol ])</span> <br>
 </div>
 <h3 id="bilhepbil">bilan hepatique et bilaire</h3> 
 <p>
@@ -305,10 +305,10 @@ right:15px;padding-left:3px">
 <span style="display:inline-block;height:240px;width:200px;padding-bottom:0px">
 <span style="display:inline-block;height:20px;width:200px">
 <span style="display:inline-block;width:200px;font-family:bookman Old Style;font-weight:bold;text-decoration:underline;text-align:center;color:#275280">EDITER EXAMENS ICI </span><br> 
-<span id="Lalphb1" style="font-size:14px;text-align:right;letter-spacing:2.1px"><span style="text-decoration:underline;font-size:11px;letter-spacing:0px;text-align:left">Ordre A-Z:</span>
-<a href="#A">A</a><a href="#B">B</a><a href="#C">C</a><a href="#D">D</a><a href="#E">E</a><a href="#F">F</a><a href="#G">G</a><a href="#H">H</a><a href="#I">I</a><a href="#J">J</a><a href="#K">K</a><a href="#M">M</a><a href="#N">N</a>
-</span><br><span id="Lalphb2" style="font-size:14px;letter-spacing:2.1px;padding-left:55px">
-<a href="#O">O</a><a href="#P">P</a><a href="#Q">Q</a><a href="#R">R</a><a href="#S">S</a><a href="#T">T</a><a href="#U">U</a><a href="#V">V</a><a href="#W">W</a><a href="#X">X</a><a href="#Y">Y</a><a href="#Z">Z</a>
+<span id="Lalphb1" style="font-size:14px;text-align:right;letter-spacing:2px"><span style="text-decoration:underline;font-size:11px;letter-spacing:0px;text-align:left">Ordre A-Z:</span>
+<a href="#A">A</a><a href="#B">B</a><a href="#C">C</a><a href="#D">D</a><a href="#E">E</a><a href="#F">F</a><a href="#G">G</a><a href="#H">H</a><a href="#I">I</a><a href="#J">J</a><a href="#K">K</a><a href="#L">L</a><a href="#M">M</a>
+</span><br><span id="Lalphb2" style="font-size:14px;letter-spacing:1.3px;padding-left:55px">
+<a href="#N">N</a><a href="#O">O</a><a href="#P">P</a><a href="#Q">Q</a><a href="#R">R</a><a href="#S">S</a><a href="#T">T</a><a href="#U">U</a><a href="#V">V</a><a href="#W">W</a><a href="#X">X</a><a href="#Y">Y</a><a href="#Z">Z</a>
 </span>
 </span>
 <span id="LMenu" style="display:inline-block;
@@ -430,7 +430,11 @@ cel.previousSibling.style.backgroundColor =="green"?"red":"blue";
 function fChpLib(cel){clearInterval(myInterval);
 cel.previousSibling.style.backgroundColor = "";
 cel.previousSibling.style.color = ""
-if(cel.value==="POSITIVE"||cel.value==="AC"||cel.value==="SC"||
+if(cel.value===""){
+cel.style.backgroundColor="";
+cel.style.color="";
+cel.style.fontWeight="";}
+else if(cel.value==="POSITIVE"||cel.value==="AC"||cel.value==="SC"||
 cel.value==="SS")
 {cel.style.backgroundColor="aqua";
 cel.style.color="red";
@@ -452,6 +456,47 @@ cel.style.backgroundColor="aqua";
 cel.style.color="red";
 cel.style.fontWeight="bold";}
 }}
+function fChpSelC(cel){
+cel.previousSibling.style.backgroundColor ="blue";
+cel.style.backgroundColor="";
+cel.style.color="";
+cel.style.fontWeight="";
+
+if(cel.placeholder==="< 2.5"){
+cel.value=(document.getElementById("CholesterolTotal").value -
+document.getElementById("CholesterolHDL").value -
+(document.getElementById("Triglycerides").value/ 5)).toFixed(2);
+let refs=cel.placeholder.split(" ");
+if(cel.value > parseFloat(refs[1])){
+cel.style.backgroundColor="aqua";
+cel.style.color="red";
+cel.style.fontWeight="bold";}
+}
+else {cel.value=(document.getElementById("CholesterolTotal").value*2.56 +
+document.getElementById("Triglycerides").value*0.87).toFixed(2);
+
+let refs=cel.placeholder.split("-");
+if(cel.value < parseFloat(refs[0])){
+cel.style.backgroundColor="aqua";
+cel.style.color="orange";
+cel.style.fontWeight="bold";}
+else if(cel.value > parseFloat(refs[1])){
+cel.style.backgroundColor="aqua";
+cel.style.color="red";
+cel.style.fontWeight="bold";}
+}
+
+myInterval = setInterval(()=>{
+cel.previousSibling.style.color = "white"
+cel.previousSibling.style.backgroundColor = 
+cel.previousSibling.style.backgroundColor == "blue" ? "green" : 
+cel.previousSibling.style.backgroundColor =="green"?"red":"blue";
+}, 500)}
+function fChpLibC(cel){clearInterval(myInterval);
+cel.previousSibling.style.backgroundColor = "";
+cel.previousSibling.style.color = ""
+}
+
 
 var btn_vld= document.getElementById("vld");
 btn_vld.addEventListener('click',vd_pgweb);
@@ -497,7 +542,5 @@ function Avertir (cel){
 if(cel.nextElementSibling.textContent===" *Champ obligatoire")
 {cel.nextElementSibling.remove();}}
 
-/*document.getElementById("CholesterolLDL").value=
-document.getElementById("CholesterolTotal").value-3;*/
 </script>
 </body></html>
