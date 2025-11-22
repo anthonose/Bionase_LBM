@@ -508,8 +508,14 @@ fTab += Rtab.push(document.querySelectorAll("input,select")[i].value)}
 let Rtab2=[],fTab2="";
 for (var i= 87; i<90 ; i++){
 fTab2 += Rtab2.push(document.querySelectorAll("input,select")[i].value)}
-
-if(Rtab.includes("")||Rtab2.includes("")){
+if(/\D/.test(document.getElementById("Telephone").value) &&
+document.getElementById("Telephone").nextElementSibling.nodeName!=="SPAN")
+{var negTx= document.createElement("span");
+negTx.textContent=" *Uniquement [0-9]";
+negTx.style.color="#275280";
+negTx.style.fontWeigth="bold";
+document.getElementById("Telephone").after(negTx);}
+else if(Rtab.includes("")||Rtab2.includes("")){
 for (var i= 0; i<6 ; i++){if(document.querySelectorAll("input,select")[i].value==="" 
 && document.querySelectorAll("input,select")[i].nextElementSibling.nodeName!=="SPAN")
 {var negTx= document.createElement("span");
@@ -539,8 +545,10 @@ btn_evt.style.width="200px";
 btn_vld.replaceWith(btn_evt) ;}}}}
 
 function Avertir (cel){
-if(cel.nextElementSibling.textContent===" *Champ obligatoire")
-{cel.nextElementSibling.remove();}}
+if(cel.value!=="" && cel.nextElementSibling.textContent===" *Champ obligatoire"||
+cel.value!=="" && cel.nextElementSibling.textContent===" *Uniquement [0-9]")
+{cel.nextElementSibling.remove();}
+}
 
 </script>
 </body></html>
