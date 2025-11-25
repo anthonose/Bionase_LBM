@@ -9,7 +9,7 @@
 <label for="nom">Nom:</label><input id="nom" list="nomL" name="nom" type="text" autocomplete="off" onblur="Avertir(this)" placeholder="Nom de famille"><datalist id="nomL">
 </datalist><br><label for="prenoms">Prénoms:</label><input list="prenomsL" id="prenoms" name="prenoms" type="text" autocomplete="off" onblur="Avertir(this)" ><datalist id="prenomsL">
 </datalist><br><label for="Sexe">Sexe:</label><select name="Sexe"  id="Sexe" style="width: 188px;margin-bottom:5px; height: 23px;" onblur="Avertir(this)"><option></option><option>M</option><option>F</option></select><br>
-<label for="Telephone">Téléphone:</label><input name="Telephone" type="tel" id="Telephone" onblur="Avertir(this)" placeholder="numero a 10 chiffres"><br>
+<label for="Telephone">Téléphone:</label><input name="Telephone" type="tel" id="Telephone" onfocus="manupir(this)" onblur="Avertir(this)" placeholder="numero a 10 chiffres"><br>
 <label for="Diagnostic_Clinique">Diagnostic Clinique:</label><input list="dc" name="Diagnostic_Clinique" type="text" autocomplete="off" id="Diagnostic_Clinique" onblur="Avertir(this)" placeholder="categorie du mal"><datalist id="dc"><option value="Bilan de santé"></datalist><br>
 <label for="Prescripteur">Prescripteur:</label><input  name="Prescripteur" type="text" autocomplete="off" list="prs" id="Prescripteur" onblur="Avertir(this)" placeholder="provenance du Bull"> <datalist id="prs"><option value="Kathanase"><option value="dr diarra"></datalist><br>
 <span style="display:inline-block;width:186px;height:37px;border:thin black solid;margin-left:275px">
@@ -454,14 +454,13 @@ cel.style.fontWeight="bold";}
 else if(cel.value > parseFloat(refs[1])){
 cel.style.backgroundColor="aqua";
 cel.style.color="red";
-cel.style.fontWeight="bold";}
-}}
+cel.style.fontWeight="bold";}}}
+
 function fChpSelC(cel){
 cel.previousSibling.style.backgroundColor ="blue";
 cel.style.backgroundColor="";
 cel.style.color="";
 cel.style.fontWeight="";
-
 if(cel.placeholder==="< 2.5"){
 cel.value=(document.getElementById("CholesterolTotal").value -
 document.getElementById("CholesterolHDL").value -
@@ -470,11 +469,9 @@ let refs=cel.placeholder.split(" ");
 if(cel.value > parseFloat(refs[1])){
 cel.style.backgroundColor="aqua";
 cel.style.color="red";
-cel.style.fontWeight="bold";}
-}
+cel.style.fontWeight="bold";}}
 else {cel.value=(document.getElementById("CholesterolTotal").value*2.56 +
 document.getElementById("Triglycerides").value*0.87).toFixed(2);
-
 let refs=cel.placeholder.split("-");
 if(cel.value < parseFloat(refs[0])){
 cel.style.backgroundColor="aqua";
@@ -483,8 +480,7 @@ cel.style.fontWeight="bold";}
 else if(cel.value > parseFloat(refs[1])){
 cel.style.backgroundColor="aqua";
 cel.style.color="red";
-cel.style.fontWeight="bold";}
-}
+cel.style.fontWeight="bold";}}
 
 myInterval = setInterval(()=>{
 cel.previousSibling.style.color = "white"
@@ -494,8 +490,7 @@ cel.previousSibling.style.backgroundColor =="green"?"red":"blue";
 }, 500)}
 function fChpLibC(cel){clearInterval(myInterval);
 cel.previousSibling.style.backgroundColor = "";
-cel.previousSibling.style.color = ""
-}
+cel.previousSibling.style.color = ""}
 
 
 var btn_vld= document.getElementById("vld");
@@ -504,35 +499,71 @@ function vd_pgweb(event){
 let Rtab=[],fTab="";
 for (var i= 0; i<6 ; i++){
 fTab += Rtab.push(document.querySelectorAll("input,select")[i].value)}
-
 let Rtab2=[],fTab2="";
 for (var i= 87; i<90 ; i++){
 fTab2 += Rtab2.push(document.querySelectorAll("input,select")[i].value)}
-if(/\D/.test(document.getElementById("Telephone").value) &&
+
+/*if(/[a-z]/.test(document.getElementById("PrixdesExamensouStatut").value) &&
+/\d/.test(document.getElementById("PrixdesExamensouStatut").value) &&
+document.getElementById("PrixdesExamensouStatut").nextElementSibling.nodeName!=="SPAN")
+{var negTx= document.createElement("span");
+negTx.textContent=" *Uniquement (Chiffres ou Lettres)";
+negTx.style.color="#275280";negTx.style.fontWeigth="bold";
+document.getElementById("PrixdesExamensouStatut").after(negTx);}
+
+else if(!/^\w{10}$/.test(document.getElementById("Telephone").value) &&
+document.getElementById("Telephone").nextElementSibling.nodeName!=="SPAN" &&
+document.getElementById("Telephone").value!=="")
+{var negTx= document.createElement("span");
+negTx.textContent=" *Exactement 10 chiffres.Merci!";
+negTx.style.color="#275280";negTx.style.fontWeigth="bold";
+document.getElementById("Telephone").after(negTx);}
+
+else if(/\D/.test(document.getElementById("Telephone").value) &&
 document.getElementById("Telephone").nextElementSibling.nodeName!=="SPAN")
 {var negTx= document.createElement("span");
 negTx.textContent=" *Uniquement [0-9]";
-negTx.style.color="#275280";
-negTx.style.fontWeigth="bold";
-document.getElementById("Telephone").after(negTx);}
-else if(Rtab.includes("")||Rtab2.includes("")){
+negTx.style.color="#275280";negTx.style.fontWeigth="bold";
+document.getElementById("Telephone").after(negTx);}*/
+
+if(Rtab.includes("")||Rtab2.includes("")||
+
+/[a-z]/.test(document.getElementById("PrixdesExamensouStatut").value) &&
+/\d/.test(document.getElementById("PrixdesExamensouStatut").value) &&
+document.getElementById("PrixdesExamensouStatut").nextElementSibling.nodeName!=="SPAN"||
+
+!/^\w{10}$/.test(document.getElementById("Telephone").value) &&
+document.getElementById("Telephone").nextElementSibling.nodeName!=="SPAN" &&
+document.getElementById("Telephone").value!==""||
+
+/\D/.test(document.getElementById("Telephone").value) &&
+document.getElementById("Telephone").nextElementSibling.nodeName!=="SPAN"
+
+
+){
 for (var i= 0; i<6 ; i++){if(document.querySelectorAll("input,select")[i].value==="" 
-&& document.querySelectorAll("input,select")[i].nextElementSibling.nodeName!=="SPAN")
-{var negTx= document.createElement("span");
-negTx.textContent=" *Champ obligatoire";
-negTx.style.color="red";
+&& document.querySelectorAll("input,select")[i].nextElementSibling.nodeName!=="SPAN"){
+
+var negTx1= document.createElement("span"),negTx2= document.createElement("span");
+var negTx3= document.createElement("span"),negTx4= document.createElement("span");
+
+negTx1.textContent=" *Champ obligatoire";negTx2.textContent=" *Uniquement (Chiffres ou Lettres)";
+negTx3.textContent=" *Exactement 10 chiffres.Merci!";negTx4.textContent=" *Uniquement [0-9]";
+
+negTx1.style.color="red";negTx2.style.color="#275280";negTx3.style.color="#275280";negTx4.style.color="#275280";
+
 document.querySelectorAll("input,select")[i].after(negTx);}}
+
 for (var i= 87; i<90 ; i++){if(document.querySelectorAll("input,select")[i].value==="" 
 && document.querySelectorAll("input,select")[i].nextElementSibling.nodeName!=="SPAN")
 {var negTx= document.createElement("span");
-negTx.textContent=" *Champ obligatoire";
-negTx.style.color="red";
+negTx.textContent=" *Champ obligatoire";negTx.style.color="red";
 document.querySelectorAll("input,select")[i].after(negTx);}}
-event.preventDefault();
-}
+event.preventDefault();}
+
 else{for (var i=90 ; i<document.querySelectorAll("label").length ; i++){
-if (document.querySelectorAll("label")[i].nextElementSibling.value.trim() ===""){
-document.querySelectorAll("label")[i].nextElementSibling.remove();
+if (document.querySelectorAll("label")[i].nextElementSibling.value.trim() ==="")
+{document.querySelectorAll("label")[i].nextElementSibling.remove();
 document.querySelectorAll("label")[i].remove();i--;
 
 var btn_evt = document.createElement("input");
@@ -546,9 +577,17 @@ btn_vld.replaceWith(btn_evt) ;}}}}
 
 function Avertir (cel){
 if(cel.value!=="" && cel.nextElementSibling.textContent===" *Champ obligatoire"||
-cel.value!=="" && cel.nextElementSibling.textContent===" *Uniquement [0-9]")
-{cel.nextElementSibling.remove();}
-}
+cel.value!=="" && cel.nextElementSibling.textContent===" *Uniquement [0-9]"||
+cel.value!=="" && cel.nextElementSibling.textContent===" *Exactement 10 chiffres.Merci!"||
+cel.value!=="" && cel.nextElementSibling.textContent===" *Uniquement (Chiffres ou Lettres)")
+{cel.nextElementSibling.remove();}}
+
+function manupir (cel){
+if(cel.value!=="" && cel.nextElementSibling.textContent===" *Champ obligatoire"||
+cel.value!=="" && cel.nextElementSibling.textContent===" *Uniquement [0-9]"||
+cel.value!=="" && cel.nextElementSibling.textContent===" *Exactement 10 chiffres.Merci!"||
+cel.value!=="" && cel.nextElementSibling.textContent===" *Uniquement (Chiffres ou Lettres)")
+{cel.nextElementSibling.remove();}}
 
 </script>
 </body></html>
