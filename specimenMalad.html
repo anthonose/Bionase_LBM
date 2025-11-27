@@ -503,80 +503,74 @@ let Rtab2=[],fTab2="";
 for (var i= 87; i<90 ; i++){
 fTab2 += Rtab2.push(document.querySelectorAll("input,select")[i].value)}
 
-/*if(/[a-z]/.test(document.getElementById("PrixdesExamensouStatut").value) &&
-/\d/.test(document.getElementById("PrixdesExamensouStatut").value) &&
-document.getElementById("PrixdesExamensouStatut").nextElementSibling.nodeName!=="SPAN")
-{var negTx= document.createElement("span");
-negTx.textContent=" *Uniquement (Chiffres ou Lettres)";
-negTx.style.color="#275280";negTx.style.fontWeigth="bold";
-document.getElementById("PrixdesExamensouStatut").after(negTx);}
-
-if(!/^\w{10}$/.test(document.getElementById("Telephone").value) &&
-document.getElementById("Telephone").nextElementSibling.nodeName!=="SPAN" &&
-document.getElementById("Telephone").value!=="")
-{var negTx= document.createElement("span");
-negTx.textContent=" *Exactement 10 chiffres.Merci!";
-negTx.style.color="#275280";negTx.style.fontWeigth="bold";
-document.getElementById("Telephone").after(negTx);}
-
-if(/\D/.test(document.getElementById("Telephone").value) &&
-document.getElementById("Telephone").nextElementSibling.nodeName!=="SPAN")
-{var negTx= document.createElement("span");
-negTx.textContent=" *Uniquement [0-9]";
-negTx.style.color="#275280";negTx.style.fontWeigth="bold";
-document.getElementById("Telephone").after(negTx);}
-*/
+var PrixdesExamensouStatut = document.getElementById("PrixdesExamensouStatut").value;
+var Telephone = document.getElementById("Telephone").value;
 
 if(Rtab.includes("")||Rtab2.includes("")){
 for (var i= 0; i<6 ; i++){if(document.querySelectorAll("input,select")[i].value==="" 
-&& document.querySelectorAll("input,select")[i].nextElementSibling.nodeName!=="SPAN"){
+&& document.querySelectorAll("input,select")[i].nextElementSibling.nodeName!=="SPAN"||
+document.querySelectorAll("input,select")[i].value==="" 
+&& document.querySelectorAll("input,select")[i].nextElementSibling.nodeName==="SPAN"
+){document.querySelectorAll("input,select")[i].nextElementSibling.remove();
 var negTx= document.createElement("span");
 negTx.textContent=" *Champ obligatoire";negTx.style.color="red";
 document.querySelectorAll("input,select")[i].after(negTx);}}
 
 for (var i= 87; i<90 ; i++){if(document.querySelectorAll("input,select")[i].value==="" 
-&& document.querySelectorAll("input,select")[i].nextElementSibling.nodeName!=="SPAN")
-{var negTx= document.createElement("span");
+&& document.querySelectorAll("input,select")[i].nextElementSibling.nodeName!=="SPAN"||
+document.querySelectorAll("input,select")[i].value==="" 
+&& document.querySelectorAll("input,select")[i].nextElementSibling.nodeName==="SPAN"
+){document.querySelectorAll("input,select")[i].nextElementSibling.remove();
+var negTx= document.createElement("span");
 negTx.textContent=" *Champ obligatoire";negTx.style.color="red";
-document.querySelectorAll("input,select")[i].after(negTx);}}
-event.preventDefault();}
+document.querySelectorAll("input,select")[i].after(negTx);}}}
 
-else if(/[a-z]/.test(document.getElementById("PrixdesExamensouStatut").value) &&
-/\d/.test(document.getElementById("PrixdesExamensouStatut").value) &&
-document.getElementById("PrixdesExamensouStatut").nextElementSibling.nodeName!=="SPAN")
+else if(/[a-z]/.test(PrixdesExamensouStatut) && /\d/.test(PrixdesExamensouStatut) 
+&& document.getElementById("PrixdesExamensouStatut").nextElementSibling.nodeName!=="SPAN")
 {var negTx= document.createElement("span");
 negTx.textContent=" *Uniquement (Chiffres ou Lettres)";
 negTx.style.color="#275280";negTx.style.fontWeigth="bold";
 document.getElementById("PrixdesExamensouStatut").after(negTx);}
+else if(/[a-z]/.test(PrixdesExamensouStatut) && /\d/.test(PrixdesExamensouStatut) 
+&& document.getElementById("PrixdesExamensouStatut").nextElementSibling.nodeName==="SPAN")
+{document.getElementById("PrixdesExamensouStatut").nextElementSibling.remove();
+var negTx= document.createElement("span");
+negTx.textContent=" *Uniquement (Chiffres ou Lettres)";
+negTx.style.color="#275280";negTx.style.fontWeigth="bold";
+document.getElementById("PrixdesExamensouStatut").after(negTx);}
 
-else if(!/^\w{10}$/.test(document.getElementById("Telephone").value) &&
+else if(!/^\w{10}$/.test(Telephone) &&
 document.getElementById("Telephone").nextElementSibling.nodeName!=="SPAN" &&
-document.getElementById("Telephone").value!=="")
-{var negTx= document.createElement("span");
+Telephone!==""){var negTx= document.createElement("span");
+negTx.textContent=" *Exactement 10 chiffres.Merci!";
+negTx.style.color="#275280";negTx.style.fontWeigth="bold";
+document.getElementById("Telephone").after(negTx);}
+else if(!/^\w{10}$/.test(Telephone) &&
+document.getElementById("Telephone").nextElementSibling.nodeName==="SPAN" &&
+Telephone!==""){document.getElementById("Telephone").nextElementSibling.remove();
+var negTx= document.createElement("span");
 negTx.textContent=" *Exactement 10 chiffres.Merci!";
 negTx.style.color="#275280";negTx.style.fontWeigth="bold";
 document.getElementById("Telephone").after(negTx);}
 
-else if(/\D/.test(document.getElementById("Telephone").value) &&
+else if(/\D/.test(Telephone) &&
 document.getElementById("Telephone").nextElementSibling.nodeName!=="SPAN")
 {var negTx= document.createElement("span");
 negTx.textContent=" *Uniquement [0-9]";
 negTx.style.color="#275280";negTx.style.fontWeigth="bold";
 document.getElementById("Telephone").after(negTx);}
+else if(/\D/.test(Telephone) &&
+document.getElementById("Telephone").nextElementSibling.nodeName==="SPAN")
+{document.getElementById("Telephone").nextElementSibling.remove();
+var negTx= document.createElement("span");
+negTx.textContent=" *Uniquement [0-9]";
+negTx.style.color="#275280";negTx.style.fontWeigth="bold";
+document.getElementById("Telephone").after(negTx);}
 
-else if (!Rtab.includes("")||!Rtab2.includes("")||
-!/[a-z]/.test(document.getElementById("PrixdesExamensouStatut").value) &&
-!/\d/.test(document.getElementById("PrixdesExamensouStatut").value) &&
-document.getElementById("PrixdesExamensouStatut").nextElementSibling.nodeName!=="SPAN"||
-
-/^\w{10}$/.test(document.getElementById("Telephone").value) &&
-document.getElementById("Telephone").nextElementSibling.nodeName!=="SPAN" &&
-){
-for (var i=90 ; i<document.querySelectorAll("label").length ; i++){
-if (document.querySelectorAll("label")[i].nextElementSibling.value.trim() ==="")
+else{for (var i=90 ; i<document.querySelectorAll("label").length ; i++){
+if (document.querySelectorAll("label")[i].nextElementSibling.value.trim()==="")
 {document.querySelectorAll("label")[i].nextElementSibling.remove();
 document.querySelectorAll("label")[i].remove();i--;
-
 var btn_evt = document.createElement("input");
 btn_evt.id="envt";btn_evt.value="Envoyer";btn_evt.type="submit";
 btn_evt.style.fontFamily="bookman Old Style";
@@ -584,7 +578,24 @@ btn_evt.style.fontWeight="bold";
 btn_evt.style.color= "#275280";
 btn_evt.style.fontSize="15px";
 btn_evt.style.width="200px";
-btn_vld.replaceWith(btn_evt) ;}}}}
+btn_vld.replaceWith(btn_evt) ;}
+
+else if (document.querySelectorAll("label")[i].nextElementSibling.value.trim()===""
+&& document.querySelectorAll("label")[i].nextElementSibling.nextElementSibling.nodeName==="SPAN")
+{document.querySelectorAll("label")[i].nextElementSibling.nextElementSibling.remove();
+document.querySelectorAll("label")[i].nextElementSibling.remove();
+document.querySelectorAll("label")[i].remove();i--;
+var btn_evt = document.createElement("input");
+btn_evt.id="envt";btn_evt.value="Envoyer";btn_evt.type="submit";
+btn_evt.style.fontFamily="bookman Old Style";
+btn_evt.style.fontWeight="bold";
+btn_evt.style.color= "#275280";
+btn_evt.style.fontSize="15px";
+btn_evt.style.width="200px";
+btn_vld.replaceWith(btn_evt) ;
+}
+
+}}}
 
 function Avertir (cel){
 if(cel.value!=="" && cel.nextElementSibling.textContent===" *Champ obligatoire"||
