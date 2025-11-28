@@ -567,10 +567,15 @@ negTx.textContent=" *Uniquement [0-9]";
 negTx.style.color="#275280";negTx.style.fontWeigth="bold";
 document.getElementById("Telephone").after(negTx);}
 
-else{for (var i=90 ; i<document.querySelectorAll("label").length ; i++){
-if (document.querySelectorAll("label")[i].nextElementSibling.value.trim()==="")
-{document.querySelectorAll("label")[i].nextElementSibling.remove();
-document.querySelectorAll("label")[i].remove();i--;
+else{for (var i=89 ; i<document.querySelectorAll("input,select").length ; i++){
+if (
+document.querySelectorAll("input,select")[i].value.trim()==="" && 
+document.querySelectorAll("input,select")[i].nextElementSibling.nodeName==="SPAN")
+
+document.querySelectorAll("input,select")[i].previousElementSibling.remove();
+document.querySelectorAll("input,select")[i].remove();
+document.querySelectorAll("input,select")[i].nextElementSibling.remove();
+i--;
 var btn_evt = document.createElement("input");
 btn_evt.id="envt";btn_evt.value="Envoyer";btn_evt.type="submit";
 btn_evt.style.fontFamily="bookman Old Style";
@@ -580,11 +585,10 @@ btn_evt.style.fontSize="15px";
 btn_evt.style.width="200px";
 btn_vld.replaceWith(btn_evt) ;}
 
-else if (document.querySelectorAll("label")[i].nextElementSibling.value.trim()===""
-&& document.querySelectorAll("label")[i].nextElementSibling.nextElementSibling.nodeName==="SPAN")
-{document.querySelectorAll("label")[i].nextElementSibling.nextElementSibling.remove();
-document.querySelectorAll("label")[i].nextElementSibling.remove();
-document.querySelectorAll("label")[i].remove();i--;
+else if (document.querySelectorAll("input,select")[i].value.trim()==="")
+{{document.querySelectorAll("input,select")[i].previousElementSibling.remove();
+document.querySelectorAll("input,select")[i].remove();i--;
+
 var btn_evt = document.createElement("input");
 btn_evt.id="envt";btn_evt.value="Envoyer";btn_evt.type="submit";
 btn_evt.style.fontFamily="bookman Old Style";
