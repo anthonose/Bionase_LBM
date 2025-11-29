@@ -2,7 +2,7 @@
 <meta content="fr-ci" http-equiv="Content-Language">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <title>ACCUEIL ET ENREGISTREMENT PATIENTS</title>
-</head><body style="background-image:url('images/LGbionase3.jpg');width: 730px;margin-right: auto;	margin-left: auto">
+</head><body id="Entree" style="background-image:url('images/LGbionase3.jpg');width: 730px;margin-right: auto;	margin-left: auto">
 <div style="text-align:center;margin-bottom:20px" >
 	<img alt="encart" height="91" src="imageTest2.jpg" width="730"><br></div>
 <form action="transit.html" method="post">
@@ -131,7 +131,7 @@
 </span>
 </div><br>
 <label for="Biotechnologiste">Biotechnologiste:</label><input  name="Biotechnologiste" type="text" autocomplete="off" list="btech" id="Biotechnologiste" onblur="Avertir(this)" placeholder="Nom du technicien"><datalist id="btech"><option value="amani yao"><option value="kouadio yao"><option value="kouadio yao athanase"></datalist><br>
-<label for="PrixdesExamensouStatut">Prix/statut:</label><input  name="PrixdesExamensouStatut" type="text" id="PrixdesExamensouStatut" onblur="Avertir(this)" placeholder="Montant ou assuré(e)"><br>
+<label for="PrixdesExamensouStatut">Prix/statut:</label><input  name="PrixdesExamensouStatut" type="text" id="PrixdesExamensouStatut" onblur="Avertir(this)" onfocus="Savertir(this)" placeholder="Montant ou assuré(e)"><br>
 <label for="DateduPrelevement">Date Prelevement:</label><input  name="DateduPrelevement" type="date" id="DateduPrelevement" style="width: 183px; height: 20px;" onblur="Avertir(this)">
 
 <hr style="margin-top:50px">
@@ -324,12 +324,14 @@ background-color:aqua;display:grid">
 <span style="display:inline-block;height:130px;width:200px">
 <input id="vld"  type="button" value="Valider [Envoyer]"><br>
 <input type="button" value="Nouveau Patient"><br>
-<input type="button" value="Bilan Operationnel"><br>
+<input type="button" value="Bilan Operationnel" onclick="alert"><br>
 <input  type="button" value="Calculatrice">
 </span>
 </span>
-
-
+<span  style="position:fixed;bottom:220px;right:35px;display:grid">
+<a style="font-size:30px;margin-bottom:0px">&#x1F3E0;</a>
+<a href="#Entree" style="font-size:12px">accueil</a>
+</span>
 </form>
 <script>
 
@@ -348,8 +350,6 @@ var Diff= scrollY - (document.getElementById("lchx").offsetTop -1) ;
 window.location.href="#l"+ e.target.textContent;
 window.scrollBy(0, Diff);}
 
-
-
 for (var i= 0; i < 6; i++){document.querySelectorAll("label")[i].style.display="inline-block";}
 for (var i= 0; i < 6; i++){document.querySelectorAll("label")[i].style.width="275px";}
 for (var i= 87; i< 90 ; i++){document.querySelectorAll("label")[i].style.display="inline-block";}
@@ -367,7 +367,6 @@ for (var i= 86; i< 88 ; i++){document.querySelectorAll("input")[i].style.marginB
 for (var i= 89; i<document.querySelectorAll("input").length-4 ; i++){document.querySelectorAll("input")[i].style.width="85px";}
 for (var i= 89; i<document.querySelectorAll("input").length-4 ; i++){document.querySelectorAll("input")[i].style.textAlign="center";}
 for (var i= 1; i<document.querySelectorAll("select").length ; i++){document.querySelectorAll("select")[i].style.width="93px";}
-
 
 for (var i= 0; i < 6; i++){document.querySelectorAll("label")[i].style.textAlign="right";}
 for (var i= 87; i< 92 ; i++){document.querySelectorAll("label")[i].style.textAlign="right";}
@@ -405,15 +404,12 @@ for (var i=2; i < document.querySelectorAll("p").length ; i++){document.querySel
 for (var i= 2; i <document.querySelectorAll("div").length; i++){
 for(var j=0;j<document.querySelectorAll("div")[i].querySelectorAll("label").length;j++)
 {document.querySelectorAll("div")[i].querySelectorAll("label")[j].style.display="inline-block";}}
-
 for (var i= 2; i <document.querySelectorAll("div").length; i++){
 for(var j=0;j<document.querySelectorAll("div")[i].querySelectorAll("label").length;j++)
 {document.querySelectorAll("div")[i].querySelectorAll("label")[j].style.width="337.5px";}}
-
 for (var i= 2; i <document.querySelectorAll("div").length; i++){
 for(var j=0;j<document.querySelectorAll("div")[i].querySelectorAll("label").length;j++)
 {document.querySelectorAll("div")[i].querySelectorAll("label")[j].style.textAlign="right";}}
-
 
 let myInterval;
 function fChpSel(cel){
@@ -492,7 +488,6 @@ function fChpLibC(cel){clearInterval(myInterval);
 cel.previousSibling.style.backgroundColor = "";
 cel.previousSibling.style.color = ""}
 
-
 var btn_vld= document.getElementById("vld");
 btn_vld.addEventListener('click',vd_pgweb);
 function vd_pgweb(event){
@@ -508,19 +503,25 @@ var Telephone = document.getElementById("Telephone").value;
 
 if(Rtab.includes("")||Rtab2.includes("")){
 for (var i= 0; i<6 ; i++){if(document.querySelectorAll("input,select")[i].value==="" 
-&& document.querySelectorAll("input,select")[i].nextElementSibling.nodeName!=="SPAN"||
-document.querySelectorAll("input,select")[i].value==="" 
-&& document.querySelectorAll("input,select")[i].nextElementSibling.nodeName==="SPAN"
-){document.querySelectorAll("input,select")[i].nextElementSibling.remove();
+&& document.querySelectorAll("input,select")[i].nextElementSibling.nodeName!=="SPAN")
+{var negTx= document.createElement("span");
+negTx.textContent=" *Champ obligatoire";negTx.style.color="red";
+document.querySelectorAll("input,select")[i].after(negTx);}
+else if(document.querySelectorAll("input,select")[i].value==="" 
+&& document.querySelectorAll("input,select")[i].nextElementSibling.nodeName==="SPAN")
+{document.querySelectorAll("input,select")[i].nextElementSibling.remove();
 var negTx= document.createElement("span");
 negTx.textContent=" *Champ obligatoire";negTx.style.color="red";
 document.querySelectorAll("input,select")[i].after(negTx);}}
 
 for (var i= 87; i<90 ; i++){if(document.querySelectorAll("input,select")[i].value==="" 
-&& document.querySelectorAll("input,select")[i].nextElementSibling.nodeName!=="SPAN"||
-document.querySelectorAll("input,select")[i].value==="" 
-&& document.querySelectorAll("input,select")[i].nextElementSibling.nodeName==="SPAN"
-){document.querySelectorAll("input,select")[i].nextElementSibling.remove();
+&& document.querySelectorAll("input,select")[i].nextElementSibling.nodeName!=="SPAN")
+{var negTx= document.createElement("span");
+negTx.textContent=" *Champ obligatoire";negTx.style.color="red";
+document.querySelectorAll("input,select")[i].after(negTx);}
+else if (document.querySelectorAll("input,select")[i].value==="" 
+&& document.querySelectorAll("input,select")[i].nextElementSibling.nodeName==="SPAN")
+{document.querySelectorAll("input,select")[i].nextElementSibling.remove();
 var negTx= document.createElement("span");
 negTx.textContent=" *Champ obligatoire";negTx.style.color="red";
 document.querySelectorAll("input,select")[i].after(negTx);}}}
@@ -568,25 +569,8 @@ negTx.style.color="#275280";negTx.style.fontWeigth="bold";
 document.getElementById("Telephone").after(negTx);}
 
 else{for (var i=89 ; i<document.querySelectorAll("input,select").length ; i++){
-if (
-document.querySelectorAll("input,select")[i].value.trim()==="" && 
-document.querySelectorAll("input,select")[i].nextElementSibling.nodeName==="SPAN")
-
-document.querySelectorAll("input,select")[i].previousElementSibling.remove();
-document.querySelectorAll("input,select")[i].remove();
-document.querySelectorAll("input,select")[i].nextElementSibling.remove();
-i--;
-var btn_evt = document.createElement("input");
-btn_evt.id="envt";btn_evt.value="Envoyer";btn_evt.type="submit";
-btn_evt.style.fontFamily="bookman Old Style";
-btn_evt.style.fontWeight="bold";
-btn_evt.style.color= "#275280";
-btn_evt.style.fontSize="15px";
-btn_evt.style.width="200px";
-btn_vld.replaceWith(btn_evt) ;}
-
-else if (document.querySelectorAll("input,select")[i].value.trim()==="")
-{{document.querySelectorAll("input,select")[i].previousElementSibling.remove();
+if (document.querySelectorAll("input,select")[i].value.trim()==="")
+{document.querySelectorAll("input,select")[i].previousElementSibling.remove();
 document.querySelectorAll("input,select")[i].remove();i--;
 
 var btn_evt = document.createElement("input");
@@ -596,8 +580,7 @@ btn_evt.style.fontWeight="bold";
 btn_evt.style.color= "#275280";
 btn_evt.style.fontSize="15px";
 btn_evt.style.width="200px";
-btn_vld.replaceWith(btn_evt) ;
-}
+btn_vld.replaceWith(btn_evt) ;}
 
 }}}
 
@@ -606,7 +589,22 @@ if(cel.value!=="" && cel.nextElementSibling.textContent===" *Champ obligatoire"|
 cel.value!=="" && cel.nextElementSibling.textContent===" *Uniquement [0-9]"||
 cel.value!=="" && cel.nextElementSibling.textContent===" *Exactement 10 chiffres.Merci!"||
 cel.value!=="" && cel.nextElementSibling.textContent===" *Uniquement (Chiffres ou Lettres)")
-{cel.nextElementSibling.remove();}}
-
+{cel.nextElementSibling.remove();}else if
+(cel.name==="PrixdesExamensouStatut" && /\d/.test(cel.value) && 
+cel.nextElementSibling.nodeName!=="SPAN"||
+cel.name==="PrixdesExamensouStatut" &&
+/\d/.test(cel.value) && cel.nextElementSibling.nodeName==="SPAN")
+{cel.nextElementSibling.remove();
+var negTx= document.createElement("span");
+negTx.textContent=" Franc CFA";
+negTx.style.color="purple";negTx.style.fontWeigth="bold";
+cel.after(negTx);}
+}
+function Savertir (cel){
+if(cel.name==="PrixdesExamensouStatut" && cel.nextElementSibling.textContent===" Franc CFA"||
+cel.name==="PrixdesExamensouStatut" && /[a-z]/.test(cel.value) &&
+cel.nextElementSibling.textContent===" Franc CFA")
+{cel.nextElementSibling.remove();}
+}
 </script>
 </body></html>
