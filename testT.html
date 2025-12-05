@@ -2,21 +2,39 @@
 <html>
 <body>
 <p id="demoT">hyundai</p>
-<label for="GoutteEpaisse">Goutte Epaisse:</label><select name="GoutteEpaisse" id="GoutteEpaisse" onblur="fChpLib(this)"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for="tGE">Titre:</label><input name="tGE" type="number"  step="0.01" id="tGE" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
+
+<label for="GoutteEpaisse">Goutte Epaisse:</label><select name="GoutteEpaisse" id="GoutteEpaisse" onblur="fChpLib(this)" ><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for="tGE">Titre:</label><input name="tGE" type="number"  step="0.01" id="tGE" onblur="fChpLib(this)" onfocus="fChpSel(this)">
 
 <script>
-function fChpLib(cel){
-if(cel.value==="POSITIVE"){
-cel.style.backgroundColor="aqua";
-cel.style.color="red";
-cel.style.fontWeight="bold";
+/*function fChpLib(cel){
+if(cel.value <= 500){
+var negTx= document.createElement("span");
+negTx.textContent="Comprimé";negTx.style.color="red";
+cel.after(negTx);}
+else{cel.style.color="blue";}
+}
+
+
+else if(cel.value <=1000){
+var negTx= document.createElement("span");
+negTx.textContent="Une Perfusion obligatoire";negTx.style.color="red";
+cel.after(negTx);}
+else if(cel.value <=1500){
+var negTx= document.createElement("span");
+negTx.textContent="Deux Perfusions obligatoire";negTx.style.color="red";
+cel.after(negTx);}
+else if(cel.value <=2000){
+var negTx= document.createElement("span");
+negTx.textContent="Trois Perfusions obligatoire";negTx.style.color="red";
+cel.after(negTx);}
 
 }
+*/
+function fChpLib(cel){
+var negTx="";
+var fxCel = cel.value==="300"||cel.value==="400"?cel.style.color="red":cel.style.color="blue";
 }
-document.getElementById("CholesterolLDL").value=
-document.getElementById("CholesterolTotal").value – 
-document.getElementById("CholesterolHDL").value – 
-(document.getElementById("Triglycerides").value/ 5);
+
 
 </script>
 </body>
