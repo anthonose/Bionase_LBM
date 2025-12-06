@@ -423,71 +423,45 @@ cel.previousSibling.style.backgroundColor =
 cel.previousSibling.style.backgroundColor == "blue" ? "green" : 
 cel.previousSibling.style.backgroundColor =="green"?"red":"blue";
 }, 500)}
+
 function fChpLib(cel){clearInterval(myInterval);
 cel.previousSibling.style.backgroundColor = "";
 cel.previousSibling.style.color = ""
-/*
+var CdtC="",refs="";
 var ArrplCel=cel.value===""?
 (cel.style.backgroundColor="",cel.style.color="",cel.style.fontWeight="")
-:cel.value==="POSITIVE"||cel.value==="AC"||cel.value==="SC"||cel.value==="SS"
-
-*/
-
-
-
-
-
-if(cel.value===""){
-cel.style.backgroundColor="";
-cel.style.color="";
-cel.style.fontWeight="";}
-else if(cel.value==="POSITIVE"||cel.value==="AC"||cel.value==="SC"||
-cel.value==="SS")
-{cel.style.backgroundColor="aqua";
-cel.style.color="red";
-cel.style.fontWeight="bold";}
-else if (cel.placeholder.includes("<")){
-let refs=cel.placeholder.split(" ");
-if(cel.value > parseFloat(refs[1])){
-cel.style.backgroundColor="aqua";
-cel.style.color="red";
-cel.style.fontWeight="bold";}}
-else if(cel.placeholder.includes("-")){
-let refs=cel.placeholder.split("-");
-if(cel.value < parseFloat(refs[0])){
-cel.style.backgroundColor="aqua";
-cel.style.color="orange";
-cel.style.fontWeight="bold";}
-else if(cel.value > parseFloat(refs[1])){
-cel.style.backgroundColor="aqua";
-cel.style.color="red";
-cel.style.fontWeight="bold";}}}
+:cel.value==="POSITIVE"||cel.value==="AC"||cel.value==="SC"||cel.value==="SS"?
+(cel.style.backgroundColor="aqua",cel.style.color="red",cel.style.fontWeight="bold")
+:cel.placeholder.includes("<")?
+(refs=cel.placeholder.split(" "),CdtC=cel.value > parseFloat(refs[1])?
+(cel.style.backgroundColor="aqua",cel.style.color="red",cel.style.fontWeight="bold")
+:"")
+:cel.placeholder.includes("-")?
+(refs=cel.placeholder.split("-"),CdtC=cel.value < parseFloat(refs[0])?
+(cel.style.backgroundColor="aqua",cel.style.color="orange",cel.style.fontWeight="bold")
+:cel.value > parseFloat(refs[1])?
+(cel.style.backgroundColor="aqua",cel.style.color="red",cel.style.fontWeight="bold"):"")
+:"";}
 
 function fChpSelC(cel){
 cel.previousSibling.style.backgroundColor ="blue";
 cel.style.backgroundColor="";
 cel.style.color="";
 cel.style.fontWeight="";
-if(cel.placeholder==="< 2.5"){
-cel.value=(document.getElementById("CholesterolTotal").value -
+
+var CdtC="",refs="";
+var ArrplCel=cel.placeholder==="< 2.5"?
+(cel.value=(document.getElementById("CholesterolTotal").value -
 document.getElementById("CholesterolHDL").value -
-(document.getElementById("Triglycerides").value/ 5)).toFixed(2);
-let refs=cel.placeholder.split(" ");
-if(cel.value > parseFloat(refs[1])){
-cel.style.backgroundColor="aqua";
-cel.style.color="red";
-cel.style.fontWeight="bold";}}
-else {cel.value=(document.getElementById("CholesterolTotal").value*2.56 +
-document.getElementById("Triglycerides").value*0.87).toFixed(2);
-let refs=cel.placeholder.split("-");
-if(cel.value < parseFloat(refs[0])){
-cel.style.backgroundColor="aqua";
-cel.style.color="orange";
-cel.style.fontWeight="bold";}
-else if(cel.value > parseFloat(refs[1])){
-cel.style.backgroundColor="aqua";
-cel.style.color="red";
-cel.style.fontWeight="bold";}}
+(document.getElementById("Triglycerides").value/ 5)).toFixed(2),
+refs=cel.placeholder.split(" "),CdtC=cel.value > parseFloat(refs[1])?
+(cel.style.backgroundColor="aqua",cel.style.color="red",cel.style.fontWeight="bold"):"")
+:(cel.value=(document.getElementById("CholesterolTotal").value*2.56 +
+document.getElementById("Triglycerides").value*0.87).toFixed(2),
+refs=cel.placeholder.split("-"),CdtC=cel.value < parseFloat(refs[0])?
+(cel.style.backgroundColor="aqua",cel.style.color="orange",cel.style.fontWeight="bold")
+:cel.value > parseFloat(refs[1])?
+(cel.style.backgroundColor="aqua",cel.style.color="red",cel.style.fontWeight="bold"):"");
 
 myInterval = setInterval(()=>{
 cel.previousSibling.style.color = "white"
@@ -510,7 +484,92 @@ for (var i= 87; i<90 ; i++){
 fTab2 += Rtab2.push(document.querySelectorAll("input,select")[i].value)}
 
 var PrixdesExamensouStatut = document.getElementById("PrixdesExamensouStatut").value;
-var Telephone = document.getElementById("Telephone").value;
+var Telephone = document.getElementById("Telephone").value,
+negTx="", btn_evt ="";
+
+/*
+var EnvCel=Rtab.includes("")||Rtab2.includes("")?
+( 
+for (var i= 0; i<6 ; i++){
+var fxBlcg=document.querySelectorAll("input,select")[i].value==="" 
+&& document.querySelectorAll("input,select")[i].nextElementSibling.nodeName!=="SPAN"?
+(negTx= document.createElement("span"),
+negTx.textContent=" *Champ obligatoire";negTx.style.color="red",
+document.querySelectorAll("input,select")[i].after(negTx))
+:document.querySelectorAll("input,select")[i].value==="" 
+&& document.querySelectorAll("input,select")[i].nextElementSibling.nodeName==="SPAN"?
+(document.querySelectorAll("input,select")[i].nextElementSibling.remove(),
+negTx= document.createElement("span"),
+negTx.textContent=" *Champ obligatoire",negTx.style.color="red",
+document.querySelectorAll("input,select")[i].after(negTx)):"";}
+, 
+for (var i= 87; i<90 ; i++){
+var fxBlcg=document.querySelectorAll("input,select")[i].value==="" 
+&& document.querySelectorAll("input,select")[i].nextElementSibling.nodeName!=="SPAN"?
+(negTx= document.createElement("span"),
+negTx.textContent=" *Champ obligatoire",negTx.style.color="red",
+document.querySelectorAll("input,select")[i].after(negTx)):document.querySelectorAll("input,select")[i].value==="" 
+&& document.querySelectorAll("input,select")[i].nextElementSibling.nodeName==="SPAN"?
+(document.querySelectorAll("input,select")[i].nextElementSibling.remove(),
+negTx= document.createElement("span"),
+negTx.textContent=" *Champ obligatoire",negTx.style.color="red",
+document.querySelectorAll("input,select")[i].after(negTx)):"";})
+:/[a-z]/.test(PrixdesExamensouStatut) && /\d/.test(PrixdesExamensouStatut) 
+&& document.getElementById("PrixdesExamensouStatut").nextElementSibling.nodeName!=="SPAN"?(
+negTx= document.createElement("span"),
+negTx.textContent=" *Uniquement (Chiffres ou Lettres)",
+negTx.style.color="#275280",negTx.style.fontWeigth="bold",
+document.getElementById("PrixdesExamensouStatut").after(negTx))
+:/[a-z]/.test(PrixdesExamensouStatut) && /\d/.test(PrixdesExamensouStatut) 
+&& document.getElementById("PrixdesExamensouStatut").nextElementSibling.nodeName==="SPAN"?
+(document.getElementById("PrixdesExamensouStatut").nextElementSibling.remove(),
+negTx= document.createElement("span"),
+negTx.textContent=" *Uniquement (Chiffres ou Lettres)",
+negTx.style.color="#275280";negTx.style.fontWeigth="bold",
+document.getElementById("PrixdesExamensouStatut").after(negTx))
+:!/^\w{10}$/.test(Telephone) &&
+document.getElementById("Telephone").nextElementSibling.nodeName!=="SPAN" &&
+Telephone!==""?(negTx= document.createElement("span"),
+negTx.textContent=" *Exactement 10 chiffres.Merci!",
+negTx.style.color="#275280",negTx.style.fontWeigth="bold",
+document.getElementById("Telephone").after(negTx))
+:!/^\w{10}$/.test(Telephone) &&
+document.getElementById("Telephone").nextElementSibling.nodeName==="SPAN" &&
+Telephone!==""?(document.getElementById("Telephone").nextElementSibling.remove(),
+negTx= document.createElement("span"),
+negTx.textContent=" *Exactement 10 chiffres.Merci!",
+negTx.style.color="#275280",negTx.style.fontWeigth="bold",
+document.getElementById("Telephone").after(negTx))
+:/\D/.test(Telephone) &&
+document.getElementById("Telephone").nextElementSibling.nodeName!=="SPAN"?(
+negTx= document.createElement("span"),
+negTx.textContent=" *Uniquement [0-9]",
+negTx.style.color="#275280",negTx.style.fontWeigth="bold",
+document.getElementById("Telephone").after(negTx))
+:/\D/.test(Telephone) &&
+document.getElementById("Telephone").nextElementSibling.nodeName==="SPAN"?(
+document.getElementById("Telephone").nextElementSibling.remove(),
+var negTx= document.createElement("span"),
+negTx.textContent=" *Uniquement [0-9]",
+negTx.style.color="#275280",negTx.style.fontWeigth="bold",
+document.getElementById("Telephone").after(negTx))
+:
+(for (var i=89 ; i<document.querySelectorAll("input,select").length ; i++){
+var fxCelEnv=document.querySelectorAll("input,select")[i].value.trim()===""?
+(document.querySelectorAll("input,select")[i].previousElementSibling.remove(),
+document.querySelectorAll("input,select")[i].remove(),i--,
+
+btn_evt = document.createElement("input"),
+btn_evt.id="envt",btn_evt.value="Envoyer",btn_evt.type="submit",
+btn_evt.style.fontFamily="bookman Old Style",
+btn_evt.style.fontWeight="bold",
+btn_evt.style.color= "#275280",
+btn_evt.style.fontSize="15px",
+btn_evt.style.width="200px",
+btn_vld.replaceWith(btn_evt))
+:"";});
+
+*/
 
 if(Rtab.includes("")||Rtab2.includes("")){
 for (var i= 0; i<6 ; i++){if(document.querySelectorAll("input,select")[i].value==="" 

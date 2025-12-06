@@ -32,7 +32,14 @@ cel.after(negTx);}
 */
 function fChpLib(cel){
 var negTx="";
-var fxCel = cel.value==="300"||cel.value==="400"?cel.style.color="red":cel.style.color="blue";
+var fxCel = cel.value==300||cel.value==400?
+(negTx= document.createElement("span"),
+negTx.textContent="Trois Perfusions obligatoire",negTx.style.color="red",
+cel.after(negTx))
+:cel.nextSibling.textContent==="Trois Perfusions obligatoire"?
+cel.style.backgroundColor="aqua"
+:"";
+
 }
 
 
