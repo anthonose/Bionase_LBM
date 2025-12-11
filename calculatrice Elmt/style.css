@@ -1,0 +1,6 @@
+﻿/* Ajoutez ici votre CSS pour styliser la calculatrice (grid, couleurs, etc.) */
+.calculator { width: 300px; margin: 50px auto; border: 1px solid #ccc; padding: 10px; }
+#calc-output { width: 95%; height: 50px; text-align: right; font-size: 2em; margin-bottom: 10px; }
+.buttons { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; }
+button { padding: 15px; font-size: 1.2em; cursor: pointer; border: none; }
+.equals { grid-column: span 2; }
