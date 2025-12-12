@@ -1,32 +1,26 @@
-﻿const http= require("http"), fs= require("fs"), url= require("url"), txt_md= require("querystring"), {MongoClient}= require("mongodb"), path = require('path');
+﻿
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = "mongodb+srv://athanasey376:Bionase12@cluster0.uiomylq.mongodb.net/?appName=Cluster0";
 
-const serveur = http.createServer((req, rep) => {
-  // Déterminer le chemin du fichier demandé
-  var pg_adr ="";
-/*  if ( req.url=== '/') { pg_adr = './specimenMalad.html'; } else {pg_adr = '.' + req.url;}*/
- pg_adr= ( req.url=== '/')?'./specimenMalad.html':'.' + req.url;
-  
-  // Déterminer le type de contenu
-  const xson= String(path.extname(pg_adr)).toLowerCase();
-  const c_typ = {
-    '.html': 'text/html',
-    '.js': 'text/javascript',
-    '.css': 'text/css',
-    '.png': 'image/png',
-    '.jpg': 'image/jpeg',
-    '.gif': 'image/gif',
-    '.svg': 'image/svg+xml',
-  };
-  const Cnu = c_typ[xson] || 'application/octet-stream';
-
-  // Lire le fichier
-  fs.readFile(pg_adr, (err, info) => {
-   var c_info="";
-c_info= (err)?console.log(err):rep.setHeader('Content-Type',Cnu);rep.end(info, 'utf-8');
-    
-  });
+// Create a MongoClient with a MongoClientOptions object to set the Stable API version
+const client = new MongoClient(uri, {
+  serverApi: {
+    version: ServerApiVersion.v1,
+    strict: true,
+    deprecationErrors: true,
+  }
 });
 
-serveur.listen(3004, "localhost",() => { console.log(`Emission serveur`);
-});
-
+async function run() {
+  try {
+    // Connect the client to the server	(optional starting in v4.7)
+    await client.connect();
+    // Send a ping to confirm a successful connection
+    await client.db("admin").command({ ping: 1 });
+    console.log("Pinged your deployment. You successfully connected to MongoDB!");
+  } finally {
+    // Ensures that the client will close when you finish/error
+    await client.close();
+  }
+}
+run().catch(console.dir);

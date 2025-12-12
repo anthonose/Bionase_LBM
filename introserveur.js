@@ -410,7 +410,7 @@ var p7="</datalist><br>\n"+
 "cel.previousSibling.style.backgroundColor ==\"green\"?\"red\":\"blue\";}, 500)}\n"+
 "function fChpLib(cel){clearInterval(myInterval);\n"+
 "cel.previousSibling.style.backgroundColor = \"\";\n"+
-"cel.previousSibling.style.color = \"\"var CdtC=\"\",refs=\"\";\n"+
+"cel.previousSibling.style.color = \"\"; var CdtC=\"\",refs=\"\";\n"+
 "var ArrplCel=cel.value===\"\"?\n"+
 "(cel.style.backgroundColor=\"\",cel.style.color=\"\",cel.style.fontWeight=\"\")\n"+
 ":cel.value===\"POSITIVE\"||cel.value===\"AC\"||cel.value===\"SC\"||cel.value===\"SS\"?\n"+
@@ -548,10 +548,10 @@ var p7="</datalist><br>\n"+
 "cel.value!==\"\" && cel.nextElementSibling.textContent===\" *Uniquement (Chiffres ou Lettres)\"?\n"+
 "cel.nextElementSibling.remove():\"\";}</script></body></html>";
 
-var pt= p1+p2+txt_sdN +p3+txt_sdP+p4+txt_sdDC+p5+txt_sdPRS+p6+txt_sdBt+p7;
+var pt= p1+p2+txt_sdN+p3+txt_sdP+p4+txt_sdDC+p5+txt_sdPRS+p6+txt_sdBt+p7;
 
 //insertion des donnees dans la page d'accueil
-fs.writeFile("specimenMalad.html",pt,
+fs.writeFile("Patient.html",pt,
 {encoding:"utf8", flag:"w"},
 (err)=>{if(err){console.log(err);}
 else{console.log("Accueil OK");}});
@@ -1121,7 +1121,7 @@ c_info= (err)?console.log(err):rep.end(info);})
 :
 
 // debut de la Condition SiFaux
-pg_web=( req.url=== '/')?'./specimenMalad.html':'.' + req.url;
+pg_web=( req.url=== '/')?'./Patient.html':'.' + req.url;
 const xson= String(path.extname(pg_web)).toLowerCase();
   const c_typ = {
     '.html': 'text/html',

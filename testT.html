@@ -30,19 +30,42 @@ cel.after(negTx);}
 
 }
 */
+const fruits = ["apple", "banana", "cherry"];
 function fChpLib(cel){
 var negTx="";
-var fxCel = cel.value==300||cel.value==400?
+var tsFor1= fruits.includes("banana")?
+(for (var i= 0; i<3 ; i++){
+var tsFor1=fruits[i]==="banana"?
 (negTx= document.createElement("span"),
-negTx.textContent="Trois Perfusions obligatoire",negTx.style.color="red",
+negTx.textContent=" OK",negTx.style.color="red",
+cel.after(negTx)):"";
+}):"";
+/*var fxCel = cel.value==300 && cel.style.backgroundColor==="" && 
+cel.nextElementSibling.nodeName!=="SPAN"||
+cel.value==="POSITIVE" && cel.style.backgroundColor===""?
+(negTx= document.createElement("span"),
+negTx.textContent="Comprimés",negTx.style.color="red",
 cel.after(negTx))
-:cel.nextSibling.textContent==="Trois Perfusions obligatoire"?
-cel.style.backgroundColor="aqua"
+:cel.value==300 && cel.style.backgroundColor==="" && 
+cel.nextElementSibling.nodeName==="SPAN"?
+cel.nextSibling.remove()
+
 :"";
-
+*/}
+/*
+function fChpLib(cel){
+if(cel.value==300 && cel.style.backgroundColor==="" && 
+cel.nextElementSibling.nodeName!=="SPAN"||
+cel.value==="POSITIVE" && cel.style.backgroundColor===""){
+var negTx= document.createElement("span");
+negTx.textContent="Comprimés";negTx.style.color="red";
+cel.after(negTx);
+}else if
+(cel.value==300 && cel.style.backgroundColor==="" && 
+cel.nextElementSibling.nodeName==="SPAN")
+{cel.nextElementSibling.remove();}
 }
-
-
+*/
 </script>
 </body>
 </html>
