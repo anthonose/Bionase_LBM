@@ -67,7 +67,7 @@ var p2="<body id=\"Entree\" style=\"background-image:url(\'images/LGbionase3.jpg
 "<label for=\"nom\">Nom:</label><input id=\"nom\" list=\"nomL\" name=\"nom\" type=\"text\" autocomplete=\"off\" onblur=\"Avertir(this)\" placeholder=\"Nom de famille\"><datalist id=\"nomL\">";
 var p3="</datalist><br><label for=\"prenoms\">Prénoms:</label><input list=\"prenomsL\" id=\"prenoms\" name=\"prenoms\" type=\"text\" autocomplete=\"off\" onblur=\"Avertir(this)\" ><datalist id=\"prenomsL\">";
 var p4="</datalist><br><label for=\"Sexe\">Sexe:</label><select name=\"Sexe\"  id=\"Sexe\" style=\"width: 188px;margin-bottom:5px; height: 23px;\" onblur=\"Avertir(this)\"><option></option><option>M</option><option>F</option></select><br>\n"+
-"<label for=\"Telephone\">Téléphone:</label><input name=\"Telephone\" type=\"tel\" id=\"Telephone\" onfocus=\"manupir(this)\" onblur=\"Avertir(this)\" placeholder=\"numero a 10 chiffres\"><br>\n"+
+"<label for=\"Telephone\">Téléphone:</label><input name=\"Telephone\" type=\"tel\" id=\"Telephone\"  onblur=\"Avertir(this)\" placeholder=\"numero a 10 chiffres\"><br>\n"+
 "<label for=\"Diagnostic_Clinique\">Diagnostic Clinique:</label><input list=\"dc\" name=\"Diagnostic_Clinique\" type=\"text\" autocomplete=\"off\" id=\"Diagnostic_Clinique\" onblur=\"Avertir(this)\" placeholder=\"categorie du mal\"><datalist id=\"dc\">";
 var p5="</datalist><br><label for=\"Prescripteur\">Prescripteur:</label><input  name=\"Prescripteur\" type=\"text\" autocomplete=\"off\" list=\"prs\" id=\"Prescripteur\" onblur=\"Avertir(this)\" placeholder=\"provenance du Bull\"> <datalist id=\"prs\">";
 var p6="</datalist><br><span style=\"display:inline-block;width:186px;height:37px;border:thin black solid;margin-left:275px\">\n"+
@@ -333,7 +333,7 @@ var p7="</datalist><br>\n"+
 "<input id=\"vld\"  type=\"button\" value=\"Valider [Envoyer]\"><br>\n"+
 "<input type=\"button\" value=\"Nouveau Patient\" onclick=\"location.reload()\"><br>\n"+
 "<input type=\"button\" value=\"Bilan Operationnel\" ><br>\n"+
-"<input  type=\"button\" value=\"Calculatrice\" onclick=\"window.open('scratch/hiper-calc_DfFo-e1.exe', '_blank')\">\n"+
+"<input  type=\"button\" value=\"Calculatrice\" onclick=\"window.open(\'calculatrice.html\', \'_blank\',\'width=350px,height=470px\')\">\n"+
 "</span></span><span  style=\"position:fixed;bottom:220px;right:35px;display:grid\">\n"+
 "<a style=\"font-size:30px;margin-bottom:0px\">&#x1F3E0;</a>\n"+
 "<a href=\"#Entree\" style=\"font-size:12px\" >accueil</a></span></form><script>\n"+
@@ -484,41 +484,41 @@ var p7="</datalist><br>\n"+
 "negTx= document.createElement(\"span\"),\n"+
 "negTx.textContent=\" *Champ obligatoire\",negTx.style.color=\"red\",\n"+
 "document.querySelectorAll(\"input,select\")[i].after(negTx)):\"\";}\n"+
-"var tstTel=!/^\w{10}$/.test(Telephone) &&\n"+
+"var tstTel=!/^\\w{10}$/.test(Telephone) &&\n"+
 "document.getElementById(\"Telephone\").nextElementSibling.nodeName!==\"SPAN\" &&\n"+
 "Telephone!==\"\"?\n"+
 "(negTx= document.createElement(\"span\"),\n"+
 "negTx.textContent=\" *Exactement 10 chiffres.Merci!\",\n"+
 "negTx.style.color=\"#275280\",negTx.style.fontWeigth=\"bold\",\n"+
 "document.getElementById(\"Telephone\").after(negTx))\n"+
-":!/^\w{10}$/.test(Telephone) &&\n"+
+":!/^\\w{10}$/.test(Telephone) &&\n"+
 "document.getElementById(\"Telephone\").nextElementSibling.nodeName===\"SPAN\" &&\n"+
 "Telephone!==\"\"?\n"+
-"(ocument.getElementById(\"Telephone\").nextElementSibling.remove(),\n"+
+"(document.getElementById(\"Telephone\").nextElementSibling.remove(),\n"+
 "negTx= document.createElement(\"span\"),\n"+
 "negTx.textContent=\" *Exactement 10 chiffres.Merci!\",\n"+
 "negTx.style.color=\"#275280\",negTx.style.fontWeigth=\"bold\",\n"+
 "document.getElementById(\"Telephone\").after(negTx))\n"+
-":/\D/.test(Telephone) &&\n"+
+":/\\D/.test(Telephone) &&\n"+
 "document.getElementById(\"Telephone\").nextElementSibling.nodeName!==\"SPAN\"?\n"+
 "(negTx= document.createElement(\"span\"),\n"+
 "negTx.textContent=\" *Uniquement [0-9]\",\n"+
 "negTx.style.color=\"#275280\",negTx.style.fontWeigth=\"bold\",\n"+
 "document.getElementById(\"Telephone\").after(negTx))\n"+
-":/\D/.test(Telephone) &&\n"+
+":/\\D/.test(Telephone) &&\n"+
 "document.getElementById(\"Telephone\").nextElementSibling.nodeName===\"SPAN\"?\n"+
 "(document.getElementById(\"Telephone\").nextElementSibling.remove(),\n"+
 "negTx= document.createElement(\"span\"),\n"+
 "negTx.textContent=\" *Uniquement [0-9]\",\n"+
 "negTx.style.color=\"#275280\",negTx.style.fontWeigth=\"bold\",\n"+
 "document.getElementById(\"Telephone\").after(negTx)):\"\";\n"+
-"var tstPrix=/[a-z]/.test(PrixdesExamensouStatut) && /\d/.test(PrixdesExamensouStatut) \n"+
+"var tstPrix=/[a-z]/.test(PrixdesExamensouStatut) && /\\d/.test(PrixdesExamensouStatut) \n"+
 "&& document.getElementById(\"PrixdesExamensouStatut\").nextElementSibling.nodeName!==\"SPAN\"?\n"+
 "(negTx= document.createElement(\"span\"),\n"+
 "negTx.textContent=\" *Uniquement (Chiffres ou Lettres)\",\n"+
 "negTx.style.color=\"#275280\",negTx.style.fontWeigth=\"bold\",\n"+
 "document.getElementById(\"PrixdesExamensouStatut\").after(negTx))\n"+
-":/[a-z]/.test(PrixdesExamensouStatut) && /\d/.test(PrixdesExamensouStatut) \n"+
+":/[a-z]/.test(PrixdesExamensouStatut) && /\\d/.test(PrixdesExamensouStatut) \n"+
 "&& document.getElementById(\"PrixdesExamensouStatut\").nextElementSibling.nodeName===\"SPAN\"?\n"+
 "(document.getElementById(\"PrixdesExamensouStatut\").nextElementSibling.remove(),\n"+
 "negTx= document.createElement(\"span\"),\n"+
@@ -527,8 +527,8 @@ var p7="</datalist><br>\n"+
 "document.getElementById(\"PrixdesExamensouStatut\").after(negTx)):\"\";\n"+
 "for (var i=90 ; i<document.querySelectorAll(\"input,select\").length ; i++){\n"+
 "var tstEnv= Rtab.includes(\"\")||Rtab2.includes(\"\")||\n"+
-"/[a-z]/.test(PrixdesExamensouStatut) && /\d/.test(PrixdesExamensouStatut)||\n"+
-"/\D/.test(Telephone)||!/^\w{10}$/.test(Telephone)?\n"+
+"/[a-z]/.test(PrixdesExamensouStatut) && /\\d/.test(PrixdesExamensouStatut)||\n"+
+"/\\D/.test(Telephone)||!/^\\w{10}$/.test(Telephone)?\n"+
 "event.preventDefault():\n"+
 "document.querySelectorAll(\"input,select\")[i].value.trim()===\"\"?\n"+
 "(document.querySelectorAll(\"input,select\")[i].previousElementSibling.remove(),\n"+

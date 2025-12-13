@@ -1,12 +1,16 @@
 <!DOCTYPE html><html><head>
 <meta content="fr-ci" http-equiv="Content-Language">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-<title>ACCUEIL ET ENREGISTREMENT PATIENTS</title></head><body id="Entree" style="background-image:url('images/LGbionase3.jpg');width: 730px;margin-right: auto;	margin-left: auto">
+<style>
+
+</style>
+<title>ACCUEIL ET ENREGISTREMENT PATIENTS</title></head>
+<body id="Entree" style="background-image:url('images/LGbionase3.jpg');width: 730px;margin-right: auto;	margin-left: auto">
 <div style="text-align:center;margin-bottom:20px" >
 <img alt="encart" height="91" src="imageTest2.jpg" width="730"><br></div>
 <form action="transit.html" method="post">
-<label for="nom">Nom:</label><input id="nom" list="nomL" name="nom" type="text" autocomplete="off" onblur="Avertir(this)" placeholder="Nom de famille"><datalist id="nomL"><option value="kodjo"><option value="coulibaly"><option value="bamba"><option value="nikiema"></datalist><br><label for="prenoms">Prénoms:</label><input list="prenomsL" id="prenoms" name="prenoms" type="text" autocomplete="off" onblur="Avertir(this)" ><datalist id="prenomsL"><option value="marguerite"><option value="siaka"><option value="bakary"><option value="mamadou"></datalist><br><label for="Sexe">Sexe:</label><select name="Sexe"  id="Sexe" style="width: 188px;margin-bottom:5px; height: 23px;" onblur="Avertir(this)"><option></option><option>M</option><option>F</option></select><br>
-<label for="Telephone">Téléphone:</label><input name="Telephone" type="tel" id="Telephone" onfocus="manupir(this)" onblur="Avertir(this)" placeholder="numero a 10 chiffres"><br>
+<label for="nom">Nom:</label><input id="nom" list="nomL" name="nom" type="text" autocomplete="off" onblur="Avertir(this)" placeholder="Nom de famille"><datalist id="nomL"><option value="kodjo"><option value="coulibaly"><option value="bamba"><option value="nikiema"><option value="kouakou"></datalist><br><label for="prenoms">Prénoms:</label><input list="prenomsL" id="prenoms" name="prenoms" type="text" autocomplete="off" onblur="Avertir(this)" ><datalist id="prenomsL"><option value="marguerite"><option value="siaka"><option value="bakary"><option value="mamadou"><option value="yao bernard"></datalist><br><label for="Sexe">Sexe:</label><select name="Sexe"  id="Sexe" style="width: 188px;margin-bottom:5px; height: 23px;" onblur="Avertir(this)"><option></option><option>M</option><option>F</option></select><br>
+<label for="Telephone">Téléphone:</label><input name="Telephone" type="tel" id="Telephone"  onblur="Avertir(this)" placeholder="numero a 10 chiffres"><br>
 <label for="Diagnostic_Clinique">Diagnostic Clinique:</label><input list="dc" name="Diagnostic_Clinique" type="text" autocomplete="off" id="Diagnostic_Clinique" onblur="Avertir(this)" placeholder="categorie du mal"><datalist id="dc"><option value="Bilan de santé"></datalist><br><label for="Prescripteur">Prescripteur:</label><input  name="Prescripteur" type="text" autocomplete="off" list="prs" id="Prescripteur" onblur="Avertir(this)" placeholder="provenance du Bull"> <datalist id="prs"><option value="Kathanase"><option value="dr diarra"></datalist><br><span style="display:inline-block;width:186px;height:37px;border:thin black solid;margin-left:275px">
 <span id="Lalphb1" style="font-size:14.5px;text-align:right;letter-spacing:1.3px"><span style="text-decoration:underline;font-size:9px;letter-spacing:0px;text-align:left">Ordre A-Z:</span>
 <a>A</a><a>B</a><a>C</a><a>D</a><a>E</a><a>F</a><a>G</a><a>H</a><a>I</a>JK<a>L</a><a>M</a>
@@ -115,7 +119,7 @@
 <span id="lW" style="color:blue">W</span><br>
 <label for="Wrs">Waaler-Rose</label><input id="Wrs" name="Wrs" type="checkbox"><br>
 <label for="wf" style="display:inline-block;height:120px">Widal et Felix</label><input id="wf" name="wf" type="checkbox"><br></span></div><br>
-<label for="Biotechnologiste">Biotechnologiste:</label><input  name="Biotechnologiste" type="text" autocomplete="off" list="btech" id="Biotechnologiste" onblur="Avertir(this)" placeholder="Nom du technicien"><datalist id="btech"><option value="amani yao"><option value="kouadio yao"><option value="kouadio yao athanase"></datalist><br>
+<label for="Biotechnologiste">Biotechnologiste:</label><input  name="Biotechnologiste" type="text" autocomplete="off" list="btech" id="Biotechnologiste" onblur="Avertir(this)" placeholder="Nom du technicien"><datalist id="btech"><option value="amani yao"><option value="kouadio yao"><option value="kouadio yao athanase"><option value="on"></datalist><br>
 <label for="PrixdesExamensouStatut">Prix/statut:</label><input  name="PrixdesExamensouStatut" type="text" id="PrixdesExamensouStatut" onblur="Avertir(this)" onfocus="Savertir(this)" placeholder="Montant ou assuré(e)"><br>
 <label for="DateduPrelevement">Date Prelevement:</label><input  name="DateduPrelevement" type="date" id="DateduPrelevement" style="width: 183px; height: 20px;" onblur="Avertir(this)">
 <hr style="margin-top:50px">
@@ -269,7 +273,7 @@ background-color:aqua;display:grid">
 <input id="vld"  type="button" value="Valider [Envoyer]"><br>
 <input type="button" value="Nouveau Patient" onclick="location.reload()"><br>
 <input type="button" value="Bilan Operationnel" ><br>
-<input  type="button" value="Calculatrice" onclick="window.open('scratch/hiper-calc_DfFo-e1.exe', '_blank')">
+<input  type="button" value="Calculatrice" onclick="window.open('calculatrice.html', '_blank','width=350px,height=470px')">
 </span></span><span  style="position:fixed;bottom:220px;right:35px;display:grid">
 <a style="font-size:30px;margin-bottom:0px">&#x1F3E0;</a>
 <a href="#Entree" style="font-size:12px" >accueil</a></span></form><script>
@@ -420,41 +424,41 @@ document.querySelectorAll("input,select")[i].nextElementSibling.nodeName==="SPAN
 negTx= document.createElement("span"),
 negTx.textContent=" *Champ obligatoire",negTx.style.color="red",
 document.querySelectorAll("input,select")[i].after(negTx)):"";}
-var tstTel=!/^w{10}$/.test(Telephone) &&
+var tstTel=!/^\w{10}$/.test(Telephone) &&
 document.getElementById("Telephone").nextElementSibling.nodeName!=="SPAN" &&
 Telephone!==""?
 (negTx= document.createElement("span"),
 negTx.textContent=" *Exactement 10 chiffres.Merci!",
 negTx.style.color="#275280",negTx.style.fontWeigth="bold",
 document.getElementById("Telephone").after(negTx))
-:!/^w{10}$/.test(Telephone) &&
+:!/^\w{10}$/.test(Telephone) &&
 document.getElementById("Telephone").nextElementSibling.nodeName==="SPAN" &&
 Telephone!==""?
-(ocument.getElementById("Telephone").nextElementSibling.remove(),
+(document.getElementById("Telephone").nextElementSibling.remove(),
 negTx= document.createElement("span"),
 negTx.textContent=" *Exactement 10 chiffres.Merci!",
 negTx.style.color="#275280",negTx.style.fontWeigth="bold",
 document.getElementById("Telephone").after(negTx))
-:/D/.test(Telephone) &&
+:/\D/.test(Telephone) &&
 document.getElementById("Telephone").nextElementSibling.nodeName!=="SPAN"?
 (negTx= document.createElement("span"),
 negTx.textContent=" *Uniquement [0-9]",
 negTx.style.color="#275280",negTx.style.fontWeigth="bold",
 document.getElementById("Telephone").after(negTx))
-:/D/.test(Telephone) &&
+:/\D/.test(Telephone) &&
 document.getElementById("Telephone").nextElementSibling.nodeName==="SPAN"?
 (document.getElementById("Telephone").nextElementSibling.remove(),
 negTx= document.createElement("span"),
 negTx.textContent=" *Uniquement [0-9]",
 negTx.style.color="#275280",negTx.style.fontWeigth="bold",
 document.getElementById("Telephone").after(negTx)):"";
-var tstPrix=/[a-z]/.test(PrixdesExamensouStatut) && /d/.test(PrixdesExamensouStatut) 
+var tstPrix=/[a-z]/.test(PrixdesExamensouStatut) && /\d/.test(PrixdesExamensouStatut) 
 && document.getElementById("PrixdesExamensouStatut").nextElementSibling.nodeName!=="SPAN"?
 (negTx= document.createElement("span"),
 negTx.textContent=" *Uniquement (Chiffres ou Lettres)",
 negTx.style.color="#275280",negTx.style.fontWeigth="bold",
 document.getElementById("PrixdesExamensouStatut").after(negTx))
-:/[a-z]/.test(PrixdesExamensouStatut) && /d/.test(PrixdesExamensouStatut) 
+:/[a-z]/.test(PrixdesExamensouStatut) && /\d/.test(PrixdesExamensouStatut) 
 && document.getElementById("PrixdesExamensouStatut").nextElementSibling.nodeName==="SPAN"?
 (document.getElementById("PrixdesExamensouStatut").nextElementSibling.remove(),
 negTx= document.createElement("span"),
@@ -463,8 +467,8 @@ negTx.style.color="#275280",negTx.style.fontWeigth="bold",
 document.getElementById("PrixdesExamensouStatut").after(negTx)):"";
 for (var i=90 ; i<document.querySelectorAll("input,select").length ; i++){
 var tstEnv= Rtab.includes("")||Rtab2.includes("")||
-/[a-z]/.test(PrixdesExamensouStatut) && /d/.test(PrixdesExamensouStatut)||
-/D/.test(Telephone)||!/^w{10}$/.test(Telephone)?
+/[a-z]/.test(PrixdesExamensouStatut) && /\d/.test(PrixdesExamensouStatut)||
+/\D/.test(Telephone)||!/^\w{10}$/.test(Telephone)?
 event.preventDefault():
 document.querySelectorAll("input,select")[i].value.trim()===""?
 (document.querySelectorAll("input,select")[i].previousElementSibling.remove(),
