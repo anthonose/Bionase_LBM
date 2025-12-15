@@ -333,7 +333,7 @@ var p7="</datalist><br>\n"+
 "<input id=\"vld\"  type=\"button\" value=\"Valider [Envoyer]\"><br>\n"+
 "<input type=\"button\" value=\"Nouveau Patient\" onclick=\"location.reload()\"><br>\n"+
 "<input type=\"button\" value=\"Bilan Operationnel\" ><br>\n"+
-"<input  type=\"button\" value=\"Calculatrice\" onclick=\"window.open(\'calculatrice.html\', \'_blank\',\'width=350px,height=470px\')\">\n"+
+"<input  type=\"button\" value=\"Calculatrice\" onclick=\"window.open(\'calculatriceElmt/calculatrice.html\', \'_blank\',\'width=350px,height=470px\')\">\n"+
 "</span></span><span  style=\"position:fixed;bottom:220px;right:35px;display:grid\">\n"+
 "<a style=\"font-size:30px;margin-bottom:0px\">&#x1F3E0;</a>\n"+
 "<a href=\"#Entree\" style=\"font-size:12px\" >accueil</a></span></form><script>\n"+
