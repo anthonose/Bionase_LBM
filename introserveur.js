@@ -59,10 +59,10 @@ txt_sdBt += "<option value=\"" + btpers + "\">";}
 var p1="<!DOCTYPE html><html><head>\n"+
 "<meta content=\"fr-ci\" http-equiv=\"Content-Language\">\n"+
 "<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\">\n"+
-"<title>ACCUEIL ET ENREGISTREMENT PATIENTS</title></head>";
-var p2="<body id=\"Entree\" style=\"background-image:url(\'images/LGbionase3.jpg\');width: 730px;margin-right: auto;	margin-left: auto\">\n"+
+"<title>ACCUEIL ET ENREGISTREMENT PATIENTS</title></head><body  style=\"background-image:url('images/LGbionase3.jpg');width: 730px;margin-right: auto;	margin-left: auto\">\n"+
+"<a id=\"Entree\" href=\"\"></a>\n"+
 "<div style=\"text-align:center;margin-bottom:20px\" >\n"+
-	"<img alt=\"encart\" height=\"91\" src=\"imageTest2.jpg\" width=\"730\"><br></div>\n"+
+"<img alt=\"encart\" height=\"91\" src=\"imageTest2.jpg\" width=\"730\"><br></div>\n"+
 "<form action=\"transit.html\" method=\"post\">\n"+
 "<label for=\"nom\">Nom:</label><input id=\"nom\" list=\"nomL\" name=\"nom\" type=\"text\" autocomplete=\"off\" onblur=\"Avertir(this)\" placeholder=\"Nom de famille\"><datalist id=\"nomL\">";
 var p3="</datalist><br><label for=\"prenoms\">Prénoms:</label><input list=\"prenomsL\" id=\"prenoms\" name=\"prenoms\" type=\"text\" autocomplete=\"off\" onblur=\"Avertir(this)\" ><datalist id=\"prenomsL\">";
@@ -71,10 +71,11 @@ var p4="</datalist><br><label for=\"Sexe\">Sexe:</label><select name=\"Sexe\"  i
 "<label for=\"Diagnostic_Clinique\">Diagnostic Clinique:</label><input list=\"dc\" name=\"Diagnostic_Clinique\" type=\"text\" autocomplete=\"off\" id=\"Diagnostic_Clinique\" onblur=\"Avertir(this)\" placeholder=\"categorie du mal\"><datalist id=\"dc\">";
 var p5="</datalist><br><label for=\"Prescripteur\">Prescripteur:</label><input  name=\"Prescripteur\" type=\"text\" autocomplete=\"off\" list=\"prs\" id=\"Prescripteur\" onblur=\"Avertir(this)\" placeholder=\"provenance du Bull\"> <datalist id=\"prs\">";
 var p6="</datalist><br><span style=\"display:inline-block;width:186px;height:37px;border:thin black solid;margin-left:275px\">\n"+
-"<span id=\"Lalphb1\" style=\"font-size:14.5px;text-align:right;letter-spacing:1.3px\"><span style=\"text-decoration:underline;font-size:9px;letter-spacing:0px;text-align:left\">Ordre A-Z:</span>\n"+
-"<a>A</a><a>B</a><a>C</a><a>D</a><a>E</a><a>F</a><a>G</a><a>H</a><a>I</a>JK<a>L</a><a>M</a>\n"+
-"</span><br><span id=\"Lalphb2\" style=\"font-size:14.5px;letter-spacing:1px;padding-left:43px\">\n"+
-"<a>N</a>O<a>P</a><a>Q</a><a>R</a><a>S</a><a>T</a><a>U</a><a>V</a><a>W</a>XYZ</span></span><br>\n"+
+"<span id=\"Lalphb1\" style=\"font-size:14.5px;text-align:right;letter-spacing:1.3px\">\n"+
+"<span style=\"text-decoration:underline;font-size:9px;letter-spacing:0px;text-align:left\">Ordre A-Z:</span>\n"+
+"<a>A</a><a>B</a><a>C</a><a>D</a><a>E</a><a>F</a><a>G</a><a>H</a><a>I</a>JK<a>L</a><a>M</a></span>\n"+
+"<br><span id=\"Lalphb2\" style=\"font-size:14.5px;letter-spacing:1px;padding-left:38px\">\n"+
+"<a>N</a>O<a>P</a><a>Q</a><a>R</a><a>S</a><a>T</a><a>U</a><a>V</a><a>W</a>XYZ</span><br>\n"+
 "<p id=\"lbExamensDemandes\" style=\"display:inline-block;width:271px;vertical-align:75px;font-family:courier New;text-align:right\">Examens Demandés:</p>\n"+
 "<div id=\"ExamensDemandes\" style=\"display:inline-block;width:186px;height:150px;overflow-y:auto;border:thin black solid;margin-bottom:1px\">\n"+
 "<span id=\"lchx\"><span id=\"lA\" style=\"color:blue\">A</span><br>\n"+
@@ -180,7 +181,7 @@ var p6="</datalist><br><span style=\"display:inline-block;width:186px;height:37p
 "<label for=\"wf\" style=\"display:inline-block;height:120px\">Widal et Felix</label><input id=\"wf\" name=\"wf\" type=\"checkbox\"><br></span></div><br>\n"+
 "<label for=\"Biotechnologiste\">Biotechnologiste:</label><input  name=\"Biotechnologiste\" type=\"text\" autocomplete=\"off\" list=\"btech\" id=\"Biotechnologiste\" onblur=\"Avertir(this)\" placeholder=\"Nom du technicien\"><datalist id=\"btech\">";
 var p7="</datalist><br>\n"+
-"<label for=\"PrixdesExamensouStatut\">Prix/statut:</label><input  name=\"PrixdesExamensouStatut\" type=\"text\" id=\"PrixdesExamensouStatut\" onblur=\"Avertir(this)\" onfocus=\"Savertir(this)\" placeholder=\"Montant ou assuré(e)\"><br>\n"+
+"<label for=\"PrixdesExamensouStatut\">Prix/statut:</label><input  name=\"PrixdesExamensouStatut\" type=\"text\" id=\"PrixdesExamensouStatut\" onblur=\"Avertir(this)\" placeholder=\"Montant ou assuré(e)\"><br>\n"+
 "<label for=\"DateduPrelevement\">Date Prelevement:</label><input  name=\"DateduPrelevement\" type=\"date\" id=\"DateduPrelevement\" style=\"width: 183px; height: 20px;\" onblur=\"Avertir(this)\">\n"+
 "<hr style=\"margin-top:50px\">\n"+
 "<h1 style=\"text-align:center;color:#275280\">EXAMENS BIOLOGIQUES</h1><hr><h3>inflammation</h3>\n"+
@@ -192,18 +193,18 @@ var p7="</datalist><br>\n"+
 "</p><div >\n"+
 "<label for=\"Magnesium\">Magnésium(Mg2+):</label><input name=\"Magnesium\" type=\"number\"  step=\"0.01\" id=\"Magnesium\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"19-25\"><br>\n"+
 "<label for=\"Calcium\">Calcium(Ca2+):</label><input name=\"Calcium\" type=\"number\"  step=\"0.01\" id=\"Calcium\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"86-103\"><br>\n"+
-"<label for=\"ReserveAlcalin\">Reserve Alcalin:</label><input name=\"ReserveAlcalin\" type=\"number\"  step=\"0.01\" id=\"ReserveAlcalin\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"22-26\"><br>\n"+
-"<label for=\"ProtidesTotaux\">Protides Totaux:</label><input name=\"ProtidesTotaux\" type=\"number\"  step=\"0.01\" id=\"ProtidesTotaux\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"65-80\">\n"+
+"<label for=\"Reserve_Alcalin\">Reserve Alcalin:</label><input name=\"Reserve_Alcalin\" type=\"number\"  step=\"0.01\" id=\"Reserve_Alcalin\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"22-26\"><br>\n"+
+"<label for=\"Protides_Tot\">Protides Totaux:</label><input name=\"Protides_Tot\" type=\"number\"  step=\"0.01\" id=\"Protides_Tot\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"65-80\">\n"+
 "</div><h3 id=\"billip\">bilan lipidique</h3><div>\n"+
 "<label for=\"Triglycerides\">Triglycérides:</label><input name=\"Triglycerides\" type=\"number\"  step=\"0.01\" id=\"Triglycerides\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"0.65-1.9\"><br>\n"+
-"<label for=\"CholesterolTotal\">Cholestérol Total:</label><input name=\"CholesterolTotal\" type=\"number\"  step=\"0.01\" id=\"CholesterolTotal\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"1.5-2.5\"><br>\n"+
-"<label for=\"CholesterolHDL\">Cholestérol HDL:</label><input name=\"CholesterolHDL\" type=\"number\"  step=\"0.01\" id=\"CholesterolHDL\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"0.2-0.4\"> <br>\n"+
-"<label for=\"CholesterolLDL\">Cholestérol LDL:</label><input name=\"CholesterolLDL\" type=\"number\"  step=\"0.01\" id=\"CholesterolLDL\" onblur=\"fChpLibC(this)\" onfocus=\"fChpSelC(this)\" readonly=\"readonly\" style=\"border:medium blue solid\" placeholder=\"< 2.5\" ><span style=\"color:blue\"> *Champ Calculé</span><span style=\"color:purple\" title=\"LDL = Cholestérol total - HDL - (Triglycérides / 5)\"> (Formule [ en survol ])</span> <br>\n"+
-"<label for=\"LipideTotale\">Lipide Totale:</label><input name=\"LipideTotale\" type=\"number\"  step=\"0.01\" id=\"LipideTotale\" onblur=\"fChpLibC(this)\" onfocus=\"fChpSelC(this)\" placeholder=\"6-7.5\" style=\"border:medium blue solid\" readonly=\"readonly\"><span style=\"color:blue\"> *Champ Calculé</span><span style=\"color:purple\" title=\"Lipides totaux (en g/L) = (Cholestérol total) x 2,56 + (Triglycérides) x 0,87\"> (Formule [ en survol ])</span> <br>\n"+
+"<label for=\"Cholesterol_Tot\">Cholestérol Total:</label><input name=\"Cholesterol_Tot\" type=\"number\"  step=\"0.01\" id=\"Cholesterol_Tot\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"1.5-2.5\"><br>\n"+
+"<label for=\"Cholesterol_HDL\">Cholestérol HDL:</label><input name=\"Cholesterol_HDL\" type=\"number\"  step=\"0.01\" id=\"Cholesterol_HDL\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"0.2-0.4\"> <br>\n"+
+"<label for=\"Cholesterol_LDL\">Cholestérol LDL:</label><input name=\"Cholesterol_LDL\" type=\"number\"  step=\"0.01\" id=\"Cholesterol_LDL\" onblur=\"fChpLibC(this)\" onfocus=\"fChpSelC(this)\" readonly=\"readonly\" style=\"border:medium blue solid\" placeholder=\"< 2.5\" ><span style=\"color:blue\"> *Champ Calculé</span><span style=\"color:purple\" title=\"LDL = Cholestérol total - HDL - (Triglycérides / 5)\"> (Formule [ en survol ])</span> <br>\n"+
+"<label for=\"Lipide_Tot\">Lipide Totale:</label><input name=\"Lipide_Tot\" type=\"number\"  step=\"0.01\" id=\"Lipide_Tot\" onblur=\"fChpLibC(this)\" onfocus=\"fChpSelC(this)\" placeholder=\"6-7.5\" style=\"border:medium blue solid\" readonly=\"readonly\"><span style=\"color:blue\"> *Champ Calculé</span><span style=\"color:purple\" title=\"Lipides totaux (en g/L) = (Cholestérol total) x 2,56 + (Triglycérides) x 0,87\"> (Formule [ en survol ])</span> <br>\n"+
 "</div><h3 id=\"bilhepbil\">bilan hepatique et bilaire</h3><p>\n"+
 "<label for=\"TGO\" ><span style=\"background-color: #00F3FF\">Transaminases</span>/TGO:</label><input name=\"TGO\" type=\"number\"  step=\"0.01\" id=\"TGO\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 37\"> <label for=\"TGP\">TGP:</label><input name=\"TGP\" type=\"number\"  step=\"0.01\" id=\"TGP\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 40\"><br>\n"+
 "</p><p>\n"+
-"<label for=\"BilirubineTotale\" >Bilirubine Tot:</label><input name=\"BilirubineTotale\" type=\"number\"  step=\"0.01\" id=\"BilirubineTotale\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 12\"> <label for=\"BilirubineConjuguee\">Bilirubine Conj:</label><input name=\"BilirubineConjuguee\" type=\"number\"  step=\"0.01\" id=\"BilirubineConjuguee\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 2.5\"><br>\n"+
+"<label for=\"Bilirubine_Tot\" >Bilirubine Tot:</label><input name=\"Bilirubine_Tot\" type=\"number\"  step=\"0.01\" id=\"Bilirubine_Tot\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 12\"> <label for=\"Bilirubine_Conj\">Bilirubine Conj:</label><input name=\"Bilirubine_Conj\" type=\"number\"  step=\"0.01\" id=\"Bilirubine_Conj\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 2.5\"><br>\n"+
 "</p><div>\n"+
 "<label for=\"AgHBS\">AgHBS:</label><select name=\"AgHBS\" id=\"AgHBS\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><br>\n"+
 "<label for=\"ACHBS\">ACHBS:</label><select name=\"ACHBS\" id=\"ACHBS\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><br>\n"+
@@ -211,20 +212,20 @@ var p7="</datalist><br>\n"+
 "<label for=\"ACHBe\">ACHBe:</label><select name=\"ACHBe\" id=\"ACHBe\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select> <br>\n"+
 "<label for=\"ACHBC\">ACHBC:</label><select name=\"ACHBC\" id=\"ACHBC\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><br>\n"+
 "<label for=\"ACHVC\">ACHVC:</label><select name=\"ACHVC\" id=\"ACHVC\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><br>\n"+
-"<label for=\"HAVIgM\">HAV(IgM):</label><select name=\"HAVIgM\" id=\"HAVIgM\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><br>\n"+
-"<label for=\"GammaGT\">Gamma-GT:</label><input name=\"GammaGT\" type=\"number\"  step=\"0.01\" id=\"GammaGT\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 45\"><br>\n"+
-"<label for=\"PhosphataseAlcaline\">Phosphatase Alc:</label><input name=\"PhosphataseAlcaline\" type=\"number\"  step=\"0.01\" id=\"PhosphataseAlcaline\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"30-130\">\n"+
+"<label for=\"HAV_IgM\">HAV(IgM):</label><select name=\"HAV_IgM\" id=\"HAV_IgM\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><br>\n"+
+"<label for=\"GAMMA_GT\">Gamma-GT:</label><input name=\"GAMMA_GT\" type=\"number\"  step=\"0.01\" id=\"GAMMA_GT\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 45\"><br>\n"+
+"<label for=\"Phosphatase_Alcaline\">Phosphatase Alc:</label><input name=\"Phosphatase_Alcaline\" type=\"number\"  step=\"0.01\" id=\"Phosphatase_Alcaline\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"30-130\">\n"+
 "</div><h3 id=\"bilren\">bilan renal</h3><div>\n"+
 "<label for=\"Creatinine\">Créatinine:</label><input name=\"Creatinine\" type=\"number\"  step=\"0.01\" id=\"Creatinine\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"6-13\"><br>\n"+
 "<label for=\"Uree\">Uree:</label><input name=\"Uree\" type=\"number\"  step=\"0.01\" id=\"Uree\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"0.15-0.55\"><br>\n"+
-"<label for=\"AcideUrique\">Acide Urique:</label><input name=\"AcideUrique\" type=\"number\"  step=\"0.01\" id=\"AcideUrique\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"30-70\"><br>\n"+
+"<label for=\"Acide_Urique\">Acide Urique:</label><input name=\"Acide_Urique\" type=\"number\"  step=\"0.01\" id=\"Acide_Urique\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"30-70\"><br>\n"+
 "<label for=\"Albumine\">Albumine:</label><input name=\"Albumine\" type=\"number\"  step=\"0.01\" id=\"Albumine\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"35-52\"><br>\n"+
 "<label for=\"Albuminurie\">Albuminurie:</label><input name=\"Albuminurie\" type=\"number\"  step=\"0.01\" id=\"Albuminurie\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 0.15\"><br>\n"+
 "<label for=\"Proteinurie\">Protéinurie:</label><input name=\"Proteinurie\" type=\"number\"  step=\"0.01\" id=\"Proteinurie\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 0.30\"><br>\n"+
-"<label for=\"Proteinurie24h\">Protéinurie 24h:</label><input name=\"Proteinurie24h\" type=\"number\"  step=\"0.01\" id=\"Proteinurie24h\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 0.15\"><br>\n"+
+"<label for=\"Proteinurie_24h\">Protéinurie 24h:</label><input name=\"Proteinurie_24h\" type=\"number\"  step=\"0.01\" id=\"Proteinurie_24h\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 0.15\"><br>\n"+
 "<label for=\"DFG\">DFG:(Débit Filtration Glomérulaire)</label><input name=\"DFG\" type=\"number\"  step=\"0.01\" id=\"DFG\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"60-89\"><br>\n"+
-"<label for=\"ClairanceCreatininurie\">Clairance Créat:</label><input name=\"ClairanceCreatininurie\" type=\"number\"  step=\"0.01\" id=\"ClairanceCreatininurie\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"80-120\"><br>\n"+
-"<label for=\"ElectrophoreseProteinesSerique\" >Electroph Prot Sq:</label><select name=\"ElectrophoreseProteinesSerique\" id=\"ElectrophoreseProteinesSerique\" style=\"margin-top:20px\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>NORMALE</option><option>ANORMALE</option></select><br>\n"+
+"<label for=\"Clairance_Creatininurie\">Clairance Créat:</label><input name=\"Clairance_Creatininurie\" type=\"number\"  step=\"0.01\" id=\"Clairance_Creatininurie\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"80-120\"><br>\n"+
+"<label for=\"Electrophorese_Proteines\" >Electroph Prot Sq:</label><select name=\"Electrophorese_Proteines\" id=\"Electrophorese_Proteines\" style=\"margin-top:20px\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>NORMALE</option><option>ANORMALE</option></select><br>\n"+
 "<label for=\"AlbumineEP\">Albumine:</label><input name=\"AlbumineEP\"  type=\"number\"  step=\"0.01\" id=\"AlbumineEP\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"35-50\">\n"+
 "<label for=\"AlphaI\">AlphaI:</label><input name=\"AlphaI\"  type=\"number\"  step=\"0.01\" id=\"AlphaI\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"1-5\"><br>\n"+
 "<label for=\"AlphaII\">AlphaII:</label><input name=\"AlphaII\"  type=\"number\"  step=\"0.01\" id=\"AlphaII\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"4-8\">\n"+
@@ -235,8 +236,8 @@ var p7="</datalist><br>\n"+
 "<label for=\"SodiumU\">Sodium(Na+):</label><input name=\"SodiumU\" type=\"number\"  step=\"0.01\" id=\"SodiumU\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"100-300\">\n"+
 "<label for=\"ChloreU\">Chlore(Cl-):</label><input name=\"ChloreU\" type=\"number\"  step=\"0.01\" id=\"ChloreU\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"80-270\">\n"+
 "</p><h3>bilan glycemique</h3><div>\n"+
-"<label for=\"GlycemieJeun\">Glycémie:</label><input name=\"GlycemieJeun\" type=\"number\"  step=\"0.01\" id=\"GlycemieJeun\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"0.60-1.06\"><br>\n"+
-"<label for=\"GlycemiePostPrandiale\">Glycémie PP:</label><input name=\"GlycemiePostPrandiale\" type=\"number\"  step=\"0.01\" id=\"GlycemiePostPrandiale\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 1.40\"><br>\n"+
+"<label for=\"Glycemie\">Glycémie:</label><input name=\"Glycemie\" type=\"number\"  step=\"0.01\" id=\"Glycemie\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"0.60-1.06\"><br>\n"+
+"<label for=\"Glycemie_PPrandiale\">Glycémie PP:</label><input name=\"Glycemie_PPrandiale\" type=\"number\"  step=\"0.01\" id=\"Glycemie_PPrandiale\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 1.40\"><br>\n"+
 "<label for=\"HBA1C\">HBA1C:</label><input name=\"HBA1C\" type=\"number\"  step=\"0.01\" id=\"HBA1C\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"4-6\"><br>\n"+
 "<label for=\"Glycosurie\">Glycosurie:</label><input name=\"Glycosurie\" type=\"number\"  step=\"0.01\" id=\"Glycosurie\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 50\"><br>\n"+
 "<label for=\"Glycorachie\">Glycorachie:</label><input name=\"Glycorachie\" type=\"number\"  step=\"0.01\" id=\"Glycorachie\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 0.4\">\n"+
@@ -255,7 +256,7 @@ var p7="</datalist><br>\n"+
 "<label for=\"nfsLY\">Lymphocyte:</label><input name=\"nfsLY\" type=\"number\"  step=\"0.01\" id=\"nfsLY\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"20-40\"><br>\n"+
 "<label for=\"nfsMn\">Monocyte:</label><input name=\"nfsMn\" type=\"number\"  step=\"0.01\" id=\"nfsMn\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"3-7\"><br><br>\n"+
 "</div><p>\n"+
-"<label for=\"GroupeSanguin\" >Groupe Sanguin:</label><select name=\"GroupeSanguin\" id=\"GroupeSanguin\" style=\"width:64px;margin-bottom:20px;text-align:center\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>O</option><option>A</option><option>B</option><option>AB</option></select>\n"+
+"<label for=\"Groupe_Sanguin\" >Groupe Sanguin:</label><select name=\"Groupe_Sanguin\" id=\"Groupe_Sanguin\" style=\"width:64px;margin-bottom:20px;text-align:center\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>O</option><option>A</option><option>B</option><option>AB</option></select>\n"+
 "<label for=\"Rhesus\">Rhésus:</label><select name=\"Rhesus\" id=\"Rhesus\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>(+)POSITIVE</option><option>(-)NEGATIVE</option></select><br>\n"+
 "</p><div>\n"+
 "<label for=\"TP\">TP(Taux Prothrombine):</label><input name=\"TP\" type=\"number\"  step=\"0.01\" id=\"TP\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"70-100\"><br>\n"+
@@ -286,13 +287,13 @@ var p7="</datalist><br>\n"+
 "<label for=\"Mycoplasme\">Mycoplasme:</label><select name=\"Mycoplasme\" id=\"Mycoplasme\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for=\"mycpIgm\">IgM:</label><input name=\"mycpIgm\" type=\"number\"  step=\"0.01\" id=\"mycpIgm\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><label for=\"mycpIgg\">IgG:</label><input name=\"mycpIgg\" type=\"number\"  step=\"0.01\" id=\"mycpIgg\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><br>\n"+
 "<label for=\"Bilharziose\">Bilharziose:</label><select name=\"Bilharziose\" id=\"Bilharziose\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for=\"bilhIgm\">IgM:</label><input name=\"bilhIgm\" type=\"number\"  step=\"0.01\" id=\"bilhIgm\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><label for=\"bilhIgg\">IgG:</label><input name=\"bilhIgg\" type=\"number\"  step=\"0.01\" id=\"bilhIgg\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><br>\n"+
 "<label for=\"BW\">VDRL:</label><select name=\"BW\" id=\"BW\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for=\"tpha\">TPHA:</label><input name=\"tpha\" type=\"number\"  step=\"0.01\" id=\"tpha\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><br>\n"+
-"<label for=\"WaalerRose\">Waaler Rose:</label><select name=\"WaalerRose\" id=\"WaalerRose\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for=\"wlrT\">Titre:</label><input name=\"wlrT\" type=\"number\"  step=\"0.01\" id=\"wlrT\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><br>\n"+
+"<label for=\"Waaler_Rose\">Waaler Rose:</label><select name=\"Waaler_Rose\" id=\"Waaler_Rose\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for=\"wlrT\">Titre:</label><input name=\"wlrT\" type=\"number\"  step=\"0.01\" id=\"wlrT\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><br>\n"+
 "<label for=\"ASLO\">ASLO:</label><select name=\"ASLO\" id=\"ASLO\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for=\"asloT\">Titre:</label><input name=\"asloT\" type=\"number\"  step=\"0.01\" id=\"asloT\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><br>\n"+
 "<label for=\"VIH\">VIH:</label><select name=\"VIH\" id=\"VIH\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for=\"vihTp\">Typage:</label><select name=\"vihTp\" id=\"vihTp\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>VIH1</option><option>VIH2</option><option>VIH1 et VIH 2</option></select><br>\n"+
 "<label for=\"CRP\">CRP:</label><select name=\"CRP\" id=\"CRP\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for=\"crpT\">Titre:</label><input name=\"crpT\" type=\"number\"  step=\"0.01\" id=\"crpT\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><br>\n"+
 "</div><h3 id=\"bilhor\">bilan hormonal</h3><div>\n"+
-"<label for=\"T3libre\">T3 libre:</label><input name=\"T3libre\" type=\"number\"  step=\"0.01\" id=\"T3libre\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"3-8.5\"><br>\n"+
-"<label for=\"T4libre\">T4 libre:</label><input name=\"T4libre\" type=\"number\"  step=\"0.01\" id=\"T4libre\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"8.6-25\"><br>\n"+
+"<label for=\"T3_libre\">T3 libre:</label><input name=\"T3_libre\" type=\"number\"  step=\"0.01\" id=\"T3_libre\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"3-8.5\"><br>\n"+
+"<label for=\"T4_libre\">T4 libre:</label><input name=\"T4_libre\" type=\"number\"  step=\"0.01\" id=\"T4_libre\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"8.6-25\"><br>\n"+
 "<label for=\"TSH\">TSH(ThyréoStimuline Hormone):</label><input name=\"TSH\" type=\"number\"  step=\"0.01\" id=\"TSH\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"0.15-4.9\"><br>\n"+
 "<label for=\"PSA\">PSA(Prostate-Specific Antigen):</label><input name=\"PSA\" type=\"number\"  step=\"0.01\" id=\"PSA\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 4\"><br>\n"+
 "<label for=\"Estradiol\">Estradiol:</label><input name=\"Estradiol\" type=\"number\"  step=\"0.01\" id=\"Estradiol\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"30-400\"><br>\n"+
@@ -303,51 +304,99 @@ var p7="</datalist><br>\n"+
 "<label for=\"FSH\">FSH(Hormone FolliculoStimulante):</label><input name=\"FSH\" type=\"number\"  step=\"0.01\" id=\"FSH\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\">VN<a onclick=\"window.open('images/FSHTab.jpg', '_blank','left=650,top=50,width=680px,height=302px')\" style=\"text-decoration:underline;color:dimgray\">(Cliquez ici !)</a><br>\n"+
 "<label for=\"Testosterone\">Testosterone:</label><input name=\"Testosterone\" type=\"number\"  step=\"0.01\" id=\"Testosterone\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"300-1000\"><br>\n"+
 "<label for=\"TSHus\">TSHus(ThyréoS. H. UltraSensible):</label><input name=\"TSHus\" type=\"number\"  step=\"0.01\" id=\"TSHus\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"0.4-4\"><br>\n"+
-"<label for=\"bHCGsang\">Beta HCG(plasma):</label><input name=\"bHCGsang\" type=\"number\"  step=\"0.01\" id=\"bHCGsang\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"> VN<a onclick=\"window.open('images/hcg_biomnis_tableau.avif', '_blank','left=650,top=50,width=337px,height=223px')\" style=\"text-decoration:underline;color:dimgray\">(Cliquez ici !)</a><br>\n"+
-"<label for=\"bHCGurine\">Beta HCG(urine):</label><input name=\"bHCGurine\" type=\"number\"  step=\"0.01\" id=\"bHCGurine\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 25\">\n"+
+"<label for=\"bHCG_plasma\">Beta HCG(plasma):</label><input name=\"bHCG_plasma\" type=\"number\"  step=\"0.01\" id=\"bHCG_plasma\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"> VN<a onclick=\"window.open('images/hcg_biomnis_tableau.avif', '_blank','left=650,top=50,width=337px,height=223px')\" style=\"text-decoration:underline;color:dimgray\">(Cliquez ici !)</a><br>\n"+
+"<label for=\"bHCG_Uri\">Beta HCG(urine):</label><input name=\"bHCG_Uri\" type=\"number\"  step=\"0.01\" id=\"bHCG_Uri\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 25\">\n"+
 "</div><h3 id=\"enzMus\">bilan enzymatique musculaires</h3><div>\n"+
 "<label for=\"LDH\">LDH(Lactate DésHydrogénase):</label><input name=\"LDH\" type=\"number\"  step=\"0.01\" id=\"LDH\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"140-280\"><br>\n"+
 "<label for=\"CPK\">CPK(Créatine Phosphokinase):</label><input name=\"CPK\" type=\"number\"  step=\"0.01\" id=\"CPK\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"20-200\"><br>\n"+
-"<label for=\"CPKmb\">CK-mb(Créatine Kinase-MB):</label><input name=\"CPKmb\" type=\"number\"  step=\"0.01\" id=\"CPKmb\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"0-5\">\n"+
+"<label for=\"CK_mb\">CK-mb(Créatine Kinase-MB):</label><input name=\"CK_mb\" type=\"number\"  step=\"0.01\" id=\"CK_mb\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"0-5\">\n"+
 "</div><h3 id=\"bildiv\">bilan divers</h3><div>\n"+
 "<label for=\"Myoglobine\">Myoglobine:</label><input name=\"Myoglobine\" type=\"number\"  step=\"0.01\" id=\"Myoglobine\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"25-72\"><br>\n"+
 "<label for=\"Troponime\">Troponime:</label><input name=\"Troponime\" type=\"number\"  step=\"0.01\" id=\"Troponime\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 0.04\"><br>\n"+
-"<label for=\"GoutteEpaisse\">Goutte Epaisse:</label><select name=\"GoutteEpaisse\" id=\"GoutteEpaisse\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for=\"tGE\">Titre:</label><input name=\"tGE\" type=\"number\"  step=\"0.01\" id=\"tGE\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><br>\n"+
+"<label for=\"Goutte_Epaisse\">Goutte Epaisse:</label><select name=\"Goutte_Epaisse\" id=\"Goutte_Epaisse\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for=\"tGE\">Titre:</label><input name=\"tGE\" type=\"number\"  step=\"0.01\" id=\"tGE\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><br>\n"+
 "</div><span style=\"display:inline-block;height:330px;width:200px;\n"+
 "border:thick #275280 solid;position:fixed;bottom:0px;right:15px;padding-left:3px\">\n"+
 "<span style=\"display:inline-block;height:240px;width:200px;padding-bottom:0px\">\n"+
 "<span style=\"display:inline-block;height:20px;width:200px\">\n"+
 "<span style=\"display:inline-block;width:200px;font-family:bookman Old Style;font-weight:bold;text-decoration:underline;text-align:center;color:#275280\">EDITER EXAMENS ICI </span><br>\n"+
-"<span id=\"Lalphb1\" style=\"font-size:14px;text-align:right;letter-spacing:2px\"><span style=\"text-decoration:underline;font-size:11px;letter-spacing:0px;text-align:left\">Ordre A-Z:</span>\n"+
-"<a href=\"#A\">A</a><a href=\"#B\">B</a><a href=\"#C\">C</a><a href=\"#D\">D</a><a href=\"#E\">E</a><a href=\"#F\">F</a><a href=\"#G\">G</a><a href=\"#H\">H</a><a href=\"#I\">I</a><a href=\"#J\">J</a><a href=\"#K\">K</a><a href=\"#L\">L</a><a href=\"#M\">M</a>\n"+
-"</span><br><span id=\"Lalphb2\" style=\"font-size:14px;letter-spacing:1.3px;padding-left:55px\">\n"+
-"<a href=\"#N\">N</a><a href=\"#O\">O</a><a href=\"#P\">P</a><a href=\"#Q\">Q</a><a href=\"#R\">R</a><a href=\"#S\">S</a><a href=\"#T\">T</a><a href=\"#U\">U</a><a href=\"#V\">V</a><a href=\"#W\">W</a><a href=\"#X\">X</a><a href=\"#Y\">Y</a><a href=\"#Z\">Z</a>\n"+
-"</span></span><span id=\"LMenu\" style=\"display:inline-block;\n"+
+"<span id=\"Lalphb3\" style=\"font-size:14px;text-align:right;letter-spacing:2px\"><span style=\"text-decoration:underline;font-size:11px;letter-spacing:0px;text-align:left\">Ordre A-Z:</span>\n"+"<a>A</a><a>B</a><a>C</a><a>D</a><a>E</a><a>F</a><a>G</a><a>H</a><a>I</a><a>J</a><a>K</a><a>L</a><a>M</a></span><br>\n"+
+"<span id=\"Lalphb4\" style=\"font-size:14px;letter-spacing:1.3px;padding-left:49px\">\n"+
+"<a>N</a><a>O</a><a>P</a><a>Q</a><a>R</a><a>S</a><a>T</a><a>U</a><a>V</a><a>W</a><a>X</a><a>Y</a><a>Z</a></span>\n"+
+"</span><span id=\"LMenu\" style=\"display:inline-block;\n"+
 "height:180px;width:180px;border:thin black solid;\n"+
-"overflow-y:auto;text-align:left;padding-left:20px;\n"+
-"background-color:aqua;display:grid\">\n"+
-"<span id=\"A\" style=\"color:red\">A</span><a href=\"#ACHBC\">ACHBC</a><a href=\"#ACHBe\">ACHBe</a><a href=\"#ACHBS\">ACHBS</a><a href=\"#ACHVC\">ACHVC</a><a href=\"#AcideUrique\">Acide urique</a><a href=\"#AgHBe\">AgHBe</a><a href=\"#AgHBS\">AgHBS</a><a href=\"#Albumine\">Albumine</a><a href=\"#Albuminurie\">Albuminurie</a><a href=\"#ASLO\">ASLO</a><span id=\"B\" style=\"color:red\">B</span><a href=\"#bHCGsang\">Beta HCG(plasma)</a><a href=\"#bHCGurine\">Beta HCG(ur)</a><a href=\"#Bilharziose\">Bilharziose</a><a href=\"#BilirubineConjuguee\">Bilirubine Conj.</a><a href=\"#BilirubineTotale\">Bilirubine Tot.</a><a href=\"#BW\">BW(VDRL-TPHA)</a><span id=\"C\" style=\"color:red\">C</span><a href=\"#Calcium\">Calcium(Ca2+)</a><a href=\"#Chlamydia\">Chlamydia</a><a href=\"#CholesterolHDL\">Cholesterol HDL</a><a href=\"#CholesterolLDL\">Cholesterol LDL</a><a href=\"#CholesterolTotal\">Cholesterol Total</a><a href=\"#ClairanceCreatininurie\">Clairance creatininurie</a><a href=\"Coproculture.html\" target=\"_blank\">Coproculture</a><a href=\"#Cortisol\">Cortisol</a><a href=\"#CPK\">CPK</a><a href=\"#CPKmb\">CK-mb</a><a href=\"#Creatinine\">Creatinine</a><a href=\"#CRP\">CRP</a><span id=\"D\" style=\"color:red\">D</span><a href=\"#DFG\">DFG</a><span id=\"E\" style=\"color:red\">E</span><a href=\"ECBU.html\" target=\"_blank\">ECBU</a><a href=\"#ElectrophoreseProteinesSerique\">Electrophorèse.Prot.Sq</a><a href=\"#Estradiol\">Estradiol</a><span id=\"F\" style=\"color:red\">F</span><a href=\"#WaalerRose\">Fact.Rhumat.(FR)</a><a href=\"#Fibrinemie\">Fibrinemie</a><a href=\"#FSH\">FSH</a>\n"+
-"<span id=\"G\" style=\"color:red\">G</span><a href=\"#GammaGT\">GAMMA-GT</a><a href=\"#GlycemieJeun\">Glycemie</a><a href=\"#GlycemiePostPrandiale\">Glycemie Post P.</a><a href=\"#Glycorachie\">Glycorachie</a><a href=\"#Glycosurie\">Glycosurie</a><a href=\"#GoutteEpaisse\">Goutte Epaisse</a><a href=\"#GroupeSanguin\">Groupe Sanguin</a><span id=\"H\" style=\"color:red\">H</span><a href=\"#HAVIgM\">HAV(IgM)</a><a href=\"#HBA1C\">HBA1C</a>\n"+
-"<span id=\"I\" style=\"color:red\">I</span><a href=\"#INR\">INR</a><a href=\"#Potassium\">Ionogramme Sg</a><a href=\"#PotassiumU\">Ionogramme Urinaire</a><span id=\"L\" style=\"color:red\">L</span><a href=\"LCR.html\" target=\"_blank\">LCR</a><a href=\"#LDH\">LDH</a><a href=\"#LHRH\">LH-RH</a><a href=\"#LipideTotale\">Lipide totale</a><span id=\"M\" style=\"color:red\">M</span><a href=\"#Magnesium\">Magnesium(Mg2+)</a><a href=\"#Mycoplasme\">Mycoplasme</a><span id=\"N\" style=\"color:red\">N</span><a href=\"#nfsLeucocytes\">NFS</a><span id=\"P\" style=\"color:red\">P</span><a href=\"#PhosphataseAlcaline\">Phosphat.Alc</a><a href=\"#Potassium\">Potassium(k+)</a><a href=\"#Progesterone\">Progesterone</a><a href=\"#Prolactinemie\">Prolactinemie</a><a href=\"#Proteinurie\">Proteinurie</a><a href=\"#Proteinurie24h\">Proteinurie 24h</a><a href=\"#ProtidesTotaux\">Protid.Tot.</a><a href=\"#PSA\">PSA</a><a href=\"PU.html\" target=\"_blank\">PU</a><a href=\"PV.html\" target=\"_blank\">PV</a><span id=\"Q\" style=\"color:red\">Q</span><a href=\"#QBC\">QBC</a><span id=\"R\" style=\"color:red\">R</span><a href=\"#ReserveAlcalin\">Res.Alcal.</a><a href=\"#Rubeole\">Rubeole</a><span id=\"S\" style=\"color:red\">S</span><a href=\"Spermoculture.html\" target=\"_blank\">Spermoculture</a><a href=\"Spermocytogramme.html\" target=\"_blank\">Spermocytogramme</a><a href=\"Spermogramme.html\" target=\"_blank\">Spermogramme</a><span id=\"T\" style=\"color:red\">T</span><a href=\"#T3libre\">T3 libre</a><a href=\"#T4libre\">T4 libre</a><a href=\"#TauxProthrombine\">Taux Prothrombine</a><a href=\"#TCK\">TCK</a><a href=\"#Toxoplasmose\">Toxoplasmose</a><a href=\"#TGO\">Transaminases</a><a href=\"#Triglycerides\">Triglycerides</a><a href=\"#TSH\">TSH</a><span id=\"U\" style=\"color:red\">U</span><a href=\"#Uree\">Urée</a><span id=\"V\" style=\"color:red\">V</span><a href=\"#VIH\">VIH</a><a href=\"#VS1ereHEURE\">Vit.Sediment.(VS)</a><span id=\"W\" style=\"color:red\">W</span><a href=\"#WaalerRose\">Waaler-Rose</a><a href=\"#WidalFelix\" style=\"display:inline-block;height:170px\">Widal et Felix</a>\n"+
+"overflow-y:auto;text-align:left;padding-left:20px;background-color:aqua;display:grid\">\n"+
+"<a id=\"A\" href=\"\">A</a><a>ACHBC</a><a>ACHBe</a><a>ACHBS</a><a>ACHVC</a><a>Acide_Urique</a><a>AgHBe</a><a>AgHBS</a><a>Albumine</a><a>Albuminurie</a><a>ASLO</a>\n"+
+"<a id=\"B\" href=\"\">B</a><a>bHCG_plasma</a><a>bHCG_Uri</a><a>Bilharziose</a><a>Bilirubine_Conj</a><a>Bilirubine_Tot</a><a>BW</a>\n"+
+"<a id=\"C\" href=\"\">C</a><a>Calcium</a><a>Chlamydia</a><a>Cholesterol_HDL</a><a>Cholesterol_LDL</a><a>Cholesterol_Tot</a><a>Clairance_Creatininurie</a><a>Coproculture</a><a>Cortisol</a><a>CPK</a><a>CK_mb</a><a>Creatinine</a><a>CRP</a>\n"+
+"<a id=\"D\" href=\"\">D</a><a>DFG</a><a id=\"E\" href=\"\">E</a><a target=\"_blank\">ECBU</a><a>Electrophorese_Proteines</a><a>Estradiol</a>\n"+
+"<a id=\"F\" href=\"\">F</a><a>Facteur_Rhumatoide</a><a>Fibrinemie</a><a>FSH</a>\n"+
+"<a id=\"G\" href=\"\">G</a><a>GAMMA_GT</a><a>Glycemie</a><a>Glycemie_PPrandiale</a><a>Glycorachie</a><a>Glycosurie</a><a>Goutte_Epaisse</a><a>Groupe_Sanguin</a>\n"+
+"<a id=\"H\" href=\"\">H</a><a>HAV_IgM</a><a>HBA1C</a>\n"+
+"<a id=\"I\" href=\"\">I</a><a>INR</a><a>Ionogramme_Sang</a><a>Ionogramme_Uri</a>\n"+
+"<a id=\"L\" href=\"\">L</a><a target=\"_blank\">LCR</a><a>LDH</a><a>LH_RH</a><a>Lipide_Tot</a>\n"+
+"<a id=\"M\" href=\"\">M</a><a>Magnesium</a><a>Mycoplasme</a><a id=\"N\" href=\"\">N</a><a>NFS</a>\n"+
+"<a id=\"P\" href=\"\">P</a><a>Phosphatases_Alcalines</a><a>Progesterone</a><a>Prolactinemie</a><a>Proteinurie</a><a>Proteinurie_24h</a><a>Protides_Tot</a><a>PSA</a><a>PU</a><a>PV</a>\n"+
+"<a id=\"Q\" href=\"\">Q</a><a>QBC</a>\n"+
+"<a id=\"R\" href=\"\">R</a><a>Reserve_Alcalin</a><a>Rubeole</a><a id=\"S\" href=\"\">S</a><a>Spermoculture</a><a>Spermocytogramme</a><a>Spermogramme</a>\n"+
+"<a id=\"T\" href=\"\">T</a><a>T3_libre</a><a>T4_libre</a><a>TP</a><a>TCK</a><a>Toxoplasmose</a><a>Transaminases</a><a>Triglycerides</a><a>TSH</a>\n"+
+"<a id=\"U\" href=\"\">U</a><a>Uree</a><a id=\"V\" href=\"\">V</a><a>VIH</a><a>Vitesse_Sedimentaire</a>\n"+
+"<a id=\"W\" href=\"\">W</a><a>Waaler_Rose</a><a style=\"display:inline-block;height:170px\">Widal_Felix</a></span>\n"+
 "</span></span><span style=\"display:inline-block;height:130px;width:200px\">\n"+
 "<input id=\"vld\"  type=\"button\" value=\"Valider [Envoyer]\"><br>\n"+
 "<input type=\"button\" value=\"Nouveau Patient\" onclick=\"location.reload()\"><br>\n"+
 "<input type=\"button\" value=\"Bilan Operationnel\" ><br>\n"+
 "<input  type=\"button\" value=\"Calculatrice\" onclick=\"window.open(\'calculatriceElmt/calculatrice.html\', \'_blank\',\'width=350px,height=470px\')\">\n"+
-"</span></span><span  style=\"position:fixed;bottom:220px;right:35px;display:grid\">\n"+
+"</span></span><span id=\"RMenuP\"style=\"position:fixed;bottom:220px;right:35px;display:grid\">\n"+
 "<a style=\"font-size:30px;margin-bottom:0px\">&#x1F3E0;</a>\n"+
-"<a href=\"#Entree\" style=\"font-size:12px\" >accueil</a></span></form><script>\n"+
-"for (var i= 0; i <document.getElementById(\"Lalphb1\").querySelectorAll(\"a\").length; i++){document.getElementById(\"Lalphb1\").querySelectorAll(\"a\")[i].style.color=\"blue\";}\n"+
-"for (var i= 0; i <document.getElementById(\"Lalphb2\").querySelectorAll(\"a\").length; i++){document.getElementById(\"Lalphb2\").querySelectorAll(\"a\")[i].style.color=\"blue\";}\n"+
-"for (var i= 0; i <document.getElementById(\"lchx\").querySelectorAll(\"span\").length; i++){document.getElementById(\"lchx\").querySelectorAll(\"span\")[i].style.display=\"inline-block\";}\n"+
-"for (var i= 0; i <document.getElementById(\"lchx\").querySelectorAll(\"span\").length; i++){document.getElementById(\"lchx\").querySelectorAll(\"span\")[i].style.width=\"186px\";}\n"+
-"for (var i= 0; i <document.getElementById(\"lchx\").querySelectorAll(\"span\").length; i++){document.getElementById(\"lchx\").querySelectorAll(\"span\")[i].style.border=\"thin #275280 solid\";}\n"+
-"for (var i=1 ; i<document.getElementById(\"Lalphb1\").children.length ; i++){\n"+
-"document.getElementById(\"Lalphb1\").children[i].addEventListener(\"click\",Atpg);}\n"+
-"for (var i=0 ; i<document.getElementById(\"Lalphb2\").children.length ; i++){\n"+
-"document.getElementById(\"Lalphb2\").children[i].addEventListener(\"click\",Atpg);}function Atpg(e){\n"+
-"var Diff= scrollY - (document.getElementById(\"lchx\").offsetTop -1) ;\n"+
-"window.location.href=\"#l\"+ e.target.textContent;window.scrollBy(0, Diff);}\n"+
+"<a style=\"font-size:12px\" >accueil</a></span></form><script>\n"+
+"for (var i = 0; i < document.getElementById(\"Lalphb1\").querySelectorAll(\"a\").length; i++){document.getElementById(\"Lalphb1\").querySelectorAll(\"a\")[i].style.color = \"blue\";}\n"+
+"for (var i = 0; i < document.getElementById(\"Lalphb1\").querySelectorAll(\"a\").length; i++){document.getElementById(\"Lalphb1\").querySelectorAll(\"a\")[i].style.cursor = \"pointer\";}\n"+
+"for (var i = 0; i < document.getElementById(\"Lalphb2\").querySelectorAll(\"a\").length; i++){document.getElementById(\"Lalphb2\").querySelectorAll(\"a\")[i].style.color = \"blue\";}\n"+
+"for (var i = 0; i < document.getElementById(\"Lalphb2\").querySelectorAll(\"a\").length; i++){document.getElementById(\"Lalphb2\").querySelectorAll(\"a\")[i].style.cursor = \"pointer\";}\n"+
+"for (var i = 0; i < document.getElementById(\"lchx\").querySelectorAll(\"a\").length; i++){document.getElementById(\"lchx\").querySelectorAll(\"a\")[i].style.display = \"inline-block\";}\n"+
+"for (var i = 0; i < document.getElementById(\"lchx\").querySelectorAll(\"a\").length; i++){document.getElementById(\"lchx\").querySelectorAll(\"a\")[i].style.width = \"186px\";}\n"+
+"for (var i = 0; i < document.getElementById(\"lchx\").querySelectorAll(\"a\").length; i++){document.getElementById(\"lchx\").querySelectorAll(\"a\")[i].style.border = \"thin #275280 solid\";}\n"+
+"for (var i = 0; i < document.getElementById(\"lchx\").querySelectorAll(\"a\").length; i++){document.getElementById(\"lchx\").querySelectorAll(\"a\")[i].style.textDecoration = \"none\";}\n"+
+"for (var i = 0; i < document.getElementById(\"lchx\").querySelectorAll(\"a\").length; i++){document.getElementById(\"lchx\").querySelectorAll(\"a\")[i].style.color = \"blue\";}\n"+
+"for (var i = 0; i < document.getElementById(\"lchx\").querySelectorAll(\"a\").length; i++){document.getElementById(\"lchx\").querySelectorAll(\"a\")[i].style.pointerEvents = \"none\";}\n"+
+"for (var i = 1; i < document.getElementById(\"Lalphb1\").children.length; i++){document.getElementById(\"Lalphb1\").children[i].addEventListener(\"click\", Atpg);}\n"+
+"for (var i = 0; i < document.getElementById(\"Lalphb2\").children.length; i++){document.getElementById(\"Lalphb2\").children[i].addEventListener(\"click\", Atpg);}\n"+
+"function Atpg(e){var LtrC = \"l\" + e.target.textContent;\"document.getElementById(LtrC).focus();\n"+
+"document.getElementById(LtrC).style.backgroundColor = \"aqua\";}\n"+
+"for (var i = 0; i < document.getElementById(\"Lalphb3\").querySelectorAll(\"a\").length; i++){document.getElementById(\"Lalphb3\").querySelectorAll(\"a\")[i].style.color = \"blue\";}\n"+
+"for (var i = 0; i < document.getElementById(\"Lalphb3\").querySelectorAll(\"a\").length; i++) {document.getElementById(\"Lalphb3\").querySelectorAll(\"a\")[i].style.cursor = \"pointer\";}\n"+
+"for (var i = 0; i < document.getElementById(\"Lalphb4\").querySelectorAll(\"a\").length; i++) {    document.getElementById(\"Lalphb4\").querySelectorAll(\"a\")[i].style.color = \"blue\";}\n"+
+"for (var i = 0; i < document.getElementById(\"Lalphb4\").querySelectorAll(\"a\").length; i++) {    document.getElementById(\"Lalphb4\").querySelectorAll(\"a\")[i].style.cursor = \"pointer\";}\n"+
+"for (var i = 1; i < document.getElementById(\"Lalphb3\").children.length; i++) {document.getElementById(\"Lalphb3\").children[i].addEventListener(\"click\", chgC);}\n"+
+"for (var i = 0; i < document.getElementById(\"Lalphb4\").children.length; i++) {document.getElementById(\"Lalphb4\").children[i].addEventListener(\"click\", chgC);}\n"+
+"for (var i = 0; i < document.getElementById(\"RMenuP\").children.length; i++)\n"+
+"{document.getElementById(\"RMenuP\").children[i].style.cursor = \"pointer\";}\n"+
+"function chgC(e) {var LtrC = e.target.textContent;document.getElementById(LtrC).focus();\n"+
+"document.getElementById(LtrC).style.backgroundColor = \"#468FC5\";}\n"+
+"for (var i = 0; i < document.getElementById(\"LMenu\").querySelectorAll(\"a\").length; i++) {\n"+
+"var aspL1=document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].href?\n"+
+"(document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].style.pointerEvents = \"none\",\n"+
+"document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].style.textDecoration = \"none\",\n"+
+"document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].style.color = \"red\"):\n"+                    
+"(document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].style.color = \"blue\",\n"+
+"document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].style.cursor = \"pointer\",\n"+
+"document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].addEventListener(\"click\", AtChp));}\n"+
+"for (var i = 0; i < document.getElementById(\"RMenuP\").children.length; i++)\n"+
+"{document.getElementById(\"RMenuP\").children[i].addEventListener(\"click\", AtChp);}\n"+
+"function AtChp(e) {var LtrC = e.target.textContent;\n"+
+"var Cchp = LtrC ===\"Coproculture\"||LtrC ===\"ECBU\"||LtrC ===\"LCR\"||LtrC ===\"PU\"\n"+
+"||LtrC ===\"PV\"||LtrC ===\"Spermoculture\"||LtrC ===\"Spermocytogramme\"\n"+
+"||LtrC ===\"Spermogramme\"||LtrC ===\"Spermogramme\"?\n"+
+"window.open((LtrC+\'.html\'), \'_blank\'):LtrC===\"Vitesse_Sedimentaire\"?\n"+
+"document.getElementById(\"VS1ereHEURE\").focus():LtrC===\"Transaminases\"?\n"+
+"document.getElementById(\"TGO\").focus():LtrC===\"Ionogramme_Sang\"?\n"+
+"document.getElementById(\"Potassium\").focus():LtrC===\"Ionogramme_Uri\"?\n"+
+"document.getElementById(\"PotassiumU\").focus():LtrC===\"NFS\"?\n"+
+"document.getElementById(\"nfsLeucocytes\").focus():LtrC===\"QBC\"?\n"+
+"document.getElementById(\"Goutte_Epaisse\").focus():LtrC===\"Facteur_Rhumatoide\"?\n"+
+"document.getElementById(\"Waaler_Rose\").focus():LtrC===\"🏠\"?\n"+
+"document.getElementById(\"Entree\").focus():LtrC===\"accueil\"?\n"+
+"document.getElementById(\"Entree\").focus():document.getElementById(LtrC).focus();}\n"+
 "for (var i= 0; i < 6; i++){document.querySelectorAll(\"label\")[i].style.display=\"inline-block\";}\n"+
 "for (var i= 0; i < 6; i++){document.querySelectorAll(\"label\")[i].style.width=\"275px\";}\n"+
 "for (var i= 87; i< 90 ; i++){document.querySelectorAll(\"label\")[i].style.display=\"inline-block\";}\n"+
@@ -812,7 +861,7 @@ var m7="</datalist></label><br><br><label>Prix des Examens (ou statut): <input  
 var mt= m1+m2+txt_sdN +m3+txt_sdP+m4+txt_sdDC+m5+txt_sdPRS+m6+txt_sdBt+m7;
 fs.writeFile("Modif.html",mt,{encoding:"utf8", flag:"w"},(err)=>{var info=(err)?console.log(err):console.log("Mdf_pg pret! ");});
 
-var suc1="<html><head>"+
+var suc1="<!DOCTYPE html><html><head>"+
 "<meta content=\"fr-ci\" http-equiv=\"Content-Language\">"+
 "<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\">"+
 "<link href=\"MFormat.css\" rel=\"stylesheet\" type=\"text/css\">"+
@@ -1090,7 +1139,7 @@ var mM7="</datalist></label><br><br><label>Prix des Examens (ou statut): <input 
 var mtM= mM1+mM2+txt_sdNM +mM3+txt_sdPM+mM4+txt_sdDCM+mM5+txt_sdPRSM+mM6+txt_sdBtM+mM7;
 fs.writeFile("Modif.html",mtM,{encoding:"utf8", flag:"w"},(err)=>{var info=(err)?console.log(err):console.log("Mdf_pg_M pret! ");});
 
-var sucM1="<html><head>"+
+var sucM1="<!DOCTYPE html><html><head>"+
 "<meta content=\"fr-ci\" http-equiv=\"Content-Language\">"+
 "<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\">"+
 "<link href=\"MFormat.css\" rel=\"stylesheet\" type=\"text/css\">"+

@@ -6,66 +6,7 @@
 <label for="GoutteEpaisse">Goutte Epaisse:</label><select name="GoutteEpaisse" id="GoutteEpaisse" onblur="fChpLib(this)" ><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for="tGE">Titre:</label><input name="tGE" type="number"  step="0.01" id="tGE" onblur="fChpLib(this)" onfocus="fChpSel(this)">
 
 <script>
-/*function fChpLib(cel){
-if(cel.value <= 500){
-var negTx= document.createElement("span");
-negTx.textContent="Comprimé";negTx.style.color="red";
-cel.after(negTx);}
-else{cel.style.color="blue";}
-}
-
-
-else if(cel.value <=1000){
-var negTx= document.createElement("span");
-negTx.textContent="Une Perfusion obligatoire";negTx.style.color="red";
-cel.after(negTx);}
-else if(cel.value <=1500){
-var negTx= document.createElement("span");
-negTx.textContent="Deux Perfusions obligatoire";negTx.style.color="red";
-cel.after(negTx);}
-else if(cel.value <=2000){
-var negTx= document.createElement("span");
-negTx.textContent="Trois Perfusions obligatoire";negTx.style.color="red";
-cel.after(negTx);}
-
-}
-*/
-const fruits = ["apple", "banana", "cherry"];
-function fChpLib(cel){
-var negTx="";
-var tsFor1= fruits.includes("banana")?
-(for (var i= 0; i<3 ; i++){
-var tsFor1=fruits[i]==="banana"?
-(negTx= document.createElement("span"),
-negTx.textContent=" OK",negTx.style.color="red",
-cel.after(negTx)):"";
-}):"";
-/*var fxCel = cel.value==300 && cel.style.backgroundColor==="" && 
-cel.nextElementSibling.nodeName!=="SPAN"||
-cel.value==="POSITIVE" && cel.style.backgroundColor===""?
-(negTx= document.createElement("span"),
-negTx.textContent="Comprimés",negTx.style.color="red",
-cel.after(negTx))
-:cel.value==300 && cel.style.backgroundColor==="" && 
-cel.nextElementSibling.nodeName==="SPAN"?
-cel.nextSibling.remove()
-
-:"";
-*/}
-/*
-function fChpLib(cel){
-if(cel.value==300 && cel.style.backgroundColor==="" && 
-cel.nextElementSibling.nodeName!=="SPAN"||
-cel.value==="POSITIVE" && cel.style.backgroundColor===""){
-var negTx= document.createElement("span");
-negTx.textContent="Comprimés";negTx.style.color="red";
-cel.after(negTx);
-}else if
-(cel.value==300 && cel.style.backgroundColor==="" && 
-cel.nextElementSibling.nodeName==="SPAN")
-{cel.nextElementSibling.remove();}
-}
-*/
+document.getElementsByName("GoutteEpaisse").style.backgroundColor="aqua";
 </script>
 </body>
 </html>
