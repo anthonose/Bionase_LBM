@@ -21,17 +21,17 @@ var Lbd= cnx_bd.db("Bionase_LBM");
 var Lpt= Lbd.collection("PATIENTS");
 
 // recherche et recuperation des informations depuis la base donnee
-var Rmld= await Lpt.find({}).toArray();
-var TbN=[],tbP=[], tbDc=[], tbPrs=[], tbBt=[];
+var RMld= await Lpt.find({}).toArray();
+var tbN=[],tbP=[], tbDc=[], tbPrs=[], tbBt=[];
 let txtN= "", txtP= "", txtDc= "", txtPrs= "", txtBt= "",
 txNom= "",txPnom= "", txDc= "",txPrs= "",txBt= "";
 
-for( let pers of  Rmld){
+for( let pers of  RMld){
 txtN += tbN.push(Object.values(pers)[1]) + "<br>";
 txtP += tbP.push(Object.values(pers)[2]) + "<br>";
 txtDc += tbDc.push(Object.values(pers)[5]) + "<br>";
 txtPrs += tbPrs.push(Object.values(pers)[6]) + "<br>";
-txtBt += tbBt.push(Object.values(pers)[8]) + "<br>";}
+txtBt += tbBt.push(Object.values(pers)[7]) + "<br>";}
 
 let tbNo= new Set(tbN), tbPo= new Set(tbP), tbDco= new Set(tbDc), tbPrso= new Set(tbPrs), tbBto= new Set(tbBt);
 tbNo= [...tbNo]; tbPo= [...tbPo]; ttbDco= [...tbDco]; tbPrso= [...tbPrso]; tbBto= [...tbBto];
@@ -40,7 +40,7 @@ for( let npers of tbNo){txNom += "<option value=\"" + npers + "\">";}
 for( let ppers of tbPo){txPnom += "<option value=\"" + ppers + "\">";}
 for( let dcpers of tbDco){txDc += "<option value=\"" + dcpers + "\">";}
 for( let prspers of tbPrso){txPrs += "<option value=\"" + prspers + "\">";}
-for( let btpers of txBto){txBt += "<option value=\"" + btpers + "\">";}
+for( let btpers of tbBto){txBt += "<option value=\"" + btpers + "\">";}
 
 var p1="<!DOCTYPE html><html><head>\n"+
 "<meta content=\"fr-ci\" http-equiv=\"Content-Language\">\n"+
@@ -56,7 +56,11 @@ var p3="</datalist><br><label for=\"Sexe\">Sexe:</label><select name=\"Sexe\"  i
 "<label for=\"Telephone\">Téléphone:</label><input name=\"Telephone\" type=\"tel\" id=\"Telephone\"  onblur=\"Avertir(this)\" placeholder=\"numero a 10 chiffres\"><br>\n"+
 "<label for=\"Diagnostic_Clinique\">Diagnostic Clinique:</label><input list=\"dc\" name=\"Diagnostic_Clinique\" type=\"text\" autocomplete=\"off\" id=\"Diagnostic_Clinique\" onblur=\"Avertir(this)\" placeholder=\"categorie du mal\"><datalist id=\"dc\">";
 var p4="</datalist><br><label for=\"Prescripteur\">Prescripteur:</label><input  name=\"Prescripteur\" type=\"text\" autocomplete=\"off\" list=\"prs\" id=\"Prescripteur\" onblur=\"Avertir(this)\" placeholder=\"provenance du Bull\"><datalist id=\"prs\">";
-var p5="</datalist><br><span style=\"display:inline-block;width:186px;height:37px;border:thin black solid;margin-left:275px\">\n"+
+var p5="</datalist><br><label for=\"Biotechnologiste\">Biotechnologiste:</label><input  name=\"Biotechnologiste\" type=\"text\" autocomplete=\"off\" list=\"btech\" id=\"Biotechnologiste\" onblur=\"Avertir(this)\" placeholder=\"Nom du technicien\"><datalist id=\"btech\">";
+var p6="</datalist><br>\n"+
+"<label for=\"PrixdesExamensouStatut\">Prix/statut:</label><input  name=\"PrixdesExamensouStatut\" type=\"text\" id=\"PrixdesExamensouStatut\" onblur=\"Avertir(this)\" placeholder=\"Montant ou assuré(e)\"><br>\n"+
+"<label for=\"DateduPrelevement\">Date Prelevement:</label><input  name=\"DateduPrelevement\" type=\"date\" id=\"DateduPrelevement\"  onblur=\"Avertir(this)\" ><br>\n"+
+"<span style=\"display:inline-block;width:186px;height:37px;border:thin black solid;margin-left:275px\">\n"+
 "<span id=\"Lalphb1\" style=\"font-size:14.5px;text-align:right;letter-spacing:1.3px\">\n"+
 "<span style=\"text-decoration:underline;font-size:9px;letter-spacing:0px;text-align:left\">Ordre A-Z:</span>\n"+
 "<a>A</a><a>B</a><a>C</a><a>D</a><a>E</a><a>F</a><a>G</a><a>H</a><a>I</a>JK<a>L</a><a>M</a></span>\n"+
@@ -166,12 +170,7 @@ var p5="</datalist><br><span style=\"display:inline-block;width:186px;height:37p
 "<a id=\"lW\" href=\"\">W</a>\n"+
 "<label for=\"Wrs\">Waaler-Rose</label><input id=\"Wrs\" name=\"Wrs\" type=\"checkbox\"><br>\n"+
 "<label for=\"wf\" style=\"display:inline-block;height:120px\">Widal et Felix</label><input id=\"wf\" name=\"wf\" type=\"checkbox\"><br></span>\n"+
-"</div><br>\n"+
-"<label for=\"Biotechnologiste\">Biotechnologiste:</label><input  name=\"Biotechnologiste\" type=\"text\" autocomplete=\"off\" list=\"btech\" id=\"Biotechnologiste\" onblur=\"Avertir(this)\" placeholder=\"Nom du technicien\"><datalist id=\"btech\">";
-var p6="</datalist><br>\n"+
-"<label for=\"PrixdesExamensouStatut\">Prix/statut:</label><input  name=\"PrixdesExamensouStatut\" type=\"text\" id=\"PrixdesExamensouStatut\" onblur=\"Avertir(this)\" onfocus=\"Savertir(this)\" placeholder=\"Montant ou assuré(e)\"><br>\n"+
-"<label for=\"DateduPrelevement\">Date Prelevement:</label><input  name=\"DateduPrelevement\" type=\"date\" id=\"DateduPrelevement\" style=\"width: 183px; height: 20px;\" onblur=\"Avertir(this)\">\n"+
-"<hr style=\"margin-top:50px\">\n"+
+"</div><br><hr style=\"margin-top:50px\">\n"+
 "<h1 style=\"text-align:center;color:#275280\">EXAMENS BIOLOGIQUES</h1><hr><h3>inflammation</h3>\n"+
 "<p><label for=\"VS1ereHEURE\"><span style=\"background-color: #00F3FF\">VS</span>/1ère HEURE:</label><input name=\"VS1ereHEURE\" type=\"number\"  step=\"0.01\" id=\"VS1ereHEURE\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 7\"> <label for=\"VS2iemeHEURE\" >2ième HEURE:</label><input name=\"VS2iemeHEURE\" type=\"number\"  step=\"0.01\" id=\"VS2iemeHEURE\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 20\"></p>\n"+
 "<h3>ionogramme</h3><p>\n"+
@@ -350,8 +349,7 @@ var p6="</datalist><br>\n"+
 "for (var i = 0; i < document.getElementById(\"lchx\").querySelectorAll(\"a\").length; i++){document.getElementById(\"lchx\").querySelectorAll(\"a\")[i].style.pointerEvents = \"none\";}\n"+
 "for (var i = 1; i < document.getElementById(\"Lalphb1\").children.length; i++){document.getElementById(\"Lalphb1\").children[i].addEventListener(\"click\", Atpg);}\n"+
 "for (var i = 0; i < document.getElementById(\"Lalphb2\").children.length; i++){document.getElementById(\"Lalphb2\").children[i].addEventListener(\"click\", Atpg);}\n"+
-"function Atpg(e){var LtrC = \"l\" + e.target.textContent;\n"+
-"document.getElementById(LtrC).focus();\n"+
+"function Atpg(e){var LtrC = \"l\" + e.target.textContent;document.getElementById(LtrC).focus();\n"+
 "document.getElementById(LtrC).style.backgroundColor = \"aqua\";}\n"+
 "for (var i = 0; i < document.getElementById(\"Lalphb3\").querySelectorAll(\"a\").length; i++){document.getElementById(\"Lalphb3\").querySelectorAll(\"a\")[i].style.color = \"blue\";}\n"+
 "for (var i = 0; i < document.getElementById(\"Lalphb3\").querySelectorAll(\"a\").length; i++) {document.getElementById(\"Lalphb3\").querySelectorAll(\"a\")[i].style.cursor = \"pointer\";}\n"+
@@ -361,24 +359,23 @@ var p6="</datalist><br>\n"+
 "for (var i = 0; i < document.getElementById(\"Lalphb4\").children.length; i++) {document.getElementById(\"Lalphb4\").children[i].addEventListener(\"click\", chgC);}\n"+
 "for (var i = 0; i < document.getElementById(\"RMenuP\").children.length; i++)\n"+
 "{document.getElementById(\"RMenuP\").children[i].style.cursor = \"pointer\";}\n"+
-"function chgC(e) {var LtrC = e.target.textContent;\n"+
-"document.getElementById(LtrC).focus();\n"+
+"function chgC(e) {var LtrC = e.target.textContent;document.getElementById(LtrC).focus();\n"+
 "document.getElementById(LtrC).style.backgroundColor = \"#468FC5\";}\n"+
-"for (var i = 0; i < document.getElementById(\"LMenu\").querySelectorAll(\"a\").length; i++) {\n"+
+"for (var i = 0; i < document.getElementById(\"LMenu\").querySelectorAll(\"a\").length; i++){\n"+
 "var aspL1=document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].href?\n"+
 "(document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].style.pointerEvents = \"none\",\n"+
 "document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].style.textDecoration = \"none\",\n"+
-"document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].style.color = \"red\"):\n"+                    
+"document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].style.color = \"red\"):\n"+                  
 "(document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].style.color = \"blue\",\n"+
 "document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].style.cursor = \"pointer\",\n"+
 "document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].addEventListener(\"click\", AtChp));}\n"+
 "for (var i = 0; i < document.getElementById(\"RMenuP\").children.length; i++)\n"+
-"{document.getElementById(\"RMenuP\").children[i].addEventListener(\"click\", AtChp);}\n"+          
-"function AtChp(e) {var LtrC = e.target.textContent;\n"+
+"{document.getElementById(\"RMenuP\").children[i].addEventListener(\"click\", AtChp);}\n"+
+"function AtChp(e){var LtrC = e.target.textContent;\n"+
 "var Cchp = LtrC ===\"Coproculture\"||LtrC ===\"ECBU\"||LtrC ===\"LCR\"||LtrC ===\"PU\"\n"+
 "||LtrC ===\"PV\"||LtrC ===\"Spermoculture\"||LtrC ===\"Spermocytogramme\"\n"+
 "||LtrC ===\"Spermogramme\"||LtrC ===\"Spermogramme\"?\n"+
-"window.open((LtrC+'.html'), '_blank'):LtrC===\"Vitesse_Sedimentaire\"?\n"+
+"window.open((LtrC+\'.html\'), \'_blank\'):LtrC===\"Vitesse_Sedimentaire\"?\n"+
 "document.getElementById(\"VS1ereHEURE\").focus():LtrC===\"Transaminases\"?\n"+
 "document.getElementById(\"TGO\").focus():LtrC===\"Ionogramme_Sang\"?\n"+
 "document.getElementById(\"Potassium\").focus():LtrC===\"Ionogramme_Uri\"?\n"+
@@ -388,23 +385,17 @@ var p6="</datalist><br>\n"+
 "document.getElementById(\"Waaler_Rose\").focus():LtrC===\"🏠\"?\n"+
 "document.getElementById(\"Entree\").focus():LtrC===\"accueil\"?\n"+
 "document.getElementById(\"Entree\").focus():document.getElementById(LtrC).focus();}\n"+
-"for (var i= 0; i < 6; i++){document.querySelectorAll(\"label\")[i].style.display=\"inline-block\";}\n"+
-"for (var i= 0; i < 6; i++){document.querySelectorAll(\"label\")[i].style.width=\"275px\";}\n"+
-"for (var i= 87; i< 90 ; i++){document.querySelectorAll(\"label\")[i].style.display=\"inline-block\";}\n"+
-"for (var i= 87; i< 90 ; i++){document.querySelectorAll(\"label\")[i].style.width=\"275px\";}\n"+
-"for (var i= 0; i < 5; i++){document.querySelectorAll(\"input\")[i].style.width=\"180px\";}\n"+
-"for (var i= 86; i< 88 ; i++){document.querySelectorAll(\"input\")[i].style.width=\"180px\";}\n"+
-"for (var i= 0; i < 5; i++){document.querySelectorAll(\"input\")[i].style.fontSize=\"15px\";}\n"+
-"for (var i= 88; i< 90 ; i++){document.querySelectorAll(\"input\")[i].style.fontSize=\"15px\"}\n"+
-"for (var i= 0; i < 5; i++){document.querySelectorAll(\"input\")[i].style.marginBottom=\"5px\";}\n"+
-"for (var i= 0; i < 5; i++){document.querySelectorAll(\"input\")[i].style.textTransform=\"capitalize\";}\n"+
-"for (var i= 86; i< 90 ; i++){document.querySelectorAll(\"input\")[i].style.textTransform=\"capitalize\";}\n"+
-"for (var i= 86; i< 88 ; i++){document.querySelectorAll(\"input\")[i].style.marginBottom=\"5px\";}\n"+
+"for (var i= 0; i < 9; i++){document.querySelectorAll(\"label\")[i].style.display=\"inline-block\";}\n"+
+"for (var i= 0; i < 9; i++){document.querySelectorAll(\"label\")[i].style.width=\"275px\";}\n"+
+"for (var i= 0; i < 9; i++){document.querySelectorAll(\"label\")[i].style.textAlign=\"right\";}\n"+
+"for (var i= 0; i < 7; i++){document.querySelectorAll(\"input\")[i].style.width=\"180px\";}\n"+
+"document.querySelectorAll(\"input\")[7].style.width=\"184px\";\n"+
+"for (var i= 0; i < 8; i++){document.querySelectorAll(\"input\")[i].style.fontSize=\"15px\";}\n"+
+"for (var i= 0; i < 8; i++){document.querySelectorAll(\"input\")[i].style.marginBottom=\"5px\";}\n"+
+"for (var i= 0; i < 8; i++){document.querySelectorAll(\"input\")[i].style.textTransform=\"capitalize\";}\n"+
 "for (var i= 89; i<document.querySelectorAll(\"input\").length-4 ; i++){document.querySelectorAll(\"input\")[i].style.width=\"85px\";}\n"+
 "for (var i= 89; i<document.querySelectorAll(\"input\").length-4 ; i++){document.querySelectorAll(\"input\")[i].style.textAlign=\"center\";}\n"+
 "for (var i= 1; i<document.querySelectorAll(\"select\").length ; i++){document.querySelectorAll(\"select\")[i].style.width=\"93px\";}\n"+
-"for (var i= 0; i < 6; i++){document.querySelectorAll(\"label\")[i].style.textAlign=\"right\";}\n"+
-"for (var i= 87; i< 92 ; i++){document.querySelectorAll(\"label\")[i].style.textAlign=\"right\";}\n"+
 "for (var i= 92; i<document.querySelectorAll(\"label\").length ; i++){document.querySelectorAll(\"label\")[i].style.display=\"inline-block\";}\n"+
 "for (var i= 0; i<document.querySelectorAll(\"label\").length ; i++){document.querySelectorAll(\"label\")[i].style.fontFamily=\"courier New\";}\n"+
 "for (var i= 0; i<document.querySelectorAll(\"input,select\").length ; i++){document.querySelectorAll(\"input,select\")[i].style.fontFamily=\"courier New\";}\n"+
@@ -443,8 +434,7 @@ var p6="</datalist><br>\n"+
 "cel.previousSibling.style.backgroundColor =\"blue\";\n"+
 "cel.style.backgroundColor=\"\";cel.style.color=\"\";\n"+
 "cel.style.fontWeight=\"\";\n"+
-"myInterval = setInterval(()=>{\n"+
-"cel.previousSibling.style.color = \"white\"\n"+
+"myInterval = setInterval(()=>{cel.previousSibling.style.color = \"white\"\n"+
 "cel.previousSibling.style.backgroundColor = \n"+
 "cel.previousSibling.style.backgroundColor == \"blue\" ? \"green\" :\n"+
 "cel.previousSibling.style.backgroundColor ==\"green\"?\"red\":\"blue\";}, 500)}\n"+
@@ -463,13 +453,9 @@ var p6="</datalist><br>\n"+
 "(cel.style.backgroundColor=\"aqua\",cel.style.color=\"orange\",cel.style.fontWeight=\"bold\")\n"+
 ":cel.value > parseFloat(refs[1])?\n"+
 "(cel.style.backgroundColor=\"aqua\",cel.style.color=\"red\",cel.style.fontWeight=\"bold\"):\"\"):\"\";}\n"+
-"function fChpSelC(cel){\n"+
-"cel.previousSibling.style.backgroundColor =\"blue\";\n"+
-"cel.style.backgroundColor=\"\";\n"+
-"cel.style.color=\"\";\n"+
-"cel.style.fontWeight=\"\";\n"+
-"var CdtC=\"\",refs=\"\";\n"+
-"var ArrplCel=cel.placeholder===\"< 2.5\"?\n"+
+"function fChpSelC(cel){cel.previousSibling.style.backgroundColor =\"blue\";\n"+
+"cel.style.backgroundColor=\"\";cel.style.color=\"\";cel.style.fontWeight=\"\";\n"+
+"var CdtC=\"\",refs=\"\";var ArrplCel=cel.placeholder===\"< 2.5\"?\n"+
 "(cel.value=(document.getElementById(\"CholesterolTotal\").value -\n"+
 "document.getElementById(\"CholesterolHDL\").value -\n"+
 "(document.getElementById(\"Triglycerides\").value/ 5)).toFixed(2),\n"+
@@ -481,38 +467,22 @@ var p6="</datalist><br>\n"+
 "(cel.style.backgroundColor=\"aqua\",cel.style.color=\"orange\",cel.style.fontWeight=\"bold\")\n"+
 ":cel.value > parseFloat(refs[1])?\n"+
 "(cel.style.backgroundColor=\"aqua\",cel.style.color=\"red\",cel.style.fontWeight=\"bold\"):\"\");\n"+
-"myInterval = setInterval(()=>{\n"+
-"cel.previousSibling.style.color = \"white\"\n"+
+"myInterval = setInterval(()=>{cel.previousSibling.style.color = \"white\"\n"+
 "cel.previousSibling.style.backgroundColor = \n"+
 "cel.previousSibling.style.backgroundColor == \"blue\" ? \"green\" :\n"+
-"cel.previousSibling.style.backgroundColor ==\"green\"?\"red\":\"blue\";\n"+
-"}, 500)}\n"+
+"cel.previousSibling.style.backgroundColor ==\"green\"?\"red\":\"blue\";}, 500)}\n"+
 "function fChpLibC(cel){clearInterval(myInterval);\n"+
 "cel.previousSibling.style.backgroundColor = \"\";\n"+
 "cel.previousSibling.style.color = \"\"}\n"+
 "var btn_vld= document.getElementById(\"vld\");\n"+
 "btn_vld.addEventListener('click',vd_pgweb);\n"+
-"function vd_pgweb(event){let Rtab=[],fTab=\"\";\n"+
-"for (var i= 0; i<6 ; i++){\n"+
+"function vd_pgweb(event){let Rtab=[],fTab;\n"+
+"for (var i= 0; i<9 ; i++){\n"+
 "fTab += Rtab.push(document.querySelectorAll(\"input,select\")[i].value)}\n"+
-"let Rtab2=[],fTab2=\"\";\n"+
-"for (var i= 87; i<90 ; i++){\n"+
-"fTab2 += Rtab2.push(document.querySelectorAll(\"input,select\")[i].value)}\n"+
+"let Rtab2=[];\n"+
 "var PrixdesExamensouStatut = document.getElementById(\"PrixdesExamensouStatut\").value;\n"+
 "var Telephone = document.getElementById(\"Telephone\").value, negTx=\"\", btn_evt =\"\";\n"+
-"for (var i= 0; i<6 ; i++){\n"+
-"var fxBlcg=document.querySelectorAll(\"input,select\")[i].value===\"\" &&\n"+
-"document.querySelectorAll(\"input,select\")[i].nextElementSibling.nodeName!==\"SPAN\"?\n"+
-"(negTx= document.createElement(\"span\"),\n"+
-"negTx.textContent=\" *Champ obligatoire\",negTx.style.color=\"red\",\n"+
-"document.querySelectorAll(\"input,select\")[i].after(negTx))\n"+
-":document.querySelectorAll(\"input,select\")[i].value===\"\" &&\n"+
-"document.querySelectorAll(\"input,select\")[i].nextElementSibling.nodeName===\"SPAN\"?\n"+
-"(document.querySelectorAll(\"input,select\")[i].nextElementSibling.remove(),\n"+
-"negTx= document.createElement(\"span\"),\n"+
-"negTx.textContent=\" *Champ obligatoire\",negTx.style.color=\"red\",\n"+
-"document.querySelectorAll(\"input,select\")[i].after(negTx)):\"\";}\n"+
-"for (var i= 87; i<90 ; i++){\n"+
+"for (var i= 0; i<9 ; i++){\n"+
 "var fxBlcg=document.querySelectorAll(\"input,select\")[i].value===\"\" &&\n"+
 "document.querySelectorAll(\"input,select\")[i].nextElementSibling.nodeName!==\"SPAN\"?\n"+
 "(negTx= document.createElement(\"span\"),\n"+
@@ -538,21 +508,18 @@ var p6="</datalist><br>\n"+
 "negTx= document.createElement(\"span\"),\n"+
 "negTx.textContent=\" *Exactement 10 chiffres.Merci!\",\n"+
 "negTx.style.color=\"#275280\",negTx.style.fontWeigth=\"bold\",\n"+
-"document.getElementById(\"Telephone\").after(negTx))\n"+
-":/\\D/.test(Telephone) &&\n"+
+"document.getElementById(\"Telephone\").after(negTx)):/\\D/.test(Telephone) &&\n"+
 "document.getElementById(\"Telephone\").nextElementSibling.nodeName!==\"SPAN\"?\n"+
 "(negTx= document.createElement(\"span\"),\n"+
 "negTx.textContent=\" *Uniquement [0-9]\",\n"+
 "negTx.style.color=\"#275280\",negTx.style.fontWeigth=\"bold\",\n"+
-"document.getElementById(\"Telephone\").after(negTx))\n"+
-":/\\D/.test(Telephone) &&\n"+
+"document.getElementById(\"Telephone\").after(negTx)):/\\D/.test(Telephone) &&\n"+
 "document.getElementById(\"Telephone\").nextElementSibling.nodeName===\"SPAN\"?\n"+
 "(document.getElementById(\"Telephone\").nextElementSibling.remove(),\n"+
-"negTx= document.createElement(\"span\"),\n"+
-"negTx.textContent=\" *Uniquement [0-9]\",\n"+
+"negTx= document.createElement(\"span\"),negTx.textContent=\" *Uniquement [0-9]\",\n"+
 "negTx.style.color=\"#275280\",negTx.style.fontWeigth=\"bold\",\n"+
 "document.getElementById(\"Telephone\").after(negTx)):\"\";\n"+
-"var tstPrix=/[a-z]/.test(PrixdesExamensouStatut) && /\\d/.test(PrixdesExamensouStatut)\n"+ 
+"var tstPrix=/[a-z]/.test(PrixdesExamensouStatut) && /\\d/.test(PrixdesExamensouStatut)\n"+
 "&& document.getElementById(\"PrixdesExamensouStatut\").nextElementSibling.nodeName!==\"SPAN\"?\n"+
 "(negTx= document.createElement(\"span\"),\n"+
 "negTx.textContent=\" *Uniquement (Chiffres ou Lettres)\",\n"+
@@ -566,29 +533,24 @@ var p6="</datalist><br>\n"+
 "negTx.style.color=\"#275280\",negTx.style.fontWeigth=\"bold\",\n"+
 "document.getElementById(\"PrixdesExamensouStatut\").after(negTx)):\"\";\n"+
 "for (var i=90 ; i<document.querySelectorAll(\"input,select\").length ; i++){\n"+
-"var tstEnv= Rtab.includes(\"\")||Rtab2.includes(\"\")||\n"+
+"var tstEnv= Rtab.includes(\"\")||\n"+
 "/[a-z]/.test(PrixdesExamensouStatut) && /\\d/.test(PrixdesExamensouStatut)||\n"+
-"/\\D/.test(Telephone)||!/^\\w{10}$/.test(Telephone)?\n"+
-"event.preventDefault():\n"+
+"/\\D/.test(Telephone)||!/^\\w{10}$/.test(Telephone)?event.preventDefault():\n"+
 "document.querySelectorAll(\"input,select\")[i].value.trim()===\"\"?\n"+
 "(document.querySelectorAll(\"input,select\")[i].previousElementSibling.remove(),\n"+
 "document.querySelectorAll(\"input,select\")[i].remove(),i--,\n"+
 "btn_evt = document.createElement(\"input\"),\n"+
 "btn_evt.id=\"envt\",btn_evt.value=\"Envoyer\",btn_evt.type=\"submit\",\n"+
 "btn_evt.style.fontFamily=\"bookman Old Style\",\n"+
-"btn_evt.style.fontWeight=\"bold\",\n"+
-"btn_evt.style.color= \"#275280\",\n"+
-"btn_evt.style.fontSize=\"15px\",\n"+
-"btn_evt.style.width=\"200px\",\n"+
-"btn_vld.replaceWith(btn_evt)):\"\";}}\n"+
-"function Avertir (cel){\n"+
+"btn_evt.style.fontWeight=\"bold\",btn_evt.style.color= \"#275280\",\n"+
+"btn_evt.style.fontSize=\"15px\",btn_evt.style.width=\"200px\",\n"+
+"btn_vld.replaceWith(btn_evt)):\"\";}}function Avertir (cel){\n"+
 "var ActLibCel=cel.value!==\"\" && cel.nextElementSibling.textContent===\" *Champ obligatoire\"||\n"+
 "cel.value!==\"\" && cel.nextElementSibling.textContent===\" *Uniquement [0-9]\"||\n"+
 "cel.value!==\"\" && cel.nextElementSibling.textContent===\" *Exactement 10 chiffres.Merci!\"||\n"+
 "cel.value!==\"\" && cel.nextElementSibling.textContent===\" *Uniquement (Chiffres ou Lettres)\"?\n"+
 "cel.nextElementSibling.remove():\"\";}</script></body></html>";
-
-var pt= p1+txt_sdN+p2+txt_sdP+p3+txt_sdDC+p4+txt_sdPRS+p5+txt_sdBt+p6;
+var pt= p1+ txNom +p2+ txPnom +p3+ txDc +p4+ txPrs +p5+ txBt +p6;
 
 //insertion des donnees dans la page d'accueil
 fs.writeFile("Patient.html",pt,
@@ -620,9 +582,11 @@ var Lpt= Lbd.collection("PATIENTS");
 var pers2= await Lpt.insertOne(info_p);
 var rch_Mld= await Lpt.find({}).toArray();
 var pers_rtv= await Lpt.findOne(info_p), info_pers="", info_exa="", info_persT="";
+console.log(pers_rtv);
+for (var i= 0; i <10; i++){info_pers += Object.keys(pers_rtv)[i] + ": "+ Object.values(pers_rtv)[i]+"<br>";}
+for (var f= 10; f < Object.values(pers_rtv).length; f++){info_exa += Object.keys(pers_rtv)[f] + ":"+ Object.values(pers_rtv)[f] + " ";}
 
-for (var i= 0; i < 11; i++){info_pers += Object.keys(pers_rtv)[i] + ": "+ Object.values(pers_rtv)[i]+"<br>";}
-for (var f= 11; f < Object.values(pers_rtv).length; f++){info_exa += Object.keys(pers_rtv)[f] + ":"+ Object.values(pers_rtv)[f] + " ";}
+
 for (var h= 0; h < Object.keys(pers_rtv).length; h++){info_persT += Object.keys(pers_rtv)[h] + ":"+"\""+ Object.values(pers_rtv)[h]+"\""+ ",";}
 
 var impr_exa_json="export let exa_Grp={"+ info_persT + "};";
@@ -852,22 +816,42 @@ var m7="</datalist></label><br><br><label>Prix des Examens (ou statut): <input  
 var mt= m1+m2+txt_sdN +m3+txt_sdP+m4+txt_sdDC+m5+txt_sdPRS+m6+txt_sdBt+m7;
 fs.writeFile("Modif.html",mt,{encoding:"utf8", flag:"w"},(err)=>{var info=(err)?console.log(err):console.log("Mdf_pg pret! ");});
 
-var suc1="<!DOCTYPE html><html><head>"+
-"<meta content=\"fr-ci\" http-equiv=\"Content-Language\">"+
-"<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\">"+
-"<link href=\"MFormat.css\" rel=\"stylesheet\" type=\"text/css\">"+
-"<title>sans titre 1</title></head><body><h1>Vous venez d'enregistrez:</h1><table>"+
-"<tr><td>Pour BULLETIN DU PATIENT</td><td>Et&nbsp; EXAMENS EFFECTUES :</td></tr><tr><td>";
-var suc2="</td><td>";
-var suc3="</td></tr></table><br><br><br><br><p>"+
-"<input id=\"mdf\"  type=\"button\"  value=\"Modifier\"><input id=\"enr_sv\"  type=\"button\" value=\"Passez à letape suivante\"><br></p><br>"+
-"<script>document.getElementById(\"mdf\").addEventListener('click',()=>{window.location.href=\"Modif.html\";});"+
-"document.getElementById(\"enr_sv\").addEventListener('click',()=>{window.location.href=\"/\";});"+
-"</script></body></html>";
+var suc1="<!DOCTYPE html>\n"+
+"<html><head>\n"+
+"<meta content=\"fr-ci\" http-equiv=\"Content-Language\">\n"+
+"<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\">\n"+
+"<title> ENREGISTREMENT SUCCES PREMIER</title></head>\n"+
+"<body id=\"Entree\" style=\"background-image:url('images/LGbionase3.jpg');width: 730px;margin-right: auto;	margin-left: auto\">\n"+
+"<div style=\"text-align:center;margin-bottom:20px\" ><img alt=\"encart\" height=\"91\" src=\"imageTest2.jpg\" width=\"730\"><br></div>\n"+
+"<h1 style=\"color:#275280\">Vous venez d'enregistrez:</h1>\n"+
+"<div style=\"display:inline-block;width:730px;padding:0px 0px\">\n"+
+"<div style=\"display:inline-block;width:250px\">\n"+
+"<span class=\"Ett\" style=\"display:inline-block;width:250px\"><span style=\"margin-left:30px\">PATIENT</span></span>\n"+
+"<span class=\"Ctn\" style=\"display:inline-block;width:250px\">";
+
+var suc2="</span></div>\n"+
+"<div style=\"display:inline-block;width:475px;vertical-align:top\">\n"+
+"<span class=\"Ett\" style=\"display:inline-block;width:475px\"><span style=\"margin-left:30px\">AVEC</span></span>\n"+
+"<span class=\"Ctn\" style=\"display:inline-block;width:475px\">";
+
+var suc3="</span></div></div>\n"+
+"<p style=\"text-align:center\"><input value=\"Modifier\" onclick=\"window.open('PatientMod.html', '_parent')\" type=\"button\"><input type=\"button\" value=\"Etape suivante\"><br></p>\n"+
+"<script>\n"+
+"for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.fontFamily=\"courier New\";}\n"+
+"for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.fontWeight=\"bold\";}\n"+
+"for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.color= \"#275280\";}\n"+
+"for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.fontSize=\"16px\"}\n"+
+"for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.width=\"200px\"}\n"+
+"for (var i= 0; i<document.getElementsByClassName(\"Ett\").length ; i++){document.getElementsByClassName(\"Ett\")[i].style.backgroundColor=\"aqua\"}\n"+
+"for (var i= 0; i<document.getElementsByClassName(\"Ett\").length ; i++){document.getElementsByClassName(\"Ett\")[i].style.fontFamily=\"bookman Old Style\"}\n"+
+"for (var i= 0; i<document.getElementsByClassName(\"Ctn\").length ; i++){document.getElementsByClassName(\"Ctn\")[i].style.backgroundColor=\"#D6E7EF\"}\n"+
+"for (var i= 0; i<document.getElementsByClassName(\"Ctn\").length ; i++){document.getElementsByClassName(\"Ctn\")[i].style.fontFamily=\"courier New\"}\n"+
+"</script>\n"+
+"</body></html>";
 
 var aff_Gle= suc1+info_pers+suc2+info_exa+suc3;
 
-fs.writeFile("pg_succes.html",aff_Gle,{encoding:"utf8", flag:"w"},(err)=>{var info=(err)?console.log(err):console.log("OK succes");});
+fs.writeFile("pgSucces.html",aff_Gle,{encoding:"utf8", flag:"w"},(err)=>{var info=(err)?console.log(err):console.log("OK succes");});
 
 })();
 
@@ -1145,7 +1129,7 @@ var sucM3="</td></tr></table><br><br><br><br><p>"+
 
 var aff_GleM= sucM1+info_persM+sucM2+info_exaM+sucM3;
 
-fs.writeFile("pg_succes.html",aff_GleM,{encoding:"utf8", flag:"w"},(err)=>{var info=(err)?console.log(err):console.log("OK succesMdf");});
+fs.writeFile("pgSucces.html",aff_GleM,{encoding:"utf8", flag:"w"},(err)=>{var info=(err)?console.log(err):console.log("OK succesMdf");});
 
 })();
 

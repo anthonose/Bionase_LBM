@@ -4,6 +4,10 @@
 <p id="demoT">hyundai</p>
 
 <label for="GoutteEpaisse">Goutte Epaisse:</label><select name="GoutteEpaisse" id="GoutteEpaisse" onblur="fChpLib(this)" ><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for="tGE">Titre:</label><input name="tGE" type="number"  step="0.01" id="tGE" onblur="fChpLib(this)" onfocus="fChpSel(this)">
+<label for="Prescripteur">Prescripteur:</label><input  name="Prescripteur" type="text" autocomplete="off" list="prs" id="Prescripteur" onblur="Avertir(this)" placeholder="provenance du Bull"> <datalist id="prs"><option value="dr diarra"><option value="Kathanase"></datalist><br>
+<label for="Biotechnologiste">Biotechnologiste:</label><input  name="Biotechnologiste" type="text" autocomplete="off" list="btech" id="Biotechnologiste" onblur="Avertir(this)" placeholder="Nom du technicien"><datalist id="btech"><option value="kouadio yao"><option value="amani yao"><option value="kouadio yao athanase"><option value="on"><option value="12000"></datalist><br>
+<label for="PrixdesExamensouStatut">Prix/statut:</label><input  name="PrixdesExamensouStatut" type="text" id="PrixdesExamensouStatut" onblur="Avertir(this)" placeholder="Montant ou assuré(e)"><br>
+<label for="DateduPrelevement">Date Prelevement:</label><input  name="DateduPrelevement" type="date" id="DateduPrelevement"  onblur="Avertir(this)">
 
 <script>
 document.getElementsByName("GoutteEpaisse").style.backgroundColor="aqua";
