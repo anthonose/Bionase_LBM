@@ -10,7 +10,17 @@
 <label for="DateduPrelevement">Date Prelevement:</label><input  name="DateduPrelevement" type="date" id="DateduPrelevement"  onblur="Avertir(this)">
 
 <script>
-document.getElementsByName("GoutteEpaisse").style.backgroundColor="aqua";
+const inventaire = [
+  { nom: "asperges", type: "légume", quantite: 5 },
+  { nom: "bananes", type: "fruit", quantite: 0 },
+  { nom: "agneau", type: "viande", quantite: 23 },
+  { nom: "cerises", type: "fruit", quantite: 5 },
+  { nom: "poisson", type: "viande", quantite: 22 },
+];
+
+const groupesParType = Object.groupBy(inventaire, item => item.type);
+
+alert(groupesParType);
 </script>
 </body>
 </html>

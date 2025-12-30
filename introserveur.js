@@ -581,10 +581,12 @@ var Lbd= cnx_bd.db("Bionase_LBM");
 var Lpt= Lbd.collection("PATIENTS");
 var pers2= await Lpt.insertOne(info_p);
 var rch_Mld= await Lpt.find({}).toArray();
-var pers_rtv= await Lpt.findOne(info_p), info_pers="", info_exa="", info_persT="";
-console.log(pers_rtv);
+var pers_rtv= await Lpt.findOne(info_p), info_pers="", info_exa="", info_persT="",ExaSlt="";
+
 for (var i= 0; i <10; i++){info_pers += Object.keys(pers_rtv)[i] + ": "+ Object.values(pers_rtv)[i]+"<br>";}
-for (var f= 10; f < Object.values(pers_rtv).length; f++){info_exa += Object.keys(pers_rtv)[f] + ":"+ Object.values(pers_rtv)[f] + " ";}
+for (var f= Object.values(pers_rtv).lastIndexOf("on")+1;
+ f < Object.values(pers_rtv).length; f++){info_exa += Object.keys(pers_rtv)[f] + ":"+ Object.values(pers_rtv)[f] + " ";}
+for(let[x,y] of Object.entries(pers_rtv)){if (y==="on"){ExaSlt += x + ",";}}
 
 
 for (var h= 0; h < Object.keys(pers_rtv).length; h++){info_persT += Object.keys(pers_rtv)[h] + ":"+"\""+ Object.values(pers_rtv)[h]+"\""+ ",";}
