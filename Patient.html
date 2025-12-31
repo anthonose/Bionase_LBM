@@ -6,10 +6,10 @@
 <div style="text-align:center;margin-bottom:20px" >
 <img alt="encart" height="91" src="imageTest2.jpg" width="730"><br></div>
 <form action="transit.html" method="post">
-<label for="nom">Nom:</label><input id="nom" list="nomL" name="nom" type="text" autocomplete="off" onblur="Avertir(this)" placeholder="Nom de famille"><datalist id="nomL"><option value="minta"><option value="traore"><option value="iloba"><option value="gnaore"><option value="zerbo"><option value="kouadio"></datalist><br><label for="prenoms">Prénoms:</label><input list="prenomsL" id="prenoms" name="prenoms" type="text" autocomplete="off" onblur="Avertir(this)"><datalist id="prenomsL"><option value="fatoumata"><option value="kadiatou"><option value="sharon"><option value="noe"><option value="yaya"><option value="phanuelle"><option value="flore"></datalist><br><label for="Sexe">Sexe:</label><select name="Sexe"  id="Sexe" style="width: 188px;margin-bottom:5px; height: 23px;" onblur="Avertir(this)"><option></option><option>M</option><option>F</option></select><br>
+<label for="nom">Nom:</label><input id="nom" list="nomL" name="nom" type="text" autocomplete="off" onblur="Avertir(this)" placeholder="Nom de famille"><datalist id="nomL"><option value="minta"><option value="traore"><option value="iloba"><option value="gnaore"><option value="zerbo"><option value="kouadio"><option value="magone"><option value="abi"></datalist><br><label for="prenoms">Prénoms:</label><input list="prenomsL" id="prenoms" name="prenoms" type="text" autocomplete="off" onblur="Avertir(this)"><datalist id="prenomsL"><option value="fatoumata"><option value="kadiatou"><option value="sharon"><option value="noe"><option value="yaya"><option value="phanuelle"><option value="flore"><option value="lou kouezan"><option value="dahio"></datalist><br><label for="Sexe">Sexe:</label><select name="Sexe"  id="Sexe" style="width: 188px;margin-bottom:5px; height: 23px;" onblur="Avertir(this)"><option></option><option>M</option><option>F</option></select><br>
 <label for="Telephone">Téléphone:</label><input name="Telephone" type="tel" id="Telephone"  onblur="Avertir(this)" placeholder="numero a 10 chiffres"><br>
-<label for="Diagnostic_Clinique">Diagnostic Clinique:</label><input list="dc" name="Diagnostic_Clinique" type="text" autocomplete="off" id="Diagnostic_Clinique" onblur="Avertir(this)" placeholder="categorie du mal"><datalist id="dc"><option value="fièvre au long court"><option value="Bilan de sante"><option value="fièvre noctune"><option value="fièvre subite"></datalist><br><label for="Prescripteur">Prescripteur:</label><input  name="Prescripteur" type="text" autocomplete="off" list="prs" id="Prescripteur" onblur="Avertir(this)" placeholder="provenance du Bull"><datalist id="prs"><option value="dr konate"><option value="vieux coul"><option value="dr diarra"><option value="sg angele"></datalist><br><label for="Biotechnologiste">Biotechnologiste:</label><input  name="Biotechnologiste" type="text" autocomplete="off" list="btech" id="Biotechnologiste" onblur="Avertir(this)" placeholder="Nom du technicien"><datalist id="btech"><option value="amani"><option value="kouadio athanase"><option value="amani sans fil"></datalist><br>
-<label for="PrixdesExamensouStatut">Prix/statut:</label><input  name="PrixdesExamensouStatut" type="text" id="PrixdesExamensouStatut" onblur="Avertir(this)" placeholder="Montant ou assuré(e)"><br>
+<label for="DiagnosticClinique">Diagnostic Clinique:</label><input list="dc" name="DiagnosticClinique" type="text" autocomplete="off" id="DiagnosticClinique" onblur="Avertir(this)" placeholder="categorie du mal"><datalist id="dc"><option value="fièvre au long court"><option value="Bilan de sante"><option value="fièvre noctune"><option value="fièvre subite"><option value="bilan prénatal"></datalist><br><label for="Prescripteur">Prescripteur:</label><input  name="Prescripteur" type="text" autocomplete="off" list="prs" id="Prescripteur" onblur="Avertir(this)" placeholder="provenance du Bull"><datalist id="prs"><option value="dr konate"><option value="vieux coul"><option value="dr diarra"><option value="sg angele"><option value="externe"></datalist><br><label for="Biotechnologiste">Biotechnologiste:</label><input  name="Biotechnologiste" type="text" autocomplete="off" list="btech" id="Biotechnologiste" onblur="Avertir(this)" placeholder="Nom du technicien"><datalist id="btech"><option value="amani"><option value="kouadio athanase"><option value="amani sans fil"></datalist><br>
+<label for="PrixExamens">Prix/statut:</label><input  name="PrixExamens" type="text" id="PrixExamens" onblur="Avertir(this)" placeholder="Montant ou assuré(e)"><br>
 <label for="DateduPrelevement">Date Prelevement:</label><input  name="DateduPrelevement" type="date" id="DateduPrelevement"  onblur="Avertir(this)" ><br>
 <span style="display:inline-block;width:186px;height:37px;border:thin black solid;margin-left:275px">
 <span id="Lalphb1" style="font-size:14.5px;text-align:right;letter-spacing:1.3px">
@@ -431,7 +431,7 @@ function vd_pgweb(event){let Rtab=[],fTab;
 for (var i= 0; i<9 ; i++){
 fTab += Rtab.push(document.querySelectorAll("input,select")[i].value)}
 let Rtab2=[];
-var PrixdesExamensouStatut = document.getElementById("PrixdesExamensouStatut").value;
+var PrixExamens = document.getElementById("PrixExamens").value;
 var Telephone = document.getElementById("Telephone").value, negTx="", btn_evt ="";
 for (var i= 0; i<9 ; i++){
 var fxBlcg=document.querySelectorAll("input,select")[i].value==="" &&
@@ -470,22 +470,22 @@ document.getElementById("Telephone").nextElementSibling.nodeName==="SPAN"?
 negTx= document.createElement("span"),negTx.textContent=" *Uniquement [0-9]",
 negTx.style.color="#275280",negTx.style.fontWeigth="bold",
 document.getElementById("Telephone").after(negTx)):"";
-var tstPrix=/[a-z]/.test(PrixdesExamensouStatut) && /\d/.test(PrixdesExamensouStatut)
-&& document.getElementById("PrixdesExamensouStatut").nextElementSibling.nodeName!=="SPAN"?
+var tstPrix=/[a-z]/.test(PrixExamens) && /\d/.test(PrixExamens)
+&& document.getElementById("PrixExamens").nextElementSibling.nodeName!=="SPAN"?
 (negTx= document.createElement("span"),
 negTx.textContent=" *Uniquement (Chiffres ou Lettres)",
 negTx.style.color="#275280",negTx.style.fontWeigth="bold",
-document.getElementById("PrixdesExamensouStatut").after(negTx))
-:/[a-z]/.test(PrixdesExamensouStatut) && /\d/.test(PrixdesExamensouStatut)
-&& document.getElementById("PrixdesExamensouStatut").nextElementSibling.nodeName==="SPAN"?
-(document.getElementById("PrixdesExamensouStatut").nextElementSibling.remove(),
+document.getElementById("PrixExamens").after(negTx))
+:/[a-z]/.test(PrixExamens) && /\d/.test(PrixExamens)
+&& document.getElementById("PrixExamens").nextElementSibling.nodeName==="SPAN"?
+(document.getElementById("PrixExamens").nextElementSibling.remove(),
 negTx= document.createElement("span"),
 negTx.textContent=" *Uniquement (Chiffres ou Lettres)",
 negTx.style.color="#275280",negTx.style.fontWeigth="bold",
-document.getElementById("PrixdesExamensouStatut").after(negTx)):"";
+document.getElementById("PrixExamens").after(negTx)):"";
 for (var i=90 ; i<document.querySelectorAll("input,select").length ; i++){
 var tstEnv= Rtab.includes("")||
-/[a-z]/.test(PrixdesExamensouStatut) && /\d/.test(PrixdesExamensouStatut)||
+/[a-z]/.test(PrixExamens) && /\d/.test(PrixExamens)||
 /\D/.test(Telephone)||!/^\w{10}$/.test(Telephone)?event.preventDefault():
 document.querySelectorAll("input,select")[i].value.trim()===""?
 (document.querySelectorAll("input,select")[i].previousElementSibling.remove(),

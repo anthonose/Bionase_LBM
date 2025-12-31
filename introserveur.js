@@ -54,11 +54,11 @@ var p1="<!DOCTYPE html><html><head>\n"+
 var p2="</datalist><br><label for=\"prenoms\">Prénoms:</label><input list=\"prenomsL\" id=\"prenoms\" name=\"prenoms\" type=\"text\" autocomplete=\"off\" onblur=\"Avertir(this)\"><datalist id=\"prenomsL\">";
 var p3="</datalist><br><label for=\"Sexe\">Sexe:</label><select name=\"Sexe\"  id=\"Sexe\" style=\"width: 188px;margin-bottom:5px; height: 23px;\" onblur=\"Avertir(this)\"><option></option><option>M</option><option>F</option></select><br>\n"+
 "<label for=\"Telephone\">Téléphone:</label><input name=\"Telephone\" type=\"tel\" id=\"Telephone\"  onblur=\"Avertir(this)\" placeholder=\"numero a 10 chiffres\"><br>\n"+
-"<label for=\"Diagnostic_Clinique\">Diagnostic Clinique:</label><input list=\"dc\" name=\"Diagnostic_Clinique\" type=\"text\" autocomplete=\"off\" id=\"Diagnostic_Clinique\" onblur=\"Avertir(this)\" placeholder=\"categorie du mal\"><datalist id=\"dc\">";
+"<label for=\"DiagnosticClinique\">Diagnostic Clinique:</label><input list=\"dc\" name=\"DiagnosticClinique\" type=\"text\" autocomplete=\"off\" id=\"DiagnosticClinique\" onblur=\"Avertir(this)\" placeholder=\"categorie du mal\"><datalist id=\"dc\">";
 var p4="</datalist><br><label for=\"Prescripteur\">Prescripteur:</label><input  name=\"Prescripteur\" type=\"text\" autocomplete=\"off\" list=\"prs\" id=\"Prescripteur\" onblur=\"Avertir(this)\" placeholder=\"provenance du Bull\"><datalist id=\"prs\">";
 var p5="</datalist><br><label for=\"Biotechnologiste\">Biotechnologiste:</label><input  name=\"Biotechnologiste\" type=\"text\" autocomplete=\"off\" list=\"btech\" id=\"Biotechnologiste\" onblur=\"Avertir(this)\" placeholder=\"Nom du technicien\"><datalist id=\"btech\">";
 var p6="</datalist><br>\n"+
-"<label for=\"PrixdesExamensouStatut\">Prix/statut:</label><input  name=\"PrixdesExamensouStatut\" type=\"text\" id=\"PrixdesExamensouStatut\" onblur=\"Avertir(this)\" placeholder=\"Montant ou assuré(e)\"><br>\n"+
+"<label for=\"PrixExamens\">Prix/statut:</label><input  name=\"PrixExamens\" type=\"text\" id=\"PrixExamens\" onblur=\"Avertir(this)\" placeholder=\"Montant ou assuré(e)\"><br>\n"+
 "<label for=\"DateduPrelevement\">Date Prelevement:</label><input  name=\"DateduPrelevement\" type=\"date\" id=\"DateduPrelevement\"  onblur=\"Avertir(this)\" ><br>\n"+
 "<span style=\"display:inline-block;width:186px;height:37px;border:thin black solid;margin-left:275px\">\n"+
 "<span id=\"Lalphb1\" style=\"font-size:14.5px;text-align:right;letter-spacing:1.3px\">\n"+
@@ -480,7 +480,7 @@ var p6="</datalist><br>\n"+
 "for (var i= 0; i<9 ; i++){\n"+
 "fTab += Rtab.push(document.querySelectorAll(\"input,select\")[i].value)}\n"+
 "let Rtab2=[];\n"+
-"var PrixdesExamensouStatut = document.getElementById(\"PrixdesExamensouStatut\").value;\n"+
+"var PrixExamens = document.getElementById(\"PrixExamens\").value;\n"+
 "var Telephone = document.getElementById(\"Telephone\").value, negTx=\"\", btn_evt =\"\";\n"+
 "for (var i= 0; i<9 ; i++){\n"+
 "var fxBlcg=document.querySelectorAll(\"input,select\")[i].value===\"\" &&\n"+
@@ -519,22 +519,22 @@ var p6="</datalist><br>\n"+
 "negTx= document.createElement(\"span\"),negTx.textContent=\" *Uniquement [0-9]\",\n"+
 "negTx.style.color=\"#275280\",negTx.style.fontWeigth=\"bold\",\n"+
 "document.getElementById(\"Telephone\").after(negTx)):\"\";\n"+
-"var tstPrix=/[a-z]/.test(PrixdesExamensouStatut) && /\\d/.test(PrixdesExamensouStatut)\n"+
-"&& document.getElementById(\"PrixdesExamensouStatut\").nextElementSibling.nodeName!==\"SPAN\"?\n"+
+"var tstPrix=/[a-z]/.test(PrixExamens) && /\\d/.test(PrixExamens)\n"+
+"&& document.getElementById(\"PrixExamens\").nextElementSibling.nodeName!==\"SPAN\"?\n"+
 "(negTx= document.createElement(\"span\"),\n"+
 "negTx.textContent=\" *Uniquement (Chiffres ou Lettres)\",\n"+
 "negTx.style.color=\"#275280\",negTx.style.fontWeigth=\"bold\",\n"+
-"document.getElementById(\"PrixdesExamensouStatut\").after(negTx))\n"+
-":/[a-z]/.test(PrixdesExamensouStatut) && /\\d/.test(PrixdesExamensouStatut)\n"+
-"&& document.getElementById(\"PrixdesExamensouStatut\").nextElementSibling.nodeName===\"SPAN\"?\n"+
-"(document.getElementById(\"PrixdesExamensouStatut\").nextElementSibling.remove(),\n"+
+"document.getElementById(\"PrixExamens\").after(negTx))\n"+
+":/[a-z]/.test(PrixExamens) && /\\d/.test(PrixExamens)\n"+
+"&& document.getElementById(\"PrixExamens\").nextElementSibling.nodeName===\"SPAN\"?\n"+
+"(document.getElementById(\"PrixExamens\").nextElementSibling.remove(),\n"+
 "negTx= document.createElement(\"span\"),\n"+
 "negTx.textContent=\" *Uniquement (Chiffres ou Lettres)\",\n"+
 "negTx.style.color=\"#275280\",negTx.style.fontWeigth=\"bold\",\n"+
-"document.getElementById(\"PrixdesExamensouStatut\").after(negTx)):\"\";\n"+
+"document.getElementById(\"PrixExamens\").after(negTx)):\"\";\n"+
 "for (var i=90 ; i<document.querySelectorAll(\"input,select\").length ; i++){\n"+
 "var tstEnv= Rtab.includes(\"\")||\n"+
-"/[a-z]/.test(PrixdesExamensouStatut) && /\\d/.test(PrixdesExamensouStatut)||\n"+
+"/[a-z]/.test(PrixExamens) && /\\d/.test(PrixExamens)||\n"+
 "/\\D/.test(Telephone)||!/^\\w{10}$/.test(Telephone)?event.preventDefault():\n"+
 "document.querySelectorAll(\"input,select\")[i].value.trim()===\"\"?\n"+
 "(document.querySelectorAll(\"input,select\")[i].previousElementSibling.remove(),\n"+
@@ -581,14 +581,12 @@ var Lbd= cnx_bd.db("Bionase_LBM");
 var Lpt= Lbd.collection("PATIENTS");
 var pers2= await Lpt.insertOne(info_p);
 var rch_Mld= await Lpt.find({}).toArray();
-var pers_rtv= await Lpt.findOne(info_p), info_pers="", info_exa="", info_persT="",ExaSlt="";
+var pers_rtv= await Lpt.findOne(info_p), info_pers="", info_exa="", info_persT="",ExamSlt="";
 
-for (var i= 0; i <10; i++){info_pers += Object.keys(pers_rtv)[i] + ": "+ Object.values(pers_rtv)[i]+"<br>";}
+for (var i= 0; i <10; i++){info_pers += Object.keys(pers_rtv)[i] + ":"+ Object.values(pers_rtv)[i]+"<br>";}
 for (var f= Object.values(pers_rtv).lastIndexOf("on")+1;
  f < Object.values(pers_rtv).length; f++){info_exa += Object.keys(pers_rtv)[f] + ":"+ Object.values(pers_rtv)[f] + " ";}
-for(let[x,y] of Object.entries(pers_rtv)){if (y==="on"){ExaSlt += x + ",";}}
-
-
+for(let[x,y] of Object.entries(pers_rtv)){if (y==="on"){ExamSlt += x + ",";}}
 for (var h= 0; h < Object.keys(pers_rtv).length; h++){info_persT += Object.keys(pers_rtv)[h] + ":"+"\""+ Object.values(pers_rtv)[h]+"\""+ ",";}
 
 var impr_exa_json="export let exa_Grp={"+ info_persT + "};";
@@ -848,10 +846,10 @@ var suc3="</span></div></div>\n"+
 "for (var i= 0; i<document.getElementsByClassName(\"Ett\").length ; i++){document.getElementsByClassName(\"Ett\")[i].style.fontFamily=\"bookman Old Style\"}\n"+
 "for (var i= 0; i<document.getElementsByClassName(\"Ctn\").length ; i++){document.getElementsByClassName(\"Ctn\")[i].style.backgroundColor=\"#D6E7EF\"}\n"+
 "for (var i= 0; i<document.getElementsByClassName(\"Ctn\").length ; i++){document.getElementsByClassName(\"Ctn\")[i].style.fontFamily=\"courier New\"}\n"+
-"</script>\n"+
-"</body></html>";
+"for (var i= 0; i<document.getElementsByClassName(\"Ctn\").length ; i++){document.getElementsByClassName(\"Ctn\")[i].style.textTransform=\"capitalize\";}\n"+
+"</script></body></html>";
 
-var aff_Gle= suc1+info_pers+suc2+info_exa+suc3;
+var aff_Gle= suc1+info_pers+ ExamSlt +suc2+info_exa+suc3;
 
 fs.writeFile("pgSucces.html",aff_Gle,{encoding:"utf8", flag:"w"},(err)=>{var info=(err)?console.log(err):console.log("OK succes");});
 
