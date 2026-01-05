@@ -7,20 +7,36 @@
 <label for="Prescripteur">Prescripteur:</label><input  name="Prescripteur" type="text" autocomplete="off" list="prs" id="Prescripteur" onblur="Avertir(this)" placeholder="provenance du Bull"> <datalist id="prs"><option value="dr diarra"><option value="Kathanase"></datalist><br>
 <label for="Biotechnologiste">Biotechnologiste:</label><input  name="Biotechnologiste" type="text" autocomplete="off" list="btech" id="Biotechnologiste" onblur="Avertir(this)" placeholder="Nom du technicien"><datalist id="btech"><option value="kouadio yao"><option value="amani yao"><option value="kouadio yao athanase"><option value="on"><option value="12000"></datalist><br>
 <label for="PrixdesExamensouStatut">Prix/statut:</label><input  name="PrixdesExamensouStatut" type="text" id="PrixdesExamensouStatut" onblur="Avertir(this)" placeholder="Montant ou assuré(e)"><br>
-<label for="DateduPrelevement">Date Prelevement:</label><input  name="DateduPrelevement" type="date" id="DateduPrelevement"  onblur="Avertir(this)">
+<label for="DateduPrelevement">Date Prelevement:</label><input  name="DateduPrelevement" type="date" id="DateduPrelevement"  onblur="Avertir(this)"><br>
+<label for="Mg">Phosphat.Alc</label><input id="Mg" name="Mg" type="checkbox" ><br>
+<label for="gly">Potassium</label><input id="gly" name="gly" type="checkbox"><br>
+
 
 <script>
-const inventaire = [
-  { nom: "asperges", type: "légume", quantite: 5 },
-  { nom: "bananes", type: "fruit", quantite: 0 },
-  { nom: "agneau", type: "viande", quantite: 23 },
-  { nom: "cerises", type: "fruit", quantite: 5 },
-  { nom: "poisson", type: "viande", quantite: 22 },
-];
+let exaGrp={_id:"695802f4acdf4e8d45839a52",nom:"naon",prenoms:"foussenan",
+Sexe:"M",Telephone:"2510365239",DiagnosticClinique:"Bilan de sante",
+Prescripteur:"vieux coul",Biotechnologiste:"kouadio athanase",PrixExamens:"12000",
+DateduPrelevement:"2026-01-02",acq:"on",Asl:"on",Ca:"on",chtt:"on",crea:"on",
+Crp:"on",gly:"on",ge:"on",Mg:"on",nfs:"on",potassium:"on",transa:"on",tgl:"on",
+wf:"on",Potassium:"3.7",Magnesium:"19",Calcium:"83",Triglycerides:".9",
+Cholesterol_Tot:"6.4",TGO:"18",TGP:"28",Creatinine:"11",Acide_Urique:"15",
+Glycemie:".95",nfsLeucocytes:"9",nfsHematies:"6",nfsHemoglobine:"8",
+nfsHematocrite:"5",nfsVGM:"2",nfsTCMH:"4",nfsCCMH:"5",nfsPlaquette:"8",
+nfsPN:"5",nfsPE:"2",nfsPB:"4",nfsLY:"5",nfsMn:"8",Widal_Felix:"POSITIVE",
+TO:"200",ASLO:"NEGATIVE",CRP:"NEGATIVE",Goutte_Epaisse:"POSITIVE",tGE:"575"},
+TxExam="",ExamSlt=[];
 
-const groupesParType = Object.groupBy(inventaire, item => item.type);
+var TypChp= document.querySelectorAll("input,select");
+for(let[x,y] of Object.entries(exaGrp)){if (y==="on"){TxExam += ExamSlt.push(x);}}
 
-alert(groupesParType);
+/*for (var i= 0; i <TypChp.length; i++){
+if(TypChp[i].type==="checkbox")
+{document.getElementById(ExamSlt[8]).checked="checked";}
+}
+*/
+
+for(var j= 0 ; j < ExamSlt.length; j++){document.getElementById(ExamSlt[j]).checked="checked";}
+
 </script>
 </body>
 </html>

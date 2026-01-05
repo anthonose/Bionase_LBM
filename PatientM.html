@@ -1,21 +1,18 @@
 ﻿<!DOCTYPE html><html><head>
 <meta content="fr-ci" http-equiv="Content-Language">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-<title>ACCUEIL ET ENREGISTREMENT PATIENTS</title></head><body  style="background-image:url('images/LGbionase3.jpg');width: 730px;margin-right: auto;	margin-left: auto">
+<title>ENREGISTREMENT PATIENTS MODIFIANT</title></head><body  style="background-image:url('images/LGbionase3.jpg');width: 730px;margin-right: auto;	margin-left: auto">
 <a id="Entree" href=""></a>
 <div style="text-align:center;margin-bottom:20px" >
 <img alt="encart" height="91" src="imageTest2.jpg" width="730"><br></div>
 <form action="transit.html" method="post">
-<label for="nom">Nom:</label><input id="nom" list="nomL" name="nom" type="text" autocomplete="off" onblur="Avertir(this)" placeholder="Nom de famille"><datalist id="nomL"><option value="bamba"><option value="coulibaly"><option value="kodjo"><option value="nikiema"><option value="kouakou"><option value="kouadio"><option value="gnaore"></datalist><br>
-<label for="prenoms">Prénoms:</label><input list="prenomsL" id="prenoms" name="prenoms" type="text" autocomplete="off" onblur="Avertir(this)" ><datalist id="prenomsL"><option value="bakary"><option value="siaka"><option value="marguerite"><option value="mamadou"><option value="yao bernard"><option value="yao athanase"><option value="noe"></datalist><br>
-<label for="Sexe">Sexe:</label><select name="Sexe"  id="Sexe" style="width: 188px;margin-bottom:5px; height: 23px;" onblur="Avertir(this)"><option></option><option>M</option><option>F</option></select><br>
+<label for="_id">ID (Auto)
+</label><input name="_id" type="text" autocomplete="off" readonly="readonly" style="width:300px;border:none;background:none;font-size:20px;color:blue;font-weight:bold"><br>
+<label for="nom">Nom:</label><input id="nom" list="nomL" name="nom" type="text" autocomplete="off" onblur="Avertir(this)" placeholder="Nom de famille"><datalist id="nomL"><option value="minta"><option value="traore"><option value="iloba"><option value="gnaore"><option value="zerbo"><option value="kouadio"><option value="magone"><option value="abi"><option value="kanon"><option value="keita"><option value="kone"><option value="naon"></datalist><br><label for="prenoms">Prénoms:</label><input list="prenomsL" id="prenoms" name="prenoms" type="text" autocomplete="off" onblur="Avertir(this)"><datalist id="prenomsL"><option value="fatoumata"><option value="kadiatou"><option value="sharon"><option value="noe"><option value="yaya"><option value="phanuelle"><option value="flore"><option value="lou kouezan"><option value="dahio"><option value="valencia"><option value="mawa"><option value="madou"><option value="foussenan"></datalist><br><label for="Sexe">Sexe:</label><select name="Sexe"  id="Sexe" style="width: 188px;margin-bottom:5px; height: 23px;" onblur="Avertir(this)"><option></option><option>M</option><option>F</option></select><br>
 <label for="Telephone">Téléphone:</label><input name="Telephone" type="tel" id="Telephone"  onblur="Avertir(this)" placeholder="numero a 10 chiffres"><br>
-<label for="Diagnostic_Clinique">Diagnostic Clinique:</label><input list="dc" name="Diagnostic_Clinique" type="text" autocomplete="off" id="Diagnostic_Clinique" onblur="Avertir(this)" placeholder="categorie du mal"><datalist id="dc"><option value="Bilan de santé"></datalist><br>
-<label for="Prescripteur">Prescripteur:</label><input  name="Prescripteur" type="text" autocomplete="off" list="prs" id="Prescripteur" onblur="Avertir(this)" placeholder="provenance du Bull"> <datalist id="prs"><option value="dr diarra"><option value="Kathanase"></datalist><br>
-<label for="Biotechnologiste">Biotechnologiste:</label><input  name="Biotechnologiste" type="text" autocomplete="off" list="btech" id="Biotechnologiste" onblur="Avertir(this)" placeholder="Nom du technicien"><datalist id="btech"><option value="kouadio yao"><option value="amani yao"><option value="kouadio yao athanase"><option value="on"><option value="12000"></datalist><br>
-<label for="PrixdesExamensouStatut">Prix/statut:</label><input  name="PrixdesExamensouStatut" type="text" id="PrixdesExamensouStatut" onblur="Avertir(this)" placeholder="Montant ou assuré(e)"><br>
+<label for="DiagnosticClinique">Diagnostic Clinique:</label><input list="dc" name="DiagnosticClinique" type="text" autocomplete="off" id="DiagnosticClinique" onblur="Avertir(this)" placeholder="categorie du mal"><datalist id="dc"><option value="fièvre au long court"><option value="Bilan de sante"><option value="fièvre noctune"><option value="fièvre subite"><option value="bilan prénatal"></datalist><br><label for="Prescripteur">Prescripteur:</label><input  name="Prescripteur" type="text" autocomplete="off" list="prs" id="Prescripteur" onblur="Avertir(this)" placeholder="provenance du Bull"><datalist id="prs"><option value="dr konate"><option value="vieux coul"><option value="dr diarra"><option value="sg angele"><option value="externe"></datalist><br><label for="Biotechnologiste">Biotechnologiste:</label><input  name="Biotechnologiste" type="text" autocomplete="off" list="btech" id="Biotechnologiste" onblur="Avertir(this)" placeholder="Nom du technicien"><datalist id="btech"><option value="amani"><option value="kouadio athanase"><option value="amani sans fil"></datalist><br>
+<label for="PrixExamens">Prix/statut:</label><input  name="PrixExamens" type="text" id="PrixExamens" onblur="Avertir(this)" placeholder="Montant ou assuré(e)"><br>
 <label for="DateduPrelevement">Date Prelevement:</label><input  name="DateduPrelevement" type="date" id="DateduPrelevement"  onblur="Avertir(this)" ><br>
-
 <span style="display:inline-block;width:186px;height:37px;border:thin black solid;margin-left:275px">
 <span id="Lalphb1" style="font-size:14.5px;text-align:right;letter-spacing:1.3px">
 <span style="text-decoration:underline;font-size:9px;letter-spacing:0px;text-align:left">Ordre A-Z:</span>
@@ -23,7 +20,6 @@
 <br><span id="Lalphb2" style="font-size:14.5px;letter-spacing:1px;padding-left:38px">
 <a>N</a>O<a>P</a><a>Q</a><a>R</a><a>S</a><a>T</a><a>U</a><a>V</a><a>W</a>XYZ</span>
 </span><br>
-
 <p id="lbExamensDemandes" style="display:inline-block;width:271px;vertical-align:75px;font-family:courier New;text-align:right">Examens Demandés:</p>
 <div id="ExamensDemandes" style="display:inline-block;width:186px;height:150px;overflow-y:auto;border:thin black solid;margin-bottom:1px">
 <span id="lchx"><a id="lA" href="">A</a><br>
@@ -37,8 +33,7 @@
 <label for="albm">Albumine</label><input id="albm" name="albm" type="checkbox"><br>
 <label for="albmu">Albuminurie</label><input id="albmu" name="albmu" type="checkbox"><br>
 <label for="Asl">ASLO</label><input id="Asl" name="Asl" type="checkbox"><br>
-<a id="lB" href="">B</a><br>
-<label for="bhcg">Beta HCG(Sg)</label><input id="bhcg" name="bhcg" type="checkbox"><br>
+<a id="lB" href="">B</a><br><label for="bhcg">Beta HCG(Sg)</label><input id="bhcg" name="bhcg" type="checkbox"><br>
 <label for="bhcgu">Beta HCG(ur)</label><input id="bhcgu" name="bhcgu" type="checkbox"><br>
 <label for="bilh">Bilharziose</label><input id="bilh" name="bilh" type="checkbox"><br>
 <label for="biliC">Bilirubine Conj.</label><input id="biliC" name="biliC" type="checkbox"><br>
@@ -61,7 +56,8 @@
 <label for="dfgl">DFG</label><input id="dfgl" name="dfgl" type="checkbox"><br><br>
 <a id="lE" href="">E</a><br>
 <label for="ecbu">ECBU</label><input name="ecbu" type="checkbox" id="ecbu"><br>
-<label for="Eps">Electrophorèse.Prot.Sq</label><input id="Eps" name="Eps" type="checkbox"><br>
+<label for="Ehs">Electrophorèse Hb.</label><input id="Ehs" name="Ehs" type="checkbox"><br>
+<label for="Eps">Electrophorèse Prot.S</label><input id="Eps" name="Eps" type="checkbox"><br>
 <label for="est">Estradiol</label><input id="est" name="est" type="checkbox"><br>&nbsp;<br>
 <a id="lF" href="">F</a>
 <label for="Fr">Fact.Rhumat.(FR)</label><input id="Fr" name="Fr" type="checkbox"><br>
@@ -94,6 +90,8 @@
 <label for="nfs">NFS</label><input id="nfs" name="nfs" type="checkbox"><br>&nbsp;<br>
 <a id="lP" href="">P</a><br>
 <label for="pal">Phosphat.Alc</label><input id="pal" name="pal" type="checkbox"><br>
+<label for="potassium">Potassium</label><input id="potassium" name="potassium" type="checkbox"><br>
+<label for="potassiumU">Potassium</label><input id="potassiumU" name="potassiumU" type="checkbox"><br>
 <label for="proges">Progesterone</label><input id="proges" name="proges" type="checkbox"><br>
 <label for="prolac">Prolactinemie</label><input id="prolac" name="prolac" type="checkbox"><br>
 <label for="Ptu">Proteinurie</label><input id="Ptu" name="Ptu" type="checkbox"><br>
@@ -107,7 +105,7 @@
 <a id="lR" href="">R</a><br>
 <label for="Rsv">Res.Alcal.</label><input id="Rsv" name="Rsv" type="checkbox"><br>
 <label for="Rbl">Rubeole</label><input id="Rbl" name="Rbl" type="checkbox"><br>&nbsp;<br>
- <a id="lS" href="">S</a><br>
+<a id="lS" href="">S</a><br>
 <label for="spermoC">Spermoculture</label><input id="spermoC" name="spermoC" type="checkbox">
 <label for="Spmg">Spermocytogramme</label><input id="Spmg" name="Spmg" type="checkbox"><br>
 <label for="Spct">Spermogramme</label><input id="Spct" name="Spct" type="checkbox"><br>&nbsp;<br>
@@ -127,8 +125,7 @@
 <a id="lW" href="">W</a>
 <label for="Wrs">Waaler-Rose</label><input id="Wrs" name="Wrs" type="checkbox"><br>
 <label for="wf" style="display:inline-block;height:120px">Widal et Felix</label><input id="wf" name="wf" type="checkbox"><br></span>
-</div><br>
-<hr style="margin-top:50px">
+</div><br><hr style="margin-top:50px">
 <h1 style="text-align:center;color:#275280">EXAMENS BIOLOGIQUES</h1><hr><h3>inflammation</h3>
 <p><label for="VS1ereHEURE"><span style="background-color: #00F3FF">VS</span>/1ère HEURE:</label><input name="VS1ereHEURE" type="number"  step="0.01" id="VS1ereHEURE" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="< 7"> <label for="VS2iemeHEURE" >2ième HEURE:</label><input name="VS2iemeHEURE" type="number"  step="0.01" id="VS2iemeHEURE" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="< 20"></p>
 <h3>ionogramme</h3><p>
@@ -177,7 +174,7 @@
 <label for="Beta">Beta:</label><input name="Beta"  type="number"  step="0.01" id="Beta" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="5-12"><br>
 <label for="Gamma">Gamma:</label><input name="Gamma"  type="number"  step="0.01" id="Gamma" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="8-16">
 </div><h3>ionogramme Urinaire</h3><p>
-<label for="PotassiumU" >Potassium(k+):</label><input name="PotassiumU" type="number"  step="0.01" id="PotassiumU" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="50-100">
+<label for="PotassiumU" >Potassium Urine(k+):</label><input name="PotassiumU" type="number"  step="0.01" id="PotassiumU" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="50-100">
 <label for="SodiumU">Sodium(Na+):</label><input name="SodiumU" type="number"  step="0.01" id="SodiumU" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="100-300">
 <label for="ChloreU">Chlore(Cl-):</label><input name="ChloreU" type="number"  step="0.01" id="ChloreU" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="80-270">
 </p><h3>bilan glycemique</h3><div>
@@ -209,7 +206,7 @@
 <label for="Fibrinemie">Fibrinémie:</label><input name="Fibrinemie" type="number"  step="0.01" id="Fibrinemie" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="2-4"><br>
 <label for="INR">INR(InternationalNormalizedRatio):</label><input name="INR" type="number"  step="0.01" id="INR" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="< 1"><br><br>
 </div><div>
-<label for="Electrophoresehemoglobine" >Electrophorèse Hb:</label><select name="Electrophoresehemoglobine" id="Electrophoresehemoglobine" style="width:64px;text-align:center" onblur="fChpLib(this)" onfocus="fChpSel(this)"><option></option><option>A1A2</option><option>AC</option><option>SC</option><option>SS</option><option>AF</option></select><br>
+<label for="Electrophorese_Hemoglobine" >Electrophorèse Hb:</label><select name="Electrophorese_Hemoglobine" id="Electrophorese_Hemoglobine" style="width:64px;text-align:center" onblur="fChpLib(this)" onfocus="fChpSel(this)"><option></option><option>A1A2</option><option>AC</option><option>SC</option><option>SS</option><option>AF</option></select><br>
 <label for="ElectroHBA1">A1:</label><input name="ElectroHBA1" type="number"  step="0.01" id="ElectroHBA1" onblur="fChpLib(this)" onfocus="fChpSel(this)">
 <label for="ElectroHBA2">A2:</label><input name="ElectroHBA2" type="number"  step="0.01" id="ElectroHBA2" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
 <label for="ElectroHBS">S:</label><input name="ElectroHBS" type="number"  step="0.01" id="ElectroHBS" onblur="fChpLib(this)" onfocus="fChpSel(this)">
@@ -274,14 +271,14 @@ overflow-y:auto;text-align:left;padding-left:20px;background-color:aqua;display:
 <a id="A" href="">A</a><a>ACHBC</a><a>ACHBe</a><a>ACHBS</a><a>ACHVC</a><a>Acide_Urique</a><a>AgHBe</a><a>AgHBS</a><a>Albumine</a><a>Albuminurie</a><a>ASLO</a>
 <a id="B" href="">B</a><a>bHCG_plasma</a><a>bHCG_Uri</a><a>Bilharziose</a><a>Bilirubine_Conj</a><a>Bilirubine_Tot</a><a>BW</a>
 <a id="C" href="">C</a><a>Calcium</a><a>Chlamydia</a><a>Cholesterol_HDL</a><a>Cholesterol_LDL</a><a>Cholesterol_Tot</a><a>Clairance_Creatininurie</a><a>Coproculture</a><a>Cortisol</a><a>CPK</a><a>CK_mb</a><a>Creatinine</a><a>CRP</a>
-<a id="D" href="">D</a><a>DFG</a><a id="E" href="">E</a><a target="_blank">ECBU</a><a>Electrophorese_Proteines</a><a>Estradiol</a>
+<a id="D" href="">D</a><a>DFG</a><a id="E" href="">E</a><a target="_blank">ECBU</a><a>Electrophorese_Hemoglobine</a><a>Electrophorese_Proteines</a><a>Estradiol</a>
 <a id="F" href="">F</a><a>Facteur_Rhumatoide</a><a>Fibrinemie</a><a>FSH</a>
 <a id="G" href="">G</a><a>GAMMA_GT</a><a>Glycemie</a><a>Glycemie_PPrandiale</a><a>Glycorachie</a><a>Glycosurie</a><a>Goutte_Epaisse</a><a>Groupe_Sanguin</a>
 <a id="H" href="">H</a><a>HAV_IgM</a><a>HBA1C</a>
 <a id="I" href="">I</a><a>INR</a><a>Ionogramme_Sang</a><a>Ionogramme_Uri</a>
 <a id="L" href="">L</a><a target="_blank">LCR</a><a>LDH</a><a>LH_RH</a><a>Lipide_Tot</a>
 <a id="M" href="">M</a><a>Magnesium</a><a>Mycoplasme</a><a id="N" href="">N</a><a>NFS</a>
-<a id="P" href="">P</a><a>Phosphatases_Alcalines</a><a>Progesterone</a><a>Prolactinemie</a><a>Proteinurie</a><a>Proteinurie_24h</a><a>Protides_Tot</a><a>PSA</a><a>PU</a><a>PV</a>
+<a id="P" href="">P</a><a>Phosphatases_Alcalines</a><a>Potassium</a><a>PotassiumU</a><a>Progesterone</a><a>Prolactinemie</a><a>Proteinurie</a><a>Proteinurie_24h</a><a>Protides_Tot</a><a>PSA</a><a>PU</a><a>PV</a>
 <a id="Q" href="">Q</a><a>QBC</a>
 <a id="R" href="">R</a><a>Reserve_Alcalin</a><a>Rubeole</a><a id="S" href="">S</a><a>Spermoculture</a><a>Spermocytogramme</a><a>Spermogramme</a>
 <a id="T" href="">T</a><a>T3_libre</a><a>T4_libre</a><a>TP</a><a>TCK</a><a>Toxoplasmose</a><a>Transaminases</a><a>Triglycerides</a><a>TSH</a>
@@ -295,7 +292,6 @@ overflow-y:auto;text-align:left;padding-left:20px;background-color:aqua;display:
 </span></span><span id="RMenuP"style="position:fixed;bottom:220px;right:35px;display:grid">
 <a style="font-size:30px;margin-bottom:0px">&#x1F3E0;</a>
 <a style="font-size:12px" >accueil</a></span></form><script>
-
 for (var i = 0; i < document.getElementById("Lalphb1").querySelectorAll("a").length; i++){document.getElementById("Lalphb1").querySelectorAll("a")[i].style.color = "blue";}
 for (var i = 0; i < document.getElementById("Lalphb1").querySelectorAll("a").length; i++){document.getElementById("Lalphb1").querySelectorAll("a")[i].style.cursor = "pointer";}
 for (var i = 0; i < document.getElementById("Lalphb2").querySelectorAll("a").length; i++){document.getElementById("Lalphb2").querySelectorAll("a")[i].style.color = "blue";}
@@ -320,17 +316,17 @@ for (var i = 0; i < document.getElementById("RMenuP").children.length; i++)
 {document.getElementById("RMenuP").children[i].style.cursor = "pointer";}
 function chgC(e) {var LtrC = e.target.textContent;document.getElementById(LtrC).focus();
 document.getElementById(LtrC).style.backgroundColor = "#468FC5";}
-for (var i = 0; i < document.getElementById("LMenu").querySelectorAll("a").length; i++) {
+for (var i = 0; i < document.getElementById("LMenu").querySelectorAll("a").length; i++){
 var aspL1=document.getElementById("LMenu").querySelectorAll("a")[i].href?
 (document.getElementById("LMenu").querySelectorAll("a")[i].style.pointerEvents = "none",
 document.getElementById("LMenu").querySelectorAll("a")[i].style.textDecoration = "none",
-document.getElementById("LMenu").querySelectorAll("a")[i].style.color = "red"):                    
+document.getElementById("LMenu").querySelectorAll("a")[i].style.color = "red"):
 (document.getElementById("LMenu").querySelectorAll("a")[i].style.color = "blue",
 document.getElementById("LMenu").querySelectorAll("a")[i].style.cursor = "pointer",
 document.getElementById("LMenu").querySelectorAll("a")[i].addEventListener("click", AtChp));}
 for (var i = 0; i < document.getElementById("RMenuP").children.length; i++)
 {document.getElementById("RMenuP").children[i].addEventListener("click", AtChp);}
- function AtChp(e){var LtrC = e.target.textContent;
+function AtChp(e){var LtrC = e.target.textContent;
 var Cchp = LtrC ==="Coproculture"||LtrC ==="ECBU"||LtrC ==="LCR"||LtrC ==="PU"
 ||LtrC ==="PV"||LtrC ==="Spermoculture"||LtrC ==="Spermocytogramme"
 ||LtrC ==="Spermogramme"||LtrC ==="Spermogramme"?
@@ -344,18 +340,18 @@ document.getElementById("Goutte_Epaisse").focus():LtrC==="Facteur_Rhumatoide"?
 document.getElementById("Waaler_Rose").focus():LtrC==="🏠"?
 document.getElementById("Entree").focus():LtrC==="accueil"?
 document.getElementById("Entree").focus():document.getElementById(LtrC).focus();}
-for (var i= 0; i < 9; i++){document.querySelectorAll("label")[i].style.display="inline-block";}
-for (var i= 0; i < 9; i++){document.querySelectorAll("label")[i].style.width="275px";}
-for (var i= 0; i < 9; i++){document.querySelectorAll("label")[i].style.textAlign="right";}
-for (var i= 0; i < 7; i++){document.querySelectorAll("input")[i].style.width="180px";}
-document.querySelectorAll("input")[7].style.width="184px";
-for (var i= 0; i < 8; i++){document.querySelectorAll("input")[i].style.fontSize="15px";}
-for (var i= 0; i < 8; i++){document.querySelectorAll("input")[i].style.marginBottom="5px";}
-for (var i= 0; i < 8; i++){document.querySelectorAll("input")[i].style.textTransform="capitalize";}
-for (var i= 89; i<document.querySelectorAll("input").length-4 ; i++){document.querySelectorAll("input")[i].style.width="85px";}
-for (var i= 89; i<document.querySelectorAll("input").length-4 ; i++){document.querySelectorAll("input")[i].style.textAlign="center";}
+for (var i= 0; i <10; i++){document.querySelectorAll("label")[i].style.display="inline-block";}
+for (var i= 0; i <10; i++){document.querySelectorAll("label")[i].style.width="275px";}
+for (var i= 0; i <10; i++){document.querySelectorAll("label")[i].style.textAlign="right";}
+for (var i= 1; i <8; i++){document.querySelectorAll("input")[i].style.width="180px";}
+document.querySelectorAll("input")[8].style.width="184px";
+for (var i= 1; i < 9; i++){document.querySelectorAll("input")[i].style.fontSize="15px";}
+for (var i= 0; i < 9; i++){document.querySelectorAll("input")[i].style.marginBottom="5px";}
+for (var i= 1; i < 9; i++){document.querySelectorAll("input")[i].style.textTransform="capitalize";}
+for (var i= 93; i<document.querySelectorAll("input").length-4 ; i++){document.querySelectorAll("input")[i].style.width="85px";}
+for (var i= 93; i<document.querySelectorAll("input").length-4 ; i++){document.querySelectorAll("input")[i].style.textAlign="center";}
 for (var i= 1; i<document.querySelectorAll("select").length ; i++){document.querySelectorAll("select")[i].style.width="93px";}
-for (var i= 92; i<document.querySelectorAll("label").length ; i++){document.querySelectorAll("label")[i].style.display="inline-block";}
+for (var i= 95; i<document.querySelectorAll("label").length ; i++){document.querySelectorAll("label")[i].style.display="inline-block";}
 for (var i= 0; i<document.querySelectorAll("label").length ; i++){document.querySelectorAll("label")[i].style.fontFamily="courier New";}
 for (var i= 0; i<document.querySelectorAll("input,select").length ; i++){document.querySelectorAll("input,select")[i].style.fontFamily="courier New";}
 for (var i= 0; i<document.querySelectorAll("input[type=button]").length ; i++){document.querySelectorAll("input[type=button]")[i].style.fontFamily="bookman Old Style";}
@@ -391,11 +387,10 @@ for(var j=0;j<document.querySelectorAll("div")[i].querySelectorAll("label").leng
 {document.querySelectorAll("div")[i].querySelectorAll("label")[j].style.textAlign="right";}}
 let myInterval;function fChpSel(cel){
 cel.previousSibling.style.backgroundColor ="blue";
-cel.style.backgroundColor="";cel.style.color="";
-cel.style.fontWeight="";
+cel.style.backgroundColor="";cel.style.color="";cel.style.fontWeight="";
 myInterval = setInterval(()=>{cel.previousSibling.style.color = "white"
 cel.previousSibling.style.backgroundColor = 
-cel.previousSibling.style.backgroundColor == "blue" ? "green" : 
+cel.previousSibling.style.backgroundColor == "blue" ? "green" :
 cel.previousSibling.style.backgroundColor =="green"?"red":"blue";}, 500)}
 function fChpLib(cel){clearInterval(myInterval);
 cel.previousSibling.style.backgroundColor = "";
@@ -428,26 +423,24 @@ refs=cel.placeholder.split("-"),CdtC=cel.value < parseFloat(refs[0])?
 (cel.style.backgroundColor="aqua",cel.style.color="red",cel.style.fontWeight="bold"):"");
 myInterval = setInterval(()=>{cel.previousSibling.style.color = "white"
 cel.previousSibling.style.backgroundColor = 
-cel.previousSibling.style.backgroundColor == "blue" ? "green" : 
+cel.previousSibling.style.backgroundColor == "blue" ? "green" :
 cel.previousSibling.style.backgroundColor =="green"?"red":"blue";}, 500)}
 function fChpLibC(cel){clearInterval(myInterval);
 cel.previousSibling.style.backgroundColor = "";
 cel.previousSibling.style.color = ""}
-var btn_vld= document.getElementById("vld");
-btn_vld.addEventListener('click',vd_pgweb);
-function vd_pgweb(event){let Rtab=[],fTab;
-for (var i= 0; i<9 ; i++){
+var btn_vld= document.getElementById("vld");btn_vld.addEventListener('click',vd_pgweb);
+function vd_pgweb(event){let Rtab=[],fTab;for (var i=1; i<10 ; i++){
 fTab += Rtab.push(document.querySelectorAll("input,select")[i].value)}
 let Rtab2=[];
-var PrixdesExamensouStatut = document.getElementById("PrixdesExamensouStatut").value;
+var PrixExamens = document.getElementById("PrixExamens").value;
 var Telephone = document.getElementById("Telephone").value, negTx="", btn_evt ="";
-for (var i= 0; i<9 ; i++){
-var fxBlcg=document.querySelectorAll("input,select")[i].value==="" && 
+for (var i=1; i<10 ; i++){
+var fxBlcg=document.querySelectorAll("input,select")[i].value==="" &&
 document.querySelectorAll("input,select")[i].nextElementSibling.nodeName!=="SPAN"?
 (negTx= document.createElement("span"),
 negTx.textContent=" *Champ obligatoire",negTx.style.color="red",
 document.querySelectorAll("input,select")[i].after(negTx))
-:document.querySelectorAll("input,select")[i].value==="" && 
+:document.querySelectorAll("input,select")[i].value==="" &&
 document.querySelectorAll("input,select")[i].nextElementSibling.nodeName==="SPAN"?
 (document.querySelectorAll("input,select")[i].nextElementSibling.remove(),
 negTx= document.createElement("span"),
@@ -455,15 +448,13 @@ negTx.textContent=" *Champ obligatoire",negTx.style.color="red",
 document.querySelectorAll("input,select")[i].after(negTx)):"";}
 var tstTel=!/^\w{10}$/.test(Telephone) &&
 document.getElementById("Telephone").nextElementSibling.nodeName!=="SPAN" &&
-Telephone!==""?
-(negTx= document.createElement("span"),
+Telephone!==""?(negTx= document.createElement("span"),
 negTx.textContent=" *Exactement 10 chiffres.Merci!",
 negTx.style.color="#275280",negTx.style.fontWeigth="bold",
 document.getElementById("Telephone").after(negTx))
 :!/^\w{10}$/.test(Telephone) &&
 document.getElementById("Telephone").nextElementSibling.nodeName==="SPAN" &&
-Telephone!==""?
-(document.getElementById("Telephone").nextElementSibling.remove(),
+Telephone!==""?(document.getElementById("Telephone").nextElementSibling.remove(),
 negTx= document.createElement("span"),
 negTx.textContent=" *Exactement 10 chiffres.Merci!",
 negTx.style.color="#275280",negTx.style.fontWeigth="bold",
@@ -478,22 +469,22 @@ document.getElementById("Telephone").nextElementSibling.nodeName==="SPAN"?
 negTx= document.createElement("span"),negTx.textContent=" *Uniquement [0-9]",
 negTx.style.color="#275280",negTx.style.fontWeigth="bold",
 document.getElementById("Telephone").after(negTx)):"";
-var tstPrix=/[a-z]/.test(PrixdesExamensouStatut) && /\d/.test(PrixdesExamensouStatut) 
-&& document.getElementById("PrixdesExamensouStatut").nextElementSibling.nodeName!=="SPAN"?
+var tstPrix=/[a-z]/.test(PrixExamens) && /\d/.test(PrixExamens)
+&& document.getElementById("PrixExamens").nextElementSibling.nodeName!=="SPAN"?
 (negTx= document.createElement("span"),
 negTx.textContent=" *Uniquement (Chiffres ou Lettres)",
 negTx.style.color="#275280",negTx.style.fontWeigth="bold",
-document.getElementById("PrixdesExamensouStatut").after(negTx))
-:/[a-z]/.test(PrixdesExamensouStatut) && /\d/.test(PrixdesExamensouStatut) 
-&& document.getElementById("PrixdesExamensouStatut").nextElementSibling.nodeName==="SPAN"?
-(document.getElementById("PrixdesExamensouStatut").nextElementSibling.remove(),
+document.getElementById("PrixExamens").after(negTx))
+:/[a-z]/.test(PrixExamens) && /\d/.test(PrixExamens)
+&& document.getElementById("PrixExamens").nextElementSibling.nodeName==="SPAN"?
+(document.getElementById("PrixExamens").nextElementSibling.remove(),
 negTx= document.createElement("span"),
 negTx.textContent=" *Uniquement (Chiffres ou Lettres)",
 negTx.style.color="#275280",negTx.style.fontWeigth="bold",
-document.getElementById("PrixdesExamensouStatut").after(negTx)):"";
+document.getElementById("PrixExamens").after(negTx)):"";
 for (var i=90 ; i<document.querySelectorAll("input,select").length ; i++){
 var tstEnv= Rtab.includes("")||
-/[a-z]/.test(PrixdesExamensouStatut) && /\d/.test(PrixdesExamensouStatut)||
+/[a-z]/.test(PrixExamens) && /\d/.test(PrixExamens)||
 /\D/.test(Telephone)||!/^\w{10}$/.test(Telephone)?event.preventDefault():
 document.querySelectorAll("input,select")[i].value.trim()===""?
 (document.querySelectorAll("input,select")[i].previousElementSibling.remove(),
@@ -508,4 +499,34 @@ var ActLibCel=cel.value!=="" && cel.nextElementSibling.textContent===" *Champ ob
 cel.value!=="" && cel.nextElementSibling.textContent===" *Uniquement [0-9]"||
 cel.value!=="" && cel.nextElementSibling.textContent===" *Exactement 10 chiffres.Merci!"||
 cel.value!=="" && cel.nextElementSibling.textContent===" *Uniquement (Chiffres ou Lettres)"?
-cel.nextElementSibling.remove():"";}</script></body></html>
+cel.nextElementSibling.remove():"";}
+
+
+let exa_Grp={_id:"695802f4acdf4e8d45839a52",nom:"naon",prenoms:"foussenan",Sexe:"M",Telephone:"2510365239",DiagnosticClinique:"Bilan de sante",Prescripteur:"vieux coul",Biotechnologiste:"kouadio athanase",PrixExamens:"12000",DateduPrelevement:"2026-01-02",acq:"on",Asl:"on",Ca:"on",chtt:"on",crea:"on",Crp:"on",gly:"on",ge:"on",Mg:"on",nfs:"on",potassium:"on",transa:"on",tgl:"on",wf:"on",Potassium:"3.7",Magnesium:"19",Calcium:"83",Triglycerides:".9",Cholesterol_Tot:"6.4",TGO:"18",TGP:"28",Creatinine:"11",Acide_Urique:"15",Glycemie:".95",nfsLeucocytes:"9",nfsHematies:"6",nfsHemoglobine:"8",nfsHematocrite:"5",nfsVGM:"2",nfsTCMH:"4",nfsCCMH:"5",nfsPlaquette:"8",nfsPN:"5",nfsPE:"2",nfsPB:"4",nfsLY:"5",nfsMn:"8",Widal_Felix:"POSITIVE",TO:"200",ASLO:"NEGATIVE",CRP:"NEGATIVE",Goutte_Epaisse:"POSITIVE",tGE:"575",};
+var TypChp= document.querySelectorAll("input,select");
+let CvED=exa_Grp.Examens_Demandes.split(","),TxExam="",ExamSlt=[];
+
+for (var i= 0; i < lgn_chp.length; i++)
+{
+if(TypChp[i].nodeName==="INPUT"){TypChp[i].value= exa_Grp[TypChp[i].name]}
+
+else if(TypChp[i].type==="checkbox"){
+for(let[x,y] of Object.entries(exa_Grp)){if (y==="on"){TxExam += ExamSlt.push(x);}}
+for (var j= 0; j < ExamSlt[j].length; j++){
+document.getElementById(ExamSlt[j]).checked="checked";
+
+/*let NvS=document.createElement("option");NvS.selected="selected";NvS.textContent=CvED[m];*/
+}
+
+
+/*for (var j= 0; j < TypChp[i].firstElementChild.children.length; j++)
+{let cph=lgn_chp[i].firstElementChild.children[j].textContent;
+for (var l= 0; l < lgn_chp[i].firstElementChild.children[j].children.length; l++){for (var m= 0; m < CvED.length; m++){
+if(lgn_chp[i].firstElementChild.children[j].children[l].textContent===CvED[m]){let NvS=document.createElement("option");NvS.selected="selected";NvS.textContent=CvED[m];
+lgn_chp[i].firstElementChild.children[j].children[l].replaceWith(NvS);}}}}*/
+
+}
+
+else {lgn_chp[i].firstElementChild.firstElementChild.textContent= exa_Grp[lgn_chp[i].firstElementChild.name]}}
+
+</script></body></html>

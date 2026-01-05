@@ -6,7 +6,7 @@
 <div style="text-align:center;margin-bottom:20px" >
 <img alt="encart" height="91" src="imageTest2.jpg" width="730"><br></div>
 <form action="transit.html" method="post">
-<label for="nom">Nom:</label><input id="nom" list="nomL" name="nom" type="text" autocomplete="off" onblur="Avertir(this)" placeholder="Nom de famille"><datalist id="nomL"><option value="minta"><option value="traore"><option value="iloba"><option value="gnaore"><option value="zerbo"><option value="kouadio"><option value="magone"><option value="abi"></datalist><br><label for="prenoms">Prénoms:</label><input list="prenomsL" id="prenoms" name="prenoms" type="text" autocomplete="off" onblur="Avertir(this)"><datalist id="prenomsL"><option value="fatoumata"><option value="kadiatou"><option value="sharon"><option value="noe"><option value="yaya"><option value="phanuelle"><option value="flore"><option value="lou kouezan"><option value="dahio"></datalist><br><label for="Sexe">Sexe:</label><select name="Sexe"  id="Sexe" style="width: 188px;margin-bottom:5px; height: 23px;" onblur="Avertir(this)"><option></option><option>M</option><option>F</option></select><br>
+<label for="nom">Nom:</label><input id="nom" list="nomL" name="nom" type="text" autocomplete="off" onblur="Avertir(this)" placeholder="Nom de famille"><datalist id="nomL"><option value="minta"><option value="traore"><option value="iloba"><option value="gnaore"><option value="zerbo"><option value="kouadio"><option value="magone"><option value="abi"><option value="kanon"><option value="keita"><option value="kone"><option value="naon"></datalist><br><label for="prenoms">Prénoms:</label><input list="prenomsL" id="prenoms" name="prenoms" type="text" autocomplete="off" onblur="Avertir(this)"><datalist id="prenomsL"><option value="fatoumata"><option value="kadiatou"><option value="sharon"><option value="noe"><option value="yaya"><option value="phanuelle"><option value="flore"><option value="lou kouezan"><option value="dahio"><option value="valencia"><option value="mawa"><option value="madou"><option value="foussenan"></datalist><br><label for="Sexe">Sexe:</label><select name="Sexe"  id="Sexe" style="width: 188px;margin-bottom:5px; height: 23px;" onblur="Avertir(this)"><option></option><option>M</option><option>F</option></select><br>
 <label for="Telephone">Téléphone:</label><input name="Telephone" type="tel" id="Telephone"  onblur="Avertir(this)" placeholder="numero a 10 chiffres"><br>
 <label for="DiagnosticClinique">Diagnostic Clinique:</label><input list="dc" name="DiagnosticClinique" type="text" autocomplete="off" id="DiagnosticClinique" onblur="Avertir(this)" placeholder="categorie du mal"><datalist id="dc"><option value="fièvre au long court"><option value="Bilan de sante"><option value="fièvre noctune"><option value="fièvre subite"><option value="bilan prénatal"></datalist><br><label for="Prescripteur">Prescripteur:</label><input  name="Prescripteur" type="text" autocomplete="off" list="prs" id="Prescripteur" onblur="Avertir(this)" placeholder="provenance du Bull"><datalist id="prs"><option value="dr konate"><option value="vieux coul"><option value="dr diarra"><option value="sg angele"><option value="externe"></datalist><br><label for="Biotechnologiste">Biotechnologiste:</label><input  name="Biotechnologiste" type="text" autocomplete="off" list="btech" id="Biotechnologiste" onblur="Avertir(this)" placeholder="Nom du technicien"><datalist id="btech"><option value="amani"><option value="kouadio athanase"><option value="amani sans fil"></datalist><br>
 <label for="PrixExamens">Prix/statut:</label><input  name="PrixExamens" type="text" id="PrixExamens" onblur="Avertir(this)" placeholder="Montant ou assuré(e)"><br>
@@ -31,8 +31,7 @@
 <label for="albm">Albumine</label><input id="albm" name="albm" type="checkbox"><br>
 <label for="albmu">Albuminurie</label><input id="albmu" name="albmu" type="checkbox"><br>
 <label for="Asl">ASLO</label><input id="Asl" name="Asl" type="checkbox"><br>
-<a id="lB" href="">B</a><br><label for="bhcg">Beta HCG(plasma)</label>
-<input id="bhcg" name="bhcg" type="checkbox"><br>
+<a id="lB" href="">B</a><br><label for="bhcg">Beta HCG(Sg)</label><input id="bhcg" name="bhcg" type="checkbox"><br>
 <label for="bhcgu">Beta HCG(ur)</label><input id="bhcgu" name="bhcgu" type="checkbox"><br>
 <label for="bilh">Bilharziose</label><input id="bilh" name="bilh" type="checkbox"><br>
 <label for="biliC">Bilirubine Conj.</label><input id="biliC" name="biliC" type="checkbox"><br>
@@ -55,7 +54,8 @@
 <label for="dfgl">DFG</label><input id="dfgl" name="dfgl" type="checkbox"><br><br>
 <a id="lE" href="">E</a><br>
 <label for="ecbu">ECBU</label><input name="ecbu" type="checkbox" id="ecbu"><br>
-<label for="Eps">Electrophorèse.Prot.Sq</label><input id="Eps" name="Eps" type="checkbox"><br>
+<label for="Ehs">Electrophorèse Hb.</label><input id="Ehs" name="Ehs" type="checkbox"><br>
+<label for="Eps">Electrophorèse Prot.S</label><input id="Eps" name="Eps" type="checkbox"><br>
 <label for="est">Estradiol</label><input id="est" name="est" type="checkbox"><br>&nbsp;<br>
 <a id="lF" href="">F</a>
 <label for="Fr">Fact.Rhumat.(FR)</label><input id="Fr" name="Fr" type="checkbox"><br>
@@ -88,6 +88,8 @@
 <label for="nfs">NFS</label><input id="nfs" name="nfs" type="checkbox"><br>&nbsp;<br>
 <a id="lP" href="">P</a><br>
 <label for="pal">Phosphat.Alc</label><input id="pal" name="pal" type="checkbox"><br>
+<label for="potassium">Potassium</label><input id="potassium" name="potassium" type="checkbox"><br>
+<label for="potassiumU">Potassium</label><input id="potassiumU" name="potassiumU" type="checkbox"><br>
 <label for="proges">Progesterone</label><input id="proges" name="proges" type="checkbox"><br>
 <label for="prolac">Prolactinemie</label><input id="prolac" name="prolac" type="checkbox"><br>
 <label for="Ptu">Proteinurie</label><input id="Ptu" name="Ptu" type="checkbox"><br>
@@ -170,7 +172,7 @@
 <label for="Beta">Beta:</label><input name="Beta"  type="number"  step="0.01" id="Beta" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="5-12"><br>
 <label for="Gamma">Gamma:</label><input name="Gamma"  type="number"  step="0.01" id="Gamma" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="8-16">
 </div><h3>ionogramme Urinaire</h3><p>
-<label for="PotassiumU" >Potassium(k+):</label><input name="PotassiumU" type="number"  step="0.01" id="PotassiumU" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="50-100">
+<label for="PotassiumU" >Potassium Urine(k+):</label><input name="PotassiumU" type="number"  step="0.01" id="PotassiumU" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="50-100">
 <label for="SodiumU">Sodium(Na+):</label><input name="SodiumU" type="number"  step="0.01" id="SodiumU" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="100-300">
 <label for="ChloreU">Chlore(Cl-):</label><input name="ChloreU" type="number"  step="0.01" id="ChloreU" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="80-270">
 </p><h3>bilan glycemique</h3><div>
@@ -202,7 +204,7 @@
 <label for="Fibrinemie">Fibrinémie:</label><input name="Fibrinemie" type="number"  step="0.01" id="Fibrinemie" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="2-4"><br>
 <label for="INR">INR(InternationalNormalizedRatio):</label><input name="INR" type="number"  step="0.01" id="INR" onblur="fChpLib(this)" onfocus="fChpSel(this)" placeholder="< 1"><br><br>
 </div><div>
-<label for="Electrophoresehemoglobine" >Electrophorèse Hb:</label><select name="Electrophoresehemoglobine" id="Electrophoresehemoglobine" style="width:64px;text-align:center" onblur="fChpLib(this)" onfocus="fChpSel(this)"><option></option><option>A1A2</option><option>AC</option><option>SC</option><option>SS</option><option>AF</option></select><br>
+<label for="Electrophorese_Hemoglobine" >Electrophorèse Hb:</label><select name="Electrophorese_Hemoglobine" id="Electrophorese_Hemoglobine" style="width:64px;text-align:center" onblur="fChpLib(this)" onfocus="fChpSel(this)"><option></option><option>A1A2</option><option>AC</option><option>SC</option><option>SS</option><option>AF</option></select><br>
 <label for="ElectroHBA1">A1:</label><input name="ElectroHBA1" type="number"  step="0.01" id="ElectroHBA1" onblur="fChpLib(this)" onfocus="fChpSel(this)">
 <label for="ElectroHBA2">A2:</label><input name="ElectroHBA2" type="number"  step="0.01" id="ElectroHBA2" onblur="fChpLib(this)" onfocus="fChpSel(this)"><br>
 <label for="ElectroHBS">S:</label><input name="ElectroHBS" type="number"  step="0.01" id="ElectroHBS" onblur="fChpLib(this)" onfocus="fChpSel(this)">
@@ -267,14 +269,14 @@ overflow-y:auto;text-align:left;padding-left:20px;background-color:aqua;display:
 <a id="A" href="">A</a><a>ACHBC</a><a>ACHBe</a><a>ACHBS</a><a>ACHVC</a><a>Acide_Urique</a><a>AgHBe</a><a>AgHBS</a><a>Albumine</a><a>Albuminurie</a><a>ASLO</a>
 <a id="B" href="">B</a><a>bHCG_plasma</a><a>bHCG_Uri</a><a>Bilharziose</a><a>Bilirubine_Conj</a><a>Bilirubine_Tot</a><a>BW</a>
 <a id="C" href="">C</a><a>Calcium</a><a>Chlamydia</a><a>Cholesterol_HDL</a><a>Cholesterol_LDL</a><a>Cholesterol_Tot</a><a>Clairance_Creatininurie</a><a>Coproculture</a><a>Cortisol</a><a>CPK</a><a>CK_mb</a><a>Creatinine</a><a>CRP</a>
-<a id="D" href="">D</a><a>DFG</a><a id="E" href="">E</a><a target="_blank">ECBU</a><a>Electrophorese_Proteines</a><a>Estradiol</a>
+<a id="D" href="">D</a><a>DFG</a><a id="E" href="">E</a><a target="_blank">ECBU</a><a>Electrophorese_Hemoglobine</a><a>Electrophorese_Proteines</a><a>Estradiol</a>
 <a id="F" href="">F</a><a>Facteur_Rhumatoide</a><a>Fibrinemie</a><a>FSH</a>
 <a id="G" href="">G</a><a>GAMMA_GT</a><a>Glycemie</a><a>Glycemie_PPrandiale</a><a>Glycorachie</a><a>Glycosurie</a><a>Goutte_Epaisse</a><a>Groupe_Sanguin</a>
 <a id="H" href="">H</a><a>HAV_IgM</a><a>HBA1C</a>
 <a id="I" href="">I</a><a>INR</a><a>Ionogramme_Sang</a><a>Ionogramme_Uri</a>
 <a id="L" href="">L</a><a target="_blank">LCR</a><a>LDH</a><a>LH_RH</a><a>Lipide_Tot</a>
 <a id="M" href="">M</a><a>Magnesium</a><a>Mycoplasme</a><a id="N" href="">N</a><a>NFS</a>
-<a id="P" href="">P</a><a>Phosphatases_Alcalines</a><a>Progesterone</a><a>Prolactinemie</a><a>Proteinurie</a><a>Proteinurie_24h</a><a>Protides_Tot</a><a>PSA</a><a>PU</a><a>PV</a>
+<a id="P" href="">P</a><a>Phosphatases_Alcalines</a><a>Potassium</a><a>PotassiumU</a><a>Progesterone</a><a>Prolactinemie</a><a>Proteinurie</a><a>Proteinurie_24h</a><a>Protides_Tot</a><a>PSA</a><a>PU</a><a>PV</a>
 <a id="Q" href="">Q</a><a>QBC</a>
 <a id="R" href="">R</a><a>Reserve_Alcalin</a><a>Rubeole</a><a id="S" href="">S</a><a>Spermoculture</a><a>Spermocytogramme</a><a>Spermogramme</a>
 <a id="T" href="">T</a><a>T3_libre</a><a>T4_libre</a><a>TP</a><a>TCK</a><a>Toxoplasmose</a><a>Transaminases</a><a>Triglycerides</a><a>TSH</a>
@@ -344,10 +346,10 @@ document.querySelectorAll("input")[7].style.width="184px";
 for (var i= 0; i < 8; i++){document.querySelectorAll("input")[i].style.fontSize="15px";}
 for (var i= 0; i < 8; i++){document.querySelectorAll("input")[i].style.marginBottom="5px";}
 for (var i= 0; i < 8; i++){document.querySelectorAll("input")[i].style.textTransform="capitalize";}
-for (var i= 89; i<document.querySelectorAll("input").length-4 ; i++){document.querySelectorAll("input")[i].style.width="85px";}
-for (var i= 89; i<document.querySelectorAll("input").length-4 ; i++){document.querySelectorAll("input")[i].style.textAlign="center";}
+for (var i= 92; i<document.querySelectorAll("input").length-4 ; i++){document.querySelectorAll("input")[i].style.width="85px";}
+for (var i= 92; i<document.querySelectorAll("input").length-4 ; i++){document.querySelectorAll("input")[i].style.textAlign="center";}
 for (var i= 1; i<document.querySelectorAll("select").length ; i++){document.querySelectorAll("select")[i].style.width="93px";}
-for (var i= 92; i<document.querySelectorAll("label").length ; i++){document.querySelectorAll("label")[i].style.display="inline-block";}
+for (var i= 94; i<document.querySelectorAll("label").length ; i++){document.querySelectorAll("label")[i].style.display="inline-block";}
 for (var i= 0; i<document.querySelectorAll("label").length ; i++){document.querySelectorAll("label")[i].style.fontFamily="courier New";}
 for (var i= 0; i<document.querySelectorAll("input,select").length ; i++){document.querySelectorAll("input,select")[i].style.fontFamily="courier New";}
 for (var i= 0; i<document.querySelectorAll("input[type=button]").length ; i++){document.querySelectorAll("input[type=button]")[i].style.fontFamily="bookman Old Style";}
