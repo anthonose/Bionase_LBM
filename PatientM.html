@@ -502,31 +502,36 @@ cel.value!=="" && cel.nextElementSibling.textContent===" *Uniquement (Chiffres o
 cel.nextElementSibling.remove():"";}
 
 
-let exa_Grp={_id:"695802f4acdf4e8d45839a52",nom:"naon",prenoms:"foussenan",Sexe:"M",Telephone:"2510365239",DiagnosticClinique:"Bilan de sante",Prescripteur:"vieux coul",Biotechnologiste:"kouadio athanase",PrixExamens:"12000",DateduPrelevement:"2026-01-02",acq:"on",Asl:"on",Ca:"on",chtt:"on",crea:"on",Crp:"on",gly:"on",ge:"on",Mg:"on",nfs:"on",potassium:"on",transa:"on",tgl:"on",wf:"on",Potassium:"3.7",Magnesium:"19",Calcium:"83",Triglycerides:".9",Cholesterol_Tot:"6.4",TGO:"18",TGP:"28",Creatinine:"11",Acide_Urique:"15",Glycemie:".95",nfsLeucocytes:"9",nfsHematies:"6",nfsHemoglobine:"8",nfsHematocrite:"5",nfsVGM:"2",nfsTCMH:"4",nfsCCMH:"5",nfsPlaquette:"8",nfsPN:"5",nfsPE:"2",nfsPB:"4",nfsLY:"5",nfsMn:"8",Widal_Felix:"POSITIVE",TO:"200",ASLO:"NEGATIVE",CRP:"NEGATIVE",Goutte_Epaisse:"POSITIVE",tGE:"575",};
-var TypChp= document.querySelectorAll("input,select");
-let CvED=exa_Grp.Examens_Demandes.split(","),TxExam="",ExamSlt=[];
+let exaGrp={_id:"695802f4acdf4e8d45839a52",nom:"naon",prenoms:"foussenan",Sexe:"M",Telephone:"2510365239",DiagnosticClinique:"Bilan de sante",Prescripteur:"vieux coul",Biotechnologiste:"kouadio athanase",PrixExamens:"12000",DateduPrelevement:"2026-01-02",acq:"on",Asl:"on",Ca:"on",chtt:"on",crea:"on",Crp:"on",gly:"on",ge:"on",Mg:"on",nfs:"on",potassium:"on",transa:"on",tgl:"on",wf:"on",Potassium:"3.7",Magnesium:"19",Calcium:"83",Triglycerides:".9",Cholesterol_Tot:"6.4",TGO:"18",TGP:"28",Creatinine:"11",Acide_Urique:"15",Glycemie:".95",nfsLeucocytes:"9",nfsHematies:"6",nfsHemoglobine:"8",nfsHematocrite:"5",nfsVGM:"2",nfsTCMH:"4",nfsCCMH:"5",nfsPlaquette:"8",nfsPN:"5",nfsPE:"2",nfsPB:"4",nfsLY:"5",nfsMn:"8",Widal_Felix:"POSITIVE",TO:"200",ASLO:"NEGATIVE",CRP:"NEGATIVE",Goutte_Epaisse:"POSITIVE",tGE:"575"};
 
-for (var i= 0; i < lgn_chp.length; i++)
-{
-if(TypChp[i].nodeName==="INPUT"){TypChp[i].value= exa_Grp[TypChp[i].name]}
+var TypChp= document.querySelectorAll("input,select"),TxExam="",ExamSlt=[];
+for(let[x,y] of Object.entries(exaGrp)){if (y==="on"){TxExam += ExamSlt.push(x);}}
 
-else if(TypChp[i].type==="checkbox"){
-for(let[x,y] of Object.entries(exa_Grp)){if (y==="on"){TxExam += ExamSlt.push(x);}}
-for (var j= 0; j < ExamSlt[j].length; j++){
-document.getElementById(ExamSlt[j]).checked="checked";
+for (var i= 0; i <TypChp.length; i++){
 
-/*let NvS=document.createElement("option");NvS.selected="selected";NvS.textContent=CvED[m];*/
+if(TypChp[i].nodeName==="INPUT" && TypChp[i].type==="checkbox"){
+for (var j= 0; j < ExamSlt.length; j++){
+document.getElementById(ExamSlt[j]).checked ="checked";}}
+
+else if(TypChp[i].nodeName==="SELECT"){
+for(var c= 0; c < Object.keys(exaGrp).length; c++){
+if(TypChp[i].id===Object.keys(exaGrp)[c]){
+for(var o= 0; o < TypChp[i].children.length; o++){}
+}
 }
 
 
-/*for (var j= 0; j < TypChp[i].firstElementChild.children.length; j++)
-{let cph=lgn_chp[i].firstElementChild.children[j].textContent;
-for (var l= 0; l < lgn_chp[i].firstElementChild.children[j].children.length; l++){for (var m= 0; m < CvED.length; m++){
-if(lgn_chp[i].firstElementChild.children[j].children[l].textContent===CvED[m]){let NvS=document.createElement("option");NvS.selected="selected";NvS.textContent=CvED[m];
-lgn_chp[i].firstElementChild.children[j].children[l].replaceWith(NvS);}}}}*/
-
 }
 
-else {lgn_chp[i].firstElementChild.firstElementChild.textContent= exa_Grp[lgn_chp[i].firstElementChild.name]}}
 
+else{TypChp[i].value= exaGrp[TypChp[i].name]}
+}
+
+/*
+for(let[x,y] of Object.entries(exaGrp)){if (TypChp[i].id===x){
+for(var opt= 0; opt < TypChp[i].children.length; opt++){
+if(TypChp[i].children[opt].textContext===y){TypChp[i].children[opt].selected="selected";}}}}
+
+
+*/
 </script></body></html>
