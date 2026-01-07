@@ -1,14 +1,25 @@
 ﻿<!DOCTYPE html><html><head>
 <meta content="fr-ci" http-equiv="Content-Language">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-<title>ENREGISTREMENT PATIENTS MODIFIANT</title></head><body  style="background-image:url('images/LGbionase3.jpg');width: 730px;margin-right: auto;	margin-left: auto">
+<title>ENREGISTREMENT PATIENTS MODIFIANT</title>
+<style type="text/css">
+.auto-style1 {
+	margin-left: 40px;
+	margin-bottom: 20px;
+}
+.auto-style2 {
+	margin-left: 40px;
+}
+</style>
+</head><body  style="background-image:url('images/LGbionase3.jpg');width: 730px;margin-right: auto;	margin-left: auto">
 <a id="Entree" href=""></a>
-<div style="text-align:center;margin-bottom:20px" >
+<div style="text-align:center;" class="auto-style1" >
 <img alt="encart" height="91" src="imageTest2.jpg" width="730"><br></div>
-<form action="transit.html" method="post">
+<form action="transit.html" method="post" class="auto-style2">
 <label for="_id">ID (Auto)
 </label><input name="_id" type="text" autocomplete="off" readonly="readonly" style="width:300px;border:none;background:none;font-size:20px;color:blue;font-weight:bold"><br>
-<label for="nom">Nom:</label><input id="nom" list="nomL" name="nom" type="text" autocomplete="off" onblur="Avertir(this)" placeholder="Nom de famille"><datalist id="nomL"><option value="minta"><option value="traore"><option value="iloba"><option value="gnaore"><option value="zerbo"><option value="kouadio"><option value="magone"><option value="abi"><option value="kanon"><option value="keita"><option value="kone"><option value="naon"></datalist><br><label for="prenoms">Prénoms:</label><input list="prenomsL" id="prenoms" name="prenoms" type="text" autocomplete="off" onblur="Avertir(this)"><datalist id="prenomsL"><option value="fatoumata"><option value="kadiatou"><option value="sharon"><option value="noe"><option value="yaya"><option value="phanuelle"><option value="flore"><option value="lou kouezan"><option value="dahio"><option value="valencia"><option value="mawa"><option value="madou"><option value="foussenan"></datalist><br><label for="Sexe">Sexe:</label><select name="Sexe"  id="Sexe" style="width: 188px;margin-bottom:5px; height: 23px;" onblur="Avertir(this)"><option></option><option>M</option><option>F</option></select><br>
+<label for="nom">Nom:</label><input id="nom" list="nomL" name="nom" type="text" autocomplete="off" onblur="Avertir(this)" placeholder="Nom de famille"><datalist id="nomL"><option value="minta"><option value="traore"><option value="iloba"><option value="gnaore"><option value="zerbo"><option value="kouadio"><option value="magone"><option value="abi"><option value="kanon"><option value="keita"><option value="kone"><option value="naon"></datalist><br>
+<label for="prenoms">Prénoms:</label><input list="prenomsL" id="prenoms" name="prenoms" type="text" autocomplete="off" onblur="Avertir(this)"><datalist id="prenomsL"><option value="fatoumata"><option value="kadiatou"><option value="sharon"><option value="noe"><option value="yaya"><option value="phanuelle"><option value="flore"><option value="lou kouezan"><option value="dahio"><option value="valencia"><option value="mawa"><option value="madou"><option value="foussenan"></datalist><br><label for="Sexe">Sexe:</label><select name="Sexe"  id="Sexe" style="width: 188px;margin-bottom:5px; height: 23px;" onblur="Avertir(this)"><option></option><option>M</option><option>F</option></select><br>
 <label for="Telephone">Téléphone:</label><input name="Telephone" type="tel" id="Telephone"  onblur="Avertir(this)" placeholder="numero a 10 chiffres"><br>
 <label for="DiagnosticClinique">Diagnostic Clinique:</label><input list="dc" name="DiagnosticClinique" type="text" autocomplete="off" id="DiagnosticClinique" onblur="Avertir(this)" placeholder="categorie du mal"><datalist id="dc"><option value="fièvre au long court"><option value="Bilan de sante"><option value="fièvre noctune"><option value="fièvre subite"><option value="bilan prénatal"></datalist><br><label for="Prescripteur">Prescripteur:</label><input  name="Prescripteur" type="text" autocomplete="off" list="prs" id="Prescripteur" onblur="Avertir(this)" placeholder="provenance du Bull"><datalist id="prs"><option value="dr konate"><option value="vieux coul"><option value="dr diarra"><option value="sg angele"><option value="externe"></datalist><br><label for="Biotechnologiste">Biotechnologiste:</label><input  name="Biotechnologiste" type="text" autocomplete="off" list="btech" id="Biotechnologiste" onblur="Avertir(this)" placeholder="Nom du technicien"><datalist id="btech"><option value="amani"><option value="kouadio athanase"><option value="amani sans fil"></datalist><br>
 <label for="PrixExamens">Prix/statut:</label><input  name="PrixExamens" type="text" id="PrixExamens" onblur="Avertir(this)" placeholder="Montant ou assuré(e)"><br>
@@ -500,38 +511,11 @@ cel.value!=="" && cel.nextElementSibling.textContent===" *Uniquement [0-9]"||
 cel.value!=="" && cel.nextElementSibling.textContent===" *Exactement 10 chiffres.Merci!"||
 cel.value!=="" && cel.nextElementSibling.textContent===" *Uniquement (Chiffres ou Lettres)"?
 cel.nextElementSibling.remove():"";}
-
-
-let exaGrp={_id:"695802f4acdf4e8d45839a52",nom:"naon",prenoms:"foussenan",Sexe:"M",Telephone:"2510365239",DiagnosticClinique:"Bilan de sante",Prescripteur:"vieux coul",Biotechnologiste:"kouadio athanase",PrixExamens:"12000",DateduPrelevement:"2026-01-02",acq:"on",Asl:"on",Ca:"on",chtt:"on",crea:"on",Crp:"on",gly:"on",ge:"on",Mg:"on",nfs:"on",potassium:"on",transa:"on",tgl:"on",wf:"on",Potassium:"3.7",Magnesium:"19",Calcium:"83",Triglycerides:".9",Cholesterol_Tot:"6.4",TGO:"18",TGP:"28",Creatinine:"11",Acide_Urique:"15",Glycemie:".95",nfsLeucocytes:"9",nfsHematies:"6",nfsHemoglobine:"8",nfsHematocrite:"5",nfsVGM:"2",nfsTCMH:"4",nfsCCMH:"5",nfsPlaquette:"8",nfsPN:"5",nfsPE:"2",nfsPB:"4",nfsLY:"5",nfsMn:"8",Widal_Felix:"POSITIVE",TO:"200",ASLO:"NEGATIVE",CRP:"NEGATIVE",Goutte_Epaisse:"POSITIVE",tGE:"575"};
-
+<script type="module"> import {exaGrp} from "./scode.js";
 var TypChp= document.querySelectorAll("input,select"),TxExam="",ExamSlt=[];
 for(let[x,y] of Object.entries(exaGrp)){if (y==="on"){TxExam += ExamSlt.push(x);}}
-
-for (var i= 0; i <TypChp.length; i++){
-
-if(TypChp[i].nodeName==="INPUT" && TypChp[i].type==="checkbox"){
-for (var j= 0; j < ExamSlt.length; j++){
-document.getElementById(ExamSlt[j]).checked ="checked";}}
-
-else if(TypChp[i].nodeName==="SELECT"){
-for(var c= 0; c < Object.keys(exaGrp).length; c++){
-if(TypChp[i].id===Object.keys(exaGrp)[c]){
-for(var o= 0; o < TypChp[i].children.length; o++){}
-}
-}
-
-
-}
-
-
-else{TypChp[i].value= exaGrp[TypChp[i].name]}
-}
-
-/*
-for(let[x,y] of Object.entries(exaGrp)){if (TypChp[i].id===x){
-for(var opt= 0; opt < TypChp[i].children.length; opt++){
-if(TypChp[i].children[opt].textContext===y){TypChp[i].children[opt].selected="selected";}}}}
-
-
-*/
+for(var i= 0; i <TypChp.length; i++){for (var j= 0; j < ExamSlt.length; j++){
+var RChp=TypChp[i].nodeName==="INPUT" && TypChp[i].type==="checkbox" ?
+document.getElementById(ExamSlt[j]).checked ="checked":
+TypChp[i].value= exaGrp[TypChp[i].name];}}
 </script></body></html>

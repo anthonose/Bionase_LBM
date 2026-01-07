@@ -591,7 +591,7 @@ for (var f= Object.values(pers_rtv).lastIndexOf("on")+1;
 for(let[x,y] of Object.entries(pers_rtv)){if (y==="on"){TxExam += ExamSlt.push(x);}}
 for (var h= 0; h < Object.keys(pers_rtv).length; h++){info_persT += Object.keys(pers_rtv)[h] + ":"+"\""+ Object.values(pers_rtv)[h]+"\""+ ",";}
 
-var impr_exa_json="export let exa_Grp={"+ info_persT + "};";
+var impr_exa_json="export let exaGrp={"+ info_persT + "};";
 fs.writeFile("scode.js",impr_exa_json,{encoding:"utf8", flag:"w"},(err)=>{var info=(err)?console.log(err):console.log("imprExaModule ok");});
 
 const tbN=[],tbP=[], tbDC=[], tbPRS=[], tbBt=[];
@@ -644,26 +644,14 @@ var m3="</datalist></label><br><label>Prénoms :<input list=\"prn\" name=\"preno
 
 
 
-var m4="</datalist></label><br><br>\n"+
-"<label>Sexe :<select name=\"Sexe\" style=\"width: 45px\"><option></option><option>M</option><option>F</option></select></label><br><br>\n"+
-"<label>Téléphone: <input name=\"Telephone\" type=\"tel\"></label><br><br>\n"+
-"<label>Diagnostic Clinique:<input list=\"dc\" name=\"Diagnostic_Clinique\" type=\"text\" autocomplete=\"off\"><datalist id=\"dc\">";
-var m5="</datalist></label><br><br><label>Prescripteur: <input  name=\"Prescripteur\" type=\"text\" autocomplete=\"off\" list=\"prs\"> <datalist id=\"prs\">";
-var m6="</datalist></label><br><br><label>Examens Demandés : \n"+
-"<select name=\"Examens_Demandes\" size=\"10\" multiple=\"multiple\">\n"+
-"<optgroup label=\"bilan cytobacteriologie\"><option>ECBU</option><option>Coproculture</option><option>LCR/Exudat</option><option>PU</option><option>PV</option><option>Spermoculture</option></optgroup>\n"+
-"<optgroup label=\"bilan enzymatique musculaires\"><option>CPK</option><option>CPK-mb</option><option>LDH</option></optgroup>\n"+
-"<optgroup label=\"bilan glycemique\"><option>Glycemie à Jeûn</option><option>Glycemie Post Prandiale</option><option>Glycorachie</option><option>Glycosurie</option><option>HBA1C</option></optgroup>\n"+
-"<optgroup label=\"bilan hepatique et bilaire\"><option>ACHBC</option><option>ACHBe</option><option>ACHBS</option><option>ACHVC</option><option>AgHBe</option><option>AgHBS</option><option>Bilirubine conjuguee</option><option>Bilirubine Totale</option><option>Gamma-GT</option><option>HAV (IgM)</option><option>Phosphatase Alcaline</option><option>Transaminases</option></optgroup>\n"+
-"<optgroup label=\"bilan hormonal\"><option>Beta HCG (sang)</option><option>Beta HCG (urine)</option><option>Cortisol</option><option>Estradiol</option><option>FSH</option><option>LH-RH</option><option>Progesterone</option><option>Prolactinemie</option><option>PSA</option><option>T3 libre</option><option>T4 libre</option><option>Testosterone</option><option>TSH</option><option>TSH_us</option></optgroup>\n"+
-"<optgroup label=\"bilan Immuno-hematologique\"><option>NFS</option><option>Fibrinemie</option><option>Groupe Sanguin</option><option>INR</option><option>Taux de Prothrombine</option><option>TCK</option></optgroup>\n"+
-"<optgroup label=\"bilan lipidique\"><option>Cholesterol HDL</option><option>Cholesterol LDL</option><option>Cholesterol Total</option><option>Triglycerides</option><option>Lipide totale</option></optgroup>\n"+
-"<optgroup label=\"bilan renal\"><option>Acide urique</option><option>Albumine</option><option>Albuminurie</option><option>Clairance de creatininurie</option><option>Creatinine</option><option>DFG</option><option>Electrophorese des Proteines Serique</option><option>Gamma</option><option>Ionogramme Urinaire</option><option>Proteinurie</option><option>Proteinurie 24h</option><option>Uree</option></optgroup>\n"+
-"<optgroup label=\"bilan serologie\"><option>ASLO</option><option>Bilharziose</option><option>BW (VDRL-TPHA)</option><option>Chlamydia</option><option>CRP</option><option>Mycoplasme</option><option>Rubeole</option><option>Toxoplasmose</option><option>VIH</option><option>Waaler Rose</option><option>Widal et Felix</option></optgroup>\n"+
-"<optgroup label=\"bilan spermiologique\"><option>Spermocytogramme</option><option>Spermogramme</option></optgroup>\n"+
-"<optgroup label=\"inflammation\"><option>Vitesse de Sedimentation (VS)</option><option>Facteur Rhumatoïde (FR)</option></optgroup>\n"+
-"<optgroup label=\"ionogramme\"><option>Ionogramme simple</option><option>Calcium (Ca2+)</option><option>Magnesium (Mg2+)</option><option>Potassium (k+)</option><option>Protides Totaux</option><option>Reserve Alcalin</option></optgroup>\n"+
-"</select></label><br><br><label>Le Biotechnologiste: <input  name=\"Biotechnologiste\" type=\"text\"autocomplete=\"off\" list=\"btech\"><datalist id=\"btech\">";
+var m4="</datalist><br><label for=\"Sexe\">Sexe:</label><select name=\"Sexe\"  id=\"Sexe\" style=\"width: 188px;margin-bottom:5px; height: 23px;\" onblur=\"Avertir(this)\"><option></option><option>M</option><option>F</option></select><br>\n"+
+"<label for=\"Telephone\">Téléphone:</label><input name=\"Telephone\" type=\"tel\" id=\"Telephone\"  onblur=\"Avertir(this)\" placeholder=\"numero a 10 chiffres\"><br>\n"+
+"<label for=\"DiagnosticClinique\">Diagnostic Clinique:</label><input list=\"dc\" name=\"DiagnosticClinique\" type=\"text\" autocomplete=\"off\" id=\"DiagnosticClinique\" onblur=\"Avertir(this)\" placeholder=\"categorie du mal\"><datalist id=\"dc\">";
+
+var m5="</datalist><br><label for=\"Prescripteur\">Prescripteur:</label><input  name=\"Prescripteur\" type=\"text\" autocomplete=\"off\" list=\"prs\" id=\"Prescripteur\" onblur=\"Avertir(this)\" placeholder=\"provenance du Bull\"><datalist id=\"prs\">";
+
+var m6="</datalist><br><label for=\"Biotechnologiste\">Biotechnologiste:</label><input  name=\"Biotechnologiste\" type=\"text\" autocomplete=\"off\" list=\"btech\" id=\"Biotechnologiste\" onblur=\"Avertir(this)\" placeholder=\"Nom du technicien\"><datalist id=\"btech\">";
+
 var m7="</datalist></label><br><br><label>Prix des Examens (ou statut): <input  name=\"Prix_des_Examens_ou_statut\" type=\"number\"  step=\"0.01\"></label><br><br>\n"+
 "<label>Date du Prelevement: <input  name=\"Date_du_Prelevement\" type=\"date\">&nbsp;</label><br><br></div>\n"+
 "<div id=\"bk_C\">\n"+
