@@ -34,7 +34,7 @@ txtPrs += tbPrs.push(Object.values(pers)[6]) + "<br>";
 txtBt += tbBt.push(Object.values(pers)[7]) + "<br>";}
 
 let tbNo= new Set(tbN), tbPo= new Set(tbP), tbDco= new Set(tbDc), tbPrso= new Set(tbPrs), tbBto= new Set(tbBt);
-tbNo= [...tbNo]; tbPo= [...tbPo]; ttbDco= [...tbDco]; tbPrso= [...tbPrso]; tbBto= [...tbBto];
+tbNo= [...tbNo]; tbPo= [...tbPo]; tbDco= [...tbDco]; tbPrso= [...tbPrso]; tbBto= [...tbBto];
 
 for( let npers of tbNo){txNom += "<option value=\"" + npers + "\">";}
 for( let ppers of tbPo){txPnom += "<option value=\"" + ppers + "\">";}
@@ -156,10 +156,12 @@ var p6="</datalist><br>\n"+
 "<label for=\"spermoC\">Spermoculture</label><input id=\"spermoC\" name=\"spermoC\" type=\"checkbox\">\n"+
 "<label for=\"Spmg\">Spermocytogramme</label><input id=\"Spmg\" name=\"Spmg\" type=\"checkbox\"><br>\n"+
 "<label for=\"Spct\">Spermogramme</label><input id=\"Spct\" name=\"Spct\" type=\"checkbox\"><br>&nbsp;<br>\n"+
+"<label for=\"swf\">S.Widal Felix</label><input id=\"swf\" name=\"swf\" type=\"checkbox\"><br></span>\n"+
 "<a id=\"lT\" href=\"\">T</a><br>\n"+
 "<label for=\"t3l\">T3 libre</label><input id=\"t3l\" name=\"t3l\" type=\"checkbox\"><br>\n"+
 "<label for=\"t4l\">T4 libre</label><input id=\"t4l\" name=\"t4l\" type=\"checkbox\"><br>\n"+
 "<label for=\"tck\">TCK</label><input id=\"tck\" name=\"tck\" type=\"checkbox\"><br>\n"+
+"<label for=\"tP\">TP</label><input id=\"tP\" name=\"tP\" type=\"checkbox\"><br>\n"+
 "<label for=\"Txp\">Toxoplasmose</label><input id=\"Txp\" name=\"Txp\" type=\"checkbox\">\n"+
 "<label for=\"transa\">Transaminases</label><input id=\"transa\" name=\"transa\" type=\"checkbox\">\n"+
 "<label for=\"tgl\">Triglycerides</label><input id=\"tgl\" name=\"tgl\" type=\"checkbox\"><br>\n"+
@@ -170,8 +172,7 @@ var p6="</datalist><br>\n"+
 "<label for=\"Vih\">VIH</label><input id=\"Vih\" name=\"Vih\" type=\"checkbox\"><br>\n"+
 "<label for=\"Vs\">Vit.Sediment.(VS)</label><input id=\"Vs\" name=\"Vs\" type=\"checkbox\"><br>&nbsp;<br>\n"+
 "<a id=\"lW\" href=\"\">W</a>\n"+
-"<label for=\"Wrs\">Waaler-Rose</label><input id=\"Wrs\" name=\"Wrs\" type=\"checkbox\"><br>\n"+
-"<label for=\"wf\" style=\"display:inline-block;height:120px\">Widal et Felix</label><input id=\"wf\" name=\"wf\" type=\"checkbox\"><br></span>\n"+
+"<label for=\"Wrs\" style=\"display:inline-block;height:120px\">Waaler-Rose</label><input id=\"Wrs\" name=\"Wrs\" type=\"checkbox\"><br>\n"+
 "</div><br><hr style=\"margin-top:50px\">\n"+
 "<h1 style=\"text-align:center;color:#275280\">EXAMENS BIOLOGIQUES</h1><hr><h3>inflammation</h3>\n"+
 "<p><label for=\"VS1ereHEURE\"><span style=\"background-color: #00F3FF\">VS</span>/1ère HEURE:</label><input name=\"VS1ereHEURE\" type=\"number\"  step=\"0.01\" id=\"VS1ereHEURE\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 7\"> <label for=\"VS2iemeHEURE\" >2ième HEURE:</label><input name=\"VS2iemeHEURE\" type=\"number\"  step=\"0.01\" id=\"VS2iemeHEURE\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 20\"></p>\n"+
@@ -260,7 +261,7 @@ var p6="</datalist><br>\n"+
 "<label for=\"ElectroHBC\">C:</label><input name=\"ElectroHBC\" type=\"number\"  step=\"0.01\" id=\"ElectroHBC\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><br>\n"+
 "<label for=\"ElectroHBF\">F:</label><input name=\"ElectroHBF\" type=\"number\"  step=\"0.01\" id=\"ElectroHBF\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\">\n"+
 "</div><h3 id=\"bilser\">bilan serologie</h3><div>\n"+
-"<label for=\"Widal_Felix\" >Widal et Félix:</label><select name=\"Widal_Felix\" id=\"Widal_Felix\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select>\n"+
+"<label for=\"SWidal_Felix\" >S.Widal et Félix:</label><select name=\"SWidal_Felix\" id=\"SWidal_Felix\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select>\n"+
 "<label for=\"TO\">TO:</label><input name=\"TO\" type=\"number\"  step=\"0.01\" id=\"TO\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\">\n"+
 "<label for=\"TH\">TH:</label><input name=\"TH\" type=\"number\"  step=\"0.01\" id=\"TH\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><br>\n"+
 "<label for=\"AO\">AO:</label><input name=\"AO\" type=\"number\"  step=\"0.01\" id=\"AO\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\">\n"+
@@ -327,10 +328,10 @@ var p6="</datalist><br>\n"+
 "<a id=\"M\" href=\"\">M</a><a>Magnesium</a><a>Mycoplasme</a><a id=\"N\" href=\"\">N</a><a>NFS</a>\n"+
 "<a id=\"P\" href=\"\">P</a><a>Phosphatases_Alcalines</a><a>Potassium</a><a>PotassiumU</a><a>Progesterone</a><a>Prolactinemie</a><a>Proteinurie</a><a>Proteinurie_24h</a><a>Protides_Tot</a><a>PSA</a><a>PU</a><a>PV</a>\n"+
 "<a id=\"Q\" href=\"\">Q</a><a>QBC</a>\n"+
-"<a id=\"R\" href=\"\">R</a><a>Reserve_Alcalin</a><a>Rubeole</a><a id=\"S\" href=\"\">S</a><a>Spermoculture</a><a>Spermocytogramme</a><a>Spermogramme</a>\n"+
+"<a id=\"R\" href=\"\">R</a><a>Reserve_Alcalin</a><a>Rubeole</a><a id=\"S\" href=\"\">S</a><a>Spermoculture</a><a>Spermocytogramme</a><a>Spermogramme</a><a>SWidal_Felix</a>\n"+
 "<a id=\"T\" href=\"\">T</a><a>T3_libre</a><a>T4_libre</a><a>TP</a><a>TCK</a><a>Toxoplasmose</a><a>Transaminases</a><a>Triglycerides</a><a>TSH</a>\n"+
 "<a id=\"U\" href=\"\">U</a><a>Uree</a><a id=\"V\" href=\"\">V</a><a>VIH</a><a>Vitesse_Sedimentaire</a>\n"+
-"<a id=\"W\" href=\"\">W</a><a>Waaler_Rose</a><a style=\"display:inline-block;height:170px\">Widal_Felix</a></span>\n"+
+"<a id=\"W\" href=\"\">W</a><a style=\"display:inline-block;height:170px\">Waaler_Rose</a></span>\n"+
 "</span><span style=\"display:inline-block;height:130px;width:200px\">\n"+
 "<input id=\"vld\"  type=\"button\" value=\"Valider [Envoyer]\"><br>\n"+
 "<input type=\"button\" value=\"Nouveau Patient\" onclick=\"location.reload()\"><br>\n"+
@@ -582,7 +583,7 @@ await cnx_bd.connect();
 var Lbd= cnx_bd.db("Bionase_LBM");
 var Lpt= Lbd.collection("PATIENTS");
 var pers2= await Lpt.insertOne(info_p);
-var rch_Mld= await Lpt.find({}).toArray();
+var RMld= await Lpt.find({}).toArray();
 var pers_rtv= await Lpt.findOne(info_p), info_pers="", info_exa="", info_persT="",TxExam="",ExamSlt=[];
 
 for (var i= 0; i <10; i++){info_pers += Object.keys(pers_rtv)[i] + ":"+ Object.values(pers_rtv)[i]+"<br>";}
@@ -594,36 +595,26 @@ for (var h= 0; h < Object.keys(pers_rtv).length; h++){info_persT += Object.keys(
 var impr_exa_json="export let exaGrp={"+ info_persT + "};";
 fs.writeFile("scode.js",impr_exa_json,{encoding:"utf8", flag:"w"},(err)=>{var info=(err)?console.log(err):console.log("imprExaModule ok");});
 
-const tbN=[],tbP=[], tbDC=[], tbPRS=[], tbBt=[];
-let txtN= "", txtP= "", txtDC= "", txtPRS= "", txtBt= "";
-for( let pers of  rch_Mld){
+var RMld= await Lpt.find({}).toArray();
+var tbN=[],tbP=[], tbDc=[], tbPrs=[], tbBt=[];
+let txtN= "", txtP= "", txtDc= "", txtPrs= "", txtBt= "",
+txNom= "",txPnom= "", txDc= "",txPrs= "",txBt= "";
+
+for( let pers of  RMld){
 txtN += tbN.push(Object.values(pers)[1]) + "<br>";
 txtP += tbP.push(Object.values(pers)[2]) + "<br>";
-txtDC += tbDC.push(Object.values(pers)[5]) + "<br>";
-txtPRS += tbPRS.push(Object.values(pers)[6]) + "<br>";
-txtBt += tbBt.push(Object.values(pers)[8]) + "<br>";}
-let tb_oN= new Set(tbN), tb_oP= new Set(tbP), tb_oDC= new Set(tbDC), tb_oPRS= new Set(tbPRS), tb_oBt= new Set(tbBt);
-tb_oN= [...tb_oN]; tb_oP= [...tb_oP]; tb_oDC= [...tb_oDC]; tb_oPRS= [...tb_oPRS]; tb_oBt= [...tb_oBt];
+txtDc += tbDc.push(Object.values(pers)[5]) + "<br>";
+txtPrs += tbPrs.push(Object.values(pers)[6]) + "<br>";
+txtBt += tbBt.push(Object.values(pers)[7]) + "<br>";}
 
-let txt_sdN= "";
-for( let npers of tb_oN){
-txt_sdN += "<option value=\"" + npers + "\">";}
+let tbNo= new Set(tbN), tbPo= new Set(tbP), tbDco= new Set(tbDc), tbPrso= new Set(tbPrs), tbBto= new Set(tbBt);
+tbNo= [...tbNo]; tbPo= [...tbPo]; tbDco= [...tbDco]; tbPrso= [...tbPrso]; tbBto= [...tbBto];
 
-let txt_sdP= "";
-for( let ppers of tb_oP){
-txt_sdP += "<option value=\"" + ppers + "\">";}
-
-let txt_sdDC= "";
-for( let dcpers of tb_oDC){
-txt_sdDC += "<option value=\"" + dcpers + "\">";}
-
-let txt_sdPRS= "";
-for( let prspers of tb_oPRS){
-txt_sdPRS += "<option value=\"" + prspers + "\">";}
-
-let txt_sdBt= "";
-for( let btpers of tb_oBt){
-txt_sdBt += "<option value=\"" + btpers + "\">";}
+for( let npers of tbNo){txNom += "<option value=\"" + npers + "\">";}
+for( let ppers of tbPo){txPnom += "<option value=\"" + ppers + "\">";}
+for( let dcpers of tbDco){txDc += "<option value=\"" + dcpers + "\">";}
+for( let prspers of tbPrso){txPrs += "<option value=\"" + prspers + "\">";}
+for( let btpers of tbBto){txBt += "<option value=\"" + btpers + "\">";}
 
 
 var m1="<!DOCTYPE html><html><head>\n"+
@@ -636,182 +627,515 @@ var m1="<!DOCTYPE html><html><head>\n"+
 "<form action=\"transit.html\" method=\"post\"><label for=\"_id\">ID (Auto)\n"+
 "</label><input name=\"_id\" type=\"text\" autocomplete=\"off\" readonly=\"readonly\" style=\"width:300px;border:none;background:none;font-size:20px;color:blue;font-weight:bold\"><br>\n"+
 "<label for=\"nom\">Nom:</label><input id=\"nom\" list=\"nomL\" name=\"nom\" type=\"text\" autocomplete=\"off\" onblur=\"Avertir(this)\" placeholder=\"Nom de famille\"><datalist id=\"nomL\">";
-
 var m2="</datalist><br><label for=\"prenoms\">Prénoms:</label><input list=\"prenomsL\" id=\"prenoms\" name=\"prenoms\" type=\"text\" autocomplete=\"off\" onblur=\"Avertir(this)\"><datalist id=\"prenomsL\">";
-
-
-var m3="</datalist></label><br><label>Prénoms :<input list=\"prn\" name=\"prenoms\" type=\"text\" autocomplete=\"off\" ><datalist id=\"prn\">";
-
-
-
-var m4="</datalist><br><label for=\"Sexe\">Sexe:</label><select name=\"Sexe\"  id=\"Sexe\" style=\"width: 188px;margin-bottom:5px; height: 23px;\" onblur=\"Avertir(this)\"><option></option><option>M</option><option>F</option></select><br>\n"+
+var m3="</datalist><br><label for=\"Sexe\">Sexe:</label><select name=\"Sexe\"  id=\"Sexe\" style=\"width: 188px;margin-bottom:5px; height: 23px;\" onblur=\"Avertir(this)\"><option></option><option>M</option><option>F</option></select><br>\n"+
 "<label for=\"Telephone\">Téléphone:</label><input name=\"Telephone\" type=\"tel\" id=\"Telephone\"  onblur=\"Avertir(this)\" placeholder=\"numero a 10 chiffres\"><br>\n"+
 "<label for=\"DiagnosticClinique\">Diagnostic Clinique:</label><input list=\"dc\" name=\"DiagnosticClinique\" type=\"text\" autocomplete=\"off\" id=\"DiagnosticClinique\" onblur=\"Avertir(this)\" placeholder=\"categorie du mal\"><datalist id=\"dc\">";
+var m4="</datalist><br><label for=\"Prescripteur\">Prescripteur:</label><input  name=\"Prescripteur\" type=\"text\" autocomplete=\"off\" list=\"prs\" id=\"Prescripteur\" onblur=\"Avertir(this)\" placeholder=\"provenance du Bull\"><datalist id=\"prs\">";
+var m5="</datalist><br><label for=\"Biotechnologiste\">Biotechnologiste:</label><input  name=\"Biotechnologiste\" type=\"text\" autocomplete=\"off\" list=\"btech\" id=\"Biotechnologiste\" onblur=\"Avertir(this)\" placeholder=\"Nom du technicien\"><datalist id=\"btech\">";
+var m6="</datalist><br>\n"+
+"<label for=\"PrixExamens\">Prix/statut:</label><input  name=\"PrixExamens\" type=\"text\" id=\"PrixExamens\" onblur=\"Avertir(this)\" placeholder=\"Montant ou assuré(e)\"><br>\n"+
+"<label for=\"DateduPrelevement\">Date Prelevement:</label><input  name=\"DateduPrelevement\" type=\"date\" id=\"DateduPrelevement\"  onblur=\"Avertir(this)\" ><br>\n"+
+"<span style=\"display:inline-block;width:186px;height:37px;border:thin black solid;margin-left:275px\">\n"+
+"<span id=\"Lalphb1\" style=\"font-size:14.5px;text-align:right;letter-spacing:1.3px\">\n"+
+"<span style=\"text-decoration:underline;font-size:9px;letter-spacing:0px;text-align:left\">Ordre A-Z:</span>\n"+
+"<a>A</a><a>B</a><a>C</a><a>D</a><a>E</a><a>F</a><a>G</a><a>H</a><a>I</a>JK<a>L</a><a>M</a></span>\n"+
+"<br><span id=\"Lalphb2\" style=\"font-size:14.5px;letter-spacing:1px;padding-left:38px\">\n"+
+"<a>N</a>O<a>P</a><a>Q</a><a>R</a><a>S</a><a>T</a><a>U</a><a>V</a><a>W</a>XYZ</span>\n"+
+"</span><br>\n"+
+"<p id=\"lbExamensDemandes\" style=\"display:inline-block;width:271px;vertical-align:75px;font-family:courier New;text-align:right\">Examens Demandés:</p>\n"+
+"<div id=\"ExamensDemandes\" style=\"display:inline-block;width:186px;height:150px;overflow-y:auto;border:thin black solid;margin-bottom:1px\">\n"+
+"<span id=\"lchx\"><a id=\"lA\" href=\"\">A</a><br>\n"+
+"<label for=\"achbc\">ACHBC</label><input id=\"achbc\" name=\"achbc\" type=\"checkbox\"><br>\n"+
+"<label for=\"achbe\">ACHBe</label><input id=\"achbe\" name=\"achbe\" type=\"checkbox\"><br>\n"+
+"<label for=\"achbs\">ACHBS</label><input id=\"achbs\" name=\"achbs\" type=\"checkbox\"><br>\n"+
+"<label for=\"achvc\">ACHVC</label><input id=\"achvc\" name=\"achvc\" type=\"checkbox\"><br>\n"+
+"<label for=\"acq\">Acide urique</label><input id=\"acq\" name=\"acq\" type=\"checkbox\"><br>\n"+
+"<label for=\"aghbe\">AgHBe</label><input id=\"aghbe\" name=\"aghbe\" type=\"checkbox\"><br>\n"+
+"<label for=\"aghbs\">AgHBS</label><input id=\"aghbs\" name=\"aghbs\" type=\"checkbox\"><br>\n"+
+"<label for=\"albm\">Albumine</label><input id=\"albm\" name=\"albm\" type=\"checkbox\"><br>\n"+
+"<label for=\"albmu\">Albuminurie</label><input id=\"albmu\" name=\"albmu\" type=\"checkbox\"><br>\n"+
+"<label for=\"Asl\">ASLO</label><input id=\"Asl\" name=\"Asl\" type=\"checkbox\"><br>\n"+
+"<a id=\"lB\" href=\"\">B</a><br><label for=\"bhcg\">Beta HCG(Sg)</label><input id=\"bhcg\" name=\"bhcg\" type=\"checkbox\"><br>\n"+
+"<label for=\"bhcgu\">Beta HCG(ur)</label><input id=\"bhcgu\" name=\"bhcgu\" type=\"checkbox\"><br>\n"+
+"<label for=\"bilh\">Bilharziose</label><input id=\"bilh\" name=\"bilh\" type=\"checkbox\"><br>\n"+
+"<label for=\"biliC\">Bilirubine Conj.</label><input id=\"biliC\" name=\"biliC\" type=\"checkbox\"><br>\n"+
+"<label for=\"biliT\">Bilirubine Tot.</label><input id=\"biliT\" name=\"biliT\" type=\"checkbox\"><br>\n"+
+"<label for=\"Bw\">BW(VDRL-TPHA)</label><input id=\"Bw\" name=\"Bw\" type=\"checkbox\"><br>\n"+
+"<a id=\"lC\" href=\"\">C</a><br>\n"+
+"<label for=\"Ca\">Calcium(Ca2+)</label><input id=\"Ca\" name=\"Ca\" type=\"checkbox\"><br>\n"+
+"<label for=\"Chl\">Chlamydia</label><input id=\"Chl\" name=\"Chl\" type=\"checkbox\"><br>\n"+
+"<label for=\"chdl\">Cholesterol HD</label><input id=\"chdl\" name=\"chdl\" type=\"checkbox\"><br>\n"+
+"<label for=\"cldl\">Cholesterol LDL</label><input id=\"cldl\" name=\"cldl\" type=\"checkbox\"><br>\n"+
+"<label for=\"chtt\">Cholesterol Total</label><input id=\"chtt\" name=\"chtt\" type=\"checkbox\"><br>\n"+
+"<label for=\"Ccr\">Clairance de creatininurie</label><input id=\"Ccr\" name=\"Ccr\" type=\"checkbox\"><br>\n"+
+"<label for=\"copro\">Coproculture</label><input id=\"copro\" name=\"copro\" type=\"checkbox\"><br>\n"+
+"<label for=\"crt\">Cortisol</label><input id=\"crt\" name=\"crt\" type=\"checkbox\"><br>\n"+
+"<label for=\"cpk\">CPK</label><input id=\"cpk\" name=\"cpk\" type=\"checkbox\"><br>\n"+
+"<label for=\"cpkMb\">CK-mb</label><input id=\"cpkMb\" name=\"cpkMb\" type=\"checkbox\"><br>\n"+
+"<label for=\"crea\">Creatinine</label><input id=\"crea\" name=\"crea\" type=\"checkbox\"><br>\n"+
+"<label for=\"Crp\">CRP</label><input id=\"Crp\" name=\"Crp\" type=\"checkbox\"><br>\n"+
+"<a id=\"lD\" href=\"\">D</a><br>\n"+
+"<label for=\"dfgl\">DFG</label><input id=\"dfgl\" name=\"dfgl\" type=\"checkbox\"><br><br>\n"+
+"<a id=\"lE\" href=\"\">E</a><br>\n"+
+"<label for=\"ecbu\">ECBU</label><input name=\"ecbu\" type=\"checkbox\" id=\"ecbu\"><br>\n"+
+"<label for=\"Ehs\">Electrophorèse Hb.</label><input id=\"Ehs\" name=\"Ehs\" type=\"checkbox\"><br>\n"+
+"<label for=\"Eps\">Electrophorèse Prot.S</label><input id=\"Eps\" name=\"Eps\" type=\"checkbox\"><br>\n"+
+"<label for=\"est\">Estradiol</label><input id=\"est\" name=\"est\" type=\"checkbox\"><br>&nbsp;<br>\n"+
+"<a id=\"lF\" href=\"\">F</a>\n"+
+"<label for=\"Fr\">Fact.Rhumat.(FR)</label><input id=\"Fr\" name=\"Fr\" type=\"checkbox\"><br>\n"+
+"<label for=\"fib\">Fibrinemie</label><input id=\"fib\" name=\"fib\" type=\"checkbox\"><br>\n"+
+"<label for=\"fsh\">FSH</label><input id=\"fsh\" name=\"fsh\" type=\"checkbox\"><br>&nbsp;<br>\n"+
+"<a id=\"lG\" href=\"\">G</a><br>\n"+
+"<label for=\"gammagt\">GAMMA-GT</label><input id=\"gammagt\" name=\"gammagt\" type=\"checkbox\"><br>\n"+
+"<label for=\"gly\">Glycemie</label><input id=\"gly\" name=\"gly\" type=\"checkbox\"><br>\n"+
+"<label for=\"glypp\">Glycemie Post P.</label><input id=\"glypp\" name=\"glypp\" type=\"checkbox\"><br>\n"+
+"<label for=\"glyR\">Glycorachie</label><input id=\"glyR\" name=\"glyR\" type=\"checkbox\"><br>\n"+
+"<label for=\"glyU\">Glycourie</label><input id=\"glyU\" name=\"glyU\" type=\"checkbox\"><br>\n"+
+"<label for=\"ge\">Goutte Epaisse</label><input id=\"ge\" name=\"ge\" type=\"checkbox\"><br>\n"+
+"<label for=\"gsr\">Groupe Sanguin</label><input id=\"gsr\" name=\"gsr\" type=\"checkbox\"><br>&nbsp;<br>\n"+
+"<a id=\"lH\" href=\"\">H</a><br>\n"+
+"<label for=\"hav\">HAV(IgM)</label><input id=\"hav\" name=\"hav\" type=\"checkbox\"><br>\n"+
+"<label for=\"hba1c\">Hémoglobine(HBA1C)</label><input id=\"hba1c\" name=\"hba1c\" type=\"checkbox\">&nbsp;<br>\n"+
+"<a id=\"lI\" href=\"\">I</a><br>\n"+
+"<label for=\"inr\">INR</label><input id=\"inr\" name=\"inr\" type=\"checkbox\">\n"+
+"<label for=\"ionsg\">Ionogramme Sg</label><input id=\"ionsg\" name=\"ionsg\" type=\"checkbox\"><br>\n"+
+"<label for=\"Iu\">Ionogramme Urinaire</label><input id=\"Iu\" name=\"Iu\" type=\"checkbox\"><br>&nbsp;<br>\n"+
+"<a id=\"lL\" href=\"\">L</a><br>\n"+
+"<label for=\"lcr\">LCR</label><input id=\"lcr\" name=\"lcr\" type=\"checkbox\"><br>\n"+
+"<label for=\"ldh\">LDH</label><input id=\"ldh\" name=\"ldh\" type=\"checkbox\">\n"+
+"<label for=\"lhrh\">LH-RH</label><input id=\"lhrh\" name=\"lhrh\" type=\"checkbox\"><br>\n"+
+"<label for=\"lptl\">Lipide totale</label><input id=\"lptl\" name=\"lptl\" type=\"checkbox\">&nbsp;<br>\n"+
+"<a id=\"lM\" href=\"\">M</a><br>\n"+
+"<label for=\"Mg\">Magnesium(Mg2+)</label><input id=\"Mg\" name=\"Mg\" type=\"checkbox\"><br>\n"+
+"<label for=\"Myco\">Mycoplasme</label><input id=\"Myco\" name=\"Myco\" type=\"checkbox\"><br>&nbsp;<br>\n"+
+"<a id=\"lN\" href=\"\">N</a><br>\n"+
+"<label for=\"nfs\">NFS</label><input id=\"nfs\" name=\"nfs\" type=\"checkbox\"><br>&nbsp;<br>\n"+
+"<a id=\"lP\" href=\"\">P</a><br>\n"+
+"<label for=\"pal\">Phosphat.Alc</label><input id=\"pal\" name=\"pal\" type=\"checkbox\"><br>\n"+
+"<label for=\"potassium\">Potassium</label><input id=\"potassium\" name=\"potassium\" type=\"checkbox\"><br>\n"+
+"<label for=\"potassiumU\">Potassium</label><input id=\"potassiumU\" name=\"potassiumU\" type=\"checkbox\"><br>\n"+
+"<label for=\"proges\">Progesterone</label><input id=\"proges\" name=\"proges\" type=\"checkbox\"><br>\n"+
+"<label for=\"prolac\">Prolactinemie</label><input id=\"prolac\" name=\"prolac\" type=\"checkbox\"><br>\n"+
+"<label for=\"Ptu\">Proteinurie</label><input id=\"Ptu\" name=\"Ptu\" type=\"checkbox\"><br>\n"+
+"<label for=\"Ptu24\">Proteinurie 24h</label><input id=\"Ptu24\" name=\"Ptu24\" type=\"checkbox\"><br>\n"+
+"<label for=\"Pttl\">Protid.Tot.</label><input id=\"Pttl\" name=\"Pttl\" type=\"checkbox\"><br>\n"+
+"<label for=\"psa\">PSA</label><input id=\"psa\" name=\"psa\" type=\"checkbox\"><br>\n"+
+"<label for=\"pu\">PU</label><input id=\"pu\" name=\"pu\" type=\"checkbox\"><br>\n"+
+"<label for=\"pv\">PV</label><input id=\"pv\" name=\"pv\" type=\"checkbox\"><br>&nbsp;<br>\n"+
+"<a id=\"lQ\" href=\"\">Q</a><br>\n"+
+"<label for=\"qbC\">QBC</label><input id=\"qbC\" name=\"qbC\" type=\"checkbox\"><br>&nbsp;<br>\n"+
+"<a id=\"lR\" href=\"\">R</a><br>\n"+
+"<label for=\"Rsv\">Res.Alcal.</label><input id=\"Rsv\" name=\"Rsv\" type=\"checkbox\"><br>\n"+
+"<label for=\"Rbl\">Rubeole</label><input id=\"Rbl\" name=\"Rbl\" type=\"checkbox\"><br>&nbsp;<br>\n"+
+"<a id=\"lS\" href=\"\">S</a><br>\n"+
+"<label for=\"spermoC\">Spermoculture</label><input id=\"spermoC\" name=\"spermoC\" type=\"checkbox\">\n"+
+"<label for=\"Spmg\">Spermocytogramme</label><input id=\"Spmg\" name=\"Spmg\" type=\"checkbox\"><br>\n"+
+"<label for=\"Spct\">Spermogramme</label><input id=\"Spct\" name=\"Spct\" type=\"checkbox\"><br>&nbsp;<br>\n"+
+"<label for=\"swf\">S.Widal Felix</label><input id=\"swf\" name=\"swf\" type=\"checkbox\"><br></span>\n"+
+"<a id=\"lT\" href=\"\">T</a><br>\n"+
+"<label for=\"t3l\">T3 libre</label><input id=\"t3l\" name=\"t3l\" type=\"checkbox\"><br>\n"+
+"<label for=\"t4l\">T4 libre</label><input id=\"t4l\" name=\"t4l\" type=\"checkbox\"><br>\n"+
+"<label for=\"tck\">TCK</label><input id=\"tck\" name=\"tck\" type=\"checkbox\"><br>\n"+
+"<label for=\"tP\">TP</label><input id=\"tP\" name=\"tP\" type=\"checkbox\"><br>\n"+
+"<label for=\"Txp\">Toxoplasmose</label><input id=\"Txp\" name=\"Txp\" type=\"checkbox\">\n"+
+"<label for=\"transa\">Transaminases</label><input id=\"transa\" name=\"transa\" type=\"checkbox\">\n"+
+"<label for=\"tgl\">Triglycerides</label><input id=\"tgl\" name=\"tgl\" type=\"checkbox\"><br>\n"+
+"<label for=\"tsh\">TSH</label><input id=\"tsh\" name=\"tsh\" type=\"checkbox\"><br>&nbsp;<br>\n"+
+"<a id=\"lU\" href=\"\">U</a><br>\n"+
+"<label for=\"Ur\">Urée</label><input id=\"Ur\" name=\"Ur\" type=\"checkbox\">&nbsp;<br>\n"+
+"<a id=\"lV\" href=\"\">V</a><br>\n"+
+"<label for=\"Vih\">VIH</label><input id=\"Vih\" name=\"Vih\" type=\"checkbox\"><br>\n"+
+"<label for=\"Vs\">Vit.Sediment.(VS)</label><input id=\"Vs\" name=\"Vs\" type=\"checkbox\"><br>&nbsp;<br>\n"+
+"<a id=\"lW\" href=\"\">W</a>\n"+
+"<label for=\"Wrs\" style=\"display:inline-block;height:120px\">Waaler-Rose</label><input id=\"Wrs\" name=\"Wrs\" type=\"checkbox\"><br></span>\n"+
+"</div><br><hr style=\"margin-top:50px\">\n"+
+"<h1 style=\"text-align:center;color:#275280\">EXAMENS BIOLOGIQUES</h1><hr><h3>inflammation</h3>\n"+
+"<p><label for=\"VS1ereHEURE\"><span style=\"background-color: #00F3FF\">VS</span>/1ère HEURE:</label><input name=\"VS1ereHEURE\" type=\"number\"  step=\"0.01\" id=\"VS1ereHEURE\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 7\"> <label for=\"VS2iemeHEURE\" >2ième HEURE:</label><input name=\"VS2iemeHEURE\" type=\"number\"  step=\"0.01\" id=\"VS2iemeHEURE\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 20\"></p>\n"+
+"<h3>ionogramme</h3><p>\n"+
+"<label for=\"Potassium\">Potassium(k+):</label><input name=\"Potassium\" type=\"number\"  step=\"0.01\" id=\"Potassium\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"3.6-5.5\">\n"+
+"<label for=\"Sodium\">Sodium(Na+):</label><input name=\"Sodium\" type=\"number\"  step=\"0.01\" id=\"Sodium\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"135-155\">\n"+
+"<label for=\"Chlore\">Chlore(Cl-):</label><input name=\"Chlore\" type=\"number\"  step=\"0.01\" id=\"Chlore\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"95-105\">\n"+
+"</p><div >\n"+
+"<label for=\"Magnesium\">Magnésium(Mg2+):</label><input name=\"Magnesium\" type=\"number\"  step=\"0.01\" id=\"Magnesium\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"19-25\"><br>\n"+
+"<label for=\"Calcium\">Calcium(Ca2+):</label><input name=\"Calcium\" type=\"number\"  step=\"0.01\" id=\"Calcium\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"86-103\"><br>\n"+
+"<label for=\"Reserve_Alcalin\">Reserve Alcalin:</label><input name=\"Reserve_Alcalin\" type=\"number\"  step=\"0.01\" id=\"Reserve_Alcalin\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"22-26\"><br>\n"+
+"<label for=\"Protides_Tot\">Protides Totaux:</label><input name=\"Protides_Tot\" type=\"number\"  step=\"0.01\" id=\"Protides_Tot\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"65-80\">\n"+
+"</div><h3 id=\"billip\">bilan lipidique</h3><div>\n"+
+"<label for=\"Triglycerides\">Triglycérides:</label><input name=\"Triglycerides\" type=\"number\"  step=\"0.01\" id=\"Triglycerides\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"0.65-1.9\"><br>\n"+
+"<label for=\"Cholesterol_Tot\">Cholestérol Total:</label><input name=\"Cholesterol_Tot\" type=\"number\"  step=\"0.01\" id=\"Cholesterol_Tot\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"1.5-2.5\"><br>\n"+
+"<label for=\"Cholesterol_HDL\">Cholestérol HDL:</label><input name=\"Cholesterol_HDL\" type=\"number\"  step=\"0.01\" id=\"Cholesterol_HDL\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"0.2-0.4\"> <br>\n"+
+"<label for=\"Cholesterol_LDL\">Cholestérol LDL:</label><input name=\"Cholesterol_LDL\" type=\"number\"  step=\"0.01\" id=\"Cholesterol_LDL\" onblur=\"fChpLibC(this)\" onfocus=\"fChpSelC(this)\" readonly=\"readonly\" style=\"border:medium blue solid\" placeholder=\"< 2.5\" ><span style=\"color:blue\"> *Champ Calculé</span><span style=\"color:purple\" title=\"LDL = Cholestérol total - HDL - (Triglycérides / 5)\"> (Formule [ en survol ])</span> <br>\n"+
+"<label for=\"Lipide_Tot\">Lipide Totale:</label><input name=\"Lipide_Tot\" type=\"number\"  step=\"0.01\" id=\"Lipide_Tot\" onblur=\"fChpLibC(this)\" onfocus=\"fChpSelC(this)\" placeholder=\"6-7.5\" style=\"border:medium blue solid\" readonly=\"readonly\"><span style=\"color:blue\"> *Champ Calculé</span><span style=\"color:purple\" title=\"Lipides totaux (en g/L) = (Cholestérol total) x 2,56 + (Triglycérides) x 0,87\"> (Formule [ en survol ])</span> <br>\n"+
+"</div><h3 id=\"bilhepbil\">bilan hepatique et bilaire</h3><p>\n"+
+"<label for=\"TGO\" ><span style=\"background-color: #00F3FF\">Transaminases</span>/TGO:</label><input name=\"TGO\" type=\"number\"  step=\"0.01\" id=\"TGO\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 37\"> <label for=\"TGP\">TGP:</label><input name=\"TGP\" type=\"number\"  step=\"0.01\" id=\"TGP\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 40\"><br>\n"+
+"</p><p>\n"+
+"<label for=\"Bilirubine_Tot\" >Bilirubine Tot:</label><input name=\"Bilirubine_Tot\" type=\"number\"  step=\"0.01\" id=\"Bilirubine_Tot\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 12\"> <label for=\"Bilirubine_Conj\">Bilirubine Conj:</label><input name=\"Bilirubine_Conj\" type=\"number\"  step=\"0.01\" id=\"Bilirubine_Conj\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 2.5\"><br>\n"+
+"</p><div>\n"+
+"<label for=\"AgHBS\">AgHBS:</label><select name=\"AgHBS\" id=\"AgHBS\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><br>\n"+
+"<label for=\"ACHBS\">ACHBS:</label><select name=\"ACHBS\" id=\"ACHBS\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><br>\n"+
+"<label for=\"AgHBe\">AgHBe:</label><select name=\"AgHBe\" id=\"AgHBe\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><br>\n"+
+"<label for=\"ACHBe\">ACHBe:</label><select name=\"ACHBe\" id=\"ACHBe\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select> <br>\n"+
+"<label for=\"ACHBC\">ACHBC:</label><select name=\"ACHBC\" id=\"ACHBC\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><br>\n"+
+"<label for=\"ACHVC\">ACHVC:</label><select name=\"ACHVC\" id=\"ACHVC\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><br>\n"+
+"<label for=\"HAV_IgM\">HAV(IgM):</label><select name=\"HAV_IgM\" id=\"HAV_IgM\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><br>\n"+
+"<label for=\"GAMMA_GT\">Gamma-GT:</label><input name=\"GAMMA_GT\" type=\"number\"  step=\"0.01\" id=\"GAMMA_GT\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 45\"><br>\n"+
+"<label for=\"PhosphataseAlcaline\">Phosphatase Alc:</label><input name=\"PhosphataseAlcaline\" type=\"number\"  step=\"0.01\" id=\"PhosphataseAlcaline\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"30-130\">\n"+
+"</div><h3 id=\"bilren\">bilan renal</h3><div>\n"+
+"<label for=\"Creatinine\">Créatinine:</label><input name=\"Creatinine\" type=\"number\"  step=\"0.01\" id=\"Creatinine\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"6-13\"><br>\n"+
+"<label for=\"Uree\">Uree:</label><input name=\"Uree\" type=\"number\"  step=\"0.01\" id=\"Uree\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"0.15-0.55\"><br>\n"+
+"<label for=\"Acide_Urique\">Acide Urique:</label><input name=\"Acide_Urique\" type=\"number\"  step=\"0.01\" id=\"Acide_Urique\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"30-70\"><br>\n"+
+"<label for=\"Albumine\">Albumine:</label><input name=\"Albumine\" type=\"number\"  step=\"0.01\" id=\"Albumine\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"35-52\"><br>\n"+
+"<label for=\"Albuminurie\">Albuminurie:</label><input name=\"Albuminurie\" type=\"number\"  step=\"0.01\" id=\"Albuminurie\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 0.15\"><br>\n"+
+"<label for=\"Proteinurie\">Protéinurie:</label><input name=\"Proteinurie\" type=\"number\"  step=\"0.01\" id=\"Proteinurie\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 0.30\"><br>\n"+
+"<label for=\"Proteinurie_24h\">Protéinurie 24h:</label><input name=\"Proteinurie_24h\" type=\"number\"  step=\"0.01\" id=\"Proteinurie_24h\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 0.15\"><br>\n"+
+"<label for=\"DFG\">DFG:(Débit Filtration Glomérulaire)</label><input name=\"DFG\" type=\"number\"  step=\"0.01\" id=\"DFG\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"60-89\"><br>\n"+
+"<label for=\"Clairance_Creatininurie\">Clairance Créat:</label><input name=\"Clairance_Creatininurie\" type=\"number\"  step=\"0.01\" id=\"Clairance_Creatininurie\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"80-120\"><br>\n"+
+"<label for=\"Electrophorese_Proteines\" >Electroph Prot Sq:</label><select name=\"Electrophorese_Proteines\" id=\"Electrophorese_Proteines\" style=\"margin-top:20px\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>NORMALE</option><option>ANORMALE</option></select><br>\n"+
+"<label for=\"AlbumineEP\">Albumine:</label><input name=\"AlbumineEP\"  type=\"number\"  step=\"0.01\" id=\"AlbumineEP\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"35-50\">\n"+
+"<label for=\"AlphaI\">AlphaI:</label><input name=\"AlphaI\"  type=\"number\"  step=\"0.01\" id=\"AlphaI\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"1-5\"><br>\n"+
+"<label for=\"AlphaII\">AlphaII:</label><input name=\"AlphaII\"  type=\"number\"  step=\"0.01\" id=\"AlphaII\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"4-8\">\n"+
+"<label for=\"Beta\">Beta:</label><input name=\"Beta\"  type=\"number\"  step=\"0.01\" id=\"Beta\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"5-12\"><br>\n"+
+"<label for=\"Gamma\">Gamma:</label><input name=\"Gamma\"  type=\"number\"  step=\"0.01\" id=\"Gamma\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"8-16\">\n"+
+"</div><h3>ionogramme Urinaire</h3><p>\n"+
+"<label for=\"PotassiumU\" >Potassium Urine(k+):</label><input name=\"PotassiumU\" type=\"number\"  step=\"0.01\" id=\"PotassiumU\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"50-100\">\n"+
+"<label for=\"SodiumU\">Sodium(Na+):</label><input name=\"SodiumU\" type=\"number\"  step=\"0.01\" id=\"SodiumU\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"100-300\">\n"+
+"<label for=\"ChloreU\">Chlore(Cl-):</label><input name=\"ChloreU\" type=\"number\"  step=\"0.01\" id=\"ChloreU\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"80-270\">\n"+
+"</p><h3>bilan glycemique</h3><div>\n"+
+"<label for=\"Glycemie\">Glycémie:</label><input name=\"Glycemie\" type=\"number\"  step=\"0.01\" id=\"Glycemie\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"0.60-1.06\"><br>\n"+
+"<label for=\"Glycemie_PPrandiale\">Glycémie PP:</label><input name=\"Glycemie_PPrandiale\" type=\"number\"  step=\"0.01\" id=\"Glycemie_PPrandiale\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 1.40\"><br>\n"+
+"<label for=\"HBA1C\">HBA1C:</label><input name=\"HBA1C\" type=\"number\"  step=\"0.01\" id=\"HBA1C\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"4-6\"><br>\n"+
+"<label for=\"Glycosurie\">Glycosurie:</label><input name=\"Glycosurie\" type=\"number\"  step=\"0.01\" id=\"Glycosurie\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 50\"><br>\n"+
+"<label for=\"Glycorachie\">Glycorachie:</label><input name=\"Glycorachie\" type=\"number\"  step=\"0.01\" id=\"Glycorachie\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 0.4\">\n"+
+"</div><h3 id=\"bilhem\">bilan Immuno-hematologique</h3> NFS (Numeration  Sanguine):<br><div>\n"+
+"<label for=\"nfsLeucocytes\">Leucocytes:</label><input name=\"nfsLeucocytes\" type=\"number\"  step=\"0.01\" id=\"nfsLeucocytes\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"4-10\"><br>\n"+
+"<label for=\"nfsHematies\">Hématies:</label><input name=\"nfsHematies\" type=\"number\"  step=\"0.01\" id=\"nfsHematies\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"4-6\"><br>\n"+
+"<label for=\"nfsHemoglobine\">Hemoglobine:</label><input name=\"nfsHemoglobine\" type=\"number\"  step=\"0.01\" id=\"nfsHemoglobine\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"12-18\"><br>\n"+
+"<label for=\"nfsHematocrite\">Hematocrite:</label><input name=\"nfsHematocrite\" type=\"number\"  step=\"0.01\" id=\"nfsHematocrite\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"38-50\"><br>\n"+
+"<label for=\"nfsVGM\">VGM:</label><input name=\"nfsVGM\" type=\"number\"  step=\"0.01\" id=\"nfsVGM\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"80-100\"><br>\n"+
+"<label for=\"nfsTCMH\">TCMH:</label><input name=\"nfsTCMH\" type=\"number\"  step=\"0.01\" id=\"nfsTCMH\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"28-32\"><br>\n"+
+"<label for=\"nfsCCMH\">CCMH:</label><input name=\"nfsCCMH\" type=\"number\"  step=\"0.01\" id=\"nfsCCMH\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"30-34\"><br>\n"+
+"<label for=\"nfsPlaquette\">Plaquette:</label><input name=\"nfsPlaquette\" type=\"number\"  step=\"0.01\" id=\"nfsPlaquette\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"150-500\"><br>\n"+
+"<label for=\"nfsPN\">Polyn.Neutrophile:</label><input name=\"nfsPN\" type=\"number\"  step=\"0.01\" id=\"nfsPN\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"45-70\"><br>\n"+
+"<label for=\"nfsPE\">Polyn.Eosinophile:</label><input name=\"nfsPE\" type=\"number\"  step=\"0.01\" id=\"nfsPE\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"1-6\"><br>\n"+
+"<label for=\"nfsPB\">Polyn.Basophile:</label><input name=\"nfsPB\" type=\"number\"  step=\"0.01\" id=\"nfsPB\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 1\"><br>\n"+
+"<label for=\"nfsLY\">Lymphocyte:</label><input name=\"nfsLY\" type=\"number\"  step=\"0.01\" id=\"nfsLY\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"20-40\"><br>\n"+
+"<label for=\"nfsMn\">Monocyte:</label><input name=\"nfsMn\" type=\"number\"  step=\"0.01\" id=\"nfsMn\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"3-7\"><br><br>\n"+
+"</div><p>\n"+
+"<label for=\"Groupe_Sanguin\" >Groupe Sanguin:</label><select name=\"Groupe_Sanguin\" id=\"Groupe_Sanguin\" style=\"width:64px;margin-bottom:20px;text-align:center\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>O</option><option>A</option><option>B</option><option>AB</option></select>\n"+
+"<label for=\"Rhesus\">Rhésus:</label><select name=\"Rhesus\" id=\"Rhesus\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>(+)POSITIVE</option><option>(-)NEGATIVE</option></select><br>\n"+
+"</p><div>\n"+
+"<label for=\"TP\">TP(Taux Prothrombine):</label><input name=\"TP\" type=\"number\"  step=\"0.01\" id=\"TP\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"70-100\"><br>\n"+
+"<label for=\"TCK\">TCK:</label><input name=\"TCK\" type=\"number\"  step=\"0.01\" id=\"TCK\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"20-33\"><br>\n"+
+"<label for=\"Fibrinemie\">Fibrinémie:</label><input name=\"Fibrinemie\" type=\"number\"  step=\"0.01\" id=\"Fibrinemie\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"2-4\"><br>\n"+
+"<label for=\"INR\">INR(InternationalNormalizedRatio):</label><input name=\"INR\" type=\"number\"  step=\"0.01\" id=\"INR\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 1\"><br><br>\n"+
+"</div><div>\n"+
+"<label for=\"Electrophorese_Hemoglobine\" >Electrophorèse Hb:</label><select name=\"Electrophorese_Hemoglobine\" id=\"Electrophorese_Hemoglobine\" style=\"width:64px;text-align:center\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>A1A2</option><option>AC</option><option>SC</option><option>SS</option><option>AF</option></select><br>\n"+
+"<label for=\"ElectroHBA1\">A1:</label><input name=\"ElectroHBA1\" type=\"number\"  step=\"0.01\" id=\"ElectroHBA1\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\">\n"+
+"<label for=\"ElectroHBA2\">A2:</label><input name=\"ElectroHBA2\" type=\"number\"  step=\"0.01\" id=\"ElectroHBA2\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><br>\n"+
+"<label for=\"ElectroHBS\">S:</label><input name=\"ElectroHBS\" type=\"number\"  step=\"0.01\" id=\"ElectroHBS\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\">\n"+
+"<label for=\"ElectroHBC\">C:</label><input name=\"ElectroHBC\" type=\"number\"  step=\"0.01\" id=\"ElectroHBC\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><br>\n"+
+"<label for=\"ElectroHBF\">F:</label><input name=\"ElectroHBF\" type=\"number\"  step=\"0.01\" id=\"ElectroHBF\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\">\n"+
+"</div><h3 id=\"bilser\">bilan serologie</h3><div>\n"+
+"<label for=\"SWidal_Felix\" >S.Widal et Félix:</label><select name=\"SWidal_Felix\" id=\"SWidal_Felix\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select>\n"+
+"<label for=\"TO\">TO:</label><input name=\"TO\" type=\"number\"  step=\"0.01\" id=\"TO\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\">\n"+
+"<label for=\"TH\">TH:</label><input name=\"TH\" type=\"number\"  step=\"0.01\" id=\"TH\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><br>\n"+
+"<label for=\"AO\">AO:</label><input name=\"AO\" type=\"number\"  step=\"0.01\" id=\"AO\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\">\n"+
+"<label for=\"AH\">AH:</label><input name=\"AH\" type=\"number\"  step=\"0.01\" id=\"AH\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><br>\n"+
+"<label for=\"BO\">BO:</label><input name=\"BO\" type=\"number\"  step=\"0.01\" id=\"BO\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\">\n"+
+"<label for=\"BH\">BH:</label><input name=\"BH\" type=\"number\"  step=\"0.01\" id=\"BH\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><br>\n"+
+"<label for=\"CO\">CO:</label><input name=\"CO\" type=\"number\"  step=\"0.01\" id=\"CO\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\">\n"+
+"<label for=\"CH\">CH:</label><input name=\"CH\" type=\"number\"  step=\"0.01\" id=\"CH\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><br><br>\n"+
+"</div><div>\n"+
+"<label for=\"Toxoplasmose\">Toxoplasmose:</label><select name=\"Toxoplasmose\" id=\"Toxoplasmose\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for=\"toxoIgm\">IgM:</label><input name=\"toxoIgm\" type=\"number\"  step=\"0.01\" id=\"toxoIgm\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><label for=\"toxoIgg\">IgG:</label><input name=\"toxoIgg\" type=\"number\"  step=\"0.01\" id=\"toxoIgg\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><br>\n"+
+"<label for=\"Rubeole\">Rubéole:</label><select name=\"Rubeole\" id=\"Rubeole\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for=\"rubIgm\">IgM:</label><input name=\"rubIgm\" type=\"number\"  step=\"0.01\" id=\"rubIgm\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><label for=\"rubIgg\">IgG:</label><input name=\"rubIgg\" type=\"number\"  step=\"0.01\" id=\"rubIgg\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><br>\n"+
+"<label for=\"Chlamydia\">Chlamydia:</label><select name=\"Chlamydia\" id=\"Chlamydia\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for=\"chldIgm\">IgM:</label><input name=\"chldIgm\" type=\"number\"  step=\"0.01\" id=\"chldIgm\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><label for=\"chldIgg\">IgG:</label><input name=\"chldIgg\" type=\"number\"  step=\"0.01\" id=\"chldIgg\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><br>\n"+
+"<label for=\"Mycoplasme\">Mycoplasme:</label><select name=\"Mycoplasme\" id=\"Mycoplasme\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for=\"mycpIgm\">IgM:</label><input name=\"mycpIgm\" type=\"number\"  step=\"0.01\" id=\"mycpIgm\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><label for=\"mycpIgg\">IgG:</label><input name=\"mycpIgg\" type=\"number\"  step=\"0.01\" id=\"mycpIgg\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><br>\n"+
+"<label for=\"Bilharziose\">Bilharziose:</label><select name=\"Bilharziose\" id=\"Bilharziose\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for=\"bilhIgm\">IgM:</label><input name=\"bilhIgm\" type=\"number\"  step=\"0.01\" id=\"bilhIgm\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><label for=\"bilhIgg\">IgG:</label><input name=\"bilhIgg\" type=\"number\"  step=\"0.01\" id=\"bilhIgg\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><br>\n"+
+"<label for=\"BW\">VDRL:</label><select name=\"BW\" id=\"BW\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for=\"tpha\">TPHA:</label><input name=\"tpha\" type=\"number\"  step=\"0.01\" id=\"tpha\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><br>\n"+
+"<label for=\"Waaler_Rose\">Waaler Rose:</label><select name=\"Waaler_Rose\" id=\"Waaler_Rose\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for=\"wlrT\">Titre:</label><input name=\"wlrT\" type=\"number\"  step=\"0.01\" id=\"wlrT\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><br>\n"+
+"<label for=\"ASLO\">ASLO:</label><select name=\"ASLO\" id=\"ASLO\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for=\"asloT\">Titre:</label><input name=\"asloT\" type=\"number\"  step=\"0.01\" id=\"asloT\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><br>\n"+
+"<label for=\"VIH\">VIH:</label><select name=\"VIH\" id=\"VIH\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for=\"vihTp\">Typage:</label><select name=\"vihTp\" id=\"vihTp\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>VIH1</option><option>VIH2</option><option>VIH1 et VIH 2</option></select><br>\n"+
+"<label for=\"CRP\">CRP:</label><select name=\"CRP\" id=\"CRP\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for=\"crpT\">Titre:</label><input name=\"crpT\" type=\"number\"  step=\"0.01\" id=\"crpT\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><br>\n"+
+"</div><h3 id=\"bilhor\">bilan hormonal</h3><div>\n"+
+"<label for=\"T3_libre\">T3 libre:</label><input name=\"T3_libre\" type=\"number\"  step=\"0.01\" id=\"T3_libre\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"3-8.5\"><br>\n"+
+"<label for=\"T4_libre\">T4 libre:</label><input name=\"T4_libre\" type=\"number\"  step=\"0.01\" id=\"T4_libre\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"8.6-25\"><br>\n"+
+"<label for=\"TSH\">TSH(ThyréoStimuline Hormone):</label><input name=\"TSH\" type=\"number\"  step=\"0.01\" id=\"TSH\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"0.15-4.9\"><br>\n"+
+"<label for=\"PSA\">PSA(Prostate-Specific Antigen):</label><input name=\"PSA\" type=\"number\"  step=\"0.01\" id=\"PSA\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 4\"><br>\n"+
+"<label for=\"Estradiol\">Estradiol:</label><input name=\"Estradiol\" type=\"number\"  step=\"0.01\" id=\"Estradiol\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"30-400\"><br>\n"+
+"<label for=\"Progesterone\">Progestérone:</label><input name=\"Progesterone\" type=\"number\"  step=\"0.01\" id=\"Progesterone\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\">VN<a onclick=\"window.open('images/ProgesteroneTab.jpg', '_blank','left=650,top=50,width=680px,height=302px')\" style=\"text-decoration:underline;color:dimgray\">(Cliquez ici !)</a><br>\n"+
+"<label for=\"Prolactinemie\">Prolactinémie:</label><input name=\"Prolactinemie\" type=\"number\"  step=\"0.01\" id=\"Prolactinemie\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\">VN<a onclick=\"window.open('images/ProlactineTab.jpg', '_blank','left=650,top=50,width=680px,height=208px')\" style=\"text-decoration:underline;color:dimgray\">(Cliquez ici !)</a><br>\n"+
+"<label for=\"LH_RH\">LH-RH(Lutéinostimuline):</label><input name=\"LH_RH\" type=\"number\"  step=\"0.01\" id=\"LH_RH\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\">VN<a onclick=\"window.open('images/LhTab.jpg', '_blank','left=650,top=50,width=680px,height=302px')\" style=\"text-decoration:underline;color:dimgray\">(Cliquez ici !)</a><br>\n"+
+"<label for=\"Cortisol\">Cortisol:</label><input name=\"Cortisol\" type=\"number\"  step=\"0.01\" id=\"Cortisol\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\">VN<a onclick=\"window.open('images/CortisolTab.jpg', '_blank','left=650,top=50,width=680px,height=208px')\" style=\"text-decoration:underline;color:dimgray\">(Cliquez ici !)</a><br>\n"+
+"<label for=\"FSH\">FSH(Hormone FolliculoStimulante):</label><input name=\"FSH\" type=\"number\"  step=\"0.01\" id=\"FSH\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\">VN<a onclick=\"window.open('images/FSHTab.jpg', '_blank','left=650,top=50,width=680px,height=302px')\" style=\"text-decoration:underline;color:dimgray\">(Cliquez ici !)</a><br>\n"+
+"<label for=\"Testosterone\">Testosterone:</label><input name=\"Testosterone\" type=\"number\"  step=\"0.01\" id=\"Testosterone\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"300-1000\"><br>\n"+
+"<label for=\"TSHus\">TSHus(ThyréoS. H. UltraSensible):</label><input name=\"TSHus\" type=\"number\"  step=\"0.01\" id=\"TSHus\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"0.4-4\"><br>\n"+
+"<label for=\"bHCG_plasma\">Beta HCG(plasma):</label><input name=\"bHCG_plasma\" type=\"number\"  step=\"0.01\" id=\"bHCG_plasma\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"> VN<a onclick=\"window.open('images/hcg_biomnis_tableau.avif', '_blank','left=650,top=50,width=337px,height=223px')\" style=\"text-decoration:underline;color:dimgray\">(Cliquez ici !)</a><br>\n"+
+"<label for=\"bHCG_Uri\">Beta HCG(urine):</label><input name=\"bHCG_Uri\" type=\"number\"  step=\"0.01\" id=\"bHCG_Uri\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 25\">\n"+
+"</div><h3 id=\"enzMus\">bilan enzymatique musculaires</h3><div>\n"+
+"<label for=\"LDH\">LDH(Lactate DésHydrogénase):</label><input name=\"LDH\" type=\"number\"  step=\"0.01\" id=\"LDH\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"140-280\"><br>\n"+
+"<label for=\"CPK\">CPK(Créatine Phosphokinase):</label><input name=\"CPK\" type=\"number\"  step=\"0.01\" id=\"CPK\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"20-200\"><br>\n"+
+"<label for=\"CK_mb\">CK-mb(Créatine Kinase-MB):</label><input name=\"CK_mb\" type=\"number\"  step=\"0.01\" id=\"CK_mb\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"0-5\">\n"+
+"</div><h3 id=\"bildiv\">bilan divers</h3><div>\n"+
+"<label for=\"Myoglobine\">Myoglobine:</label><input name=\"Myoglobine\" type=\"number\"  step=\"0.01\" id=\"Myoglobine\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"25-72\"><br>\n"+
+"<label for=\"Troponime\">Troponime:</label><input name=\"Troponime\" type=\"number\"  step=\"0.01\" id=\"Troponime\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 0.04\"><br>\n"+
+"<label for=\"Goutte_Epaisse\">Goutte Epaisse:</label><select name=\"Goutte_Epaisse\" id=\"Goutte_Epaisse\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select><label for=\"tGE\">Titre:</label><input name=\"tGE\" type=\"number\"  step=\"0.01\" id=\"tGE\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><br>\n"+
+"</div><span style=\"display:inline-block;height:330px;width:200px;\n"+
+"border:thick #275280 solid;position:fixed;bottom:0px;right:15px;padding-left:3px\">\n"+
+"<span style=\"display:inline-block;height:240px;width:200px;padding-bottom:0px\">\n"+
+"<span style=\"display:inline-block;height:20px;width:200px\">\n"+
+"<span style=\"display:inline-block;width:200px;font-family:bookman Old Style;font-weight:bold;text-decoration:underline;text-align:center;color:#275280\">EDITER EXAMENS ICI </span><br>\n"+
+"<span id=\"Lalphb3\" style=\"font-size:14px;text-align:right;letter-spacing:2px\"><span style=\"text-decoration:underline;font-size:11px;letter-spacing:0px;text-align:left\">Ordre A-Z:</span>\n"+
+"<a>A</a><a>B</a><a>C</a><a>D</a><a>E</a><a>F</a><a>G</a><a>H</a><a>I</a><a>J</a><a>K</a><a>L</a><a>M</a></span><br>\n"+
+"<span id=\"Lalphb4\" style=\"font-size:14px;letter-spacing:1.3px;padding-left:49px\">\n"+
+"<a>N</a><a>O</a><a>P</a><a>Q</a><a>R</a><a>S</a><a>T</a><a>U</a><a>V</a><a>W</a><a>X</a><a>Y</a><a>Z</a></span>\n"+
+"</span><span id=\"LMenu\" style=\"display:inline-block;\n"+
+"height:180px;width:180px;border:thin black solid;\n"+
+"overflow-y:auto;text-align:left;padding-left:20px;background-color:aqua;display:grid\">\n"+
+"<a id=\"A\" href=\"\">A</a><a>ACHBC</a><a>ACHBe</a><a>ACHBS</a><a>ACHVC</a><a>Acide_Urique</a><a>AgHBe</a><a>AgHBS</a><a>Albumine</a><a>Albuminurie</a><a>ASLO</a>\n"+
+"<a id=\"B\" href=\"\">B</a><a>bHCG_plasma</a><a>bHCG_Uri</a><a>Bilharziose</a><a>Bilirubine_Conj</a><a>Bilirubine_Tot</a><a>BW</a>\n"+
+"<a id=\"C\" href=\"\">C</a><a>Calcium</a><a>Chlamydia</a><a>Cholesterol_HDL</a><a>Cholesterol_LDL</a><a>Cholesterol_Tot</a><a>Clairance_Creatininurie</a><a>Coproculture</a><a>Cortisol</a><a>CPK</a><a>CK_mb</a><a>Creatinine</a><a>CRP</a>\n"+
+"<a id=\"D\" href=\"\">D</a><a>DFG</a><a id=\"E\" href=\"\">E</a><a target=\"_blank\">ECBU</a><a>Electrophorese_Hemoglobine</a><a>Electrophorese_Proteines</a><a>Estradiol</a>\n"+
+"<a id=\"F\" href=\"\">F</a><a>Facteur_Rhumatoide</a><a>Fibrinemie</a><a>FSH</a>\n"+
+"<a id=\"G\" href=\"\">G</a><a>GAMMA_GT</a><a>Glycemie</a><a>Glycemie_PPrandiale</a><a>Glycorachie</a><a>Glycosurie</a><a>Goutte_Epaisse</a><a>Groupe_Sanguin</a>\n"+
+"<a id=\"H\" href=\"\">H</a><a>HAV_IgM</a><a>HBA1C</a>\n"+
+"<a id=\"I\" href=\"\">I</a><a>INR</a><a>Ionogramme_Sang</a><a>Ionogramme_Uri</a>\n"+
+"<a id=\"L\" href=\"\">L</a><a target=\"_blank\">LCR</a><a>LDH</a><a>LH_RH</a><a>Lipide_Tot</a>\n"+
+"<a id=\"M\" href=\"\">M</a><a>Magnesium</a><a>Mycoplasme</a><a id=\"N\" href=\"\">N</a><a>NFS</a>\n"+
+"<a id=\"P\" href=\"\">P</a><a>Phosphatases_Alcalines</a><a>Potassium</a><a>PotassiumU</a><a>Progesterone</a><a>Prolactinemie</a><a>Proteinurie</a><a>Proteinurie_24h</a><a>Protides_Tot</a><a>PSA</a><a>PU</a><a>PV</a>\n"+
+"<a id=\"Q\" href=\"\">Q</a><a>QBC</a>\n"+
+"<a id=\"R\" href=\"\">R</a><a>Reserve_Alcalin</a><a>Rubeole</a><a id=\"S\" href=\"\">S</a><a>Spermoculture</a><a>Spermocytogramme</a><a>Spermogramme</a><a>SWidal_Felix</a>\n"+
+"<a id=\"T\" href=\"\">T</a><a>T3_libre</a><a>T4_libre</a><a>TP</a><a>TCK</a><a>Toxoplasmose</a><a>Transaminases</a><a>Triglycerides</a><a>TSH</a>\n"+
+"<a id=\"U\" href=\"\">U</a><a>Uree</a><a id=\"V\" href=\"\">V</a><a>VIH</a><a>Vitesse_Sedimentaire</a>\n"+
+"<a id=\"W\" href=\"\">W</a><a>Waaler_Rose</a><a style=\"display:inline-block;height:170px\">Widal_Felix</a></span>\n"+
+"</span><span style=\"display:inline-block;height:130px;width:200px\">\n"+
+"<input id=\"vld\"  type=\"button\" value=\"Valider [Envoyer]\"><br>\n"+
+"<input type=\"button\" value=\"Nouveau Patient\" onclick=\"window.open('Patient.html', '_parent')\"><br>\n"+
+"<input type=\"button\" value=\"Bilan Operationnel\" ><br>\n"+
+"<input  type=\"button\" value=\"Calculatrice\" onclick=\"window.open('calculatriceElmt/calculatrice.html', '_blank','width=350px,height=470px')\">\n"+
+"</span></span><span id=\"RMenuP\"style=\"position:fixed;bottom:220px;right:35px;display:grid\">\n"+
+"<a style=\"font-size:30px;margin-bottom:0px\">&#x1F3E0;</a>\n"+
+"<a style=\"font-size:12px\" >accueil</a></span></form><script>\n"+
+"for (var i = 0; i < document.getElementById(\"Lalphb1\").querySelectorAll(\"a\").length; i++){document.getElementById(\"Lalphb1\").querySelectorAll(\"a\")[i].style.color = \"blue\";}\n"+
+"for (var i = 0; i < document.getElementById(\"Lalphb1\").querySelectorAll(\"a\").length; i++){document.getElementById(\"Lalphb1\").querySelectorAll(\"a\")[i].style.cursor = \"pointer\";}\n"+
+"for (var i = 0; i < document.getElementById(\"Lalphb2\").querySelectorAll(\"a\").length; i++){document.getElementById(\"Lalphb2\").querySelectorAll(\"a\")[i].style.color = \"blue\";}\n"+
+"for (var i = 0; i < document.getElementById(\"Lalphb2\").querySelectorAll(\"a\").length; i++){document.getElementById(\"Lalphb2\").querySelectorAll(\"a\")[i].style.cursor = \"pointer\";}\n"+
+"for (var i = 0; i < document.getElementById(\"lchx\").querySelectorAll(\"a\").length; i++){document.getElementById(\"lchx\").querySelectorAll(\"a\")[i].style.display = \"inline-block\";}\n"+
+"for (var i = 0; i < document.getElementById(\"lchx\").querySelectorAll(\"a\").length; i++){document.getElementById(\"lchx\").querySelectorAll(\"a\")[i].style.width = \"186px\";}\n"+
+"for (var i = 0; i < document.getElementById(\"lchx\").querySelectorAll(\"a\").length; i++){document.getElementById(\"lchx\").querySelectorAll(\"a\")[i].style.border = \"thin #275280 solid\";}\n"+
+"for (var i = 0; i < document.getElementById(\"lchx\").querySelectorAll(\"a\").length; i++){document.getElementById(\"lchx\").querySelectorAll(\"a\")[i].style.textDecoration = \"none\";}\n"+
+"for (var i = 0; i < document.getElementById(\"lchx\").querySelectorAll(\"a\").length; i++){document.getElementById(\"lchx\").querySelectorAll(\"a\")[i].style.color = \"blue\";}\n"+
+"for (var i = 0; i < document.getElementById(\"lchx\").querySelectorAll(\"a\").length; i++){document.getElementById(\"lchx\").querySelectorAll(\"a\")[i].style.pointerEvents = \"none\";}\n"+
+"for (var i = 1; i < document.getElementById(\"Lalphb1\").children.length; i++){document.getElementById(\"Lalphb1\").children[i].addEventListener(\"click\", Atpg);}\n"+
+"for (var i = 0; i < document.getElementById(\"Lalphb2\").children.length; i++){document.getElementById(\"Lalphb2\").children[i].addEventListener(\"click\", Atpg);}\n"+
+"function Atpg(e){var LtrC = \"l\" + e.target.textContent;document.getElementById(LtrC).focus();\n"+
+"document.getElementById(LtrC).style.backgroundColor = \"aqua\";}\n"+
+"for (var i = 0; i < document.getElementById(\"Lalphb3\").querySelectorAll(\"a\").length; i++){document.getElementById(\"Lalphb3\").querySelectorAll(\"a\")[i].style.color = \"blue\";}\n"+
+"for (var i = 0; i < document.getElementById(\"Lalphb3\").querySelectorAll(\"a\").length; i++) {document.getElementById(\"Lalphb3\").querySelectorAll(\"a\")[i].style.cursor = \"pointer\";}\n"+
+"for (var i = 0; i < document.getElementById(\"Lalphb4\").querySelectorAll(\"a\").length; i++) {    document.getElementById(\"Lalphb4\").querySelectorAll(\"a\")[i].style.color = \"blue\";}\n"+
+"for (var i = 0; i < document.getElementById(\"Lalphb4\").querySelectorAll(\"a\").length; i++) {    document.getElementById(\"Lalphb4\").querySelectorAll(\"a\")[i].style.cursor = \"pointer\";}\n"+
+"for (var i = 1; i < document.getElementById(\"Lalphb3\").children.length; i++) {document.getElementById(\"Lalphb3\").children[i].addEventListener(\"click\", chgC);}\n"+
+"for (var i = 0; i < document.getElementById(\"Lalphb4\").children.length; i++) {document.getElementById(\"Lalphb4\").children[i].addEventListener(\"click\", chgC);}\n"+
+"for (var i = 0; i < document.getElementById(\"RMenuP\").children.length; i++)\n"+
+"{document.getElementById(\"RMenuP\").children[i].style.cursor = \"pointer\";}\n"+
+"function chgC(e) {var LtrC = e.target.textContent;document.getElementById(LtrC).focus();\n"+
+"document.getElementById(LtrC).style.backgroundColor = \"#468FC5\";}\n"+
+"for (var i = 0; i < document.getElementById(\"LMenu\").querySelectorAll(\"a\").length; i++){\n"+
+"var aspL1=document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].href?\n"+
+"(document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].style.pointerEvents = \"none\",\n"+
+"document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].style.textDecoration = \"none\",\n"+
+"document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].style.color = \"red\"):\n"+
+"(document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].style.color = \"blue\",\n"+
+"document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].style.cursor = \"pointer\",\n"+
+"document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].addEventListener(\"click\", AtChp));}\n"+
+"for (var i = 0; i < document.getElementById(\"RMenuP\").children.length; i++)\n"+
+"{document.getElementById(\"RMenuP\").children[i].addEventListener(\"click\", AtChp);}\n"+
+"function AtChp(e){var LtrC = e.target.textContent;\n"+
+"var Cchp = LtrC ===\"Coproculture\"||LtrC ===\"ECBU\"||LtrC ===\"LCR\"||LtrC ===\"PU\"\n"+
+"||LtrC ===\"PV\"||LtrC ===\"Spermoculture\"||LtrC ===\"Spermocytogramme\"\n"+
+"||LtrC ===\"Spermogramme\"||LtrC ===\"Spermogramme\"?\n"+
+"window.open((LtrC+'.html'), '_blank'):LtrC===\"Vitesse_Sedimentaire\"?\n"+
+"document.getElementById(\"VS1ereHEURE\").focus():LtrC===\"Transaminases\"?\n"+
+"document.getElementById(\"TGO\").focus():LtrC===\"Ionogramme_Sang\"?\n"+
+"document.getElementById(\"Potassium\").focus():LtrC===\"Ionogramme_Uri\"?\n"+
+"document.getElementById(\"PotassiumU\").focus():LtrC===\"NFS\"?\n"+
+"document.getElementById(\"nfsLeucocytes\").focus():LtrC===\"QBC\"?\n"+
+"document.getElementById(\"Goutte_Epaisse\").focus():LtrC===\"Facteur_Rhumatoide\"?\n"+
+"document.getElementById(\"Waaler_Rose\").focus():LtrC===\"🏠\"?\n"+
+"document.getElementById(\"Entree\").focus():LtrC===\"accueil\"?\n"+
+"document.getElementById(\"Entree\").focus():document.getElementById(LtrC).focus();}\n"+
+"for (var i= 0; i <10; i++){document.querySelectorAll(\"label\")[i].style.display=\"inline-block\";}\n"+
+"for (var i= 0; i <10; i++){document.querySelectorAll(\"label\")[i].style.width=\"275px\";}\n"+
+"for (var i= 0; i <10; i++){document.querySelectorAll(\"label\")[i].style.textAlign=\"right\";}\n"+
+"for (var i= 1; i <8; i++){document.querySelectorAll(\"input\")[i].style.width=\"180px\";}\n"+
+"document.querySelectorAll(\"input\")[8].style.width=\"184px\";\n"+
+"for (var i= 1; i < 9; i++){document.querySelectorAll(\"input\")[i].style.fontSize=\"15px\";}\n"+
+"for (var i= 0; i < 9; i++){document.querySelectorAll(\"input\")[i].style.marginBottom=\"5px\";}\n"+
+"for (var i= 1; i < 9; i++){document.querySelectorAll(\"input\")[i].style.textTransform=\"capitalize\";}\n"+
+"for (var i= 93; i<document.querySelectorAll(\"input\").length-4 ; i++){document.querySelectorAll(\"input\")[i].style.width=\"85px\";}\n"+
+"for (var i= 93; i<document.querySelectorAll(\"input\").length-4 ; i++){document.querySelectorAll(\"input\")[i].style.textAlign=\"center\";}\n"+
+"for (var i= 1; i<document.querySelectorAll(\"select\").length ; i++){document.querySelectorAll(\"select\")[i].style.width=\"93px\";}\n"+
+"for (var i= 95; i<document.querySelectorAll(\"label\").length ; i++){document.querySelectorAll(\"label\")[i].style.display=\"inline-block\";}\n"+
+"for (var i= 0; i<document.querySelectorAll(\"label\").length ; i++){document.querySelectorAll(\"label\")[i].style.fontFamily=\"courier New\";}\n"+
+"for (var i= 0; i<document.querySelectorAll(\"input,select\").length ; i++){document.querySelectorAll(\"input,select\")[i].style.fontFamily=\"courier New\";}\n"+
+"for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.fontFamily=\"bookman Old Style\";}\n"+
+"for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.fontWeight=\"bold\";}\n"+
+"for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.color= \"#275280\";}\n"+
+"for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.fontSize=\"15px\"}\n"+
+"for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.width=\"200px\"}\n"+
+"for (var i= 0; i <document.getElementById(\"ExamensDemandes\").querySelectorAll(\"label\").length; i++){document.getElementById(\"ExamensDemandes\").querySelectorAll(\"label\")[i].style.display=\"inline-block\";}\n"+
+"for (var i= 0; i <document.getElementById(\"ExamensDemandes\").querySelectorAll(\"label\").length; i++){document.getElementById(\"ExamensDemandes\").querySelectorAll(\"label\")[i].style.width=\"150px\";}\n"+
+"for (var i= 0; i <document.getElementById(\"ExamensDemandes\").querySelectorAll(\"label\").length; i++){document.getElementById(\"ExamensDemandes\").querySelectorAll(\"label\")[i].style.textAlign=\"right\";}\n"+
+"for (var i= 0; i <document.getElementById(\"ExamensDemandes\").querySelectorAll(\"label\").length; i++){document.getElementById(\"ExamensDemandes\").querySelectorAll(\"label\")[i].style.fontSize=\"12px\";}\n"+
+"for (var i= 0; i <document.getElementById(\"ExamensDemandes\").querySelectorAll(\"h6\").length; i++){document.getElementById(\"ExamensDemandes\").querySelectorAll(\"h6\")[i].style.textAlign=\"right\";}\n"+
+"for (var i= 0; i <document.getElementById(\"ExamensDemandes\").querySelectorAll(\"h6\").length; i++){document.getElementById(\"ExamensDemandes\").querySelectorAll(\"h6\")[i].style.margin=\"5px 0px\";}\n"+
+"for (var i= 0; i <document.getElementById(\"ExamensDemandes\").querySelectorAll(\"h6\").length; i++){document.getElementById(\"ExamensDemandes\").querySelectorAll(\"h6\")[i].style.fontSize=\"12px\";}\n"+
+"for (var i= 0; i <document.getElementById(\"ExamensDemandes\").querySelectorAll(\"h6\").length; i++){document.getElementById(\"ExamensDemandes\").querySelectorAll(\"h6\")[i].style.textTransform=\"capitalize\";}\n"+
+"for (var i= 0; i <document.getElementById(\"ExamensDemandes\").querySelectorAll(\"h6\").length; i++){document.getElementById(\"ExamensDemandes\").querySelectorAll(\"h6\")[i].style.textDecoration=\"underline\";}\n"+
+"for (var i= 0; i <document.getElementById(\"LMenu\").querySelectorAll(\"a\").length; i++){document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].style.fontSize=\"14px\";}\n"+
+"for (var i= 0; i <document.getElementById(\"LMenu\").querySelectorAll(\"h6\").length; i++){document.getElementById(\"LMenu\").querySelectorAll(\"h6\")[i].style.textAlign=\"left\";}\n"+
+"for (var i= 0; i <document.getElementById(\"LMenu\").querySelectorAll(\"h6\").length; i++){document.getElementById(\"LMenu\").querySelectorAll(\"h6\")[i].style.margin=\"5px 0px\";}\n"+
+"for (var i= 0; i <document.getElementById(\"LMenu\").querySelectorAll(\"h6\").length; i++){document.getElementById(\"LMenu\").querySelectorAll(\"h6\")[i].style.fontSize=\"12px\";}\n"+
+"for (var i= 0; i <document.getElementById(\"LMenu\").querySelectorAll(\"h6\").length; i++){document.getElementById(\"LMenu\").querySelectorAll(\"h6\")[i].style.textTransform=\"capitalize\";}\n"+
+"for (var i= 0; i <document.getElementById(\"LMenu\").querySelectorAll(\"h6\").length; i++){document.getElementById(\"LMenu\").querySelectorAll(\"h6\")[i].style.textDecoration=\"underline\";}\n"+
+"for (var i=1; i < document.querySelectorAll(\"p\").length ; i++){document.querySelectorAll(\"p\")[i].style.textAlign=\"center\";}\n"+
+"for (var i=2; i < document.querySelectorAll(\"p\").length ; i++){document.querySelectorAll(\"p\")[i].style.marginBottom=\"25px\";}\n"+
+"for (var i= 2; i <document.querySelectorAll(\"div\").length; i++){\n"+
+"for(var j=0;j<document.querySelectorAll(\"div\")[i].querySelectorAll(\"label\").length;j++)\n"+
+"{document.querySelectorAll(\"div\")[i].querySelectorAll(\"label\")[j].style.display=\"inline-block\";}}\n"+
+"for (var i= 2; i <document.querySelectorAll(\"div\").length; i++){\n"+
+"for(var j=0;j<document.querySelectorAll(\"div\")[i].querySelectorAll(\"label\").length;j++)\n"+
+"{document.querySelectorAll(\"div\")[i].querySelectorAll(\"label\")[j].style.width=\"337.5px\";}}\n"+
+"for (var i= 2; i <document.querySelectorAll(\"div\").length; i++){\n"+
+"for(var j=0;j<document.querySelectorAll(\"div\")[i].querySelectorAll(\"label\").length;j++)\n"+
+"{document.querySelectorAll(\"div\")[i].querySelectorAll(\"label\")[j].style.textAlign=\"right\";}}\n"+
+"let myInterval;function fChpSel(cel){\n"+
+"cel.previousSibling.style.backgroundColor =\"blue\";\n"+
+"cel.style.backgroundColor=\"\";cel.style.color=\"\";cel.style.fontWeight=\"\";\n"+
+"myInterval = setInterval(()=>{cel.previousSibling.style.color = \"white\"\n"+
+"cel.previousSibling.style.backgroundColor =\n"+
+"cel.previousSibling.style.backgroundColor == \"blue\" ? \"green\" :\n"+
+"cel.previousSibling.style.backgroundColor ==\"green\"?\"red\":\"blue\";}, 500)}\n"+
+"function fChpLib(cel){clearInterval(myInterval);\n"+
+"cel.previousSibling.style.backgroundColor = \"\";\n"+
+"cel.previousSibling.style.color = \"\"; var CdtC=\"\",refs=\"\";\n"+
+"var ArrplCel=cel.value===\"\"?\n"+
+"(cel.style.backgroundColor=\"\",cel.style.color=\"\",cel.style.fontWeight=\"\")\n"+
+":cel.value===\"POSITIVE\"||cel.value===\"AC\"||cel.value===\"SC\"||cel.value===\"SS\"?\n"+
+"(cel.style.backgroundColor=\"aqua\",cel.style.color=\"red\",cel.style.fontWeight=\"bold\")\n"+
+":cel.placeholder.includes(\"<\")?\n"+
+"(refs=cel.placeholder.split(\" \"),CdtC=cel.value > parseFloat(refs[1])?\n"+
+"(cel.style.backgroundColor=\"aqua\",cel.style.color=\"red\",cel.style.fontWeight=\"bold\"):\"\")\n"+
+":cel.placeholder.includes(\"-\")?\n"+
+"(refs=cel.placeholder.split(\"-\"),CdtC=cel.value < parseFloat(refs[0])?\n"+
+"(cel.style.backgroundColor=\"aqua\",cel.style.color=\"orange\",cel.style.fontWeight=\"bold\")\n"+
+":cel.value > parseFloat(refs[1])?\n"+
+"(cel.style.backgroundColor=\"aqua\",cel.style.color=\"red\",cel.style.fontWeight=\"bold\"):\"\"):\"\";}\n"+
+"function fChpSelC(cel){cel.previousSibling.style.backgroundColor =\"blue\";\n"+
+"cel.style.backgroundColor=\"\";cel.style.color=\"\";cel.style.fontWeight=\"\";\n"+
+"var CdtC=\"\",refs=\"\";var ArrplCel=cel.placeholder===\"< 2.5\"?\n"+
+"(cel.value=(document.getElementById(\"CholesterolTotal\").value -\n"+
+"document.getElementById(\"CholesterolHDL\").value -\n"+
+"(document.getElementById(\"Triglycerides\").value/ 5)).toFixed(2),\n"+
+"refs=cel.placeholder.split(\" \"),CdtC=cel.value > parseFloat(refs[1])?\n"+
+"(cel.style.backgroundColor=\"aqua\",cel.style.color=\"red\",cel.style.fontWeight=\"bold\"):\"\")\n"+
+":(cel.value=(document.getElementById(\"CholesterolTotal\").value*2.56 +\n"+
+"document.getElementById(\"Triglycerides\").value*0.87).toFixed(2),\n"+
+"refs=cel.placeholder.split(\"-\"),CdtC=cel.value < parseFloat(refs[0])?\n"+
+"(cel.style.backgroundColor=\"aqua\",cel.style.color=\"orange\",cel.style.fontWeight=\"bold\")\n"+
+":cel.value > parseFloat(refs[1])?\n"+
+"(cel.style.backgroundColor=\"aqua\",cel.style.color=\"red\",cel.style.fontWeight=\"bold\"):\"\");\n"+
+"myInterval = setInterval(()=>{cel.previousSibling.style.color = \"white\"\n"+
+"cel.previousSibling.style.backgroundColor =\n"+
+"cel.previousSibling.style.backgroundColor == \"blue\" ? \"green\" :\n"+
+"cel.previousSibling.style.backgroundColor ==\"green\"?\"red\":\"blue\";}, 500)}\n"+
+"function fChpLibC(cel){clearInterval(myInterval);\n"+
+"cel.previousSibling.style.backgroundColor = \"\";\n"+
+"cel.previousSibling.style.color = \"\"}\n"+
+"var btn_vld= document.getElementById(\"vld\");btn_vld.addEventListener('click',vd_pgweb);\n"+
+"function vd_pgweb(event){let Rtab=[],fTab;for (var i=1; i<10 ; i++){\n"+
+"fTab += Rtab.push(document.querySelectorAll(\"input,select\")[i].value)}\n"+
+"let Rtab2=[];\n"+
+"var PrixExamens = document.getElementById(\"PrixExamens\").value;\n"+
+"var Telephone = document.getElementById(\"Telephone\").value, negTx=\"\", btn_evt =\"\";\n"+
+"for (var i=1; i<10 ; i++){\n"+
+"var fxBlcg=document.querySelectorAll(\"input,select\")[i].value===\"\" &&\n"+
+"document.querySelectorAll(\"input,select\")[i].nextElementSibling.nodeName!==\"SPAN\"?\n"+
+"(negTx= document.createElement(\"span\"),\n"+
+"negTx.textContent=\" *Champ obligatoire\",negTx.style.color=\"red\",\n"+
+"document.querySelectorAll(\"input,select\")[i].after(negTx))\n"+
+":document.querySelectorAll(\"input,select\")[i].value===\"\" &&\n"+
+"document.querySelectorAll(\"input,select\")[i].nextElementSibling.nodeName===\"SPAN\"?\n"+
+"(document.querySelectorAll(\"input,select\")[i].nextElementSibling.remove(),\n"+
+"negTx= document.createElement(\"span\"),\n"+
+"negTx.textContent=\" *Champ obligatoire\",negTx.style.color=\"red\",\n"+
+"document.querySelectorAll(\"input,select\")[i].after(negTx)):\"\";}\n"+
+"var tstTel=!/^\\w{10}$/.test(Telephone) &&\n"+
+"document.getElementById(\"Telephone\").nextElementSibling.nodeName!==\"SPAN\" &&\n"+
+"Telephone!==\"\"?(negTx= document.createElement(\"span\"),\n"+
+"negTx.textContent=\" *Exactement 10 chiffres.Merci!\",\n"+
+"negTx.style.color=\"#275280\",negTx.style.fontWeigth=\"bold\",\n"+
+"document.getElementById(\"Telephone\").after(negTx))\n"+
+":!/^\\w{10}$/.test(Telephone) &&\n"+
+"document.getElementById(\"Telephone\").nextElementSibling.nodeName===\"SPAN\" &&\n"+
+"Telephone!==\"\"?(document.getElementById(\"Telephone\").nextElementSibling.remove(),\n"+
+"negTx= document.createElement(\"span\"),\n"+
+"negTx.textContent=\" *Exactement 10 chiffres.Merci!\",\n"+
+"negTx.style.color=\"#275280\",negTx.style.fontWeigth=\"bold\",\n"+
+"document.getElementById(\"Telephone\").after(negTx)):/\\D/.test(Telephone) &&\n"+
+"document.getElementById(\"Telephone\").nextElementSibling.nodeName!==\"SPAN\"?\n"+
+"(negTx= document.createElement(\"span\"),\n"+
+"negTx.textContent=\" *Uniquement [0-9]\",\n"+
+"negTx.style.color=\"#275280\",negTx.style.fontWeigth=\"bold\",\n"+
+"document.getElementById(\"Telephone\").after(negTx)):/\\D/.test(Telephone) &&\n"+
+"document.getElementById(\"Telephone\").nextElementSibling.nodeName===\"SPAN\"?\n"+
+"(document.getElementById(\"Telephone\").nextElementSibling.remove(),\n"+
+"negTx= document.createElement(\"span\"),negTx.textContent=\" *Uniquement [0-9]\",\n"+
+"negTx.style.color=\"#275280\",negTx.style.fontWeigth=\"bold\",\n"+
+"document.getElementById(\"Telephone\").after(negTx)):\"\";\n"+
+"var tstPrix=/[a-z]/.test(PrixExamens) && /\\d/.test(PrixExamens)\n"+
+"&& document.getElementById(\"PrixExamens\").nextElementSibling.nodeName!==\"SPAN\"?\n"+
+"(negTx= document.createElement(\"span\"),\n"+
+"negTx.textContent=\" *Uniquement (Chiffres ou Lettres)\",\n"+
+"negTx.style.color=\"#275280\",negTx.style.fontWeigth=\"bold\",\n"+
+"document.getElementById(\"PrixExamens\").after(negTx))\n"+
+":/[a-z]/.test(PrixExamens) && /\d/.test(PrixExamens)\n"+
+"&& document.getElementById(\"PrixExamens\").nextElementSibling.nodeName===\"SPAN\"?\n"+
+"(document.getElementById(\"PrixExamens\").nextElementSibling.remove(),\n"+
+"negTx= document.createElement(\"span\"),\n"+
+"negTx.textContent=\" *Uniquement (Chiffres ou Lettres)\",\n"+
+"negTx.style.color=\"#275280\",negTx.style.fontWeigth=\"bold\",\n"+
+"document.getElementById(\"PrixExamens\").after(negTx)):\"\";\n"+
+"for (var i=90 ; i<document.querySelectorAll(\"input,select\").length ; i++){\n"+
+"var tstEnv= Rtab.includes(\"\")||\n"+
+"/[a-z]/.test(PrixExamens) && /\\d/.test(PrixExamens)||\n"+
+"/\\D/.test(Telephone)||!/^\\w{10}$/.test(Telephone)?event.preventDefault():\n"+
+"document.querySelectorAll(\"input,select\")[i].value.trim()===\"\"?\n"+
+"(document.querySelectorAll(\"input,select\")[i].previousElementSibling.remove(),\n"+
+"document.querySelectorAll(\"input,select\")[i].remove(),i--,\n"+
+"btn_evt = document.createElement(\"input\"),\n"+
+"btn_evt.id=\"envt\",btn_evt.value=\"Envoyer\",btn_evt.type=\"submit\",\n"+
+"btn_evt.style.fontFamily=\"bookman Old Style\",\n"+
+"btn_evt.style.fontWeight=\"bold\",btn_evt.style.color= \"#275280\",\n"+
+"btn_evt.style.fontSize=\"15px\",btn_evt.style.width=\"200px\",\n"+
+"btn_vld.replaceWith(btn_evt)):\"\";}}function Avertir (cel){\n"+
+"var ActLibCel=cel.value!==\"\" && cel.nextElementSibling.textContent===\" *Champ obligatoire\"||\n"+
+"cel.value!==\"\" && cel.nextElementSibling.textContent===\" *Uniquement [0-9]\"||\n"+
+"cel.value!==\"\" && cel.nextElementSibling.textContent===\" *Exactement 10 chiffres.Merci!\"||\n"+
+"cel.value!==\"\" && cel.nextElementSibling.textContent===\" *Uniquement (Chiffres ou Lettres)\"?\n"+
+"cel.nextElementSibling.remove():\"\";}\n"+
+"</script><script type=\"module\">\n"+
+"import {exaGrp} from \"./scode.js\";\n"+
+"var TypChp= document.querySelectorAll(\"input,select\"),TxExam=\"\",ExamSlt=[];\n"+
+"for(let[x,y] of Object.entries(exaGrp)){var RCon=y===\"on\"?TxExam += ExamSlt.push(x):\"\";}\n"+
+"for(var i= 0; i <TypChp.length; i++){for (var j= 0; j < ExamSlt.length; j++){\n"+
+"var RChp=TypChp[i].nodeName===\"INPUT\" && TypChp[i].type===\"checkbox\" ?\n"+
+"document.getElementById(ExamSlt[j]).checked =\"checked\":TypChp[i].type===\"button\"?\n"+
+"\"\":TypChp[i].value= exaGrp[TypChp[i].name];}}</script></body></html>";
 
-var m5="</datalist><br><label for=\"Prescripteur\">Prescripteur:</label><input  name=\"Prescripteur\" type=\"text\" autocomplete=\"off\" list=\"prs\" id=\"Prescripteur\" onblur=\"Avertir(this)\" placeholder=\"provenance du Bull\"><datalist id=\"prs\">";
+var mt= m1+ txNom +m2+ txPnom +m3+ txDc +m4+ txPrs +m5+ txBt +m6;
 
-var m6="</datalist><br><label for=\"Biotechnologiste\">Biotechnologiste:</label><input  name=\"Biotechnologiste\" type=\"text\" autocomplete=\"off\" list=\"btech\" id=\"Biotechnologiste\" onblur=\"Avertir(this)\" placeholder=\"Nom du technicien\"><datalist id=\"btech\">";
-
-var m7="</datalist></label><br><br><label>Prix des Examens (ou statut): <input  name=\"Prix_des_Examens_ou_statut\" type=\"number\"  step=\"0.01\"></label><br><br>\n"+
-"<label>Date du Prelevement: <input  name=\"Date_du_Prelevement\" type=\"date\">&nbsp;</label><br><br></div>\n"+
-"<div id=\"bk_C\">\n"+
-"<div id=\"bk_CG\">\n"+
-"<h3>inflammation</h3>\n"+
-"<label>VS : 1ère HEURE <input name=\"VS_1ereHEURE\" type=\"number\"  step=\"0.01\"></label><label>2ième HEURE : <input name=\"VS_2iemeHEURE\" type=\"number\"  step=\"0.01\"></label>\n"+
-"<h3>ionogramme</h3>\n"+
-"<div>\n"+
-"<label>Potassium (k+) : <input name=\"Potassium\" type=\"number\"  step=\"0.01\" ></label> \n"+
-"<label>Sodium (Na+) : <input name=\"Sodium\" type=\"number\"  step=\"0.01\" ></label>\n"+
-"<label>Chlore (Cl-) : <input name=\"Chlore\" type=\"number\"  step=\"0.01\" /></label>\n"+
-"</div><br>\n"+
-"<label>Magnésium (Mg2+) : <input name=\"Magnesium\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Calcium (Ca2+) : <input name=\"Calcium\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Reserve Alcalin : <input name=\"Reserve_Alcalin\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Protides Totaux : <input name=\"Protides_Totaux\" type=\"number\"  step=\"0.01\"></label>\n"+
-"<h3>bilan lipidique</h3>\n"+
-"<label>Triglycérides: <input name=\"Triglycerides\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Cholestérol Total : <input name=\"Cholesterol_Total\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Cholestérol HDL : <input name=\"Cholesterol_HDL\" type=\"number\"  step=\"0.01\"> </label><br>\n"+
-"<label>Cholestérol LDL : <input name=\"Cholesterol_LDL\" type=\"number\"  step=\"0.01\"> </label><br>\n"+
-"<label>Lipide Totale : <input name=\"Lipide_Totale\" type=\"number\"  step=\"0.01\"> </label><br>\n"+
-"<h3>bilan hepatique et bilaire</h3>\n"+
-"<label>Transaminasemie GOT : <input name=\"TGO\" type=\"number\"  step=\"0.01\"></label><label>Transaminases TGP : <input name=\"TGP\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Bilirubine Totale : <input name=\"Bilirubine_Totale\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Bilirubine conjuguee : <input name=\"Bilirubine_Conjuguee\" type=\"number\"  step=\"0.01\"> </label><br>\n"+
-"<label>AgHBS : <select name=\"AgHBS\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label><br>\n"+
-"<label>ACHBS : <select name=\"ACHBS\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label><br>\n"+
-"<label>AgHBe : <select name=\"AgHBe\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label><br>\n"+
-"<label>ACHBe : <select name=\"ACHBe\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select> </label><br>\n"+
-"<label>ACHBC : <select name=\"ACHBC\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label><br>\n"+
-"<label>ACHVC : <select name=\"ACHVC\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label><br>\n"+
-"<label>HAV (IgM) : <select name=\"HAV_IgM\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label><br>\n"+
-"<label>Gamma-GT <input name=\"Gamma_GT\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Phosphatase Alcaline <input name=\"Phosphatase_Alcaline\" type=\"number\"  step=\"0.01\"></label>\n"+
-"<h3>bilan cytobacteriologie</h3>\n"+
-"			<a href=\"ECBU.html\">ECBU: </a><br> \n"+
-"			<a href=\"coproculture.html\">Coproculture:  </a><br> \n"+ 
-"			<a href=\"pv.html\">PV :  </a><br>  \n"+
-"			<a href=\"pu.html\">PU :</a><br>\n"+
-"			<a href=\"spermoculture.html\">Spermoculture : </a><br> \n"+
-"			<a href=\"lcr_exudat.html\">LCR/Exudat :</a> \n"+
-
-"<h3>bilan spermiologique</h3>\n"+
-"			<a href=\"spermogramme.html\">Spermogramme:</a><br>\n"+
-"			<a href=\"spermocytogramme.html\">Spermocytogramme:</a>\n"+
-"</div><div id=\"bk_CC\">\n"+
-"<h3>bilan renal</h3>\n"+
-"<label>Créatinine : <input name=\"Creatinine\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Uree:<input name=\"Uree\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Albuminurie:<input name=\"Albuminurie\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Protéinurie:<input name=\"Proteinurie\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Protéinurie 24h:<input name=\"Proteinurie_24h\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>DFG:<input name=\"DFG\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Ionogramme Urinaire : <input name=\"Ionogramme_Urinaire\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Clairance de Créatininurie : <input name=\"Clairance_de_Creatininurie\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Electrophorèse des Proteines Serique : <select name=\"Electrophorese_des_Proteines_Serique\"><option></option><option>NORMALE</option><option>ANORMALE</option></select></label><br>\n"+	
-"<label>Albumine : <input name=\"Albumine_EP\"  type=\"number\"  step=\"0.01\"></label>\n"+
-"<label>Alpha I : <input name=\"AlphaI\"  type=\"number\"  step=\"0.01\"></label>\n"+
-"<label>Alpha II : <input name=\"AlphaII\"  type=\"number\"  step=\"0.01\"></label>\n"+
-"<label>Beta : <input name=\"Beta\"  type=\"number\"  step=\"0.01\"></label>\n"+
-"<label>Gamma : <input name=\"Gamma\"  type=\"number\"  step=\"0.01\"></label>\n"+
-"<h3>bilan glycemique</h3>\n"+
-"<label>Glycémie à Jeûn : <input name=\"Glycemie_à_Jeûn\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Glycémie Post Prandiale : <input name=\"Glycemie_Post_Prandiale\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>HBA1C : <input name=\"HBA1C\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Glycosurie : <input name=\"Glycosurie\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Glycorachie : <input name=\"Glycorachie\" type=\"number\"  step=\"0.01\"></label>\n"+
-"<h3>bilan Immuno-hematologique</h3>\n"+
-"NFS (Numeration  Sanguine):\n"+
-"<label>Leucocytes : <input name=\"nfs_Leucocytes\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Hématies : <input name=\"nfs_Hematies\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Hemoglobine : <input name=\"nfs_Hemoglobine\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Hematocrite : <input name=\"nfs_Hematocrite\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>VGM : <input name=\"nfs_VGM\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>TCMH : <input name=\"nfs_TCMH\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>CCMH : <input name=\"nfs_CCMH\"  type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Plaquette : <input name=\"nfs_Plaquette\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>PN : <input name=\"nfs_PN\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>PE : <input name=\"nfs_PE\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>PB : <input name=\"nfs_PB\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>LY : <input name=\"nfs_LY\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Mn : <input name=\"nfs_Mn\" type=\"number\"  step=\"0.01\"></label><br><br>\n"+
-"<label>Groupe Sanguin : <select name=\"Groupe_Sanguin\"><option></option><option>O</option><option>A</option><option>B</option><option>AB</option></select></label>\n"+ 
-"<label>Rhésus : <select name=\"Rhesus\"><option></option><option>(+) POSITIVE</option><option>(-) NEGATIVE</option></select></label>\n"+
-"<label>TP : <input name=\"TP\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>TCK : <input name=\"TCK\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Fibrinémie : <input name=\"Fibrinemie\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Taux de Prothrombine : <input name=\"Taux_de_Prothrombine\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>INR : <input name=\"INR\" type=\"number\"  step=\"0.01\"></label><br><br>\n"+
-"<label>Electrophorèse de hemoglobine : <select name=\"Electrophorese_de_hemoglobine\"><option></option><option>A1A2</option><option>AC</option><option>SC</option><option>SS</option><option>AF</option></select></label><br>\n"+
-"<label>A1 : <input name=\"ElectroHB_A1\" type=\"number\"  step=\"0.01\"></label>\n"+
-"<label>A2 : <input name=\"ElectroHB_A2\" type=\"number\"  step=\"0.01\"></label>\n"+
-"<label>S : <input name=\"ElectroHB_S\" type=\"number\"  step=\"0.01\"></label>\n"+
-"<label>C : <input name=\"ElectroHB_C\" type=\"number\"  step=\"0.01\"></label>\n"+
-"<label>F : <input name=\"ElectroHB_F\" type=\"number\"  step=\"0.01\"></label>\n"+
-"<h3>bilan serologie</h3>\n"+
-"<label>Widal et Félix : <select name=\"Widal_et_Felix\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label><br>\n"+
-"<label>TO : <input name=\"TO\" type=\"number\"  step=\"0.01\"></label>\n"+
-"<label>TH : <input name=\"TH\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>AO : <input name=\"AO\" type=\"number\"  step=\"0.01\"></label>\n"+
-"<label>AH : <input name=\"AH\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>BO : <input name=\"BO\" type=\"number\"  step=\"0.01\"></label>\n"+ 
-"<label>BH : <input name=\"BH\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>CO : <input name=\"CO\" type=\"number\"  step=\"0.01\"></label>\n"+
-"<label>CH :	<input name=\"CH\" type=\"number\"  step=\"0.01\"></label><br><br>\n"+
-"<label>Toxoplasmose : <select name=\"Toxoplasmose\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label><label> IgM : <input name=\"toxo_igm\" type=\"number\"  step=\"0.01\"></label><label> IgG :<input name=\"toxo_igg\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Rubéole : <select name=\"Rubeole\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label><label> IgM : <input name=\"rub_igm\" type=\"number\"  step=\"0.01\"></label><label> IgG :<input name=\"rub_igg\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Chlamydia : <select name=\"Chlamydia\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label><label> IgM : <input name=\"chld_igm\" type=\"number\"  step=\"0.01\"></label><label> IgG : <input name=\"chld_igg\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Mycoplasme : <select name=\"Mycoplasme\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label><label> IgM : <input name=\"mycp_igm\" type=\"number\"  step=\"0.01\"></label><label> IgG : <input name=\"mycp_igg\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Bilharziose : <select name=\"Bilharziose\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label><label> IgM : <input name=\"bilh_igm\" type=\"number\"  step=\"0.01\"></label><label> IgG : <input name=\"bilh_igg\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>VDRL : <select name=\"BW\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label><label> TPHA : <input name=\"tpha\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Waaler Rose : <select name=\"Waaler_Rose\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label><label> Titre : <input name=\"wlr_t\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>ASLO : <select name=\"ASLO\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label><label> Titre : <input name=\"aslo_t\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>VIH : <select name=\"VIH\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label><label> Typage : <select name=\"vih_tp\"><option></option><option>VIH1</option><option>VIH2</option><option>VIH1 et VIH 2</option></select></label><br>\n"+
-"<label>CRP: <select name=\"CRP\"><option></option><option>POSITIVE</option><option>NEGATIVE</option></select></label><label> Titre: <input name=\"CRP_t\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"</div><div id=\"bk_CD\">\n"+
-"<h3>bilan hormonal</h3>\n"+
-"<label>T3 libre: <input name=\"T3_libre\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>T4 libre : <input name=\"T4_libre\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>TSH : <input name=\"TSH\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>PSA : <input name=\"PSA\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Estradiol : <input name=\"Estradiol\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Progestérone : <input name=\"Progesterone\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Prolactinémie : <input name=\"Prolactinemie\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>LH-RH : <input name=\"LH_RH\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Cortisol : <input name=\"Cortisol\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>FSH : <input name=\"FSH\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Testosterone : <input name=\"Testosterone\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>TSH_us : <input name=\"TSH_us\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Beta HCG (sang) : <input name=\"Beta_HCG_sang\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Beta HCG (urine) : <input name=\"Beta_HCG_urine\" type=\"number\"  step=\"0.01\"></label>\n"+
-"<h3>bilan enzymatique musculaires</h3>\n"+
-"<label>LDH : <input name=\"LDH\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>CPK : <input name=\"CPK\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>CPK-mb : <input name=\"CPK_mb\" type=\"number\"  step=\"0.01\"></label>\n"+
-"<h3>bilan divers</h3>\n"+
-"<label>Myoglobine: <input name=\"Myoglobine\" type=\"number\"  step=\"0.01\"></label><br>\n"+
-"<label>Troponime: <input name=\"Troponime\" type=\"number\"  step=\"0.01\"></label><br><br>\n"+
-"<input id=\"vdg\"  type=\"submit\" value=\"Envoyer [Vider]\">\n"+
-"<input id=\"Enr_av\" type=\"button\" value=\"<\">\n"+
-"<input  id=\"Enr_dv\" type=\"button\" value=\"/\" >\n"+
-"<input id=\"edit_exam\" type=\"button\" value=\"Redaction d'examens\">\n"+
-"<input type=\"button\" value=\"Nouveau Patient\"><input type=\"button\" value=\"Bilan Operationnel\"><input  type=\"button\" value=\"Utilisez une Calculatrice?\">\n"+
-"<br></div></div></form><script src=\"Manip.js\"></script><script type=\"module\"> import {exa_Grp} from \"./scode.js\";\n"+
-"var lgn_chp=document.getElementsByTagName(\"label\");\n"+
-"let CvED=exa_Grp.Examens_Demandes.split(\",\");\n"+
-"for (var i= 0; i < lgn_chp.length; i++)\n"+
-"{if(lgn_chp[i].firstElementChild.nodeName===\"INPUT\"){lgn_chp[i].firstElementChild.value= exa_Grp[lgn_chp[i].firstElementChild.name]}\n"+
-"else if(lgn_chp[i].firstElementChild.multiple){\n"+
-"for (var j= 0; j < lgn_chp[i].firstElementChild.children.length; j++)\n"+
-"{let cph=lgn_chp[i].firstElementChild.children[j].textContent;\n"+
-"for (var l= 0; l < lgn_chp[i].firstElementChild.children[j].children.length; l++){for (var m= 0; m < CvED.length; m++){\n"+
-"if(lgn_chp[i].firstElementChild.children[j].children[l].textContent===CvED[m]){let NvS=document.createElement(\"option\");NvS.selected=\"selected\";NvS.textContent=CvED[m];\n"+
-"lgn_chp[i].firstElementChild.children[j].children[l].replaceWith(NvS);}}}}}\n"+
-"else {lgn_chp[i].firstElementChild.firstElementChild.textContent= exa_Grp[lgn_chp[i].firstElementChild.name]}}\n"+
-"</script></body></html>";
-
-var mt= m1+m2+txt_sdN +m3+txt_sdP+m4+txt_sdDC+m5+txt_sdPRS+m6+txt_sdBt+m7;
-fs.writeFile("Modif.html",mt,{encoding:"utf8", flag:"w"},(err)=>{var info=(err)?console.log(err):console.log("Mdf_pg pret! ");});
+fs.writeFile("PatientMd.html",mt,{encoding:"utf8", flag:"w"},(err)=>{var info=(err)?console.log(err):console.log("Mdf_pg pret! ");});
 
 var suc1="<!DOCTYPE html><html><head>\n"+
 "<meta content=\"fr-ci\" http-equiv=\"Content-Language\">\n"+
@@ -831,7 +1155,7 @@ var suc2="</span></div>\n"+
 "<span class=\"Ctn\" style=\"display:inline-block;width:450px\">";
 
 var suc3="</span></div></div>\n"+
-"<p style=\"text-align:center\"><input value=\"Modifier\" onclick=\"window.open('PatientMod.html', '_parent')\" type=\"button\"><input type=\"button\" value=\"Etape suivante\"><br></p>\n"+
+"<p style=\"text-align:center\"><input value=\"Modifier\" onclick=\"window.open('PatientMd.html', '_parent')\" type=\"button\"><input type=\"button\" value=\"Etape suivante\"><br></p>\n"+
 "<script>\n"+
 "for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.fontFamily=\"courier New\";}\n"+
 "for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.fontWeight=\"bold\";}\n"+

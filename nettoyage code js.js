@@ -280,220 +280,219 @@
 "</span></span><span id=\"RMenuP\"style=\"position:fixed;bottom:220px;right:35px;display:grid\">\n"+
 "<a style=\"font-size:30px;margin-bottom:0px\">&#x1F3E0;</a>\n"+
 "<a style=\"font-size:12px\" >accueil</a></span></form><script>\n"+
-"for (var i = 0; i < document.getElementById(\"Lalphb1\").querySelectorAll(\"a\").length; i++){document.getElementById(\"Lalphb1\").querySelectorAll(\"a\")[i].style.color = \"blue\";}
-"for (var i = 0; i < document.getElementById(\"Lalphb1\").querySelectorAll(\"a\").length; i++){document.getElementById(\"Lalphb1\").querySelectorAll(\"a\")[i].style.cursor = \"pointer\";}
-"for (var i = 0; i < document.getElementById(\"Lalphb2\").querySelectorAll(\"a\").length; i++){document.getElementById(\"Lalphb2\").querySelectorAll(\"a\")[i].style.color = \"blue\";}
-"for (var i = 0; i < document.getElementById(\"Lalphb2\").querySelectorAll(\"a\").length; i++){document.getElementById(\"Lalphb2\").querySelectorAll(\"a\")[i].style.cursor = \"pointer\";}
-"for (var i = 0; i < document.getElementById(\"lchx\").querySelectorAll(\"a\").length; i++){document.getElementById(\"lchx\").querySelectorAll(\"a\")[i].style.display = \"inline-block\";}
-"for (var i = 0; i < document.getElementById(\"lchx\").querySelectorAll(\"a\").length; i++){document.getElementById(\"lchx\").querySelectorAll(\"a\")[i].style.width = \"186px\";}
-"for (var i = 0; i < document.getElementById(\"lchx\").querySelectorAll(\"a\").length; i++){document.getElementById(\"lchx\").querySelectorAll(\"a\")[i].style.border = \"thin #275280 solid\";}
-"for (var i = 0; i < document.getElementById(\"lchx\").querySelectorAll(\"a\").length; i++){document.getElementById(\"lchx\").querySelectorAll(\"a\")[i].style.textDecoration = \"none\";}
-"for (var i = 0; i < document.getElementById(\"lchx\").querySelectorAll(\"a\").length; i++){document.getElementById(\"lchx\").querySelectorAll(\"a\")[i].style.color = \"blue\";}
-"for (var i = 0; i < document.getElementById(\"lchx\").querySelectorAll(\"a\").length; i++){document.getElementById(\"lchx\").querySelectorAll(\"a\")[i].style.pointerEvents = \"none\";}
-"for (var i = 1; i < document.getElementById(\"Lalphb1\").children.length; i++){document.getElementById(\"Lalphb1\").children[i].addEventListener(\"click\", Atpg);}
-"for (var i = 0; i < document.getElementById(\"Lalphb2\").children.length; i++){document.getElementById(\"Lalphb2\").children[i].addEventListener(\"click\", Atpg);}
-"function Atpg(e){var LtrC = \"l\" + e.target.textContent;document.getElementById(LtrC).focus();
-"document.getElementById(LtrC).style.backgroundColor = \"aqua\";}
-"for (var i = 0; i < document.getElementById(\"Lalphb3\").querySelectorAll(\"a\").length; i++){document.getElementById(\"Lalphb3\").querySelectorAll(\"a\")[i].style.color = \"blue\";}
-"for (var i = 0; i < document.getElementById(\"Lalphb3\").querySelectorAll(\"a\").length; i++) {document.getElementById(\"Lalphb3\").querySelectorAll(\"a\")[i].style.cursor = \"pointer\";}
-"for (var i = 0; i < document.getElementById(\"Lalphb4\").querySelectorAll(\"a\").length; i++) {    document.getElementById(\"Lalphb4\").querySelectorAll(\"a\")[i].style.color = \"blue\";}
-"for (var i = 0; i < document.getElementById(\"Lalphb4\").querySelectorAll(\"a\").length; i++) {    document.getElementById(\"Lalphb4\").querySelectorAll(\"a\")[i].style.cursor = \"pointer\";}
-"for (var i = 1; i < document.getElementById(\"Lalphb3\").children.length; i++) {document.getElementById(\"Lalphb3\").children[i].addEventListener(\"click\", chgC);}
-"for (var i = 0; i < document.getElementById(\"Lalphb4\").children.length; i++) {document.getElementById(\"Lalphb4\").children[i].addEventListener(\"click\", chgC);}
-"for (var i = 0; i < document.getElementById(\"RMenuP\").children.length; i++)
-"{document.getElementById(\"RMenuP\").children[i].style.cursor = \"pointer\";}
-"function chgC(e) {var LtrC = e.target.textContent;document.getElementById(LtrC).focus();
-"document.getElementById(LtrC).style.backgroundColor = \"#468FC5\";}
-"for (var i = 0; i < document.getElementById(\"LMenu\").querySelectorAll(\"a\").length; i++){
-"var aspL1=document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].href?
-"(document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].style.pointerEvents = \"none\",
-"document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].style.textDecoration = \"none\",
-"document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].style.color = \"red\"):
-"(document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].style.color = \"blue\",
-"document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].style.cursor = \"pointer\",
-"document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].addEventListener(\"click\", AtChp));}
-"for (var i = 0; i < document.getElementById(\"RMenuP\").children.length; i++)
-"{document.getElementById(\"RMenuP\").children[i].addEventListener(\"click\", AtChp);}
-"function AtChp(e){var LtrC = e.target.textContent;
-"var Cchp = LtrC ===\"Coproculture\"||LtrC ===\"ECBU\"||LtrC ===\"LCR\"||LtrC ===\"PU\"
-"||LtrC ===\"PV\"||LtrC ===\"Spermoculture\"||LtrC ===\"Spermocytogramme\"
-"||LtrC ===\"Spermogramme\"||LtrC ===\"Spermogramme\"?
-
-window.open((LtrC+'.html'), '_blank'):LtrC===\"Vitesse_Sedimentaire\"?
-"document.getElementById(\"VS1ereHEURE\").focus():LtrC===\"Transaminases\"?
-"document.getElementById(\"TGO\").focus():LtrC===\"Ionogramme_Sang\"?
-"document.getElementById(\"Potassium\").focus():LtrC===\"Ionogramme_Uri\"?
-"document.getElementById(\"PotassiumU\").focus():LtrC===\"NFS\"?
-"document.getElementById(\"nfsLeucocytes\").focus():LtrC===\"QBC\"?
-"document.getElementById(\"Goutte_Epaisse\").focus():LtrC===\"Facteur_Rhumatoide\"?
-"document.getElementById(\"Waaler_Rose\").focus():LtrC===\"🏠\"?
-"document.getElementById(\"Entree\").focus():LtrC===\"accueil\"?
-"document.getElementById(\"Entree\").focus():document.getElementById(LtrC).focus();}
-"for (var i= 0; i <10; i++){document.querySelectorAll(\"label\")[i].style.display=\"inline-block\";}
-"for (var i= 0; i <10; i++){document.querySelectorAll(\"label\")[i].style.width=\"275px\";}
-"for (var i= 0; i <10; i++){document.querySelectorAll(\"label\")[i].style.textAlign=\"right\";}
-"for (var i= 1; i <8; i++){document.querySelectorAll(\"input\")[i].style.width=\"180px\";}
-"document.querySelectorAll(\"input\")[8].style.width=\"184px\";
-"for (var i= 1; i < 9; i++){document.querySelectorAll(\"input\")[i].style.fontSize=\"15px\";}
-"for (var i= 0; i < 9; i++){document.querySelectorAll(\"input\")[i].style.marginBottom=\"5px\";}
-"for (var i= 1; i < 9; i++){document.querySelectorAll(\"input\")[i].style.textTransform=\"capitalize\";}
-"for (var i= 93; i<document.querySelectorAll(\"input\").length-4 ; i++){document.querySelectorAll(\"input\")[i].style.width=\"85px\";}
-"for (var i= 93; i<document.querySelectorAll(\"input\").length-4 ; i++){document.querySelectorAll(\"input\")[i].style.textAlign=\"center\";}
-"for (var i= 1; i<document.querySelectorAll(\"select\").length ; i++){document.querySelectorAll(\"select\")[i].style.width=\"93px\";}
-"for (var i= 95; i<document.querySelectorAll(\"label\").length ; i++){document.querySelectorAll(\"label\")[i].style.display=\"inline-block\";}
-"for (var i= 0; i<document.querySelectorAll(\"label\").length ; i++){document.querySelectorAll(\"label\")[i].style.fontFamily=\"courier New\";}
-"for (var i= 0; i<document.querySelectorAll(\"input,select\").length ; i++){document.querySelectorAll(\"input,select\")[i].style.fontFamily=\"courier New\";}
-"for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.fontFamily=\"bookman Old Style\";}
-"for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.fontWeight=\"bold\";}
-"for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.color= \"#275280\";}
-"for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.fontSize=\"15px\"}
-"for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.width=\"200px\"}
-"for (var i= 0; i <document.getElementById(\"ExamensDemandes\").querySelectorAll(\"label\").length; i++){document.getElementById(\"ExamensDemandes\").querySelectorAll(\"label\")[i].style.display=\"inline-block\";}
-"for (var i= 0; i <document.getElementById(\"ExamensDemandes\").querySelectorAll(\"label\").length; i++){document.getElementById(\"ExamensDemandes\").querySelectorAll(\"label\")[i].style.width=\"150px\";}
-"for (var i= 0; i <document.getElementById(\"ExamensDemandes\").querySelectorAll(\"label\").length; i++){document.getElementById(\"ExamensDemandes\").querySelectorAll(\"label\")[i].style.textAlign=\"right\";}
-"for (var i= 0; i <document.getElementById(\"ExamensDemandes\").querySelectorAll(\"label\").length; i++){document.getElementById(\"ExamensDemandes\").querySelectorAll(\"label\")[i].style.fontSize=\"12px\";}
-"for (var i= 0; i <document.getElementById(\"ExamensDemandes\").querySelectorAll(\"h6\").length; i++){document.getElementById(\"ExamensDemandes\").querySelectorAll(\"h6\")[i].style.textAlign=\"right\";}
-"for (var i= 0; i <document.getElementById(\"ExamensDemandes\").querySelectorAll(\"h6\").length; i++){document.getElementById(\"ExamensDemandes\").querySelectorAll(\"h6\")[i].style.margin=\"5px 0px\";}
-"for (var i= 0; i <document.getElementById(\"ExamensDemandes\").querySelectorAll(\"h6\").length; i++){document.getElementById(\"ExamensDemandes\").querySelectorAll(\"h6\")[i].style.fontSize=\"12px\";}
-"for (var i= 0; i <document.getElementById(\"ExamensDemandes\").querySelectorAll(\"h6\").length; i++){document.getElementById(\"ExamensDemandes\").querySelectorAll(\"h6\")[i].style.textTransform=\"capitalize\";}
-"for (var i= 0; i <document.getElementById(\"ExamensDemandes\").querySelectorAll(\"h6\").length; i++){document.getElementById(\"ExamensDemandes\").querySelectorAll(\"h6\")[i].style.textDecoration=\"underline\";}
-"for (var i= 0; i <document.getElementById(\"LMenu\").querySelectorAll(\"a\").length; i++){document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].style.fontSize=\"14px\";}
-"for (var i= 0; i <document.getElementById(\"LMenu\").querySelectorAll(\"h6\").length; i++){document.getElementById(\"LMenu\").querySelectorAll(\"h6\")[i].style.textAlign=\"left\";}
-"for (var i= 0; i <document.getElementById(\"LMenu\").querySelectorAll(\"h6\").length; i++){document.getElementById(\"LMenu\").querySelectorAll(\"h6\")[i].style.margin=\"5px 0px\";}
-"for (var i= 0; i <document.getElementById(\"LMenu\").querySelectorAll(\"h6\").length; i++){document.getElementById(\"LMenu\").querySelectorAll(\"h6\")[i].style.fontSize=\"12px\";}
-"for (var i= 0; i <document.getElementById(\"LMenu\").querySelectorAll(\"h6\").length; i++){document.getElementById(\"LMenu\").querySelectorAll(\"h6\")[i].style.textTransform=\"capitalize\";}
-"for (var i= 0; i <document.getElementById(\"LMenu\").querySelectorAll(\"h6\").length; i++){document.getElementById(\"LMenu\").querySelectorAll(\"h6\")[i].style.textDecoration=\"underline\";}
-"for (var i=1; i < document.querySelectorAll(\"p\").length ; i++){document.querySelectorAll(\"p\")[i].style.textAlign=\"center\";}
-"for (var i=2; i < document.querySelectorAll(\"p\").length ; i++){document.querySelectorAll(\"p\")[i].style.marginBottom=\"25px\";}
-"for (var i= 2; i <document.querySelectorAll(\"div\").length; i++){
-"for(var j=0;j<document.querySelectorAll(\"div\")[i].querySelectorAll(\"label\").length;j++)
-"{document.querySelectorAll(\"div\")[i].querySelectorAll(\"label\")[j].style.display=\"inline-block\";}}
-"for (var i= 2; i <document.querySelectorAll(\"div\").length; i++){
-"for(var j=0;j<document.querySelectorAll(\"div\")[i].querySelectorAll(\"label\").length;j++)
-"{document.querySelectorAll(\"div\")[i].querySelectorAll(\"label\")[j].style.width=\"337.5px\";}}
-"for (var i= 2; i <document.querySelectorAll(\"div\").length; i++){
-"for(var j=0;j<document.querySelectorAll(\"div\")[i].querySelectorAll(\"label\").length;j++)
-"{document.querySelectorAll(\"div\")[i].querySelectorAll(\"label\")[j].style.textAlign=\"right\";}}
-let myInterval;function fChpSel(cel){
-cel.previousSibling.style.backgroundColor =\"blue\";
-cel.style.backgroundColor=\"\";cel.style.color=\"\";cel.style.fontWeight=\"\";
-myInterval = setInterval(()=>{cel.previousSibling.style.color = \"white\"
-cel.previousSibling.style.backgroundColor = 
-cel.previousSibling.style.backgroundColor == \"blue\" ? \"green\" :
-cel.previousSibling.style.backgroundColor ==\"green\"?\"red\":\"blue\";}, 500)}
-"function fChpLib(cel){clearInterval(myInterval);
-cel.previousSibling.style.backgroundColor = \"\";
-cel.previousSibling.style.color = \"\"; var CdtC=\"\",refs=\"\";
-"var ArrplCel=cel.value===\"\"?
-"(cel.style.backgroundColor=\"\",cel.style.color=\"\",cel.style.fontWeight=\"\")
-:cel.value===\"POSITIVE\"||cel.value===\"AC\"||cel.value===\"SC\"||cel.value===\"SS\"?
-"(cel.style.backgroundColor=\"aqua\",cel.style.color=\"red\",cel.style.fontWeight=\"bold\")
-:cel.placeholder.includes(\"<\")?
-"(refs=cel.placeholder.split(\" \"),CdtC=cel.value > parseFloat(refs[1])?
-"(cel.style.backgroundColor=\"aqua\",cel.style.color=\"red\",cel.style.fontWeight=\"bold\"):\"\")
-:cel.placeholder.includes(\"-\")?
-"(refs=cel.placeholder.split(\"-\"),CdtC=cel.value < parseFloat(refs[0])?
-"(cel.style.backgroundColor=\"aqua\",cel.style.color=\"orange\",cel.style.fontWeight=\"bold\")
-:cel.value > parseFloat(refs[1])?
-"(cel.style.backgroundColor=\"aqua\",cel.style.color=\"red\",cel.style.fontWeight=\"bold\"):\"\"):\"\";}
-"function fChpSelC(cel){cel.previousSibling.style.backgroundColor =\"blue\";
-cel.style.backgroundColor=\"\";cel.style.color=\"\";cel.style.fontWeight=\"\";
-"var CdtC=\"\",refs=\"\";var ArrplCel=cel.placeholder===\"< 2.5\"?
-"(cel.value=(document.getElementById(\"CholesterolTotal\").value -
-"document.getElementById(\"CholesterolHDL\").value -
-"(document.getElementById(\"Triglycerides\").value/ 5)).toFixed(2),
-refs=cel.placeholder.split(\" \"),CdtC=cel.value > parseFloat(refs[1])?
-"(cel.style.backgroundColor=\"aqua\",cel.style.color=\"red\",cel.style.fontWeight=\"bold\"):\"\")
-:(cel.value=(document.getElementById(\"CholesterolTotal\").value*2.56 +
-"document.getElementById(\"Triglycerides\").value*0.87).toFixed(2),
-refs=cel.placeholder.split(\"-\"),CdtC=cel.value < parseFloat(refs[0])?
-"(cel.style.backgroundColor=\"aqua\",cel.style.color=\"orange\",cel.style.fontWeight=\"bold\")
-:cel.value > parseFloat(refs[1])?
-"(cel.style.backgroundColor=\"aqua\",cel.style.color=\"red\",cel.style.fontWeight=\"bold\"):\"\");
-myInterval = setInterval(()=>{cel.previousSibling.style.color = \"white\"
-cel.previousSibling.style.backgroundColor = 
-cel.previousSibling.style.backgroundColor == \"blue\" ? \"green\" :
-cel.previousSibling.style.backgroundColor ==\"green\"?\"red\":\"blue\";}, 500)}
-"function fChpLibC(cel){clearInterval(myInterval);
-cel.previousSibling.style.backgroundColor = \"\";
-cel.previousSibling.style.color = \"\"}
-"var btn_vld= document.getElementById(\"vld\");btn_vld.addEventListener('click',vd_pgweb);
-"function vd_pgweb(event){let Rtab=[],fTab;for (var i=1; i<10 ; i++){
-fTab += Rtab.push(document.querySelectorAll(\"input,select\")[i].value)}
-let Rtab2=[];
-"var PrixExamens = document.getElementById(\"PrixExamens\").value;
-"var Telephone = document.getElementById(\"Telephone\").value, negTx=\"\", btn_evt =\"\";
-"for (var i=1; i<10 ; i++){
-"var fxBlcg=document.querySelectorAll(\"input,select\")[i].value===\"\" &&
-"document.querySelectorAll(\"input,select\")[i].nextElementSibling.nodeName!==\"SPAN\"?
-"(negTx= document.createElement(\"span\"),
-negTx.textContent=\" *Champ obligatoire\",negTx.style.color=\"red\",
-"document.querySelectorAll(\"input,select\")[i].after(negTx))
-:document.querySelectorAll(\"input,select\")[i].value===\"\" &&
-"document.querySelectorAll(\"input,select\")[i].nextElementSibling.nodeName===\"SPAN\"?
-"(document.querySelectorAll(\"input,select\")[i].nextElementSibling.remove(),
-negTx= document.createElement(\"span\"),
-negTx.textContent=\" *Champ obligatoire\",negTx.style.color=\"red\",
-"document.querySelectorAll(\"input,select\")[i].after(negTx)):\"\";}
-"var tstTel=!/^\w{10}$/.test(Telephone) &&
-"document.getElementById(\"Telephone\").nextElementSibling.nodeName!==\"SPAN\" &&
-Telephone!==\"\"?(negTx= document.createElement(\"span\"),
-negTx.textContent=\" *Exactement 10 chiffres.Merci!\",
-negTx.style.color=\"#275280\",negTx.style.fontWeigth=\"bold\",
-"document.getElementById(\"Telephone\").after(negTx))
-:!/^\w{10}$/.test(Telephone) &&
-"document.getElementById(\"Telephone\").nextElementSibling.nodeName===\"SPAN\" &&
-Telephone!==\"\"?(document.getElementById(\"Telephone\").nextElementSibling.remove(),
-negTx= document.createElement(\"span\"),
-negTx.textContent=\" *Exactement 10 chiffres.Merci!\",
-negTx.style.color=\"#275280\",negTx.style.fontWeigth=\"bold\",
-"document.getElementById(\"Telephone\").after(negTx)):/\D/.test(Telephone) &&
-"document.getElementById(\"Telephone\").nextElementSibling.nodeName!==\"SPAN\"?
-"(negTx= document.createElement(\"span\"),
-negTx.textContent=\" *Uniquement [0-9]\",
-negTx.style.color=\"#275280\",negTx.style.fontWeigth=\"bold\",
-"document.getElementById(\"Telephone\").after(negTx)):/\D/.test(Telephone) &&
-"document.getElementById(\"Telephone\").nextElementSibling.nodeName===\"SPAN\"?
-"(document.getElementById(\"Telephone\").nextElementSibling.remove(),
-negTx= document.createElement(\"span\"),negTx.textContent=\" *Uniquement [0-9]\",
-negTx.style.color=\"#275280\",negTx.style.fontWeigth=\"bold\",
-"document.getElementById(\"Telephone\").after(negTx)):\"\";
-"var tstPrix=/[a-z]/.test(PrixExamens) && /\d/.test(PrixExamens)
-&& document.getElementById(\"PrixExamens\").nextElementSibling.nodeName!==\"SPAN\"?
-"(negTx= document.createElement(\"span\"),
-negTx.textContent=\" *Uniquement (Chiffres ou Lettres)\",
-negTx.style.color=\"#275280\",negTx.style.fontWeigth=\"bold\",
-"document.getElementById(\"PrixExamens\").after(negTx))
-:/[a-z]/.test(PrixExamens) && /\d/.test(PrixExamens)
-&& document.getElementById(\"PrixExamens\").nextElementSibling.nodeName===\"SPAN\"?
-"(document.getElementById(\"PrixExamens\").nextElementSibling.remove(),
-negTx= document.createElement(\"span\"),
-negTx.textContent=\" *Uniquement (Chiffres ou Lettres)\",
-negTx.style.color=\"#275280\",negTx.style.fontWeigth=\"bold\",
-"document.getElementById(\"PrixExamens\").after(negTx)):\"\";
-"for (var i=90 ; i<document.querySelectorAll(\"input,select\").length ; i++){
-"var tstEnv= Rtab.includes(\"\")||
-/[a-z]/.test(PrixExamens) && /\d/.test(PrixExamens)||
-/\D/.test(Telephone)||!/^\w{10}$/.test(Telephone)?event.preventDefault():
-"document.querySelectorAll(\"input,select\")[i].value.trim()===\"\"?
-"(document.querySelectorAll(\"input,select\")[i].previousElementSibling.remove(),
-"document.querySelectorAll(\"input,select\")[i].remove(),i--,
-btn_evt = document.createElement(\"input\"),
-btn_evt.id=\"envt\",btn_evt.value=\"Envoyer\",btn_evt.type=\"submit\",
-btn_evt.style.fontFamily=\"bookman Old Style\",
-btn_evt.style.fontWeight=\"bold\",btn_evt.style.color= \"#275280\",
-btn_evt.style.fontSize=\"15px\",btn_evt.style.width=\"200px\",
-btn_vld.replaceWith(btn_evt)):\"\";}}function Avertir (cel){
-"var ActLibCel=cel.value!==\"\" && cel.nextElementSibling.textContent===\" *Champ obligatoire\"||
-cel.value!==\"\" && cel.nextElementSibling.textContent===\" *Uniquement [0-9]\"||
-cel.value!==\"\" && cel.nextElementSibling.textContent===\" *Exactement 10 chiffres.Merci!\"||
-cel.value!==\"\" && cel.nextElementSibling.textContent===\" *Uniquement (Chiffres ou Lettres)\"?
-cel.nextElementSibling.remove():\"\";}
-"<script type=\"module\"> import {exaGrp} from \"./scode.js\";
-"var TypChp= document.querySelectorAll(\"input,select\"),TxExam=\"\",ExamSlt=[];
-"for(let[x,y] of Object.entries(exaGrp)){if (y===\"on\"){TxExam += ExamSlt.push(x);}}
-"for(var i= 0; i <TypChp.length; i++){for (var j= 0; j < ExamSlt.length; j++){
-"var RChp=TypChp[i].nodeName===\"INPUT\" && TypChp[i].type===\"checkbox\" ?
-"document.getElementById(ExamSlt[j]).checked =\"checked\":
-TypChp[i].value= exaGrp[TypChp[i].name];}}
-"</script></body></html>\n"+
+"for (var i = 0; i < document.getElementById(\"Lalphb1\").querySelectorAll(\"a\").length; i++){document.getElementById(\"Lalphb1\").querySelectorAll(\"a\")[i].style.color = \"blue\";}\n"+
+"for (var i = 0; i < document.getElementById(\"Lalphb1\").querySelectorAll(\"a\").length; i++){document.getElementById(\"Lalphb1\").querySelectorAll(\"a\")[i].style.cursor = \"pointer\";}\n"+
+"for (var i = 0; i < document.getElementById(\"Lalphb2\").querySelectorAll(\"a\").length; i++){document.getElementById(\"Lalphb2\").querySelectorAll(\"a\")[i].style.color = \"blue\";}\n"+
+"for (var i = 0; i < document.getElementById(\"Lalphb2\").querySelectorAll(\"a\").length; i++){document.getElementById(\"Lalphb2\").querySelectorAll(\"a\")[i].style.cursor = \"pointer\";}\n"+
+"for (var i = 0; i < document.getElementById(\"lchx\").querySelectorAll(\"a\").length; i++){document.getElementById(\"lchx\").querySelectorAll(\"a\")[i].style.display = \"inline-block\";}\n"+
+"for (var i = 0; i < document.getElementById(\"lchx\").querySelectorAll(\"a\").length; i++){document.getElementById(\"lchx\").querySelectorAll(\"a\")[i].style.width = \"186px\";}\n"+
+"for (var i = 0; i < document.getElementById(\"lchx\").querySelectorAll(\"a\").length; i++){document.getElementById(\"lchx\").querySelectorAll(\"a\")[i].style.border = \"thin #275280 solid\";}\n"+
+"for (var i = 0; i < document.getElementById(\"lchx\").querySelectorAll(\"a\").length; i++){document.getElementById(\"lchx\").querySelectorAll(\"a\")[i].style.textDecoration = \"none\";}\n"+
+"for (var i = 0; i < document.getElementById(\"lchx\").querySelectorAll(\"a\").length; i++){document.getElementById(\"lchx\").querySelectorAll(\"a\")[i].style.color = \"blue\";}\n"+
+"for (var i = 0; i < document.getElementById(\"lchx\").querySelectorAll(\"a\").length; i++){document.getElementById(\"lchx\").querySelectorAll(\"a\")[i].style.pointerEvents = \"none\";}\n"+
+"for (var i = 1; i < document.getElementById(\"Lalphb1\").children.length; i++){document.getElementById(\"Lalphb1\").children[i].addEventListener(\"click\", Atpg);}\n"+
+"for (var i = 0; i < document.getElementById(\"Lalphb2\").children.length; i++){document.getElementById(\"Lalphb2\").children[i].addEventListener(\"click\", Atpg);}\n"+
+"function Atpg(e){var LtrC = \"l\" + e.target.textContent;document.getElementById(LtrC).focus();\n"+
+"document.getElementById(LtrC).style.backgroundColor = \"aqua\";}\n"+
+"for (var i = 0; i < document.getElementById(\"Lalphb3\").querySelectorAll(\"a\").length; i++){document.getElementById(\"Lalphb3\").querySelectorAll(\"a\")[i].style.color = \"blue\";}\n"+
+"for (var i = 0; i < document.getElementById(\"Lalphb3\").querySelectorAll(\"a\").length; i++) {document.getElementById(\"Lalphb3\").querySelectorAll(\"a\")[i].style.cursor = \"pointer\";}\n"+
+"for (var i = 0; i < document.getElementById(\"Lalphb4\").querySelectorAll(\"a\").length; i++) {    document.getElementById(\"Lalphb4\").querySelectorAll(\"a\")[i].style.color = \"blue\";}\n"+
+"for (var i = 0; i < document.getElementById(\"Lalphb4\").querySelectorAll(\"a\").length; i++) {    document.getElementById(\"Lalphb4\").querySelectorAll(\"a\")[i].style.cursor = \"pointer\";}\n"+
+"for (var i = 1; i < document.getElementById(\"Lalphb3\").children.length; i++) {document.getElementById(\"Lalphb3\").children[i].addEventListener(\"click\", chgC);}\n"+
+"for (var i = 0; i < document.getElementById(\"Lalphb4\").children.length; i++) {document.getElementById(\"Lalphb4\").children[i].addEventListener(\"click\", chgC);}\n"+
+"for (var i = 0; i < document.getElementById(\"RMenuP\").children.length; i++)\n"+
+"{document.getElementById(\"RMenuP\").children[i].style.cursor = \"pointer\";}\n"+
+"function chgC(e) {var LtrC = e.target.textContent;document.getElementById(LtrC).focus();\n"+
+"document.getElementById(LtrC).style.backgroundColor = \"#468FC5\";}\n"+
+"for (var i = 0; i < document.getElementById(\"LMenu\").querySelectorAll(\"a\").length; i++){\n"+
+"var aspL1=document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].href?\n"+
+"(document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].style.pointerEvents = \"none\",\n"+
+"document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].style.textDecoration = \"none\",\n"+
+"document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].style.color = \"red\"):\n"+
+"(document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].style.color = \"blue\",\n"+
+"document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].style.cursor = \"pointer\",\n"+
+"document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].addEventListener(\"click\", AtChp));}\n"+
+"for (var i = 0; i < document.getElementById(\"RMenuP\").children.length; i++)\n"+
+"{document.getElementById(\"RMenuP\").children[i].addEventListener(\"click\", AtChp);}\n"+
+"function AtChp(e){var LtrC = e.target.textContent;\n"+
+"var Cchp = LtrC ===\"Coproculture\"||LtrC ===\"ECBU\"||LtrC ===\"LCR\"||LtrC ===\"PU\"\n"+
+"||LtrC ===\"PV\"||LtrC ===\"Spermoculture\"||LtrC ===\"Spermocytogramme\"\n"+
+"||LtrC ===\"Spermogramme\"||LtrC ===\"Spermogramme\"?\n"+
+"window.open((LtrC+'.html'), '_blank'):LtrC===\"Vitesse_Sedimentaire\"?\n"+
+"document.getElementById(\"VS1ereHEURE\").focus():LtrC===\"Transaminases\"?\n"+
+"document.getElementById(\"TGO\").focus():LtrC===\"Ionogramme_Sang\"?\n"+
+"document.getElementById(\"Potassium\").focus():LtrC===\"Ionogramme_Uri\"?\n"+
+"document.getElementById(\"PotassiumU\").focus():LtrC===\"NFS\"?\n"+
+"document.getElementById(\"nfsLeucocytes\").focus():LtrC===\"QBC\"?\n"+
+"document.getElementById(\"Goutte_Epaisse\").focus():LtrC===\"Facteur_Rhumatoide\"?\n"+
+"document.getElementById(\"Waaler_Rose\").focus():LtrC===\"🏠\"?\n"+
+"document.getElementById(\"Entree\").focus():LtrC===\"accueil\"?\n"+
+"document.getElementById(\"Entree\").focus():document.getElementById(LtrC).focus();}\n"+
+"for (var i= 0; i <10; i++){document.querySelectorAll(\"label\")[i].style.display=\"inline-block\";}\n"+
+"for (var i= 0; i <10; i++){document.querySelectorAll(\"label\")[i].style.width=\"275px\";}\n"+
+"for (var i= 0; i <10; i++){document.querySelectorAll(\"label\")[i].style.textAlign=\"right\";}\n"+
+"for (var i= 1; i <8; i++){document.querySelectorAll(\"input\")[i].style.width=\"180px\";}\n"+
+"document.querySelectorAll(\"input\")[8].style.width=\"184px\";\n"+
+"for (var i= 1; i < 9; i++){document.querySelectorAll(\"input\")[i].style.fontSize=\"15px\";}\n"+
+"for (var i= 0; i < 9; i++){document.querySelectorAll(\"input\")[i].style.marginBottom=\"5px\";}\n"+
+"for (var i= 1; i < 9; i++){document.querySelectorAll(\"input\")[i].style.textTransform=\"capitalize\";}\n"+
+"for (var i= 93; i<document.querySelectorAll(\"input\").length-4 ; i++){document.querySelectorAll(\"input\")[i].style.width=\"85px\";}\n"+
+"for (var i= 93; i<document.querySelectorAll(\"input\").length-4 ; i++){document.querySelectorAll(\"input\")[i].style.textAlign=\"center\";}\n"+
+"for (var i= 1; i<document.querySelectorAll(\"select\").length ; i++){document.querySelectorAll(\"select\")[i].style.width=\"93px\";}\n"+
+"for (var i= 95; i<document.querySelectorAll(\"label\").length ; i++){document.querySelectorAll(\"label\")[i].style.display=\"inline-block\";}\n"+
+"for (var i= 0; i<document.querySelectorAll(\"label\").length ; i++){document.querySelectorAll(\"label\")[i].style.fontFamily=\"courier New\";}\n"+
+"for (var i= 0; i<document.querySelectorAll(\"input,select\").length ; i++){document.querySelectorAll(\"input,select\")[i].style.fontFamily=\"courier New\";}\n"+
+"for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.fontFamily=\"bookman Old Style\";}\n"+
+"for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.fontWeight=\"bold\";}\n"+
+"for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.color= \"#275280\";}\n"+
+"for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.fontSize=\"15px\"}\n"+
+"for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.width=\"200px\"}\n"+
+"for (var i= 0; i <document.getElementById(\"ExamensDemandes\").querySelectorAll(\"label\").length; i++){document.getElementById(\"ExamensDemandes\").querySelectorAll(\"label\")[i].style.display=\"inline-block\";}\n"+
+"for (var i= 0; i <document.getElementById(\"ExamensDemandes\").querySelectorAll(\"label\").length; i++){document.getElementById(\"ExamensDemandes\").querySelectorAll(\"label\")[i].style.width=\"150px\";}\n"+
+"for (var i= 0; i <document.getElementById(\"ExamensDemandes\").querySelectorAll(\"label\").length; i++){document.getElementById(\"ExamensDemandes\").querySelectorAll(\"label\")[i].style.textAlign=\"right\";}\n"+
+"for (var i= 0; i <document.getElementById(\"ExamensDemandes\").querySelectorAll(\"label\").length; i++){document.getElementById(\"ExamensDemandes\").querySelectorAll(\"label\")[i].style.fontSize=\"12px\";}\n"+
+"for (var i= 0; i <document.getElementById(\"ExamensDemandes\").querySelectorAll(\"h6\").length; i++){document.getElementById(\"ExamensDemandes\").querySelectorAll(\"h6\")[i].style.textAlign=\"right\";}\n"+
+"for (var i= 0; i <document.getElementById(\"ExamensDemandes\").querySelectorAll(\"h6\").length; i++){document.getElementById(\"ExamensDemandes\").querySelectorAll(\"h6\")[i].style.margin=\"5px 0px\";}\n"+
+"for (var i= 0; i <document.getElementById(\"ExamensDemandes\").querySelectorAll(\"h6\").length; i++){document.getElementById(\"ExamensDemandes\").querySelectorAll(\"h6\")[i].style.fontSize=\"12px\";}\n"+
+"for (var i= 0; i <document.getElementById(\"ExamensDemandes\").querySelectorAll(\"h6\").length; i++){document.getElementById(\"ExamensDemandes\").querySelectorAll(\"h6\")[i].style.textTransform=\"capitalize\";}\n"+
+"for (var i= 0; i <document.getElementById(\"ExamensDemandes\").querySelectorAll(\"h6\").length; i++){document.getElementById(\"ExamensDemandes\").querySelectorAll(\"h6\")[i].style.textDecoration=\"underline\";}\n"+
+"for (var i= 0; i <document.getElementById(\"LMenu\").querySelectorAll(\"a\").length; i++){document.getElementById(\"LMenu\").querySelectorAll(\"a\")[i].style.fontSize=\"14px\";}\n"+
+"for (var i= 0; i <document.getElementById(\"LMenu\").querySelectorAll(\"h6\").length; i++){document.getElementById(\"LMenu\").querySelectorAll(\"h6\")[i].style.textAlign=\"left\";}\n"+
+"for (var i= 0; i <document.getElementById(\"LMenu\").querySelectorAll(\"h6\").length; i++){document.getElementById(\"LMenu\").querySelectorAll(\"h6\")[i].style.margin=\"5px 0px\";}\n"+
+"for (var i= 0; i <document.getElementById(\"LMenu\").querySelectorAll(\"h6\").length; i++){document.getElementById(\"LMenu\").querySelectorAll(\"h6\")[i].style.fontSize=\"12px\";}\n"+
+"for (var i= 0; i <document.getElementById(\"LMenu\").querySelectorAll(\"h6\").length; i++){document.getElementById(\"LMenu\").querySelectorAll(\"h6\")[i].style.textTransform=\"capitalize\";}\n"+
+"for (var i= 0; i <document.getElementById(\"LMenu\").querySelectorAll(\"h6\").length; i++){document.getElementById(\"LMenu\").querySelectorAll(\"h6\")[i].style.textDecoration=\"underline\";}\n"+
+"for (var i=1; i < document.querySelectorAll(\"p\").length ; i++){document.querySelectorAll(\"p\")[i].style.textAlign=\"center\";}\n"+
+"for (var i=2; i < document.querySelectorAll(\"p\").length ; i++){document.querySelectorAll(\"p\")[i].style.marginBottom=\"25px\";}\n"+
+"for (var i= 2; i <document.querySelectorAll(\"div\").length; i++){\n"+
+"for(var j=0;j<document.querySelectorAll(\"div\")[i].querySelectorAll(\"label\").length;j++)\n"+
+"{document.querySelectorAll(\"div\")[i].querySelectorAll(\"label\")[j].style.display=\"inline-block\";}}\n"+
+"for (var i= 2; i <document.querySelectorAll(\"div\").length; i++){\n"+
+"for(var j=0;j<document.querySelectorAll(\"div\")[i].querySelectorAll(\"label\").length;j++)\n"+
+"{document.querySelectorAll(\"div\")[i].querySelectorAll(\"label\")[j].style.width=\"337.5px\";}}\n"+
+"for (var i= 2; i <document.querySelectorAll(\"div\").length; i++){\n"+
+"for(var j=0;j<document.querySelectorAll(\"div\")[i].querySelectorAll(\"label\").length;j++)\n"+
+"{document.querySelectorAll(\"div\")[i].querySelectorAll(\"label\")[j].style.textAlign=\"right\";}}\n"+
+"let myInterval;function fChpSel(cel){\n"+
+"cel.previousSibling.style.backgroundColor =\"blue\";\n"+
+"cel.style.backgroundColor=\"\";cel.style.color=\"\";cel.style.fontWeight=\"\";\n"+
+"myInterval = setInterval(()=>{cel.previousSibling.style.color = \"white\"\n"+
+"cel.previousSibling.style.backgroundColor =\n"+
+"cel.previousSibling.style.backgroundColor == \"blue\" ? \"green\" :\n"+
+"cel.previousSibling.style.backgroundColor ==\"green\"?\"red\":\"blue\";}, 500)}\n"+
+"function fChpLib(cel){clearInterval(myInterval);\n"+
+"cel.previousSibling.style.backgroundColor = \"\";\n"+
+"cel.previousSibling.style.color = \"\"; var CdtC=\"\",refs=\"\";\n"+
+"var ArrplCel=cel.value===\"\"?\n"+
+"(cel.style.backgroundColor=\"\",cel.style.color=\"\",cel.style.fontWeight=\"\")\n"+
+":cel.value===\"POSITIVE\"||cel.value===\"AC\"||cel.value===\"SC\"||cel.value===\"SS\"?\n"+
+"(cel.style.backgroundColor=\"aqua\",cel.style.color=\"red\",cel.style.fontWeight=\"bold\")\n"+
+":cel.placeholder.includes(\"<\")?\n"+
+"(refs=cel.placeholder.split(\" \"),CdtC=cel.value > parseFloat(refs[1])?\n"+
+"(cel.style.backgroundColor=\"aqua\",cel.style.color=\"red\",cel.style.fontWeight=\"bold\"):\"\")\n"+
+":cel.placeholder.includes(\"-\")?\n"+
+"(refs=cel.placeholder.split(\"-\"),CdtC=cel.value < parseFloat(refs[0])?\n"+
+"(cel.style.backgroundColor=\"aqua\",cel.style.color=\"orange\",cel.style.fontWeight=\"bold\")\n"+
+":cel.value > parseFloat(refs[1])?\n"+
+"(cel.style.backgroundColor=\"aqua\",cel.style.color=\"red\",cel.style.fontWeight=\"bold\"):\"\"):\"\";}\n"+
+"function fChpSelC(cel){cel.previousSibling.style.backgroundColor =\"blue\";\n"+
+"cel.style.backgroundColor=\"\";cel.style.color=\"\";cel.style.fontWeight=\"\";\n"+
+"var CdtC=\"\",refs=\"\";var ArrplCel=cel.placeholder===\"< 2.5\"?\n"+
+"(cel.value=(document.getElementById(\"CholesterolTotal\").value -\n"+
+"document.getElementById(\"CholesterolHDL\").value -\n"+
+"(document.getElementById(\"Triglycerides\").value/ 5)).toFixed(2),\n"+
+"refs=cel.placeholder.split(\" \"),CdtC=cel.value > parseFloat(refs[1])?\n"+
+"(cel.style.backgroundColor=\"aqua\",cel.style.color=\"red\",cel.style.fontWeight=\"bold\"):\"\")\n"+
+":(cel.value=(document.getElementById(\"CholesterolTotal\").value*2.56 +\n"+
+"document.getElementById(\"Triglycerides\").value*0.87).toFixed(2),\n"+
+"refs=cel.placeholder.split(\"-\"),CdtC=cel.value < parseFloat(refs[0])?\n"+
+"(cel.style.backgroundColor=\"aqua\",cel.style.color=\"orange\",cel.style.fontWeight=\"bold\")\n"+
+":cel.value > parseFloat(refs[1])?\n"+
+"(cel.style.backgroundColor=\"aqua\",cel.style.color=\"red\",cel.style.fontWeight=\"bold\"):\"\");\n"+
+"myInterval = setInterval(()=>{cel.previousSibling.style.color = \"white\"\n"+
+"cel.previousSibling.style.backgroundColor =\n"+
+"cel.previousSibling.style.backgroundColor == \"blue\" ? \"green\" :\n"+
+"cel.previousSibling.style.backgroundColor ==\"green\"?\"red\":\"blue\";}, 500)}\n"+
+"function fChpLibC(cel){clearInterval(myInterval);\n"+
+"cel.previousSibling.style.backgroundColor = \"\";\n"+
+"cel.previousSibling.style.color = \"\"}\n"+
+"var btn_vld= document.getElementById(\"vld\");btn_vld.addEventListener('click',vd_pgweb);\n"+
+"function vd_pgweb(event){let Rtab=[],fTab;for (var i=1; i<10 ; i++){\n"+
+"fTab += Rtab.push(document.querySelectorAll(\"input,select\")[i].value)}\n"+
+"let Rtab2=[];\n"+
+"var PrixExamens = document.getElementById(\"PrixExamens\").value;\n"+
+"var Telephone = document.getElementById(\"Telephone\").value, negTx=\"\", btn_evt =\"\";\n"+
+"for (var i=1; i<10 ; i++){\n"+
+"var fxBlcg=document.querySelectorAll(\"input,select\")[i].value===\"\" &&\n"+
+"document.querySelectorAll(\"input,select\")[i].nextElementSibling.nodeName!==\"SPAN\"?\n"+
+"(negTx= document.createElement(\"span\"),\n"+
+"negTx.textContent=\" *Champ obligatoire\",negTx.style.color=\"red\",\n"+
+"document.querySelectorAll(\"input,select\")[i].after(negTx))\n"+
+":document.querySelectorAll(\"input,select\")[i].value===\"\" &&\n"+
+"document.querySelectorAll(\"input,select\")[i].nextElementSibling.nodeName===\"SPAN\"?\n"+
+"(document.querySelectorAll(\"input,select\")[i].nextElementSibling.remove(),\n"+
+"negTx= document.createElement(\"span\"),\n"+
+"negTx.textContent=\" *Champ obligatoire\",negTx.style.color=\"red\",\n"+
+"document.querySelectorAll(\"input,select\")[i].after(negTx)):\"\";}\n"+
+"var tstTel=!/^\w{10}$/.test(Telephone) &&\n"+
+"document.getElementById(\"Telephone\").nextElementSibling.nodeName!==\"SPAN\" &&\n"+
+"Telephone!==\"\"?(negTx= document.createElement(\"span\"),\n"+
+"negTx.textContent=\" *Exactement 10 chiffres.Merci!\",\n"+
+"negTx.style.color=\"#275280\",negTx.style.fontWeigth=\"bold\",\n"+
+"document.getElementById(\"Telephone\").after(negTx))\n"+
+":!/^\w{10}$/.test(Telephone) &&\n"+
+"document.getElementById(\"Telephone\").nextElementSibling.nodeName===\"SPAN\" &&\n"+
+"Telephone!==\"\"?(document.getElementById(\"Telephone\").nextElementSibling.remove(),\n"+
+"negTx= document.createElement(\"span\"),\n"+
+"negTx.textContent=\" *Exactement 10 chiffres.Merci!\",\n"+
+"negTx.style.color=\"#275280\",negTx.style.fontWeigth=\"bold\",\n"+
+"document.getElementById(\"Telephone\").after(negTx)):/\D/.test(Telephone) &&\n"+
+"document.getElementById(\"Telephone\").nextElementSibling.nodeName!==\"SPAN\"?\n"+
+"(negTx= document.createElement(\"span\"),\n"+
+"negTx.textContent=\" *Uniquement [0-9]\",\n"+
+"negTx.style.color=\"#275280\",negTx.style.fontWeigth=\"bold\",\n"+
+"document.getElementById(\"Telephone\").after(negTx)):/\D/.test(Telephone) &&\n"+
+"document.getElementById(\"Telephone\").nextElementSibling.nodeName===\"SPAN\"?\n"+
+"(document.getElementById(\"Telephone\").nextElementSibling.remove(),\n"+
+"negTx= document.createElement(\"span\"),negTx.textContent=\" *Uniquement [0-9]\",\n"+
+"negTx.style.color=\"#275280\",negTx.style.fontWeigth=\"bold\",\n"+
+"document.getElementById(\"Telephone\").after(negTx)):\"\";\n"+
+"var tstPrix=/[a-z]/.test(PrixExamens) && /\d/.test(PrixExamens)\n"+
+"&& document.getElementById(\"PrixExamens\").nextElementSibling.nodeName!==\"SPAN\"?\n"+
+"(negTx= document.createElement(\"span\"),\n"+
+"negTx.textContent=\" *Uniquement (Chiffres ou Lettres)\",\n"+
+"negTx.style.color=\"#275280\",negTx.style.fontWeigth=\"bold\",\n"+
+"document.getElementById(\"PrixExamens\").after(negTx))\n"+
+":/[a-z]/.test(PrixExamens) && /\d/.test(PrixExamens)\n"+
+"&& document.getElementById(\"PrixExamens\").nextElementSibling.nodeName===\"SPAN\"?\n"+
+"(document.getElementById(\"PrixExamens\").nextElementSibling.remove(),\n"+
+"negTx= document.createElement(\"span\"),\n"+
+"negTx.textContent=\" *Uniquement (Chiffres ou Lettres)\",\n"+
+"negTx.style.color=\"#275280\",negTx.style.fontWeigth=\"bold\",\n"+
+"document.getElementById(\"PrixExamens\").after(negTx)):\"\";\n"+
+"for (var i=90 ; i<document.querySelectorAll(\"input,select\").length ; i++){\n"+
+"var tstEnv= Rtab.includes(\"\")||\n"+
+"/[a-z]/.test(PrixExamens) && /\d/.test(PrixExamens)||\n"+
+"/\D/.test(Telephone)||!/^\w{10}$/.test(Telephone)?event.preventDefault():\n"+
+"document.querySelectorAll(\"input,select\")[i].value.trim()===\"\"?\n"+
+"(document.querySelectorAll(\"input,select\")[i].previousElementSibling.remove(),\n"+
+"document.querySelectorAll(\"input,select\")[i].remove(),i--,\n"+
+"btn_evt = document.createElement(\"input\"),\n"+
+"btn_evt.id=\"envt\",btn_evt.value=\"Envoyer\",btn_evt.type=\"submit\",\n"+
+"btn_evt.style.fontFamily=\"bookman Old Style\",\n"+
+"btn_evt.style.fontWeight=\"bold\",btn_evt.style.color= \"#275280\",\n"+
+"btn_evt.style.fontSize=\"15px\",btn_evt.style.width=\"200px\",\n"+
+"btn_vld.replaceWith(btn_evt)):\"\";}}function Avertir (cel){\n"+
+"var ActLibCel=cel.value!==\"\" && cel.nextElementSibling.textContent===\" *Champ obligatoire\"||\n"+
+"cel.value!==\"\" && cel.nextElementSibling.textContent===\" *Uniquement [0-9]\"||\n"+
+"cel.value!==\"\" && cel.nextElementSibling.textContent===\" *Exactement 10 chiffres.Merci!\"||\n"+
+"cel.value!==\"\" && cel.nextElementSibling.textContent===\" *Uniquement (Chiffres ou Lettres)\"?\n"+
+"cel.nextElementSibling.remove():\"\";}\n"+
+"<script type=\"module\"> import {exaGrp} from \"./scode.js\";\n"+
+"var TypChp= document.querySelectorAll(\"input,select\"),TxExam=\"\",ExamSlt=[];\n"+
+"for(let[x,y] of Object.entries(exaGrp)){if (y===\"on\"){TxExam += ExamSlt.push(x);}}\n"+
+"for(var i= 0; i <TypChp.length; i++){for (var j= 0; j < ExamSlt.length; j++){\n"+
+"var RChp=TypChp[i].nodeName===\"INPUT\" && TypChp[i].type===\"checkbox\" ?\n"+
+"document.getElementById(ExamSlt[j]).checked =\"checked\":\n"+
+"TypChp[i].value= exaGrp[TypChp[i].name];}}\n"+
+"</script></body></html>";
