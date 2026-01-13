@@ -26,7 +26,7 @@ var tbN=[],tbP=[], tbDc=[], tbPrs=[], tbBt=[];
 let txtN= "", txtP= "", txtDc= "", txtPrs= "", txtBt= "",
 txNom= "",txPnom= "", txDc= "",txPrs= "",txBt= "";
 
-for( let pers of  RMld){
+for(let pers of  RMld){
 txtN += tbN.push(Object.values(pers)[1]) + "<br>";
 txtP += tbP.push(Object.values(pers)[2]) + "<br>";
 txtDc += tbDc.push(Object.values(pers)[5]) + "<br>";
@@ -1206,7 +1206,7 @@ var LptM= LbdM.collection("PATIENTS");
 const ptID= info_pM._id; delete info_pM._id;
 var persM= await LptM.findOneAndReplace({_id:new ObjectId(ptID)},info_pM);
 
-var RMld= await Lpt.find({}).toArray();
+var RMld= await LptM.find({}).toArray();
 var tbN=[],tbP=[], tbDc=[], tbPrs=[], tbBt=[];
 let txtN= "", txtP= "", txtDc= "", txtPrs= "", txtBt= "",
 txNom= "",txPnom= "", txDc= "",txPrs= "",txBt= "";
@@ -1736,7 +1736,7 @@ var m6="</datalist><br>\n"+
 "cel.value!==\"\" && cel.nextElementSibling.textContent===\" *Uniquement (Chiffres ou Lettres)\"?\n"+
 "cel.nextElementSibling.remove():\"\";}\n"+
 "</script><script type=\"module\">\n"+
-"import {exaGrpM} from \"./scode.js\";\n"+
+"import {exaGrpM} from \"./scodeM.js\";\n"+
 "var TypChp= document.querySelectorAll(\"input,select\"),TxExam=\"\",ExamSlt=[];\n"+
 "for(let[x,y] of Object.entries(exaGrpM)){var RCon=y===\"on\"?TxExam += ExamSlt.push(x):\"\";}\n"+
 "for(var i= 0; i <TypChp.length; i++){for (var j= 0; j < ExamSlt.length; j++){\n"+

@@ -501,10 +501,10 @@ cel.value!=="" && cel.nextElementSibling.textContent===" *Exactement 10 chiffres
 cel.value!=="" && cel.nextElementSibling.textContent===" *Uniquement (Chiffres ou Lettres)"?
 cel.nextElementSibling.remove():"";}
 </script><script type="module">
-import {exaGrp} from "./scode.js";
+import {exaGrpM} from "./scodeM.js";
 var TypChp= document.querySelectorAll("input,select"),TxExam="",ExamSlt=[];
-for(let[x,y] of Object.entries(exaGrp)){var RCon=y==="on"?TxExam += ExamSlt.push(x):"";}
+for(let[x,y] of Object.entries(exaGrpM)){var RCon=y==="on"?TxExam += ExamSlt.push(x):"";}
 for(var i= 0; i <TypChp.length; i++){for (var j= 0; j < ExamSlt.length; j++){
 var RChp=TypChp[i].nodeName==="INPUT" && TypChp[i].type==="checkbox" ?
 document.getElementById(ExamSlt[j]).checked ="checked":TypChp[i].type==="button"?
-"":TypChp[i].value= exaGrp[TypChp[i].name];}}</script></body></html>
+"":TypChp[i].value= exaGrpM[TypChp[i].name];}}</script></body></html>
