@@ -501,7 +501,7 @@ cel.value!=="" && cel.nextElementSibling.textContent===" *Exactement 10 chiffres
 cel.value!=="" && cel.nextElementSibling.textContent===" *Uniquement (Chiffres ou Lettres)"?
 cel.nextElementSibling.remove():"";}
 </script><script type="module">
-import {exaGrpM} from "./scodeM.js";
+import {exaGrp} from "./scode.js";
 var TypChp= document.querySelectorAll("input,select"),TxExam="",ExamSlt=[];
 for(let[x,y] of Object.entries(exaGrpM)){var RCon=y==="on"?TxExam += ExamSlt.push(x):"";}
 for(var i= 0; i <TypChp.length; i++){for (var j= 0; j < ExamSlt.length; j++){

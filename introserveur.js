@@ -1140,19 +1140,17 @@ fs.writeFile("PatientMd.html",mt,{encoding:"utf8", flag:"w"},(err)=>{var info=(e
 var suc1="<!DOCTYPE html><html><head>\n"+
 "<meta content=\"fr-ci\" http-equiv=\"Content-Language\">\n"+
 "<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\">\n"+
-"<title> ENREGISTREMENT SUCCES PREMIER</title></head>\n"+
+"<title> ENREGISTREMENT SUCCES MODIFIER</title></head>\n"+
 "<body id=\"Entree\" style=\"background-image:url('images/LGbionase3.jpg');width: 730px;margin-right: auto;	margin-left: auto\">\n"+
 "<div style=\"text-align:center;margin-bottom:20px\" ><img alt=\"encart\" height=\"91\" src=\"imageTest2.jpg\" width=\"730\"><br></div>\n"+
-"<h1 style=\"color:#275280\">Vous venez d'enregistrez:</h1>\n"+
-"<div style=\"display:inline-block;width:730px;padding:0px 0px\">\n"+
-"<div style=\"display:inline-block;width:275px\">\n"+
+"<h1 style=\"color:#275280;text-decoration:underline\" >Vous venez d'enregistrez:</h1>\n"+
+"<div style=\"display:inline-block;width:730px;padding:0px 0px\"><div style=\"display:inline-block;width:275px\">\n"+
 "<span class=\"Ett\" style=\"display:inline-block;width:275px\"><span style=\"margin-left:30px\">PATIENT</span></span>\n"+
 "<span class=\"Ctn\" style=\"display:inline-block;width:275px;overflow-wrap:anywhere\">";
 
-var suc2="</span></div>\n"+
-"<div style=\"display:inline-block;width:450px;vertical-align:top\">\n"+
-"<span class=\"Ett\" style=\"display:inline-block;width:450px\"><span style=\"margin-left:30px\">AVEC</span></span>\n"+
-"<span class=\"Ctn\" style=\"display:inline-block;width:450px\">";
+var suc2="</span></div><div style=\"display:inline-block;width:450px;vertical-align:top\">\n"+
+"<span class=\"Ett\" style=\"display:inline-block;width:450px\"><span style=\"margin-left:30px\" id=\"ctn\" >AVEC</span></span>\n"+
+"<span class=\"Ctn\"  style=\"display:inline-block;width:450px\">";
 
 var suc3="</span></div></div>\n"+
 "<p style=\"text-align:center\"><input value=\"Modifier\" onclick=\"window.open('PatientMd.html', '_parent')\" type=\"button\"><input type=\"button\" value=\"Etape suivante\"><br></p>\n"+
@@ -1190,8 +1188,8 @@ const info_pM= txt_md.parse(txt_dM);let info_persTM="",info_persM="", info_exaM=
 
 
 for (var k= 0; k < Object.keys(info_pM).length; k++){info_persTM += Object.keys(info_pM)[k] + ":"+"\""+ Object.values(info_pM)[k]+"\""+ ",";}
-var impr_exa_jsonM="export let exaGrpM={"+ info_persTM + "};";
-fs.writeFile("scodeM.js",impr_exa_jsonM,{encoding:"utf8", flag:"w"},(err)=>{var info=(err)?console.log(err):console.log("imprExaModule_M ok");});
+var impr_exa_jsonM="export let exaGrp={"+ info_persTM + "};";
+fs.writeFile("scode.js",impr_exa_jsonM,{encoding:"utf8", flag:"w"},(err)=>{var info=(err)?console.log(err):console.log("imprExaModule_M ok");});
 
 for (var m= 0; m < 10; m++){info_persM += Object.keys(info_pM)[m] + ": "+ Object.values(info_pM)[m]+"<br>";}
 for (var f= Object.values(info_pM).lastIndexOf("on")+1;
@@ -1736,13 +1734,13 @@ var m6="</datalist><br>\n"+
 "cel.value!==\"\" && cel.nextElementSibling.textContent===\" *Uniquement (Chiffres ou Lettres)\"?\n"+
 "cel.nextElementSibling.remove():\"\";}\n"+
 "</script><script type=\"module\">\n"+
-"import {exaGrpM} from \"./scodeM.js\";\n"+
+"import {exaGrp} from \"./scodeM.js\";\n"+
 "var TypChp= document.querySelectorAll(\"input,select\"),TxExam=\"\",ExamSlt=[];\n"+
-"for(let[x,y] of Object.entries(exaGrpM)){var RCon=y===\"on\"?TxExam += ExamSlt.push(x):\"\";}\n"+
+"for(let[x,y] of Object.entries(exaGrp)){var RCon=y===\"on\"?TxExam += ExamSlt.push(x):\"\";}\n"+
 "for(var i= 0; i <TypChp.length; i++){for (var j= 0; j < ExamSlt.length; j++){\n"+
 "var RChp=TypChp[i].nodeName===\"INPUT\" && TypChp[i].type===\"checkbox\" ?\n"+
 "document.getElementById(ExamSlt[j]).checked =\"checked\":TypChp[i].type===\"button\"?\n"+
-"\"\":TypChp[i].value= exaGrpM[TypChp[i].name];}}</script></body></html>";
+"\"\":TypChp[i].value= exaGrp[TypChp[i].name];}}</script></body></html>";
 
 var mtM= m1+ txNom +m2+ txPnom +m3+ txDc +m4+ txPrs +m5+ txBt +m6;
 
