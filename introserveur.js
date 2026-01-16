@@ -1152,18 +1152,27 @@ var suc2="</span></div><div style=\"display:inline-block;width:450px;vertical-al
 "<span class=\"Ett\" style=\"display:inline-block;width:450px\"><span style=\"margin-left:30px\" id=\"ctn\" >AVEC</span></span>\n"+
 "<span class=\"Ctn\"  style=\"display:inline-block;width:450px\">";
 
-var suc3="</span></div></div>\n"+
-"<p style=\"text-align:center\"><input value=\"Modifier\" onclick=\"window.open('PatientMd.html', '_parent')\" type=\"button\"><input type=\"button\" value=\"Etape suivante\"><br></p>\n"+
-"<script>\n"+
-"for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.fontFamily=\"courier New\";}\n"+
+var suc3="</span></div></div><p style=\"text-align:center\">\n"+
+"<input value=\"Modifier Informations Patient \" onclick=\"window.open('PatientMd.html', '_parent')\" type=\"button\" id=\"tat\" style=\"width: 471px; height: 29px\"><br></p>\n"+
+"<table style=\"width: 730px;height:25px\"><tr><td rowspan=\"2\" class=\"Ett\" >IMPRESSIONS </td>\n"+
+"<td class=\"Ett\">QUELLE FICHE SOUHAITEZ-VOUS IMPRIMER?</td>\n"+
+"</tr><tr><td class=\"Ctn\" id=\"liens\" >\n"+
+"<a href=\"\">  |  BetaHcgPlasma</a><a href=\"\">  |  BetaHcgUrinaire</a><a href=\"\">  |  BiochimieComplet</a><a href=\"\">  |  BiochimieSimple</a><a href=\"\">  |  Coproculture</a><a href=\"\"><a href=\"\">  |  Ecbe+L</a><a href=\"\">  |  Ecbu</a><a href=\"\">  |  Ferritine</a><a href=\"\">  |  Ge+Crp+Swf</a><a href=\"\">  |  Ge+Swf</a><a href=\"\">  |  Hb1ac</a><a href=\"\">  |  Hormones</a><a href=\"\">  |  Immuno+Hematologie</a><a href=\"\">  |  InfectueuxGle</a><a href=\"\">  |  Kop</a><a href=\"\">  |  MarqueursHepathique</a><a href=\"\">  |  Nfs</a><a href=\"\">  |  Nfs+Ge</a><a href=\"\">  |  Proteinurie</a><a href=\"\">  |  Psa</a><a href=\"\">  |  Pu</a><a href=\"\">  |  Pv</a><a href=\"\">  |  PvColUterus</a><a href=\"\">  |  Serologie</a><a href=\"\">  |  Spermo+Cyto+Gramme</a><a href=\"\">  |  Spermoculture</a><a href=\"\">  |  TestCoombs</a><a href=\"\">  |  Vih</a><a href=\"\">  |  Vs</a>\n"+
+"</td></tr></table><script>\n"+
+"for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.fontFamily=\"bookman Old Style\";}\n"+
 "for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.fontWeight=\"bold\";}\n"+
 "for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.color= \"#275280\";}\n"+
 "for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.fontSize=\"16px\"}\n"+
-"for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.width=\"200px\"}\n"+
+"for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.width=\"300px\"}\n"+
 "for (var i= 0; i<document.getElementsByClassName(\"Ett\").length ; i++){document.getElementsByClassName(\"Ett\")[i].style.backgroundColor=\"aqua\"}\n"+
 "for (var i= 0; i<document.getElementsByClassName(\"Ett\").length ; i++){document.getElementsByClassName(\"Ett\")[i].style.fontFamily=\"bookman Old Style\"}\n"+
+"for (var i= 0; i<document.getElementsByClassName(\"Ett\").length ; i++){document.getElementsByClassName(\"Ett\")[i].style.textAlign=\"center\"}\n"+
 "for (var i= 0; i<document.getElementsByClassName(\"Ctn\").length ; i++){document.getElementsByClassName(\"Ctn\")[i].style.backgroundColor=\"#D6E7EF\"}\n"+
 "for (var i= 0; i<document.getElementsByClassName(\"Ctn\").length ; i++){document.getElementsByClassName(\"Ctn\")[i].style.fontFamily=\"courier New\"}\n"+
+"for (var i= 0; i<document.getElementById(\"liens\").querySelectorAll(\"a\").length; i++){document.getElementById(\"liens\").querySelectorAll(\"a\")[i].style.textDecoration=\"none\";}\n"+
+"for (var i= 0; i<document.getElementById(\"liens\").querySelectorAll(\"a\").length; i++){document.getElementById(\"liens\").querySelectorAll(\"a\")[i].style.color=\"black\";}\n"+
+"for (var i= 0; i<document.getElementById(\"liens\").querySelectorAll(\"a\").length; i++){document.getElementById(\"liens\").querySelectorAll(\"a\")[i].addEventListener(\"click\", AtChp);}\n"+
+"function AtChp(e){var LtrC = e.target.textContent;window.open((('FichierSaisie/'+LtrC.replace(/\\s|[|]/g, '')+'.html')), '_blank','left=650,top=50,width=620px,height=842px')}\n"+
 "/*Dans l'avenir on utilisera un tableau a la place d'un div ou span*/</script></body></html>";
 
 var aff_Gle= suc1+info_pers+"ExamensDemandés:"+ ExamSlt +suc2+info_exa+suc3;
@@ -1734,7 +1743,7 @@ var m6="</datalist><br>\n"+
 "cel.value!==\"\" && cel.nextElementSibling.textContent===\" *Uniquement (Chiffres ou Lettres)\"?\n"+
 "cel.nextElementSibling.remove():\"\";}\n"+
 "</script><script type=\"module\">\n"+
-"import {exaGrp} from \"./scodeM.js\";\n"+
+"import {exaGrp} from \"./scode.js\";\n"+
 "var TypChp= document.querySelectorAll(\"input,select\"),TxExam=\"\",ExamSlt=[];\n"+
 "for(let[x,y] of Object.entries(exaGrp)){var RCon=y===\"on\"?TxExam += ExamSlt.push(x):\"\";}\n"+
 "for(var i= 0; i <TypChp.length; i++){for (var j= 0; j < ExamSlt.length; j++){\n"+
@@ -1752,29 +1761,36 @@ var suc1="<!DOCTYPE html><html><head>\n"+
 "<title> ENREGISTREMENT SUCCES MODIFIER</title></head>\n"+
 "<body id=\"Entree\" style=\"background-image:url('images/LGbionase3.jpg');width: 730px;margin-right: auto;	margin-left: auto\">\n"+
 "<div style=\"text-align:center;margin-bottom:20px\" ><img alt=\"encart\" height=\"91\" src=\"imageTest2.jpg\" width=\"730\"><br></div>\n"+
-"<h1 style=\"color:#275280\">Vous venez d'enregistrez:</h1>\n"+
-"<div style=\"display:inline-block;width:730px;padding:0px 0px\">\n"+
-"<div style=\"display:inline-block;width:275px\">\n"+
+"<h1 style=\"color:#275280;text-decoration:underline\" >Vous venez d'enregistrez:</h1>\n"+
+"<div style=\"display:inline-block;width:730px;padding:0px 0px\"><div style=\"display:inline-block;width:275px\">\n"+
 "<span class=\"Ett\" style=\"display:inline-block;width:275px\"><span style=\"margin-left:30px\">PATIENT</span></span>\n"+
 "<span class=\"Ctn\" style=\"display:inline-block;width:275px;overflow-wrap:anywhere\">";
 
-var suc2="</span></div>\n"+
-"<div style=\"display:inline-block;width:450px;vertical-align:top\">\n"+
-"<span class=\"Ett\" style=\"display:inline-block;width:450px\"><span style=\"margin-left:30px\">AVEC</span></span>\n"+
-"<span class=\"Ctn\" style=\"display:inline-block;width:450px\">";
+var suc2="</span></div><div style=\"display:inline-block;width:450px;vertical-align:top\">\n"+
+"<span class=\"Ett\" style=\"display:inline-block;width:450px\"><span style=\"margin-left:30px\" id=\"ctn\" >AVEC</span></span>\n"+
+"<span class=\"Ctn\"  style=\"display:inline-block;width:450px\">";
 
-var suc3="</span></div></div>\n"+
-"<p style=\"text-align:center\"><input value=\"Modifier\" onclick=\"window.open('PatientMd.html', '_parent')\" type=\"button\"><input type=\"button\" value=\"Etape suivante\"><br></p>\n"+
-"<script>\n"+
-"for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.fontFamily=\"courier New\";}\n"+
+var suc3="</span></div></div><p style=\"text-align:center\">\n"+
+"<input value=\"Modifier Informations Patient \" onclick=\"window.open('PatientMd.html', '_parent')\" type=\"button\" id=\"tat\" style=\"width: 471px; height: 29px\"><br></p>\n"+
+"<table style=\"width: 730px;height:25px\"><tr><td rowspan=\"2\" class=\"Ett\" >IMPRESSIONS </td>\n"+
+"<td class=\"Ett\">QUELLE FICHE SOUHAITEZ-VOUS IMPRIMER?</td>\n"+
+"</tr><tr><td class=\"Ctn\" id=\"liens\" >\n"+
+"<a href=\"\">  |  BetaHcgPlasma</a><a href=\"\">  |  BetaHcgUrinaire</a><a href=\"\">  |  BiochimieComplet</a><a href=\"\">  |  BiochimieSimple</a><a href=\"\">  |  Coproculture</a><a href=\"\"><a href=\"\">  |  Ecbe+L</a><a href=\"\">  |  Ecbu</a><a href=\"\">  |  Ferritine</a><a href=\"\">  |  Ge+Crp+Swf</a><a href=\"\">  |  Ge+Swf</a><a href=\"\">  |  Hb1ac</a><a href=\"\">  |  Hormones</a><a href=\"\">  |  Immuno+Hematologie</a><a href=\"\">  |  InfectueuxGle</a><a href=\"\">  |  Kop</a><a href=\"\">  |  MarqueursHepathique</a><a href=\"\">  |  Nfs</a><a href=\"\">  |  Nfs+Ge</a><a href=\"\">  |  Proteinurie</a><a href=\"\">  |  Psa</a><a href=\"\">  |  Pu</a><a href=\"\">  |  Pv</a><a href=\"\">  |  PvColUterus</a><a href=\"\">  |  Serologie</a><a href=\"\">  |  Spermo+Cyto+Gramme</a><a href=\"\">  |  Spermoculture</a><a href=\"\">  |  TestCoombs</a><a href=\"\">  |  Vih</a><a href=\"\">  |  Vs</a>\n"+
+"</td></tr></table><script>\n"+
+"for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.fontFamily=\"bookman Old Style\";}\n"+
 "for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.fontWeight=\"bold\";}\n"+
 "for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.color= \"#275280\";}\n"+
 "for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.fontSize=\"16px\"}\n"+
-"for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.width=\"200px\"}\n"+
+"for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.width=\"300px\"}\n"+
 "for (var i= 0; i<document.getElementsByClassName(\"Ett\").length ; i++){document.getElementsByClassName(\"Ett\")[i].style.backgroundColor=\"aqua\"}\n"+
 "for (var i= 0; i<document.getElementsByClassName(\"Ett\").length ; i++){document.getElementsByClassName(\"Ett\")[i].style.fontFamily=\"bookman Old Style\"}\n"+
+"for (var i= 0; i<document.getElementsByClassName(\"Ett\").length ; i++){document.getElementsByClassName(\"Ett\")[i].style.textAlign=\"center\"}\n"+
 "for (var i= 0; i<document.getElementsByClassName(\"Ctn\").length ; i++){document.getElementsByClassName(\"Ctn\")[i].style.backgroundColor=\"#D6E7EF\"}\n"+
 "for (var i= 0; i<document.getElementsByClassName(\"Ctn\").length ; i++){document.getElementsByClassName(\"Ctn\")[i].style.fontFamily=\"courier New\"}\n"+
+"for (var i= 0; i<document.getElementById(\"liens\").querySelectorAll(\"a\").length; i++){document.getElementById(\"liens\").querySelectorAll(\"a\")[i].style.textDecoration=\"none\";}\n"+
+"for (var i= 0; i<document.getElementById(\"liens\").querySelectorAll(\"a\").length; i++){document.getElementById(\"liens\").querySelectorAll(\"a\")[i].style.color=\"black\";}\n"+
+"for (var i= 0; i<document.getElementById(\"liens\").querySelectorAll(\"a\").length; i++){document.getElementById(\"liens\").querySelectorAll(\"a\")[i].addEventListener(\"click\", AtChp);}\n"+
+"function AtChp(e){var LtrC = e.target.textContent;window.open((('FichierSaisie/'+LtrC.replace(/\\s|[|]/g, '')+'.html')), '_blank','left=650,top=50,width=620px,height=842px')}\n"+
 "/*Dans l'avenir on utilisera un tableau a la place d'un div ou span*/</script></body></html>";
 
 var aff_GleM= suc1+info_persM+"ExamensDemandés:"+ ExamSlt +suc2+info_exaM+suc3;

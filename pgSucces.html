@@ -7,25 +7,15 @@
 <h1 style="color:#275280;text-decoration:underline" >Vous venez d'enregistrez:</h1>
 <div style="display:inline-block;width:730px;padding:0px 0px"><div style="display:inline-block;width:275px">
 <span class="Ett" style="display:inline-block;width:275px"><span style="margin-left:30px">PATIENT</span></span>
-<span class="Ctn" style="display:inline-block;width:275px;overflow-wrap:anywhere">_id: 69626d432765960c0908ecba<br>nom: kouadio<br>prenoms: valencia<br>Sexe: F<br>Telephone: 2510365233<br>DiagnosticClinique: Bilan de sante<br>Prescripteur: dr konate<br>Biotechnologiste: kouadio athanase<br>PrixExamens: 12000<br>DateduPrelevement: 2026-01-10<br>ExamensDemandés:Crp,ge,nfs,swf</span></div>
-<div style="display:inline-block;width:450px;vertical-align:top">
+<span class="Ctn" style="display:inline-block;width:275px;overflow-wrap:anywhere">_id: 696a6f4fef373f339824a88a<br>nom: keita<br>prenoms: foussenan<br>Sexe: F<br>Telephone: 2510365237<br>DiagnosticClinique: fièvre noctune<br>Prescripteur: dr konate<br>Biotechnologiste: amani<br>PrixExamens: assure<br>DateduPrelevement: 2026-01-16<br>ExamensDemandés:t3l,t4l,tck</span></div><div style="display:inline-block;width:450px;vertical-align:top">
 <span class="Ett" style="display:inline-block;width:450px"><span style="margin-left:30px" id="ctn" >AVEC</span></span>
-<span class="Ctn"  style="display:inline-block;width:450px">Bilharziose:NEGATIVE bHCG_plasma:14 bHCG_Uri:16 Goutte_Epaisse:NEGATIVE </span></div></div>
-<p style="text-align:center">
+<span class="Ctn"  style="display:inline-block;width:450px">TCK:45 T3_libre:6 T4_libre:6 bHCG_plasma:20 bHCG_Uri:31 </span></div></div><p style="text-align:center">
 <input value="Modifier Informations Patient " onclick="window.open('PatientMd.html', '_parent')" type="button" id="tat" style="width: 471px; height: 29px"><br></p>
-
-<table style="width: 730px;height:25px">
-	<tr>
-		<td rowspan="2" class="Ett" >IMPRESSIONS </td>
-		<td class="Ett">QUELLE FICHE SOUHAITEZ-VOUS IMPRIMER?</td>
-	</tr>
-	<tr>
-		<td class="Ctn" id="liens" >
+<table style="width: 730px;height:25px"><tr><td rowspan="2" class="Ett" >IMPRESSIONS </td>
+<td class="Ett">QUELLE FICHE SOUHAITEZ-VOUS IMPRIMER?</td>
+</tr><tr><td class="Ctn" id="liens" >
 <a href="">  |  BetaHcgPlasma</a><a href="">  |  BetaHcgUrinaire</a><a href="">  |  BiochimieComplet</a><a href="">  |  BiochimieSimple</a><a href="">  |  Coproculture</a><a href=""><a href="">  |  Ecbe+L</a><a href="">  |  Ecbu</a><a href="">  |  Ferritine</a><a href="">  |  Ge+Crp+Swf</a><a href="">  |  Ge+Swf</a><a href="">  |  Hb1ac</a><a href="">  |  Hormones</a><a href="">  |  Immuno+Hematologie</a><a href="">  |  InfectueuxGle</a><a href="">  |  Kop</a><a href="">  |  MarqueursHepathique</a><a href="">  |  Nfs</a><a href="">  |  Nfs+Ge</a><a href="">  |  Proteinurie</a><a href="">  |  Psa</a><a href="">  |  Pu</a><a href="">  |  Pv</a><a href="">  |  PvColUterus</a><a href="">  |  Serologie</a><a href="">  |  Spermo+Cyto+Gramme</a><a href="">  |  Spermoculture</a><a href="">  |  TestCoombs</a><a href="">  |  Vih</a><a href="">  |  Vs</a>
-		</td></tr>
-</table>
-
-<script>
+</td></tr></table><script>
 for (var i= 0; i<document.querySelectorAll("input[type=button]").length ; i++){document.querySelectorAll("input[type=button]")[i].style.fontFamily="bookman Old Style";}
 for (var i= 0; i<document.querySelectorAll("input[type=button]").length ; i++){document.querySelectorAll("input[type=button]")[i].style.fontWeight="bold";}
 for (var i= 0; i<document.querySelectorAll("input[type=button]").length ; i++){document.querySelectorAll("input[type=button]")[i].style.color= "#275280";}
@@ -39,6 +29,5 @@ for (var i= 0; i<document.getElementsByClassName("Ctn").length ; i++){document.g
 for (var i= 0; i<document.getElementById("liens").querySelectorAll("a").length; i++){document.getElementById("liens").querySelectorAll("a")[i].style.textDecoration="none";}
 for (var i= 0; i<document.getElementById("liens").querySelectorAll("a").length; i++){document.getElementById("liens").querySelectorAll("a")[i].style.color="black";}
 for (var i= 0; i<document.getElementById("liens").querySelectorAll("a").length; i++){document.getElementById("liens").querySelectorAll("a")[i].addEventListener("click", AtChp);}
-function AtChp(e){var LtrC = e.target.textContent;window.open(('FichierSaisie/'+LtrC.replace(/\s|[|]/g, '')+'.html'), '_blank','left=650,top=50,width=620px,height=842px')}
-
+function AtChp(e){var LtrC = e.target.textContent;window.open((('FichierSaisie/'+LtrC.replace(/\s|[|]/g, '')+'.html')), '_blank','left=650,top=50,width=620px,height=842px')}
 /*Dans l'avenir on utilisera un tableau a la place d'un div ou span*/</script></body></html>
