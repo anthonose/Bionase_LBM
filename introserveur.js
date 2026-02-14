@@ -141,7 +141,6 @@ var p6="</datalist><br>\n"+
 "<label for=\"potassiumU\">PotassiumU</label><input id=\"potassiumU\" name=\"potassiumU\" type=\"checkbox\"><br>\n"+
 "<label for=\"proges\">Progesterone</label><input id=\"proges\" name=\"proges\" type=\"checkbox\"><br>\n"+
 "<label for=\"prolac\">Prolactinemie</label><input id=\"prolac\" name=\"prolac\" type=\"checkbox\"><br>\n"+
-"<label for=\"Ptu\">Proteinurie</label><input id=\"Ptu\" name=\"Ptu\" type=\"checkbox\"><br>\n"+
 "<label for=\"Ptu24\">Proteinurie 24h</label><input id=\"Ptu24\" name=\"Ptu24\" type=\"checkbox\"><br>\n"+
 "<label for=\"Pttl\">Protid.Tot.</label><input id=\"Pttl\" name=\"Pttl\" type=\"checkbox\"><br>\n"+
 "<label for=\"psa\">PSA</label><input id=\"psa\" name=\"psa\" type=\"checkbox\"><br>\n"+
@@ -211,8 +210,7 @@ var p6="</datalist><br>\n"+
 "<label for=\"Acide_Urique\">Acide Urique:</label><input name=\"Acide_Urique\" type=\"number\"  step=\"0.01\" id=\"Acide_Urique\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"30-70\"><br>\n"+
 "<label for=\"Albumine\">Albumine:</label><input name=\"Albumine\" type=\"number\"  step=\"0.01\" id=\"Albumine\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"35-52\"><br>\n"+
 "<label for=\"Albuminurie\">Albuminurie:</label><input name=\"Albuminurie\" type=\"number\"  step=\"0.01\" id=\"Albuminurie\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 0.15\"><br>\n"+
-"<label for=\"Proteinurie\">Protéinurie:</label><input name=\"Proteinurie\" type=\"number\"  step=\"0.01\" id=\"Proteinurie\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 0.30\"><br>\n"+
-"<label for=\"Proteinurie_24h\">Protéinurie 24h:</label><input name=\"Proteinurie_24h\" type=\"number\"  step=\"0.01\" id=\"Proteinurie_24h\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 0.15\"><br>\n"+
+"<label for=\"Proteinurie24\">Protéinurie 24h:</label><input name=\"Proteinurie24\" type=\"number\"  step=\"0.01\" id=\"Proteinurie24\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 0.15\"><br>\n"+
 "<label for=\"DFG\">DFG:(Débit Filtration Glomérulaire)</label><input name=\"DFG\" type=\"number\"  step=\"0.01\" id=\"DFG\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"60-89\"><br>\n"+
 "<label for=\"Clairance_Creatininurie\">Clairance Créat:</label><input name=\"Clairance_Creatininurie\" type=\"number\"  step=\"0.01\" id=\"Clairance_Creatininurie\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"80-120\"><br>\n"+
 "<label for=\"Electrophorese_Proteines\" >Electroph Prot Sq:</label><select name=\"Electrophorese_Proteines\" id=\"Electrophorese_Proteines\" style=\"margin-top:20px\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>NORMALE</option><option>ANORMALE</option></select><br>\n"+
@@ -326,7 +324,7 @@ var p6="</datalist><br>\n"+
 "<a id=\"I\" href=\"\">I</a><a>INR</a><a>Ionogramme_Sang</a><a>Ionogramme_Uri</a>\n"+
 "<a id=\"L\" href=\"\">L</a><a target=\"_blank\">LCR</a><a>LDH</a><a>LH_RH</a><a>Lipide_Tot</a>\n"+
 "<a id=\"M\" href=\"\">M</a><a>Magnesium</a><a>Mycoplasme</a><a id=\"N\" href=\"\">N</a><a>NFS</a>\n"+
-"<a id=\"P\" href=\"\">P</a><a>Phosphatases_Alcalines</a><a>Potassium</a><a>PotassiumU</a><a>Progesterone</a><a>Prolactinemie</a><a>Proteinurie</a><a>Proteinurie_24h</a><a>Protides_Tot</a><a>PSA</a><a>PU</a><a>PV</a>\n"+
+"<a id=\"P\" href=\"\">P</a><a>Phosphatases_Alcalines</a><a>Potassium</a><a>PotassiumU</a><a>Progesterone</a><a>Prolactinemie</a><a>Proteinurie24</a><a>Protides_Tot</a><a>PSA</a><a>PU</a><a>PV</a>\n"+
 "<a id=\"Q\" href=\"\">Q</a><a>QBC</a>\n"+
 "<a id=\"R\" href=\"\">R</a><a>Reserve_Alcalin</a><a>Rubeole</a><a id=\"S\" href=\"\">S</a><a>Spermoculture</a><a>Spermocytogramme</a><a>Spermogramme</a><a>SWidal_Felix</a>\n"+
 "<a id=\"T\" href=\"\">T</a><a>T3_libre</a><a>T4_libre</a><a>TP</a><a>TCK</a><a>Toxoplasmose</a><a>Transaminases</a><a>Triglycerides</a><a>TSH</a>\n"+
@@ -717,7 +715,6 @@ var m6="</datalist><br>\n"+
 "<label for=\"potassiumU\">Potassium</label><input id=\"potassiumU\" name=\"potassiumU\" type=\"checkbox\"><br>\n"+
 "<label for=\"proges\">Progesterone</label><input id=\"proges\" name=\"proges\" type=\"checkbox\"><br>\n"+
 "<label for=\"prolac\">Prolactinemie</label><input id=\"prolac\" name=\"prolac\" type=\"checkbox\"><br>\n"+
-"<label for=\"Ptu\">Proteinurie</label><input id=\"Ptu\" name=\"Ptu\" type=\"checkbox\"><br>\n"+
 "<label for=\"Ptu24\">Proteinurie 24h</label><input id=\"Ptu24\" name=\"Ptu24\" type=\"checkbox\"><br>\n"+
 "<label for=\"Pttl\">Protid.Tot.</label><input id=\"Pttl\" name=\"Pttl\" type=\"checkbox\"><br>\n"+
 "<label for=\"psa\">PSA</label><input id=\"psa\" name=\"psa\" type=\"checkbox\"><br>\n"+
@@ -787,8 +784,7 @@ var m6="</datalist><br>\n"+
 "<label for=\"Acide_Urique\">Acide Urique:</label><input name=\"Acide_Urique\" type=\"number\"  step=\"0.01\" id=\"Acide_Urique\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"30-70\"><br>\n"+
 "<label for=\"Albumine\">Albumine:</label><input name=\"Albumine\" type=\"number\"  step=\"0.01\" id=\"Albumine\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"35-52\"><br>\n"+
 "<label for=\"Albuminurie\">Albuminurie:</label><input name=\"Albuminurie\" type=\"number\"  step=\"0.01\" id=\"Albuminurie\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 0.15\"><br>\n"+
-"<label for=\"Proteinurie\">Protéinurie:</label><input name=\"Proteinurie\" type=\"number\"  step=\"0.01\" id=\"Proteinurie\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 0.30\"><br>\n"+
-"<label for=\"Proteinurie_24h\">Protéinurie 24h:</label><input name=\"Proteinurie_24h\" type=\"number\"  step=\"0.01\" id=\"Proteinurie_24h\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 0.15\"><br>\n"+
+"<label for=\"Proteinurie24\">Protéinurie 24h:</label><input name=\"Proteinurie24\" type=\"number\"  step=\"0.01\" id=\"Proteinurie24\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 0.15\"><br>\n"+
 "<label for=\"DFG\">DFG:(Débit Filtration Glomérulaire)</label><input name=\"DFG\" type=\"number\"  step=\"0.01\" id=\"DFG\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"60-89\"><br>\n"+
 "<label for=\"Clairance_Creatininurie\">Clairance Créat:</label><input name=\"Clairance_Creatininurie\" type=\"number\"  step=\"0.01\" id=\"Clairance_Creatininurie\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"80-120\"><br>\n"+
 "<label for=\"Electrophorese_Proteines\" >Electroph Prot Sq:</label><select name=\"Electrophorese_Proteines\" id=\"Electrophorese_Proteines\" style=\"margin-top:20px\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>NORMALE</option><option>ANORMALE</option></select><br>\n"+
@@ -902,7 +898,7 @@ var m6="</datalist><br>\n"+
 "<a id=\"I\" href=\"\">I</a><a>INR</a><a>Ionogramme_Sang</a><a>Ionogramme_Uri</a>\n"+
 "<a id=\"L\" href=\"\">L</a><a target=\"_blank\">LCR</a><a>LDH</a><a>LH_RH</a><a>Lipide_Tot</a>\n"+
 "<a id=\"M\" href=\"\">M</a><a>Magnesium</a><a>Mycoplasme</a><a id=\"N\" href=\"\">N</a><a>NFS</a>\n"+
-"<a id=\"P\" href=\"\">P</a><a>Phosphatases_Alcalines</a><a>Potassium</a><a>PotassiumU</a><a>Progesterone</a><a>Prolactinemie</a><a>Proteinurie</a><a>Proteinurie_24h</a><a>Protides_Tot</a><a>PSA</a><a>PU</a><a>PV</a>\n"+
+"<a id=\"P\" href=\"\">P</a><a>Phosphatases_Alcalines</a><a>Potassium</a><a>PotassiumU</a><a>Progesterone</a><a>Prolactinemie</a><a>Proteinurie24</a><a>Protides_Tot</a><a>PSA</a><a>PU</a><a>PV</a>\n"+
 "<a id=\"Q\" href=\"\">Q</a><a>QBC</a>\n"+
 "<a id=\"R\" href=\"\">R</a><a>Reserve_Alcalin</a><a>Rubeole</a><a id=\"S\" href=\"\">S</a><a>Spermoculture</a><a>Spermocytogramme</a><a>Spermogramme</a><a>SWidal_Felix</a>\n"+
 "<a id=\"T\" href=\"\">T</a><a>T3_libre</a><a>T4_libre</a><a>TP</a><a>TCK</a><a>Toxoplasmose</a><a>Transaminases</a><a>Triglycerides</a><a>TSH</a>\n"+
@@ -1157,7 +1153,7 @@ var suc3="</span></div></div><p style=\"text-align:center\">\n"+
 "<table style=\"width: 730px;height:25px\"><tr><td rowspan=\"2\" class=\"Ett\" >IMPRESSIONS </td>\n"+
 "<td class=\"Ett\">QUELLE FICHE SOUHAITEZ-VOUS IMPRIMER?</td>\n"+
 "</tr><tr><td class=\"Ctn\" id=\"liens\" >\n"+
-"<a href=\"\">  |  BetaHcgPlasma</a><a href=\"\">  |  BetaHcgUrinaire</a><a href=\"\">  |  BiochimieComplet</a><a href=\"\">  |  BiochimieSimple</a><a href=\"\">  |  Coproculture</a><a href=\"\"><a href=\"\">  |  Ecbe+L</a><a href=\"\">  |  Ecbu</a><a href=\"\">  |  Ferritine</a><a href=\"\">  |  Ge+Crp+Swf</a><a href=\"\">  |  Ge+Swf</a><a href=\"\">  |  Hb1ac</a><a href=\"\">  |  Hormones</a><a href=\"\">  |  Immuno+Hematologie</a><a href=\"\">  |  InfectueuxGle</a><a href=\"\">  |  Kop</a><a href=\"\">  |  MarqueursHepathique</a><a href=\"\">  |  Nfs</a><a href=\"\">  |  Nfs+Ge</a><a href=\"\">  |  Proteinurie</a><a href=\"\">  |  Psa</a><a href=\"\">  |  Pu</a><a href=\"\">  |  Pv</a><a href=\"\">  |  PvColUterus</a><a href=\"\">  |  Serologie</a><a href=\"\">  |  Spermo+Cyto+Gramme</a><a href=\"\">  |  Spermoculture</a><a href=\"\">  |  TestCoombs</a><a href=\"\">  |  Vih</a><a href=\"\">  |  Vs</a>\n"+
+"<a href=\"\">  |  BetaHcgPlasma</a><a href=\"\">  |  BetaHcgUrinaire</a><a href=\"\">  |  BiochimieComplet</a><a href=\"\">  |  BiochimieSimple</a><a href=\"\">  |  Coproculture</a><a href=\"\"><a href=\"\">  |  Ecbe+L</a><a href=\"\">  |  Ecbu</a><a href=\"\">  |  Ferritine</a><a href=\"\">  |  Ge+Crp+Swf</a><a href=\"\">  |  Ge+Swf</a><a href=\"\">  |  Hb1ac</a><a href=\"\">  |  Hormones</a><a href=\"\">  |  Immuno+Hematologie</a><a href=\"\">  |  InfectueuxGle</a><a href=\"\">  |  Kop</a><a href=\"\">  |  MarqueursHepathique</a><a href=\"\">  |  Nfs</a><a href=\"\">  |  Nfs+Ge</a><a href=\"\">  |  Proteinurie24</a><a href=\"\">  |  Psa</a><a href=\"\">  |  Pu</a><a href=\"\">  |  Pv</a><a href=\"\">  |  PvColUterus</a><a href=\"\">  |  Serologie</a><a href=\"\">  |  Spermo+Cyto+Gramme</a><a href=\"\">  |  Spermoculture</a><a href=\"\">  |  TestCoombs</a><a href=\"\">  |  Vih</a><a href=\"\">  |  Vs</a>\n"+
 "</td></tr></table><script>\n"+
 "for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.fontFamily=\"bookman Old Style\";}\n"+
 "for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.fontWeight=\"bold\";}\n"+
@@ -1335,7 +1331,6 @@ var m6="</datalist><br>\n"+
 "<label for=\"potassiumU\">Potassium</label><input id=\"potassiumU\" name=\"potassiumU\" type=\"checkbox\"><br>\n"+
 "<label for=\"proges\">Progesterone</label><input id=\"proges\" name=\"proges\" type=\"checkbox\"><br>\n"+
 "<label for=\"prolac\">Prolactinemie</label><input id=\"prolac\" name=\"prolac\" type=\"checkbox\"><br>\n"+
-"<label for=\"Ptu\">Proteinurie</label><input id=\"Ptu\" name=\"Ptu\" type=\"checkbox\"><br>\n"+
 "<label for=\"Ptu24\">Proteinurie 24h</label><input id=\"Ptu24\" name=\"Ptu24\" type=\"checkbox\"><br>\n"+
 "<label for=\"Pttl\">Protid.Tot.</label><input id=\"Pttl\" name=\"Pttl\" type=\"checkbox\"><br>\n"+
 "<label for=\"psa\">PSA</label><input id=\"psa\" name=\"psa\" type=\"checkbox\"><br>\n"+
@@ -1405,8 +1400,7 @@ var m6="</datalist><br>\n"+
 "<label for=\"Acide_Urique\">Acide Urique:</label><input name=\"Acide_Urique\" type=\"number\"  step=\"0.01\" id=\"Acide_Urique\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"30-70\"><br>\n"+
 "<label for=\"Albumine\">Albumine:</label><input name=\"Albumine\" type=\"number\"  step=\"0.01\" id=\"Albumine\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"35-52\"><br>\n"+
 "<label for=\"Albuminurie\">Albuminurie:</label><input name=\"Albuminurie\" type=\"number\"  step=\"0.01\" id=\"Albuminurie\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 0.15\"><br>\n"+
-"<label for=\"Proteinurie\">Protéinurie:</label><input name=\"Proteinurie\" type=\"number\"  step=\"0.01\" id=\"Proteinurie\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 0.30\"><br>\n"+
-"<label for=\"Proteinurie_24h\">Protéinurie 24h:</label><input name=\"Proteinurie_24h\" type=\"number\"  step=\"0.01\" id=\"Proteinurie_24h\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 0.15\"><br>\n"+
+"<label for=\"Proteinurie24\">Protéinurie 24h:</label><input name=\"Proteinurie24\" type=\"number\"  step=\"0.01\" id=\"Proteinurie24\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"< 0.15\"><br>\n"+
 "<label for=\"DFG\">DFG:(Débit Filtration Glomérulaire)</label><input name=\"DFG\" type=\"number\"  step=\"0.01\" id=\"DFG\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"60-89\"><br>\n"+
 "<label for=\"Clairance_Creatininurie\">Clairance Créat:</label><input name=\"Clairance_Creatininurie\" type=\"number\"  step=\"0.01\" id=\"Clairance_Creatininurie\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\" placeholder=\"80-120\"><br>\n"+
 "<label for=\"Electrophorese_Proteines\" >Electroph Prot Sq:</label><select name=\"Electrophorese_Proteines\" id=\"Electrophorese_Proteines\" style=\"margin-top:20px\" onblur=\"fChpLib(this)\" onfocus=\"fChpSel(this)\"><option></option><option>NORMALE</option><option>ANORMALE</option></select><br>\n"+
@@ -1520,7 +1514,7 @@ var m6="</datalist><br>\n"+
 "<a id=\"I\" href=\"\">I</a><a>INR</a><a>Ionogramme_Sang</a><a>Ionogramme_Uri</a>\n"+
 "<a id=\"L\" href=\"\">L</a><a target=\"_blank\">LCR</a><a>LDH</a><a>LH_RH</a><a>Lipide_Tot</a>\n"+
 "<a id=\"M\" href=\"\">M</a><a>Magnesium</a><a>Mycoplasme</a><a id=\"N\" href=\"\">N</a><a>NFS</a>\n"+
-"<a id=\"P\" href=\"\">P</a><a>Phosphatases_Alcalines</a><a>Potassium</a><a>PotassiumU</a><a>Progesterone</a><a>Prolactinemie</a><a>Proteinurie</a><a>Proteinurie_24h</a><a>Protides_Tot</a><a>PSA</a><a>PU</a><a>PV</a>\n"+
+"<a id=\"P\" href=\"\">P</a><a>Phosphatases_Alcalines</a><a>Potassium</a><a>PotassiumU</a><a>Progesterone</a><a>Prolactinemie</a><a>Proteinurie24</a><a>Protides_Tot</a><a>PSA</a><a>PU</a><a>PV</a>\n"+
 "<a id=\"Q\" href=\"\">Q</a><a>QBC</a>\n"+
 "<a id=\"R\" href=\"\">R</a><a>Reserve_Alcalin</a><a>Rubeole</a><a id=\"S\" href=\"\">S</a><a>Spermoculture</a><a>Spermocytogramme</a><a>Spermogramme</a><a>SWidal_Felix</a>\n"+
 "<a id=\"T\" href=\"\">T</a><a>T3_libre</a><a>T4_libre</a><a>TP</a><a>TCK</a><a>Toxoplasmose</a><a>Transaminases</a><a>Triglycerides</a><a>TSH</a>\n"+
@@ -1775,7 +1769,7 @@ var suc3="</span></div></div><p style=\"text-align:center\">\n"+
 "<table style=\"width: 730px;height:25px\"><tr><td rowspan=\"2\" class=\"Ett\" >IMPRESSIONS </td>\n"+
 "<td class=\"Ett\">QUELLE FICHE SOUHAITEZ-VOUS IMPRIMER?</td>\n"+
 "</tr><tr><td class=\"Ctn\" id=\"liens\" >\n"+
-"<a href=\"\">  |  BetaHcgPlasma</a><a href=\"\">  |  BetaHcgUrinaire</a><a href=\"\">  |  BiochimieComplet</a><a href=\"\">  |  BiochimieSimple</a><a href=\"\">  |  Coproculture</a><a href=\"\"><a href=\"\">  |  Ecbe+L</a><a href=\"\">  |  Ecbu</a><a href=\"\">  |  Ferritine</a><a href=\"\">  |  Ge+Crp+Swf</a><a href=\"\">  |  Ge+Swf</a><a href=\"\">  |  Hb1ac</a><a href=\"\">  |  Hormones</a><a href=\"\">  |  Immuno+Hematologie</a><a href=\"\">  |  InfectueuxGle</a><a href=\"\">  |  Kop</a><a href=\"\">  |  MarqueursHepathique</a><a href=\"\">  |  Nfs</a><a href=\"\">  |  Nfs+Ge</a><a href=\"\">  |  Proteinurie</a><a href=\"\">  |  Psa</a><a href=\"\">  |  Pu</a><a href=\"\">  |  Pv</a><a href=\"\">  |  PvColUterus</a><a href=\"\">  |  Serologie</a><a href=\"\">  |  Spermo+Cyto+Gramme</a><a href=\"\">  |  Spermoculture</a><a href=\"\">  |  TestCoombs</a><a href=\"\">  |  Vih</a><a href=\"\">  |  Vs</a>\n"+
+"<a href=\"\">  |  BetaHcgPlasma</a><a href=\"\">  |  BetaHcgUrinaire</a><a href=\"\">  |  BiochimieComplet</a><a href=\"\">  |  BiochimieSimple</a><a href=\"\">  |  Coproculture</a><a href=\"\"><a href=\"\">  |  Ecbe+L</a><a href=\"\">  |  Ecbu</a><a href=\"\">  |  Ferritine</a><a href=\"\">  |  Ge+Crp+Swf</a><a href=\"\">  |  Ge+Swf</a><a href=\"\">  |  Hb1ac</a><a href=\"\">  |  Hormones</a><a href=\"\">  |  Immuno+Hematologie</a><a href=\"\">  |  InfectueuxGle</a><a href=\"\">  |  Kop</a><a href=\"\">  |  MarqueursHepathique</a><a href=\"\">  |  Nfs</a><a href=\"\">  |  Nfs+Ge</a><a href=\"\">  |  Proteinurie24</a><a href=\"\">  |  Psa</a><a href=\"\">  |  Pu</a><a href=\"\">  |  Pv</a><a href=\"\">  |  PvColUterus</a><a href=\"\">  |  Serologie</a><a href=\"\">  |  Spermo+Cyto+Gramme</a><a href=\"\">  |  Spermoculture</a><a href=\"\">  |  TestCoombs</a><a href=\"\">  |  Vih</a><a href=\"\">  |  Vs</a>\n"+
 "</td></tr></table><script>\n"+
 "for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.fontFamily=\"bookman Old Style\";}\n"+
 "for (var i= 0; i<document.querySelectorAll(\"input[type=button]\").length ; i++){document.querySelectorAll(\"input[type=button]\")[i].style.fontWeight=\"bold\";}\n"+
